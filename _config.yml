@@ -1,11 +1,13 @@
-auto: true
-
-markdown: rdiscount
-pygments: true
-paginate: 8
-permalink: /:title
-
-title: TedYin.me
-url: http://tedyin.me
-feed: /atom.xml
-author_info: <a href="http://tedyin.me/">TedYin</a>
+title:            Mu-An Chiou - @muanchiou || @muan
+url:              http://muan.co
+permalink:        pretty
+pygments:         true
+markdown:         rdiscount
+rdiscount:
+  extensions:     [smart]
+google_analytics: UA-21332781-7
+timezone:         Europe/London
+paginate: 5
+links: 
+  - name:         About
+    url:          /about
