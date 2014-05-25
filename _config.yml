@@ -1,12 +1,12 @@
-title:            Mu-An Chiou - @muanchiou || @muan
-url:              http://muan.co
+title:            TedYin
+url:              http://tedyin.me
 permalink:        pretty
 pygments:         true
 markdown:         rdiscount
 rdiscount:
   extensions:     [smart]
 google_analytics: UA-21332781-7
-timezone:         Europe/London
+timezone:         Asia/Shanghai
 paginate: 5
 links: 
   - name:         About
