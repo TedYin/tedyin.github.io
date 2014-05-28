@@ -4,15 +4,11 @@ title: TedYin
 ---
 
 <center>
-**TedYin** <small>(**尹珅杰**)</small>. 
+尹珅杰
+===
 
-Android Lover.
-
+Android Lover
+---
 </center>
-Follow me：
 
-* [GitHub](https://github.com/tedyin)
-
-Mail：
-
-* [Gmail](tedworld.time@gmail.com)
+>Mail： tedworld.time@gmail.com
