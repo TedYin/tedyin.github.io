@@ -14,5 +14,4 @@ links:
 
 markdown:        redcarpet
 redcarpet:
-	extensions:
-		-smart
+extensions:     [smart]
