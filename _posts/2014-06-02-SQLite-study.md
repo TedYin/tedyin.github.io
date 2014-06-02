@@ -4,10 +4,8 @@ layout: post
 tags:
 ---
 
-<center>
-SQLite 学习
+<center>SQLite学习
 ===
-</center>
 
 ##SQLite简介
 SQLite是一个小型数据库，它被集成到Android系统中完成数据库部分。它不需要进行配置和管理，可以在Android系统中直接使用。
