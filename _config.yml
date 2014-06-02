@@ -10,8 +10,6 @@ paginate: 5
 links: 
 - name: 	Blog
    url:		/
-- name:		News
-   url:		/_news
 - name:		About
    url:          	/about
 
