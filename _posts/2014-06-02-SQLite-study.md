@@ -2,7 +2,7 @@
 title: SQLite Study
 layout: post
 date: 2014-06-02 23:01:00
-tags: SQLite
+tags:
 ---
 
 <center>
