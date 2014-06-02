@@ -6,7 +6,6 @@ markdown:         rdiscount
 rdiscount:
   extensions:     [smart]
 google_analytics: UA-21332781-7
-timezone:         Asia/Shanghai
 paginate: 5
 links: 
   - name:         About
