@@ -1,12 +1,12 @@
 ---
 title: SQLite Study
 layout: post
-date: 2014-06-02 23:01:0
+date: 2014-06-02 23:01:00
 tags: SQLite
 ---
 
 <center>
-SQLite Study
+SQLite 学习
 ===
 </center>
 
