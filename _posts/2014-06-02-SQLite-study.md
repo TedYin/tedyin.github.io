@@ -1,6 +1,8 @@
 ---
 title: SQLite Study
 layout: post
+guid: Elt4Zo1Ybnle
+date: 2014-06-03 22:39:00
 tags:
 ---
 
