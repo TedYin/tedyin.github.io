@@ -1,5 +1,12 @@
+---
+title: SQLite Study
+layout: post
+date: 2014-06-02 23:01:0
+tags: SQLite
+---
+
 <center>
-SQLite 学习笔记
+SQLite Study
 ===
 </center>
 
@@ -33,17 +40,10 @@ SQLiteOpenHelper使用一个帮助类，通过继承它并实现onCreate方法�
 + isAfterLast 检查是否已经到达end
 **注意：**`Cursor`在使用完成后需要调用close关闭。（TDOO：如果不关闭怎么办）
 
-###4.SimpleCursorAdapter在ListView，ListActivity等中的使用
-
-SimpleCursorAdapter
 
 ###4.DAO在Android中的使用
 
 DAO的作用就是对外提供增删改查接口，在他的内部封装了SQLiteDatabase，以及SQLiteOpenHelper，将常用的增删改查以静态方法的形式对外提供。并且还封装了一些对数据进行初步加工的方法。DAO的存在就是将应用层和数据持久层相互隔离，应用层需要操作数据时，只通过DAO来和持久层交互。在持久层的实现中可以引入CursorLoader之类的东西。在Android中的最佳实践是使用ContentProvider来访做DAO与数据层进行交互，因为Android为此提供了安全而完善的机制访问数据层。
-
-
-
-
 
 ##SQLite使用注意事项
 + 在对数据库进行操作的时候会访问文件系统，很有可能是耗时操作，因此建议放在异步线程进行数据库操作。
