@@ -8,8 +8,7 @@ google_analytics: UA-21332781-7
 
 paginate: 5
 links: 
-- name: 	Blog
-   url:		/
+
 - name:		About
    url:          	/about
 
