@@ -1,8 +1,6 @@
 title:            TedYin
 url:              http://tedyin.me
 description: "TedYin 's Record !"
-
-
 permalink:        pretty
 pygments:         true
 markdown:         rdiscount
