@@ -11,3 +11,5 @@ paginate: 5
 links: 
   - name:         About
     url:          /about
+   -name: Feed
+   url: /about
