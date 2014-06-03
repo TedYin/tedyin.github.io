@@ -1,15 +1,13 @@
 title:            TedYin
 url:              http://tedyin.me
-permalink:        pretty
+permalink:        http://tedyin.me
 pygments:         true
 markdown:         rdiscount
 rdiscount:
   extensions:     [smart]
-google_analytics: ""
+google_analytics: UA-21332781-7
 timezone:         China
 paginate: 5
 links: 
- - name:  Blog
-   url: http://tedyin.me
   - name:         About
     url:          /about
