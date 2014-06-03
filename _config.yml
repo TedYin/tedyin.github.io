@@ -1,11 +1,11 @@
 title:            TedYin
 url:              http://tedyin.me
-permalink:        http://tedyin.me
+permalink:        pretty
 pygments:         true
 markdown:         rdiscount
 rdiscount:
-  extensions:     [smart]
-google_analytics: UA-21332781-7
+extensions:     [smart]
+google_analytics: ""
 timezone:         China
 paginate: 5
 links: 
