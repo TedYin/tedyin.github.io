@@ -1,14 +1,16 @@
-title:            TedYin
-url:              http://tedyin.me
-description: "TedYin 's Record !"
-permalink:        pretty
+title:            		"TedYIn"
+description:		"TedYin ‘ s record !"
+url:              		"http://tedyin.me"
+signoff:			"TedYIn"
+permalink:        /:title.html
 pygments:         true
-markdown:         rdiscount
-rdiscount:
-extensions:     [smart]
-google_analytics: ""
-timezone:         China
-paginate: 6
+google_analytics: UA-21332781-7
+
+paginate: 5
 links: 
-  - name:         About
-    url:          /about
+- name:		About
+   url:          	/about.md
+
+markdown:        redcarpet
+redcarpet:
+extensions:     [smart]
