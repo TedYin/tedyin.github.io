@@ -1,5 +1,8 @@
 title:            TedYin
 url:              http://tedyin.me
+description: "TedYin 's Record !"
+
+
 permalink:        pretty
 pygments:         true
 markdown:         rdiscount
@@ -7,9 +10,7 @@ rdiscount:
 extensions:     [smart]
 google_analytics: ""
 timezone:         China
-paginate: 5
+paginate: 6
 links: 
   - name:         About
     url:          /about
-   -name: Feed
-   url: /about
