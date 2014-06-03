@@ -5,9 +5,11 @@ pygments:         true
 markdown:         rdiscount
 rdiscount:
   extensions:     [smart]
-google_analytics: UA-21332781-7
+google_analytics: ""
 timezone:         China
 paginate: 5
 links: 
+ - name:  Blog
+   url: http://tedyin.me
   - name:         About
     url:          /about
