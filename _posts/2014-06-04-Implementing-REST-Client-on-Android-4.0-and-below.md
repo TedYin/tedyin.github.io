@@ -11,7 +11,7 @@ Implementing-REST-Client-on-Android-4.0-and-below
 
 REST Client 是一个非常好的处理客户端与服务端之间交互的框架模型，他的机构如下：
 
-![framework](http://framework.jpg)
+![framework](http://tedyin.me/images/framework.png)
 
 他的最佳实践有以下几点：
 
