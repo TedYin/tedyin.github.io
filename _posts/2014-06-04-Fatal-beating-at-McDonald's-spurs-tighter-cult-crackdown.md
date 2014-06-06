@@ -2,7 +2,7 @@
 title: Fatal beating at McDonald's spurs tighter cult crackdown
 layout: post
 date: 2014-06-04 10:47:00
-tags:
+cover: /images/201406041218.jpg
 ---
 
 ![framework](http://tedyin.me/images/201406041218.jpg)

@@ -2,7 +2,7 @@
 title: Tough regime cranks out test winners
 layout: post
 date: 2014-06-06
-tags:
+cover: /images/201406061227.jpg
 ---
 ![School](http://tedyin.me/images/201406061227.jpg)
 
