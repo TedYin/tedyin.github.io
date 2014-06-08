@@ -2,54 +2,93 @@
 title: Learn ActionBar
 layout: post
 date: 2014-06-04
-tags:
 ---
 
 #ActionBar Overview
+ActionBar有如下几个特点：
++ ActionBar 是android系统提供专门用来应用导行功能的一个控件
++ 提供一种非常便捷和高效的导航方式
++ 支持不同页面间的导航功能切换
 
-#ActionBar Style
+是android在3.0时添加的一个重要组件。它可以通过support library的形式被集成到2.1及其以上的版本中使用。
 
 #ActionBar Use
+下面主要介绍一下使用support v7 library中的ActionBar。
+###Add ActionBar
+1. 先[导入v7包](http://developer.android.com/tools/support-library/setup.html).
+2. 你的Activity必须继承自ActionBarActivity
+3. 在你的应用中使用Theme.AppComapt主题或者使用继承自Theme.AppCompat主题的自定义。*注：Theme.AppCompat 相当于3.0中添加的Theme.Holo主题*
+这样在你的Activity中就完成了ActionBar的添加。
 
-#ActionBar Note
-+ ActionBar中使用的Icon应当保存在res/drawable目录下
-+ showAs属性在API level 11以下是不支持的，需要用户去自定义。
-+ 
+###Removing the action bar
+关闭ActionBar的方法如下：
++ getSupportActionBar()得到ActionBar的对象，调用hide方法即可关闭ActionBar。如果想再次显示，则可以是用show方法即可
++ 使用Them.AppCompat.NoActonBar方法，不使用Actionbar
+>注意：
+>+ support包中的getSupportXXX()方法就等同于在加入该控件的API level以上的SDK中调用 getXXX()方法。
+>+ 在使用ActionBar的show()和hide()方法的时候，会导致界面布局调整，整个界面会被重绘，增加性能成本，如果需要经常对ActionBar进行隐藏和显示操作，我们可以使用ActionBar Overlay来完成这个需求。ActionBar Overlay的实现方式是使用Custom的主题继承自Theme.AppCompat并且设置windowActionBarOverlay这个属性为true即可。它会使得ActionBar浮在Layout的上面，此时如果对ActionBar进行show或者hide操作，就不会进行界面重绘了。如果你的布局不想被ActionBar挡住，则可以在该布局的根一级的Layout中加入paddingTop 或者marginTop属性，给他们赋值为"?android:attr/actionBarSize"即可。
 
+###Add Action Items
 
-1.icon类的图标应该保存在res/drawable目录下。
-2.showAs 在3.0（API level 11以下）需要自定义这个属性
-3.performing Up navigation simply requires that you declare the parent activity in the manifest file and enable the Up button for the action bar
-4.在低于API level 11 以下，使用meta-data来声明Activity与其父类之间的关系 
-<!-- Parent activity meta-data to support 4.0 and lower -->
+上面已经有了ActionBar，但是如何让这个ActionBar进行工作呢?因此我们需要给ActionBar添加内容。ActionBar相当于一个导航容器，他是一个什么都能接收到东西。你可以自定义许多内容给他，他都可以将这些东西组织并展现出来。ActionBar跟3.0之前的版本中的菜单一样，提供一堆功能导航，只是在3.0之后将它的作用明确了，尤其是在4.0之后配合Android Design一起使得它的功能性更明确了就是处理Activity中的动作交互。添加Action Item我们只需在res/menu/xxx_menu.xml中定义好要添加的Item内容，然后重载OnCreateOptionsMenu()方法，并且在其中使用MenuInflater将这个xml布局inflate成Menu对象，并且设置给ActionBar即可。
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+xxx_menu.xml布局文件如下：
+
+    <menu xmlns:android="http://schemas.android.com/apk/res/android" >
+        <item android:id="@+id/action_search"
+              android:icon="@drawable/ic_action_search"
+              android:title="@string/action_search"/>
+        <item android:id="@+id/action_compose"
+              android:icon="@drawable/ic_action_compose"
+              android:title="@string/action_compose" 
+              yourStyle:showAsAction="ifRoome"/>
+    </menu>
+
+*yourStyle:showAsAction*是需要用户自定义的属性，在3.0以上版本中属于Android的默认属性。`showAsAction`属性的选项有`ifRoom/always/never `,作用如下：
++ ifRoom 表示如果有做够的空间，Action将会显示在ActionBar，否则会隐藏到overFlow中
++ always 表示永远显示在ActionBar上
++ never表示永不显示在ActionBar上，即永远显示在overflow中
+
+当用户点击上述按钮的时候会调用`onOptionsItemSelected(MenuItem item)`方法，并且将被点击的Item传入到Menu中去，因此我们可以重载该方法并且在该方法中处理按钮点击事件，和处理普通的点击事件一样。
+
+>如果你是在Fragment中使用`OnCreateOptionsMenu`方法inflate一个Menu到ActionBar上，当你在Fragment中点击ActionBar中的Action时，如果你在`OnOptionsItemSelected`中使用了`super.onOptionsItemSelected`方法，系统会先调用Activity中的`OnOptionsItemSelected()`方法去处理，处理完成后才会调用Fragment中的这个方法处理，如果不加则会直接调用Fragment中的`OnOptionsItemSelected()`方法处理。
+
+###Using Split Action bar
+Split ActionBar其实就是对ActionBar的分割，当用户使用窄屏幕的时候，如果在ActionBar上面不够放，系统会将Actions都放在屏幕的底部，来为导航和标题留出空间。使用Split Action Bar的效果图如下
+![normal ActionBar](http://tedyin.me/images/201406081930.png)   ![split ActionBar](http://tedyin.me/images/201406081931.png)
+
+使用Split action bar 的方法如下:
++ 给`<application>`标签添加属性 `uiOptions="splitActionBarWhenNarrow"`,使得所有的Activity都应用Split Action Bar或者给某些指定的`<activity>`标签添加该属性，指定某几个Activity应用Split Action Bar。这个属性只能用于API level 14及其以上，如果想对其以下的版本进行兼容，需要在`<activity>`标签下使用`<meta-data>`标签来指定
+
+    <activity ... >
         <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.example.myfirstapp.MainActivity" />
-            为了支持4.1以下的版本。
-5.API Leve > 11 (3.0)的就不需要Support包了，所以在使用的时候直接就是getXXX方法而不是使用getSupportXXX方法。
-6.home的按钮id为android.r.id.home，当点击Up Button时，会调用onOptionsItemSelected().并且传入Up Button的id
+            android:name="android.support.UI_OPTIONS"
+            android:value="splitActionBarWhenNarrow"/>
+    </activity>
+如果Activity使用了该属性，并且对于ActionBar上的icon和title分别使用`setDisplayShowHomeEnable(false)`和`setDisplayShowTitleEnable(false)`进行隐藏，那那么在有tab的情况下，main ActionBar也会被自动隐藏，效果如下图：
+ ![split ActionBar](http://tedyin.me/images/201406081931.png)    ![split ActionBar](http://tedyin.me/images/201406082059.png)
 
-7.在使用Up Button 的时候我们可以使用NavUtils这个工具类来简化我们的处理。当你的Activity是从另外的应用开启的时候，你的Activity就会在一个新的task中，这个task是属于你的APP的，你应当处理用户对这个activity的Up Button的点击事件，即实现onOptionItemSelected方法。处理id为android.id.home这个回调。处理过程如下：
-    1.调用shouldUpRecreateTask(Context,Intent)方法，来检查你的Activity是否在整个系统的App ‘s stack中存在，如果返回true（需要重新创建，Activity不存在），则使用TaskStackBuilder来创建新的task，否则使用navigateUpFromSameTask()方法跳转到目标Activity。
-```java
-    //使用方法如下
-    case android.R.id.home:
-        Intent upIntent = NavUtils.getParentActivityIntent(this);
-        if(NavUtils.shouldUpRecreateTask){
-            //需要重新创建一个Task，来保存当前Activity的Parent Activity 到新的task stack中
-            TaskStackBuilder.create(this).addNextIntentWithParentStack(upIntent).startActivitise();
-        }else{
-            //不需要的新建一个task来维护当前Activity和它的Parent Activity之间的stack关系，所以直接启动切换到父Activity即可
-            NavUtils.navigateUpTo(this,upIntent);
-        }
-    break;
-```
-*注意:*为了确保addNextIntentWithParentStack()方法能使得Activity以正确的顺序进入新建的task stack中，需要我们在AndroidMainfest文件中指定好Activity与其父类之间的关系。
+###Navigating Up with the App Icon
+Navigating Up返回到上一级Activity，有两种方法：
+1. 在`<activity>`标签中设置`android:parentActivityName="me.tedyin.todo.MainActivity"`（API level 16及其以上）即可，对于API level低于16的可以使用`<meta-data>`标签来指定
 
-8.通过ActionBar Style来自定义ActionBar的样式，背景颜色等。
-9.在Support包中，Widget.AppCompat.* 就相当于3.0以上的Theme.holo主题风格。
-10.在Fragment中使用Up Button的时候，可以使用FragmentManager将逻辑上的Parent Fragment加入到task stack中，用法如下：
-getSupportFragmentManager().beginTransaction().add(xxxFragment,"xxx").addToBackStack().commit();//注意，在commit之前要调用addToBackStack()方法将其放入stack中。
-11.只要在AndroidMainfest文件中对`<activity>`标签设置了parentActivityName属性，就会默认设置getActionBar.setDisplayHomeAsUpEnabled(true)
+    <activity  ... >
+        <meta-data
+            android:name="android:support.PARENT_ACTIVITY"
+            android:value="com.example.app.MainActivity"
+            />
+    <activity >
 
-12.ActionBar 可以通过Style来自定义ActionBar的各种属性，实现各种ActionBar的样式。如果我们要对ActionBar进行操作，使它能隐藏或者显示，我们会用ActionBar自带的show或者close。但是show或者close的话都会使得Layout界面占满整个屏幕，界面会重新绘制，并且刷新。但是使用ActionBar overlay的时候它是浮在布局上面的，当隐藏或者显示的时候不会导致界面重绘，可以在布局文件中加入 margin或者paddingTop等android:marginTop="?android:attr/actionBarSize"属性即可使得布局文件不被遮挡住。想实现ActionBar Overlay只需要自定义一下ActionBar的style属性，设置`<item name="android:windowActionBarOverlay">true</item>`即可。
+2. 在代码中使用`getSupportActionBar().setDisplayHomeAsUpEnable(true)`来开启navigate up 按钮。
+
+当Up Action 打开后，此时Icon前面会出现一个系统默认的返回按钮，表示可以返回到父Activity中。当点击该Up Action的时候，会调用`OnOptionsItemSelected(MenuItem)`方法，传入的是Id为`android.r.id.home`的`MenuItem`对象，我们可以重载上述方法来处理此点击事件。        
+
+*未完待续~~*
