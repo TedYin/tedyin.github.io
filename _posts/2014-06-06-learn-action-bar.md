@@ -103,4 +103,60 @@ Navigating Up返回到上一级Activity，有两种方法：
 
 当Up Action 打开后，此时Icon前面会出现一个系统默认的返回按钮，表示可以返回到父Activity中。当点击该Up Action的时候，会调用`OnOptionsItemSelected(MenuItem)`方法，传入的是Id为`android.r.id.home`的`MenuItem`对象，我们可以重载上述方法来处理此点击事件。        
 
+>如果我们的应用在关闭的情况下被第三方打开某个Activity，那么此时我们的activity则是在一个新的task stack中，此时该Activity的Logic Parent是不在该stack中的，为了保证操作的连贯性，你应该处理这种情况。我们可以使用NavUtils 来帮助我们处理，处理的过程如下:
+1. 调用shouldUpReCreateTask(Context , Intent)来检查你的Activity是否存在一个App ‘s stack，包含你的Activity，如果返回true（不存在，需要重新创建），如果返回false（存在，不需要重新创建）。
+2. 如果需要重新创建，则需要使用TaskStackBuilder来方便我们创新的task stack 。
+
+最佳实践如下:
+
+    //重载OnOptionsItemSelected(MenuItem)方法
+    case android.R.id.home:
+        Intent upIntent = NavUtils.getParentActivityIntent(this);
+        if(NavUtils.shouldUpRecreateTask){
+            //需要重新创建一个Task，来保存当前Activity的Parent Activity 到新的task stack中
+            TaskStackBuilder.create(this).addNextIntentWithParentStack(upIntent).startActivitise();
+        }else{
+            //不需要的新建一个task来维护当前Activity和它的Parent Activity之间的stack关系，所以直接启动切换到父Activity即可
+            NavUtils.navigateUpTo(this,upIntent);
+        }
+    break;
+
+>如果是从Fragment中处理Navigation Up,我们需要覆写onSupportNavigateUp()方法去处理fragment transaction。通常我们会用popBackStack()方法处理fragment切换到Parent Fragment中去。
+
+###Adding an Action View
+Action View就是显示在ActionBar上面的Widget，他可以不需要改变Activity Fragment，并且也不会替换原有的ActionBar，不会导致界面重绘等问题，可以快速提供一个丰富的Action交互空间。我们常见的Search操作就是使用的ActionView来实现的。
+####声明一个ActionView有如下方法:
+
++ 使用`actionLayout`属性来指定一个resource资源来生成一个ActionView
++ 使用`actionViewClass`属性来指定一个Widget来生成一个ActionView
+
+添加一个ActionView的方法如下:(此处添加一个Widget来作为ActionView)
+
+    <menu ... >
+        <item  android:id = "@+id/action_search"
+            android:title="search"
+            andorid:icon="@drawable/icon"
+            yourStyle:showAsAction="ifRoom|collapseActionView"
+            yourStyle:actionViewClass="android.support.v7.widget.SearchView"
+            >
+    </menu>
+上述中collapseActionView的作用即为当点击Action Button时触发ActionView。
+
+上面声明了ActionView，我们可以在OnCreateOptionsMenu(Menu)方法中inflate出这个ActionView并将其加入到ActionBar中。
+
+    @Overried
+    public void OnCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.layout.menu_actions,  menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView)MenuItemCompat.getActionView(searchItem);
+        ...
+        return super.OnCreateOptionsMenu(menu);
+    }
+使用MenuItemCompat的静态方法getActionView(MenuItem)即可得到ActionView。
+*在API leve 11及其以上，`MenuItem`对象也提供`getActionView()`方法，即：`menu.findItem(R.id.action_search).getActionView()`*
+
+###Handling collapsible action views
+上面只讲述了如何打开Action view但是没有告诉你怎么collapse 一个 action view，下面就讨论一下如何collapse一个action view。
+
+
 *未完待续~~*
