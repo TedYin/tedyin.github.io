@@ -64,8 +64,9 @@ xxx_menu.xml布局文件如下：
 >如果你是在Fragment中使用`OnCreateOptionsMenu`方法inflate一个Menu到ActionBar上，当你在Fragment中点击ActionBar中的Action时，如果你在`OnOptionsItemSelected`中使用了`super.onOptionsItemSelected`方法，系统会先调用Activity中的`OnOptionsItemSelected()`方法去处理，处理完成后才会调用Fragment中的这个方法处理，如果不加则会直接调用Fragment中的`OnOptionsItemSelected()`方法处理。
 
 ###Using Split Action bar
-Split ActionBar其实就是对ActionBar的分割，当用户使用窄屏幕的时候，如果在ActionBar上面不够放，系统会将Actions都放在屏幕的底部，来为导航和标题留出空间。使用Split Action Bar的效果图如下
-![normal ActionBar](http://tedyin.me/images/201406081930.png)   ![split ActionBar](http://tedyin.me/images/201406081931.png)
+Split ActionBar其实就是对ActionBar的分割，当用户使用窄屏幕的时候，如果在ActionBar上面不够放，系统会将Actions都放在屏幕的底部，来为导航和标题留出空间。使用Split Action Bar的效果图如下第1~2图。
+
+![normal ActionBar](http://tedyin.me/images/201406090916.png) 
 
 使用Split action bar 的方法如下:
 
@@ -79,8 +80,7 @@ Split ActionBar其实就是对ActionBar的分割，当用户使用窄屏幕的�
     </activity>
 ```
 
-如果Activity使用了该属性，并且对于ActionBar上的icon和title分别使用`setDisplayShowHomeEnable(false)`和`setDisplayShowTitleEnable(false)`进行隐藏，那那么在有tab的情况下，main ActionBar也会被自动隐藏，效果如下图：
- ![split ActionBar](http://tedyin.me/images/201406081931.png)    ![split ActionBar](http://tedyin.me/images/201406082059.png)
+如果Activity使用了该属性，并且对于ActionBar上的icon和title分别使用`setDisplayShowHomeEnable(false)`和`setDisplayShowTitleEnable(false)`进行隐藏，那那么在有tab的情况下，main ActionBar也会被自动隐藏，效果如上图中第2~3图。
 
 ###Navigating Up with the App Icon
 Navigating Up返回到上一级Activity，有两种方法：
