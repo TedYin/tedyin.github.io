@@ -25,8 +25,9 @@ ActionBar有如下几个特点：
 + getSupportActionBar()得到ActionBar的对象，调用hide方法即可关闭ActionBar。如果想再次显示，则可以是用show方法即可
 + 使用Them.AppCompat.NoActonBar方法，不使用Actionbar
 >注意：
->+ support包中的getSupportXXX()方法就等同于在加入该控件的API level以上的SDK中调用 getXXX()方法。
->+ 在使用ActionBar的show()和hide()方法的时候，会导致界面布局调整，整个界面会被重绘，增加性能成本，如果需要经常对ActionBar进行隐藏和显示操作，我们可以使用ActionBar Overlay来完成这个需求。ActionBar Overlay的实现方式是使用Custom的主题继承自Theme.AppCompat并且设置windowActionBarOverlay这个属性为true即可。它会使得ActionBar浮在Layout的上面，此时如果对ActionBar进行show或者hide操作，就不会进行界面重绘了。如果你的布局不想被ActionBar挡住，则可以在该布局的根一级的Layout中加入paddingTop 或者marginTop属性，给他们赋值为"?android:attr/actionBarSize"即可。
+
++ support包中的getSupportXXX()方法就等同于在加入该控件的API level以上的SDK中调用 getXXX()方法。
++ 在使用ActionBar的show()和hide()方法的时候，会导致界面布局调整，整个界面会被重绘，增加性能成本，如果需要经常对ActionBar进行隐藏和显示操作，我们可以使用ActionBar Overlay来完成这个需求。ActionBar Overlay的实现方式是使用Custom的主题继承自Theme.AppCompat并且设置windowActionBarOverlay这个属性为true即可。它会使得ActionBar浮在Layout的上面，此时如果对ActionBar进行show或者hide操作，就不会进行界面重绘了。如果你的布局不想被ActionBar挡住，则可以在该布局的根一级的Layout中加入paddingTop 或者marginTop属性，给他们赋值为"?android:attr/actionBarSize"即可。
 
 ###Add Action Items
 
@@ -52,7 +53,8 @@ xxx_menu.xml布局文件如下：
               yourStyle:showAsAction="ifRoome"/>
     </menu>
 
-*yourStyle:showAsAction*是需要用户自定义的属性，在3.0以上版本中属于Android的默认属性。`showAsAction`属性的选项有`ifRoom/always/never `,作用如下：
+*yourStyle:showAsAction*是需要用户自定义的属性，在3.0以上版本中属于Android的默认属性。`showAsAction`属性的选项有`ifRoom/always/never `,作用如下:
+
 + ifRoom 表示如果有做够的空间，Action将会显示在ActionBar，否则会隐藏到overFlow中
 + always 表示永远显示在ActionBar上
 + never表示永不显示在ActionBar上，即永远显示在overflow中
@@ -66,13 +68,17 @@ Split ActionBar其实就是对ActionBar的分割，当用户使用窄屏幕的�
 ![normal ActionBar](http://tedyin.me/images/201406081930.png)   ![split ActionBar](http://tedyin.me/images/201406081931.png)
 
 使用Split action bar 的方法如下:
+
 + 给`<application>`标签添加属性 `uiOptions="splitActionBarWhenNarrow"`,使得所有的Activity都应用Split Action Bar或者给某些指定的`<activity>`标签添加该属性，指定某几个Activity应用Split Action Bar。这个属性只能用于API level 14及其以上，如果想对其以下的版本进行兼容，需要在`<activity>`标签下使用`<meta-data>`标签来指定
 
+```
     <activity ... >
         <meta-data
             android:name="android.support.UI_OPTIONS"
             android:value="splitActionBarWhenNarrow"/>
     </activity>
+```
+
 如果Activity使用了该属性，并且对于ActionBar上的icon和title分别使用`setDisplayShowHomeEnable(false)`和`setDisplayShowTitleEnable(false)`进行隐藏，那那么在有tab的情况下，main ActionBar也会被自动隐藏，效果如下图：
  ![split ActionBar](http://tedyin.me/images/201406081931.png)    ![split ActionBar](http://tedyin.me/images/201406082059.png)
 
