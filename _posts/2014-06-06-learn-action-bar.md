@@ -5,7 +5,8 @@ date: 2014-06-04
 ---
 
 #ActionBar Overview
-ActionBar有如下几个特点：
+ActionBar有如下几个特点:
+
 + ActionBar 是android系统提供专门用来应用导行功能的一个控件
 + 提供一种非常便捷和高效的导航方式
 + 支持不同页面间的导航功能切换
@@ -15,19 +16,24 @@ ActionBar有如下几个特点：
 #ActionBar Use
 下面主要介绍一下使用support v7 library中的ActionBar。
 ###Add ActionBar
+
 1. 先[导入v7包](http://developer.android.com/tools/support-library/setup.html).
 2. 你的Activity必须继承自ActionBarActivity
-3. 在你的应用中使用Theme.AppComapt主题或者使用继承自Theme.AppCompat主题的自定义。*注：Theme.AppCompat 相当于3.0中添加的Theme.Holo主题*
+3. 在你的应用中使用Theme.AppComapt主题或者使用继承自Theme.AppCompat主题的自定义。
+
+*注：Theme.AppCompat 相当于3.0中添加的Theme.Holo主题*
 这样在你的Activity中就完成了ActionBar的添加。
 
 ###Removing the action bar
-关闭ActionBar的方法如下：
+关闭ActionBar的方法如下:
+
 + getSupportActionBar()得到ActionBar的对象，调用hide方法即可关闭ActionBar。如果想再次显示，则可以是用show方法即可
 + 使用Them.AppCompat.NoActonBar方法，不使用Actionbar
->注意：
 
-+ support包中的getSupportXXX()方法就等同于在加入该控件的API level以上的SDK中调用 getXXX()方法。
-+ 在使用ActionBar的show()和hide()方法的时候，会导致界面布局调整，整个界面会被重绘，增加性能成本，如果需要经常对ActionBar进行隐藏和显示操作，我们可以使用ActionBar Overlay来完成这个需求。ActionBar Overlay的实现方式是使用Custom的主题继承自Theme.AppCompat并且设置windowActionBarOverlay这个属性为true即可。它会使得ActionBar浮在Layout的上面，此时如果对ActionBar进行show或者hide操作，就不会进行界面重绘了。如果你的布局不想被ActionBar挡住，则可以在该布局的根一级的Layout中加入paddingTop 或者marginTop属性，给他们赋值为"?android:attr/actionBarSize"即可。
+>注意
+
+>+ support包中的getSupportXXX()方法就等同于在加入该控件的API level以上的SDK中调用 getXXX()方法。
+>+ 在使用ActionBar的show()和hide()方法的时候，会导致界面布局调整，整个界面会被重绘，增加性能成本，如果需要经常对ActionBar进行隐藏和显示操作，我们可以使用ActionBar Overlay来完成这个需求。ActionBar Overlay的实现方式是使用Custom的主题继承自Theme.AppCompat并且设置windowActionBarOverlay这个属性为true即可。它会使得ActionBar浮在Layout的上面，此时如果对ActionBar进行show或者hide操作，就不会进行界面重绘了。如果你的布局不想被ActionBar挡住，则可以在该布局的根一级的Layout中加入paddingTop 或者marginTop属性，给他们赋值为"?android:attr/actionBarSize"即可。
 
 ###Add Action Items
 
