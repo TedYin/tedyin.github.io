@@ -156,7 +156,25 @@ Action View就是显示在ActionBar上面的Widget，他可以不需要改变Act
 *在API leve 11及其以上，`MenuItem`对象也提供`getActionView()`方法，即：`menu.findItem(R.id.action_search).getActionView()`*
 
 ###Handling collapsible action views
-上面只讲述了如何打开Action view但是没有告诉你怎么collapse 一个 action view，下面就讨论一下如何collapse一个action view。
+上面只讲述了如何打开Action view但是没有告诉你怎么collapse 一个 action view，下面就讨论一下如何collapse一个action view。当你点击返回键或者Up navigate button时，ActionView会自动收起。我们可以使用`OnActionExpandListener`来监听ActionView的打开与关闭。
 
+    @Override
+    public void OnCreateOptionsMenu(Menu menu){
+        MenuItemCompat.setOnActionExpandListener(menuItem, new OnActionExpandListener(){
+            @Overried
+            public boolean onMenuItemActionCollapse(MenuItem item){
+                //do something
+            }
+            @Overried
+            public boolean onMenuItemActionExpand(MenuItem item){
+                //do something
+            }
+        });
+    }
+
+###Add an Action Provider
+每一个ActionProvider都已经定义好了自己的行为，因此你不需要再在OnOptionItemSelected()方法中对ActionProvider处理。虽然不用处理，但是如果你需要监听ActionProvider的行为的话，依然可以在OnOptionsItemSelected()方法中监听处理，但是一定要注意，然会值应该为false，否则ActionProvider无法收到点击事件。如果ActionProvider提供一个子菜单的话，那么子菜单中的点击事件不会调用OnOptionsItemSelected()方法。使用了ActionProvider我们需要处理的其实就是
+ActionProvider使用方法如下:
+    
 
 *未完待续~~*
