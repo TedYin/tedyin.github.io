@@ -137,7 +137,7 @@ Action View就是显示在ActionBar上面的Widget，他可以不需要改变Act
             android:title="search"
             andorid:icon="@drawable/icon"
             yourStyle:showAsAction="ifRoom|collapseActionView"
-            yourStyle:actionViewClass="android.support.v7.widget.SearchView"
+            yourStyle:actionViewClass="android.support.v7.widget.SearchView" 
             >
     </menu>
 上述中collapseActionView的作用即为当点击Action Button时触发ActionView。
@@ -175,6 +175,119 @@ Action View就是显示在ActionBar上面的Widget，他可以不需要改变Act
 ###Add an Action Provider
 每一个ActionProvider都已经定义好了自己的行为，因此你不需要再在OnOptionItemSelected()方法中对ActionProvider处理。虽然不用处理，但是如果你需要监听ActionProvider的行为的话，依然可以在OnOptionsItemSelected()方法中监听处理，但是一定要注意，然会值应该为false，否则ActionProvider无法收到点击事件。如果ActionProvider提供一个子菜单的话，那么子菜单中的点击事件不会调用OnOptionsItemSelected()方法。使用了ActionProvider我们需要处理的其实就是
 ActionProvider使用方法如下:
+    
+    <?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:yourapp="http://schemas.android.com/apk/res-auto" >
+        <item android:id="@+id/action_share"
+              android:title="@string/share"
+              yourStyle:showAsAction="ifRoom"
+              yourStyle:actionProviderClass="android.support.v7.widget.ShareActionProvider"
+              />
+        ...
+    </menu>    
+
+上述中`actionProviderClass`属性，在API Level 11以下需要自定义实现。添加完了布局文件，我们需要做的就是给在初始化ActionProvider的时候传入正确的Intent来保证他会按照我们设置的方式来工作。因为Context会变化，因此必须在每次更新的时候都要调用一次`setShareItent()`来保证我们Inent的正确。
+
+    private ShareActionProvider shareActionProvider;
+    //...
+    @Overried
+    public boolean OnCreateOptionsMenu(Menu menu){
+        getMenuInflater.inflate(R.id.menu,menu);
+        //set up share action provider
+        MenuItem shareItem = menu.findItem(R.id.action_share);
+        shareActionProvider = (ShareActionProvider)MenuItemCompat.getActionProvider(shareItem);
+        //set share intent
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("image/*");
+        shareActionProvider.setShareIntent(intent);
+        return supper.OnCreateOptionsMenu(menu);
+    }
+
+`ShareActionProvider`默认会根据用户的使用频率动态的调整每个Item的先后顺序，这个排序是保存在一个私有的文件`DEFAULT_SHARE_HISTORY_FIILE_NAME`中，我们可以使用`ShareActionProvider`对象的`setShareHistoryFileName("example.xml")`方法来指定一个排序文件，按照我们喜欢的方式进行自定义排序。
+
+###Creating a custom action provider
+使用自定义的Action Provider可以很方便的让你去管理和重用那些Action动作，而不用你再去每个Activity或者Fragment中去处理Action的行为。
+创建自定义Action Provider的步骤如下:
+
+1. 继承ActionProvider这个类
+2. 实现ActionProvider()这个构造方法，他会传递一个Application Context 给你，你需要保存这个Context为后面其他回调方法提供。
+3. 实现`onCreateActionView(MenuItem menuItem)`方法，这个方法是用来inflate action view的。
+4. 实现`onPerformDefaultAction()`这个方法是在触发Action的时候系统调用的。这个方法默认是不实现任何操作，并且返回false
+
+*注:如果你的ActionProvider是放在Overflow中的，而且它有subMenu，那么在点击时`onPerformDefaultAction()`这个方法是不会被调用的*
+
+###Adding  Navigation Tabs
+Tabs 提供了方便的导航，他的添加方法如下:
+
+1. 实现`ActionBar.TabListener`接口。这个接口提供了许多tab事件的回调方法，你可以在这个接口中处理和tab相关的操作。
+2. 对于每个你想添加的tab你在初始化这个tab的时候，可以通过`setTabListener()`方法添加`TabListener`，也可以同过`setTabTitle(title)`来设置tab的属性等。
+3. 当初始化好一个tab后可以使用`addTab(yourTab)`方法将它加入到ActionBar去。
+4. 必须调用`setNavigationMode(NAVIGATION_MODE_TABS)`方法让tab显示出来。
+
+>注意:
+>1. ActionBar.TabListener的回调方法不会指定哪个fragment和具体的tab绑定，它只会提供当前选中了哪个tab，你需要自己根据需要绑定，下面介绍一种绑定实现.
+>2. 初始化一个Tab的方法: Tab tab = actionBar.newTab().setText("tab").setTabListener(tabListener);   然后 actionBar.addTab(tab);即可。
+
+
+    //TabListener的实现
+    public static class TabListener<T extends Fragment> implements ActionBar.TabListener{
+        private Fragment mFragment;
+        private final String mTag;//用来唯一标识Fragment在FragmentTransaction中的key
+        private final Activity mActivity;//用来初始化Fragment
+        private final Class<T> mClass;//Frangment的类，用来初始化fragment
+        public TabListener(Activity activity, String keyTag, Class<T> clz){
+            this.mTag = keyTag;
+            this.mActivity = activity;
+            this.mClass = clz;
+        }
+        public void onTabSelected(Tab tab, FragmentTransaction ft){
+            // when tab selected
+            //如果没有初始化，则进行初始化
+            if(mFragment == null){
+                mFragment = Fragment.instantiate(mActivity, mClass.getName());
+                ft.add(android.R.id.content,mFragment,mTag);
+            }else{
+                //存在则直接attach显示
+                ft.attach(mFragment);
+            }
+        }
+        public void onTabUnSelected(Tab tab, FragmenTransaction ft){
+            //whne tab unselected
+            if(mFragment != null){
+                //detach ，因为别的Fragment要attach显示
+                ft.detach(mFragment);
+            }
+        }
+        public void onTabReselected(Tab tab. FragmentTransaction ft){
+            //user select the already selected tab , Usually do nothing. 因为他就是当前显示的，所以不需要操作什么。
+        }
+    }
+
+>**注意：在回调中我们禁止调用commit()方法来确认fragment transaction，因为系统会为我们调用它，如果我们自己调用的话会出现异常。你同样也不能将这个fragment transaction 加入到back task stack中！**
+
+>*上面的`android.R.id.content`是root view的Id，在不使用`setContentView`时使用它来作为Fragment的容器*
+
+
+下面的代码使用了上面的TabListener，示例如下:
+
+    @Overried
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        //use the android.R.id.content as the container for each fragment , it is the root view id. 因此不用setContentView()
+        //setup action bar for tabs
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);//显示tabs
+        actionBar.setDisplayShowTitleEnable(false);
+        Tab tab1 = actionBar.newTab().setText("tab1").setTabListener(new TabListener<Fragment>(this,"tab1",MFirstFragment.class));
+        actionBar.addTab(tab);
+        Tab tab2 = actionBar.newTab().setText("tab2").setTabListener(new TabListener<Fragment>(thsi,"tab2",MSecondFragment.class));
+        actionBar.addTab(tab2);
+    }
+
+
+
+
     
 
 *未完待续~~*
