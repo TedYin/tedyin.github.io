@@ -92,12 +92,16 @@ Split ActionBar其实就是对ActionBar的分割，当用户使用窄屏幕的�
 Navigating Up返回到上一级Activity，有两种方法：
 1. 在`<activity>`标签中设置`android:parentActivityName="me.tedyin.todo.MainActivity"`（API level 16及其以上）即可，对于API level低于16的可以使用`<meta-data>`标签来指定
 
-    <activity  ... >
+    <activity  ...     		android:parentActivityName="com.example.app.MainActivity"
+    	>
         <meta-data
             android:name="android:support.PARENT_ACTIVITY"
             android:value="com.example.app.MainActivity"
             />
     <activity >
+    
+ >*注意：上面`android:parentActivityName`的值必须和下面meta-data的value中定义的值相同。*
+ 
 
 2. 在代码中使用`getSupportActionBar().setDisplayHomeAsUpEnable(true)`来开启navigate up 按钮。
 
