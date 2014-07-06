@@ -55,7 +55,8 @@ String imageType = opt.outMimeType;
 下面是一个计算`inSampleSize`取值的方法：
 
 ```
-public static int calculateInSampleSize(BitmapFactory.Options opt, int reqWidth,
+public static int calculateInSampleSize(
+	BitmapFactory.Options opt, int reqWidth,
 	 int reqHeight){
 	final int height = opt.outHeight;
 	final int width = opt.outWidth;
