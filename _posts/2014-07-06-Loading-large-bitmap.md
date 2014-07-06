@@ -80,8 +80,8 @@ public static int calculateInSampleSize(BitmapFactory.Options opt, int reqWidth,
 3. 使用2中获得的`inSampleSize`来解析图片
 
 ```
-public static Bitmap decodeSampledBmpFromResource(Resource res,int
-	resId, int reqHeight, int reqWidth){
+public static Bitmap decodeSampledBmpFromResource(
+	Resource res,int resId,int reqHeight,int reqWidth){
 	// 1.获取图片的尺寸信息
 	BitmapFactory.Options opt = new BitmapFactory.Options();
 	opt.inJustDecodeBounds = true;
