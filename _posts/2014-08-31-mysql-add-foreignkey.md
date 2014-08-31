@@ -58,11 +58,11 @@ show create table tableName;
 
 ##遇到的问题
 在创建外键的过程中我遇到无法创建的问题，解决办法：
-为了得到详细的错误原因，可以使用下面方法:
+为了得到详细的错误原因，可以使用下面方法来获取出错的详细信息
 
-`SHOW ENGINE INNODB STATUS\G`
-
-来获取出错的详细信息。
+```
+SHOW ENGINE INNODB STATUS\G
+```
 
 ###常见的错误原因：
 
