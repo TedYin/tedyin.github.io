@@ -59,8 +59,13 @@ show create table tableName;
 ##遇到的问题
 在创建外键的过程中我遇到无法创建的问题，解决办法：
 为了得到详细的错误原因，可以使用下面方法:
-`SHOW ENGINE INNODB STATUS\G`来获取出错的详细信息。
-常见的错误原因：
+
+`SHOW ENGINE INNODB STATUS\G`
+
+来获取出错的详细信息。
+
+###常见的错误原因：
+
 + 没有建立索引
 + 外键(aid)和参考字段(bid)的值类型不一样
 + 创建外键的SQL有误
