@@ -17,6 +17,7 @@ date: 2014-09-08 20:34:00
 如果想自定义一个Style要从何下手呢？完全从头做起？那你就错了，在定义Style的时候，不需要从头做起，只需要继承Android提供的Style，并且对你需要自定义的属性进行修改即可。
 
 例如：继承TextView的默认Style，并对其进行修改
+
 ```
 <style name="GreenText" parent="@android:style/TextAppearance">
         <item name="android:textColor">#00FF00</item>
