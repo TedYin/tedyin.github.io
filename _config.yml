@@ -2,7 +2,7 @@ title:            "TedYin's Blog"
 description:      "Java Programer"
 url:              http://tedyin.me
 signoff:          "TedYin"
-disqus_shortname: "TedYin"
+disqus_shortname: "tedyin"
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
 google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
 
