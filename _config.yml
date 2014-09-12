@@ -7,17 +7,14 @@ facebook_appid:   # appid for like button, remove from /_includes/share.html if 
 google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
 
 links:
+  - name:         Blog
+    url:          /
   - name:         About
     url:          /about
-  - name:         Blog
-    url:          http://tedyin.me
-    external:     true
   - name:         Email
     url:          mailto:tedworld.time@gmail.com
-    external:     true
   - name:         GitHub
     url:          http://github.com/TedYin
-    external:     true
 highlighter:      pygments
 permalink:        pretty
 markdown:         redcarpet
