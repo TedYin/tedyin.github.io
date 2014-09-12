@@ -1,8 +1,8 @@
-title:            TedYin's Blog
-description:      Javaer
+title:            "TedYin's Blog"
+description:      "Java Programer"
 url:              http://tedyin.me
-signoff:          TedYin
-disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
+signoff:          "TedYin"
+disqus_shortname: "TedYin"
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
 google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
 
