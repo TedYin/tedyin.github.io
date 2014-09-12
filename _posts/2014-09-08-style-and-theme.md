@@ -4,8 +4,7 @@ title: Theme And Style
 date: 2014-09-08 20:34:00
 tag: - Android
 disqus: 'y'
-share: y
-categories: [Android]
+share: 'y'
 ---
 
 ##Theme和Style的区别
