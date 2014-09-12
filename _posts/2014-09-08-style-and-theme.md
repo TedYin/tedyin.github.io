@@ -20,21 +20,21 @@ disqus: tedyin
 
 例如：继承TextView的默认Style，并对其进行修改
 
-```
+{% highlight xml %}
 <style name="GreenText" parent="@android:style/TextAppearance">
         <item name="android:textColor">#00FF00</item>
 </style>
 
-```
+{% endhighlight %}
 
 如果你想继承自己定义的Style，而不是系统默认的Style的话，你可以直接在自定义Style名后面加上“.”再
 加新的属性名即可，不需要再去写`parent`。例如：创建一个新的Style并继承上面自定义的GreenText
 
-```
+{% highlight xml %}
 <style name=“GreenText.Big">
         <item name="android:textSize”>30sp</item>
 </style>
-```
+{% endhighlight %}
 
 ##Style的属性（Properties）
 从上面的介绍知道了如何自定义一个Style，你只需继承Android默认的Style并且重写其中你需要自定义的字
@@ -65,7 +65,7 @@ disqus: tedyin
 举例如下：
 假如当前版本为3.0以下，我们可以在res/values目录下定义style.xml:
 
-```
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
      ···
@@ -74,11 +74,11 @@ disqus: tedyin
     </style>
      ···
 </resources>
-```
+{% endhighlight %}
 
 假如当前版本为3.0~4.0之间我们可以在res/values-v11目录下定义style.xml:
 
-```
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
      ···
@@ -87,7 +87,7 @@ disqus: tedyin
     </style>
      ···
 </resources>
-```
+{% endhighlight %}
 
 Holo主题是在API 11后提供的。如果在API 14以上，我们可以在res/values-v14目录下定义。
 这样就可以很好的兼容多个版本，保持视觉上的统一。
@@ -109,23 +109,3 @@ Holo主题是在API 11后提供的。如果在API 14以上，我们可以在res/
 [Android的属性资源](http://developer.android.com/reference/android/R.attr.html)
 
 [可以在Theme中使用的属性](http://developer.android.com/reference/android/R.styleable.html#Theme)
-
-{% highlight ruby %}
-def whaaa
-  puts "I have a friend called Bobobmob."
-end
-{% endhighlight %}
-
-
-{% highlight xml %}
-```
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-     ···
-    <style name="LightThemeSelector" parent=“android:Theme.Holo.Light”>
-          ···
-    </style>
-     ···
-</resources>
-```
-{% endhighlight %}
