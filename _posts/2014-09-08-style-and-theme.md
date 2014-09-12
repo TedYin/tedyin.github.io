@@ -2,7 +2,7 @@
 layout: post
 title: Theme And Style
 date: 2014-09-08 20:34:00
-tag: [Android]
+tag: - Android
 ---
 
 ##Theme和Style的区别
@@ -103,6 +103,9 @@ Holo主题是在API 11后提供的。如果在API 14以上，我们可以在res/
 
 ##资源
 [Android的Style资源](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/res/res/values/styles.xml)
+
 [Android的Theme资源](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/res/res/values/themes.xml)
+
 [Android的属性资源](http://developer.android.com/reference/android/R.attr.html)
+
 [可以在Theme中使用的属性](http://developer.android.com/reference/android/R.styleable.html#Theme)
