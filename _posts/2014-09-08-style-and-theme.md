@@ -3,6 +3,9 @@ layout: post
 title: Theme And Style
 date: 2014-09-08 20:34:00
 tag: - Android
+disqus: 'y'
+share: y
+categories: [Android]
 ---
 
 ##Theme和Style的区别
@@ -109,3 +112,23 @@ Holo主题是在API 11后提供的。如果在API 14以上，我们可以在res/
 [Android的属性资源](http://developer.android.com/reference/android/R.attr.html)
 
 [可以在Theme中使用的属性](http://developer.android.com/reference/android/R.styleable.html#Theme)
+
+{% highlight ruby %}
+def whaaa
+  puts "I have a friend called Bobobmob."
+end
+{% endhighlight %}
+
+
+{% highlight xml %}
+```
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     ···
+    <style name="LightThemeSelector" parent=“android:Theme.Holo.Light”>
+          ···
+    </style>
+     ···
+</resources>
+```
+{% endhighlight %}
