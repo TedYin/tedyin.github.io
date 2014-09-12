@@ -2,6 +2,7 @@
 title: MySQL添加外键
 date: 2014-08-31 11:19:20
 layout: post
+disqus: tedyin
 ---
 
 ##什么是外键
