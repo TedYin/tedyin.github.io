@@ -2,8 +2,7 @@
 layout: post
 title: Theme And Style
 date: 2014-09-08 20:34:00
-tag:
-    - Android
+tag: [Android]
 ---
 
 ##Theme和Style的区别
