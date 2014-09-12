@@ -1,6 +1,6 @@
 title:            "TedYin's Blog"
 description:      "Java Programer"
-url:              http://tedyin.me
+url:              "http://tedyin.me"
 signoff:          "TedYin"
 disqus_shortname: "tedyin"
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
