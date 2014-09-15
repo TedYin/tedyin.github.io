@@ -53,7 +53,9 @@ public class DataFragment extends Framgent{
 {% endhighlight %}
 
 > + 注意：在Fragment中保存数据时，禁止保存和Activity绑定的数据，比如View，Adapter或Drawable等。因为Activity会被销毁后再重新启动，当重启后View等对象中引用的Activity已经失效，会引起错误导致程序崩溃。
- + 在setRetainInstance(boolean)方法设置为true的作用就是防止当Fragment所在的Activity被销毁的时候，Fragment不被销毁，设置为true后，Fragment的生命周期会有所改变，`onDestory()`方法不会被调用，但是`onDeteach()`方法会被调用，当Activity再次启动后，`onCreate()`方法不会被调用，`onAttach()`方法会被调用，`onActivity()`方法也会被调用。（就是跳过了Fragment的创建和销毁过程）
+
+
+> + 在setRetainInstance(boolean)方法设置为true的作用就是防止当Fragment所在的Activity被销毁的时候，Fragment不被销毁，设置为true后，Fragment的生命周期会有所改变，`onDestory()`方法不会被调用，但是`onDeteach()`方法会被调用，当Activity再次启动后，`onCreate()`方法不会被调用，`onAttach()`方法会被调用，`onActivity()`方法也会被调用。（就是跳过了Fragment的创建和销毁过程）
 
 当Activity重启之后，可通过FragmentManager获取，保存数据的Fragment，然后从Fragment中恢复保存的数据，代码如下:
 
