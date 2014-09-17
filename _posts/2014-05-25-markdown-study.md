@@ -1,13 +1,9 @@
 ---
 title: Markdown Study
 layout: post
-guid: Elt4Zo1Ybnle
 date: 2014-05-25 22:39:00
-tags: [markdown,study]
 ---
 
-<center>MarkDown语法学习
-===
 写文章需要标题，表示标题的方法有：
 
 	使用三个=号，来代表主标题

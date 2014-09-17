@@ -4,7 +4,7 @@ layout: post
 date: 2014-06-06
 cover: /images/201406061227.jpg
 ---
-![School](http://tedyin.me/images/201406061227.jpg)
+![School](http://blog.tedyin.me/images/201406061227.jpg)
 
 *Students prepare for the gaokao, China’s national university entrance exam, at No 2 Middle School in Nanchang, the capital of Jiangxi province. ZHOU MI / XINHUA*
 

@@ -72,7 +72,7 @@ xxx_menu.xml布局文件如下：
 ###Using Split Action bar
 Split ActionBar其实就是对ActionBar的分割，当用户使用窄屏幕的时候，如果在ActionBar上面不够放，系统会将Actions都放在屏幕的底部，来为导航和标题留出空间。使用Split Action Bar的效果图如下第1~2图。
 
-![normal ActionBar](http://tedyin.me/images/201406090916.png) 
+![normal ActionBar](http://blog.tedyin.me/images/201406090916.png) 
 
 使用Split action bar 的方法如下:
 

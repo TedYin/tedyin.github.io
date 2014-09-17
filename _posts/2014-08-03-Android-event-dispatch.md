@@ -33,7 +33,7 @@ Touch事件的传递过程：
      因此onTouch会在onClick之前调用，onClick方法会在ACTION_UP的时候调用，而不是在ACTION_DOWN的时候调用。执行了onTouch方法的时候如果返回true时dispatchTouchEvent也会返回true，事件就不会再往下执行了，也就不会再去执行onTouchEvent方法了，也就不会再去执行onClick方法了。
 
 事件传递的流程图：
-![event](http://tedyin.me/images/charflow.jpg)
+![event](http://blog.tedyin.me/images/charflow.jpg)
 
 
 对于嵌套布局的事件传递是：
@@ -44,4 +44,4 @@ Touch事件的传递过程：
 3. onInterceptTouchEvent方法的作用是拦截MotionEvent，它是ViewGroup特有的方法，如果在ViewGroup中它返回true表示事件被拦截，那么事件就不会再传递到View中去了。表现的现象就是你点击Layout中的一个Button但是调用的却是Layout中的onClick方法。
 
 常用控件之间的继承关系：
-![overried](http://tedyin.me/images/over.jpg)
+![overried](http://blog.tedyin.me/images/over.jpg)

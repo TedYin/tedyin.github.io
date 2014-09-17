@@ -3,9 +3,9 @@ title: Rain to hit most of China this week
 layout: post
 date: 2014-06-09 17:57:00
 ---
-![pic1](http://tedyin.me/images/201406091742.jpg)
+![pic1](http://blog.tedyin.me/images/201406091742.jpg)
 
-![pic2](http://tedyin.me/images/201406091743.jpg)
+![pic2](http://blog.tedyin.me/images/201406091743.jpg)
 
 >*大意：据国家气象局表示，未来三天，我国将普降大雨，北方以雷雨天气为主，并伴有大风、冰雹，南方的降雨集中于广西、重庆、云南等省份，其中贵州的降雨量预计将达到120mm。*
 

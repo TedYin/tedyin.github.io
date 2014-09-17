@@ -5,7 +5,7 @@ date: 2014-06-04 10:47:00
 cover: /images/201406041218.jpg
 ---
 
-![framework](http://tedyin.me/images/201406041218.jpg)
+![framework](http://blog.tedyin.me/images/201406041218.jpg)
 
 >The husband (left, with mask) and son (second to left) of a murder victim, together with other relatives, `mourn` the death of Wu Shuoyan in front of a McDonald's restaurant in Zhaoyuan, Shandong province, on Tuesday. Wu was severely beaten inside the restaurant on May 28, allegedly by six cult members, and died in a hospital. Kou Cong / For China Daily
 
