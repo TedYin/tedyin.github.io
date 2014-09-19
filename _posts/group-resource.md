@@ -42,7 +42,13 @@ res/
 
 上述`drawable`就是规定格式中的`<resources_name>`，`hdpi`就是规定格式中的`<config_qualifier>`。只要按照规定格式`<config_qualifier>`部分的内容可以自定义，但是不推荐这样做。
 
+> 使用了所有的`<config_qualifier>`的资源文件夹命名，排列的顺序是按照优先级排列的，结果为：
+values-mcc310-en-sw320dp-w720dp-h720dp-large-long-port-car-night-ldpi-notouch-keysexposed-nokeys-navexposed-nonav-v7
+> 具体的解释下:
+values-mcc310(sim卡运营商)-en(语言)-sw320dp(屏幕最小宽度)-w720dp(屏幕最佳宽度)-h720dp(屏幕最佳高度)-large(屏幕尺寸)-long(屏幕长短边模式)-port(当前屏幕横竖屏显示模式)-car(dock模式)-night(白天或夜晚)-ldpi(屏幕最佳dpi)-notouch(触摸屏模类型)-keysexposed(键盘类型)-nokey(硬按键类型)-navexposed(方向键是否可用)-nonav(方向键类型)-v7(android系统版本API level 7)
+
 2. 多套资源的命名必须和默认的(drawable、layout等)相同。具体的文件命名和组织结构可参考[不同资源的命名和组织](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources)
+
 
 ##为多个尺寸屏幕提供最好的适配
 为了适配大多数的机型，在组织App的资源文件时必须提供一套默认的资源数据，这样做的目的就是在无法找到合适的`<config_qualifier>`数据的时候可以使用默认的资源，而不至于找不到资源文件而崩溃，在API level 4以后，drawable资源可以不需要指定默认的资源文件，因为Android会根据屏幕的信息自己找到合适的图片资源并进行必要的缩放，但是此处还是推荐大家指定所有的默认资源！
@@ -58,3 +64,4 @@ res/
 ##参考
 [raw和asset的区别](http://www.cnblogs.com/leizhenzi/archive/2011/10/18/2216428.html)
 [资源文件的组织](http://developer.android.com/guide/topics/resources/providing-resources.html)
+[文件夹属性的使用](http://ivan-ru.iteye.com/blog/1711414)
