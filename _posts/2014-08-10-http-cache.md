@@ -1,6 +1,6 @@
 ---
 title: Http Cache 简介
-Layout: post
+layout: post
 date: 2014-08-10 19:45:00
 ---
 

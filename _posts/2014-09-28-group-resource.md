@@ -30,7 +30,7 @@ date: 2014-09-28 19:08:00
 
 1. 在`res/`下创建`<resources_name>-<config_qualifier>`这种格式的文件夹，`<config_qualifier>`的属性可以添加多个，中间使用`-`隔开即可,但是要注意分类的顺序，大类属性在前，小类属性在后即可(大类属性中包含了小类属性)，前面的属性包含后面的属性举例如下:
 
-```
+{% highlight xml %}
 res/
     drawable/   
         icon.png
@@ -41,7 +41,7 @@ res/
     drawable-hdpi-landscape/  
     	icon.png
     	background.png
-```
+{% endhighlight %}
 
 上述`drawable`就是规定格式中的`<resources_name>`，`hdpi`就是规定格式中的`<config_qualifier>`。只要按照规定格式`<config_qualifier>`部分的内容可以自定义，但是不推荐这样做。
 
