@@ -14,8 +14,8 @@ title: Irregular Shape
 
 使用这种方法实现的话，我们需要使用到两张图片，一张是原图，另外一张就是与原图大小尺寸完全相同的模板图片比如下面两幅：
 
-![dog](http:blog.tedyin.me/images/dog.jpg)
-![mask](http:blog.tedyin.me/images/mask.png)
+![dog](http://blog.tedyin.me/images/dog.jpg)
+![mask](http://blog.tedyin.me/images/mask.png)
 
 > 这里使用绿色的原因只是为了大家看的清楚而已。
 
@@ -40,7 +40,7 @@ public Bitmap combineImage(Bitmap srcBitmap, Bitmap maskBitmap){
 
 合成后的效果如下
 
-![dog_mask](http:blog.tedyin.me/images/dog_mask.jpg))
+![dog_mask](http://blog.tedyin.me/images/dog_mask.jpg))
 
 OK，圆角矩形图片效果实现。但是这个方法实质上是最差劲的，它有如下几个缺点:
 
