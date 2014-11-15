@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2014-11-15 23:52:00
-title: Irregular Shape
+title: Irregular Shape (1)
 ---
 
 接下来几周的内容是一系列文章，来讲解Android中不规则图形的创建和使用。今天先来介绍一下圆角图片的实现。
@@ -40,7 +40,7 @@ public Bitmap combineImage(Bitmap srcBitmap, Bitmap maskBitmap){
 
 合成后的效果如下
 
-![dog_mask](http://blog.tedyin.me/images/dog_mask.jpg))
+![dog_mask](http://blog.tedyin.me/images/dog_mask.jpg)
 
 OK，圆角矩形图片效果实现。但是这个方法实质上是最差劲的，它有如下几个缺点:
 
