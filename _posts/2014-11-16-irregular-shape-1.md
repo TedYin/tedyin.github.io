@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2014-11-15 23:52:00
-title: Irregular Shape (1)
+title: Irregular Shape 1
 ---
 
 接下来几周的内容是一系列文章，来讲解Android中不规则图形的创建和使用。今天先来介绍一下圆角图片的实现。
