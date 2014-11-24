@@ -57,25 +57,29 @@ OK，圆角矩形图片效果实现。但是这个方法实质上是最差劲的
 ##使用BitmapShader来创建圆角矩形
 先来介绍一下使用BitmapShader的思路，其实这个很类似于我们平常使用Canvas画图形的方式，只是我们平时在画圆角矩形时填充Canvas的是纯色，这里为了得到圆角图片，我们可以使用上面的思路，将填充物由纯色改为我们要画的图片即可。具体的实现方式如下：
 {% highlight java %}
-// bitmap 要填充到Canvas里面的图片
-BimapShader shader = new BitmapShader(bitmap,Shader.TileMode.CLAMP,Shader.TileMode.CLAMP);
 
-// paint 画笔，将BitmapShader设置给Paint来绘制texture
-Paint paint = new Paint();
-paint.setAntiAlias(true);
-paint.setShader(shader);
+private Bitmap processBitmap(Bitmap bitmap) {
+	Bitmap bmp;
+	bmp = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+	BitmapShader shader = new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
+	// 随机设置一个圆角的半径大小
+	float raidus = getResources().getDisplayMetrics().density * 6 + 0.5f;
 
-RectF mRect = new RectF(0,0,width,height);
+	Canvas canvas = new Canvas(bmp);
+	Paint paint = new Paint();
+	paint.setAntiAlias(true);
+	paint.setShader(shader); // 将要填充的shader交给Paint
 
-// 在 onDraw方法中绘制圆角矩形图片
-// mRect 包含了画布的形状
-// mCornerRadius 圆角的像素值
-// paint 包含了要填充的图片
-canvas.drawRoundRect(mRect,mCornerRadius,mCornerRadius,paint);
-
+	RectF rect = new RectF(0, 0, bitmap.getWidth(), bitmap.getHeight());
+	canvas.drawRoundRect(rect, raidus, raidus, paint);// 在RectF上绘制圆角图片
+	return bmp;
+}
 {% endhighlight %}
 
-使用上述代码即可实现圆角矩形的绘制，同样的道理，我们可以使用上述方式，绘制出三角形，椭圆，多边形等各种各样的图片，思路和绘制圆角矩形是一样的。都是使用RectF来确定大体形状，然后使用带有BitmapShader的Paint来填充即可实现。
+使用上述代码即可实现圆角矩形的绘制，绘制的结果如下：
+![dog2](http://blog.tedyin.me/images/dog2.png)
+
+同样的道理，我们可以使用上述方式，绘制出三角形，椭圆，多边形等各种各样的图片，思路和绘制圆角矩形是一样的。都是使用RectF来确定大体形状，然后使用带有BitmapShader的Paint来填充即可实现。
 
 
 
