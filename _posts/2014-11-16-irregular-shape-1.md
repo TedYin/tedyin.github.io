@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2014-11-15 23:52:00
-title: Irregular Shape 1
+title: Irregular Shape
 ---
 
 接下来几周的内容是一系列文章，来讲解Android中不规则图形的创建和使用。今天先来介绍一下圆角图片的实现。
@@ -48,8 +48,34 @@ OK，圆角矩形图片效果实现。但是这个方法实质上是最差劲的
 > 2. 适配性会变得很差，如果是圆角矩形图片，在大屏手机上拉伸回导致圆角效果失真。
 > 3. 还有个最大的问题，就是性能问题，如果图片尺寸很大，我们加载到内存中很可能出现内存溢出的情况，这样就得不偿失了。
 
-因此这个方法的可用性较低，不推荐使用。但是此处为什么要介绍这个方法呢，最主要的是这个处理思路，我们可以使用上述的而方法来处理一些水印效果或者其他图片合成的效果，这样才是上述方法最好的使用方式。至于具体的图片生成下次再继续分享。
+因此这个方法的可用性较低，不推荐使用。但是此处为什么要介绍这个方法呢，最主要的是这个处理思路，我们可以使用上述的而方法来处理一些水印效果或者其他图片合成的效果，这样才是上述方法最好的使用方式。
 
-谢谢~~ ^_^.
+
+接下来看看如何使用高效的方法创建圆角矩形。
+
+
+##使用BitmapShader来创建圆角矩形
+先来介绍一下使用BitmapShader的思路，其实这个很类似于我们平常使用Canvas画图形的方式，只是我们平时在画圆角矩形时填充Canvas的是纯色，这里为了得到圆角图片，我们可以使用上面的思路，将填充物由纯色改为我们要画的图片即可。具体的实现方式如下：
+{% highlight java %}
+// bitmap 要填充到Canvas里面的图片
+BimapShader shader = new BitmapShader(bitmap,Shader.TileMode.CLAMP,Shader.TileMode.CLAMP);
+
+// paint 画笔，将BitmapShader设置给Paint来绘制texture
+Paint paint = new Paint();
+paint.setAntiAlias(true);
+paint.setShader(shader);
+
+RectF mRect = new RectF(0,0,width,height);
+
+// 在 onDraw方法中绘制圆角矩形图片
+// mRect 包含了画布的形状
+// mCornerRadius 圆角的像素值
+// paint 包含了要填充的图片
+canvas.drawRoundRect(mRect,mCornerRadius,mCornerRadius,paint);
+
+{% endhighlight %}
+
+使用上述代码即可实现圆角矩形的绘制，同样的道理，我们可以使用上述方式，绘制出三角形，椭圆，多边形等各种各样的图片，思路和绘制圆角矩形是一样的。都是使用RectF来确定大体形状，然后使用带有BitmapShader的Paint来填充即可实现。
+
 
 
