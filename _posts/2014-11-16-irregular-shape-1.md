@@ -82,4 +82,73 @@ private Bitmap processBitmap(Bitmap bitmap) {
 同样的道理，我们可以使用上述方式，绘制出三角形，椭圆，多边形等各种各样的图片，思路和绘制圆角矩形是一样的。都是使用RectF来确定大体形状，然后使用带有BitmapShader的Paint来填充即可实现。
 
 
+上面介绍了如何创建圆角矩形的方法，下面来介绍一下不规则图形的方法。
+
+###创建聊天气泡背景效果的图片
+
+创建这类图片的大体思路和上面是一致的，也是要使用`BitmapShader`这个类来进行。实现思路如下，我们可以先创建一个圆角矩形的图片，然后再在这个圆角矩形的基础之上绘制一个三角形，就可以实现带有气泡效果的图片了。现在已经知道了如何去画一个圆角矩形，那么一半工作已经算是完成了，下来要做的就是再绘制出一个三角形，然后和圆角矩形拼接在一起即可。但是现在有一个问题，`Canvas`并没有提供画三角形的方法，我们怎么办呢？在Canvas中提供了两个基本方法`movetTo()`和`lineTo()`方法，这两个方法可以让我们移动画笔画出直线，这样的话我们就可以使用这两个方法来自己动手画出三角形了（其实和Canvas封装的方法一样，只是要自己动手，显得有些麻烦）。是不是觉得很爽呢？其实这样做是有问题的，这样做智能画出一个三角形的轮廓，不会填充成一个完整的三角形。幸亏另外一个类也支持这些方法，那就是`Path`类，我们可以使用`Path`类画出一个路径，然后使用`Shader`来填充这个路径所包围的空间（路径类似于PhotoShop中的选区的概念）。有了这么一个牛逼的类，理论上讲我们是什么都可以画出来的，只要你能勾勒出那个路径，我们就能画出来。
+
+好了，废话那么多下来看看如何用代码来是想上述气泡图片。
+
+首先来画三角形的路径
+{% highlight java %}
+// 新建一个Path类
+Path triangle = new Path();
+// 下来从0点开始一次画三条线，最终首尾相连，形成一个三角形
+triangle.moveTo(0, TRIANGLE_OFFSET);
+triangle.lineTo(TRIANGLE_WIDTH, 
+    TRIANGLE_OFFSET - (TRIANGLE_HEIGHT / 2));
+triangle.lineTo(TRIANGLE_WIDTH, 
+    TRIANGLE_OFFSET + (TRIANGLE_HEIGHT / 2));
+// 然后close这个Path，这样一个三角形的Path就绘制完成了
+triangle.close();
+{% endhighlight }
+
+画完三角形的Path后，下面要做的就是，将该路径所围成的图像画在圆角矩形上，然后再用Shader填充即可。
+完整代码如下
+{% highlight java %}
+private static final float RADIUS_FACTOR = 8.0f;
+private static final int TRIANGLE_WIDTH = 120;
+private static final int TRIANGLE_HEIGHT = 100;
+private static final int TRIANGLE_OFFSET = 300;
+
+public Bitmap processImage(Bitmap bitmap) {
+    Bitmap bmp;
+
+    bmp = Bitmap.createBitmap(bitmap.getWidth(), 
+        bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+    BitmapShader shader = new BitmapShader(bitmap, 
+        BitmapShader.TileMode.CLAMP, 
+        BitmapShader.TileMode.CLAMP);
+
+    float radius = Math.min(bitmap.getWidth(), 
+        bitmap.getHeight()) / RADIUS_FACTOR;
+    Canvas canvas = new Canvas(bmp);
+    Paint paint = new Paint();
+    paint.setAntiAlias(true);
+    paint.setShader(shader);
+
+    RectF rect = new RectF(TRIANGLE_WIDTH, 0, 
+        bitmap.getWidth(), bitmap.getHeight());
+    canvas.drawRoundRect(rect, radius, radius, paint);
+
+    Path triangle = new Path();
+    triangle.moveTo(0, TRIANGLE_OFFSET);
+    triangle.lineTo(TRIANGLE_WIDTH, 
+        TRIANGLE_OFFSET - (TRIANGLE_HEIGHT / 2));
+    triangle.lineTo(TRIANGLE_WIDTH, 
+        TRIANGLE_OFFSET + (TRIANGLE_HEIGHT / 2));
+    triangle.close();
+    canvas.drawPath(triangle, paint);
+
+    return bmp;
+}
+{% endhighlight }
+
+最终得到的效果图如下：
+
+![dog3](http://blog.tedyin.me/images/dog3.jpg)
+
+只要用好Path、Shader以及Canvas类，理论上什么图形都可以实现。
+
 
