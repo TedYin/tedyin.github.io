@@ -91,7 +91,9 @@ private Bitmap processBitmap(Bitmap bitmap) {
 好了，废话那么多下来看看如何用代码来是想上述气泡图片。
 
 首先来画三角形的路径
+
 {% highlight java %}
+
 // 新建一个Path类
 Path triangle = new Path();
 // 下来从0点开始一次画三条线，最终首尾相连，形成一个三角形
@@ -102,7 +104,7 @@ triangle.lineTo(TRIANGLE_WIDTH,
     TRIANGLE_OFFSET + (TRIANGLE_HEIGHT / 2));
 // 然后close这个Path，这样一个三角形的Path就绘制完成了
 triangle.close();
-{% endhighlight }
+{% endhighlight %}
 
 画完三角形的Path后，下面要做的就是，将该路径所围成的图像画在圆角矩形上，然后再用Shader填充即可。
 完整代码如下
@@ -143,7 +145,7 @@ public Bitmap processImage(Bitmap bitmap) {
 
     return bmp;
 }
-{% endhighlight }
+{% endhighlight %}
 
 最终得到的效果图如下：
 
