@@ -153,4 +153,94 @@ public Bitmap processImage(Bitmap bitmap) {
 
 只要用好Path、Shader以及Canvas类，理论上什么图形都可以实现。
 
+##终结
+上面说了Path、Shader、Rect、Canvas等，下面我们就可以是用上述介绍的方法和类来实现一些更加复杂的图形，作为这篇文章的终结。下面我们用上述介绍的内容来绘制一张心形的图片。
+首先说一下绘制心形图片的思路，其实这个思路和上面绘制图片的思路大同小异，最主要的思想就是使用Path画出路径，然后使用Shader来填充这个路径包围的部分。
+
+大体上我们将绘制步骤分为下面4步
+
+###创建好画布(Canvas)、画笔(Paint)以及要绘制图像的区域Bitmap
+{% highlight java %}
+Bitmap bmp = Bitmap.createBitmap(bitmap.getWidth(), 
+    bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+BitmapShader shader = new BitmapShader(bitmap, 
+    BitmapShader.TileMode.CLAMP, 
+    BitmapShader.TileMode.CLAMP);
+ 
+Canvas canvas = new Canvas(bmp);
+Paint paint = new Paint();
+paint.setAntiAlias(true);
+paint.setShader(shader);
+{% endhighlight %}
+因为后面要绘制不规则图形路径，有一些需要计算的地方，因此我们需要将`bitmap`的宽高记录下来。
+{% highlight java %}
+float width = bitmap.getWidth();
+float height = bitmap.getHeight();
+{% endhighlight %}
+保存好宽高后，下来需要初始化Path，Region以及Matrix，这些都会在绘制心形图案时用到。
+{% highlight java %}
+Path oval = new Path();
+Matrix matrix = new Matrix();
+Region region = new Region();
+RectF ovalRect = new RectF(width / 8, 0, 
+    width - (width / 8), height);
+{% endhighlight %}
+
+下面来开始绘制心形图案的第二步，先绘制一个椭圆，这个椭圆的高度与我们的`bitmap`的高度一样，宽度是`bimap`的四分之三，这个宽度是来决定心形图片的宽窄的，可自行定义。
+下面来绘制椭圆Path
+{% highlight java %}
+RectF ovalRect = new RectF(width / 8, 0, 
+    width - (width / 8), height);
+oval.addOval(ovalRect, Path.Direction.CW);
+{% endhighlight %}
+这个`oval`就是上面已经定义过的椭圆路径，在此处进行填充，这个路径渲染出来的效果如下：
+![dog4](http://blog.tedyin.me/images/dog4.jpg)
+
+绘制出椭圆后，下来我们将其进行旋转，使用上面定义好的`Matrix`对象来完成旋转的操作：
+{% highlight java %}
+matrix.postRotate(30, width / 2, height / 2);
+oval.transform(matrix, oval);
+{% endhighlight %}
+
+Matrix是一个很强大的类，我们可以借助它实现很多关于图片的操作。
+
+旋转后的效果如下：
+![dog5](http://blog.tedyin.me/images/dog5.jpg)
+
+有了这样的效果之后，下来要做的就是，用一个矩形路径和这个被旋转的椭圆合并出半个心形路径，然后填充这个半个心形路径就可以到半个心形图片。这里使用上面定义好的`Region`类，Region就是一个矩形类，我们用这个类和半个椭圆类结合起来就可以拼出半个心形的路径来，具体的拼接方法如下：
+{% highlight java %}
+// 将oval椭圆的路径和矩形Region路径合并
+region.setPath(oval, new Region((int)width / 2, 0, 
+    (int)width, (int)height));
+// 画出该路径
+canvas.drawPath(region.getBoundaryPath(), paint);
+{% endhighlight %}
+画出后的效果如下：
+![dog6](http://blog.tedyin.me/images/dog6.jpg)
+
+好了，这样就画出了半个心形图片，重复上面的操作就可以画出另外一半的心形图片了，方法如下：
+
+{% highlight java %}
+oval.addOval(ovalRect, Path.Direction.CW);
+matrix.postRotate(-30, width / 2, height / 2);
+oval.transform(matrix, oval);
+region.setPath(oval, 
+    new Region(0, 0, (int)width / 2, (int)height));
+canvas.drawPath(region.getBoundaryPath(), paint);
+{% endhighlight %}
+
+效果如下：
+![dog7](http://blog.tedyin.me/images/dog7.jpg)
+
+总结：只要用好Path、Shader、RectF所有的图形都可以迎刃而解，但是有一点需要注意的就是，这些操作都是比较消耗性能的操作，所以使用的时候需要注意性能问题。
+
+
+
+
+
+
+
+
+
+
 
