@@ -3,7 +3,7 @@ title: Android HttpURLConnection VS HttpClient
 date: 2014-12-22 23:40:00
 layout: post
 ---
-(原文)[http://android-developers.blogspot.tw/2011/09/androids-http-clients.html]
+
 在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。
 
 ##HttpClient与HttpURLConnection在Android中的比较
@@ -30,3 +30,6 @@ private void enableHttpResponseCache(){
 
 ##到底使用哪一个？
 上面已经说的很明确了，在2.3版本之前使用HttpClient进行网络请求，在FROYO版本之后使用HttpURLConnection进行网络请求，因为2.3以前的版本市场份额已经很小很小了，所以在以后的开发中可以略去选择直接使用HttpURLConnection进行网络操作，而且Android官方也会持续改进HttpURLConnection在Android中的性能。
+
+##参考
+(参考)[http://android-developers.blogspot.tw/2011/09/androids-http-clients.html]
