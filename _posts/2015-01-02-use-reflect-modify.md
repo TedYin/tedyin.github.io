@@ -28,7 +28,10 @@ if (mQueryHint != null) {
     mQueryTextView.setHint(getDecoratedHint(""));
 }
 {% endhighlight %}
+
+###使用反射修改SearchView
 从上述代码可以看出，显示Hint的是`mQueryHint`,因此只要将这个Hint值设为“”空字符串就可以隐藏该icon。下面使用反射的方式获取mQueryTextView这个private级别的控件,并将Hint设为空字符串，代码如下：
+
 {% highlight java %}
 private void hideCloseSearchIcon(SearchView searchView) {
 	SearchAutoComplete mQueryTextView = (SearchAutoComplete) SystemUiHelper.getFieldByReflect(
