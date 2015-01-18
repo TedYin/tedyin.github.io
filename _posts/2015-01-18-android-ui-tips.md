@@ -22,4 +22,6 @@ layout: post
 4. 延迟加载一些不需要立即使用的内容。
 5. 对你的Thread或者Task设置优先级，UI任务和Thread永远是最高级。
 
-参考：https://speakerdeck.com/cyrilmottier/optimizing-android-ui-pro-tips-for-creating-smooth-and-responsive-apps
+###参考:
+
+https://speakerdeck.com/cyrilmottier/optimizing-android-ui-pro-tips-for-creating-smooth-and-responsive-apps
