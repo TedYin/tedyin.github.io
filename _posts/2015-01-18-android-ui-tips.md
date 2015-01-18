@@ -24,4 +24,4 @@ layout: post
 
 ###参考:
 
-https://speakerdeck.com/cyrilmottier/optimizing-android-ui-pro-tips-for-creating-smooth-and-responsive-apps
+[Android UI Tips](https://speakerdeck.com/cyrilmottier/optimizing-android-ui-pro-tips-for-creating-smooth-and-responsive-apps)
