@@ -36,4 +36,4 @@ View的渲染过程会调用onDraw方法。
 当View通过构造函数创建出来后，如果不挂载到Window上时，是无法显示出来的。当View要挂载到Window上时会调用`Veiw#onAttachedToWindow()`方法；当View被销毁后要从Window上去除时会调用`View#onDetachedFromWindow()`方法；当Window隐藏或者可见时会调用`View#onWindowVisibilityChanged()`方法。通过这几个方法我们可以处理一些初始化的操作，和一些在View被销毁后进行的内存回收或者善后的工作。
 
 ##View的生命周期示意图
-[view_lifecycle](http://blog.tedyin.me/images/view_lifecycle.png)
+![view_lifecycle](http://blog.tedyin.me/images/view_lifecycle.png)
