@@ -10,10 +10,8 @@ Android tools提供了一组非常有用的属性方法来方便我们开发，t
 ![p1](http://blog.tedyin.me/images/tools_1.png)
 
 ##tools:menu
-如果你已经使用了context属性指定过了对应的Activity，那么IDE默认会自己去检查OnCreateOptionsMenu里面使用了哪个menu布局，然后在预览的时候加载该布局。使用menu属性可以覆盖上述默认操作。如果不想显示menu则可以设置tools:menu=“”即可。另外还可以使用menu属性定义多个菜单资源，
-
-如果不想显示menu则可以给menu属性赋值为空，例如：tools:menu=“”即可。另外，还可以在预览的时预览任意个你想看到的menu菜单项，而不是直接预览menu布局里面的内容。实现这样的效果十分简单，只需要在menu后面写上对应的菜单项的Id并用“ , ”隔开即可。举个例子：
-tools:menu=“action_search,action_add"
+如果你已经使用了context属性指定过了对应的Activity，那么IDE默认会自己去检查OnCreateOptionsMenu里面使用了哪个menu布局，然后在预览的时候加载该布局。使用menu属性可以覆盖上述默认操作。如果不想显示menu则可以设置tools:menu=“”即可。另外还可以使用menu属性定义多个菜单资源，如果不想显示menu则可以给menu属性赋值为空，例如：tools:menu=“”即可。另外，还可以在预览的时预览任意个你想看到的menu菜单项，而不是直接预览menu布局里面的内容。实现这样的效果十分简单，只需要在menu后面写上对应的菜单项的Id并用“ , ”隔开即可。举个例子：
+`tools:menu=“action_search,action_add"`
 还有一点需要注意的就是，在使用Theme.AppCompat时，menu这个属性不起作用。
 
 ##tools:actionBarNavMod
