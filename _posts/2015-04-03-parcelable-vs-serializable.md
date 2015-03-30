@@ -110,10 +110,10 @@ public class ParcelableClass implements Parcelable{
 {% endhighlight %}
 终于写完了，这比刚才使用`Serializable`接口时的代码长了好几倍，代码的可读性也大不如刚刚的代码，但是为了性能上的提升，这么做也是值得的，与性能相比代码多点难点又算得了什么呢？何况这个代码也不是很难，而且是有迹可循的:
 
-1. 每个实现了Parcelable的接口都需要实现一个`Parcelable.Creator`对象。
-2. 提供一个以Parcel为参数的构造函数。
-3. 实现`describeContents()`方法
-4. 实现`writeToParcel(Parcel dest, int flags)`方法。
+> 1. 每个实现了Parcelable的接口都需要实现一个`Parcelable.Creator`对象。
+> 2. 提供一个以Parcel为参数的构造函数。
+> 3. 实现`describeContents()`方法
+> 4. 实现`writeToParcel(Parcel dest, int flags)`方法。
 
 这样就OK了,下面来看看废了一番周折写出来的序列化方法到底比原生的好了多少，有图有真相！！
 ![parcelable](http://blog.tedyin.me/images/parcelable_vs_serializable.png)
