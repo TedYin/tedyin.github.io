@@ -25,7 +25,7 @@ public class SerializableClass implements Serializable{
 
 ##Parcelable接口的使用
 和上面一样，还是先来看看`Parcelable`接口是如何使用的。
-{% highliht java %}
+{% highlight java %}
 public class ParcelableClass implements Parcelable{
 	String name;
 	int age;
