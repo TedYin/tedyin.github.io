@@ -1,6 +1,5 @@
 ---
 title: Implementing REST Client on Android 4.0 and below
-layout: post
 date: 2014-06-03 22:19:00
 tags: 
 ---
