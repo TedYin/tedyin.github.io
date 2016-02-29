@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>SOLID 原则在Ruby中的应用『译』 | TedYin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文链接: SOLID Principles in Ruby
+
+作为一名程序员无论你的水平高低，你都会想写出一手优秀的代码，但是想写优秀的代码并不容易，因此怎样才能提高我们的代码质量呢？下面来看下我们今天的主角 SOLID 原则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SOLID 原则在Ruby中的应用『译』">
+<meta property="og:url" content="http://www.tedyin.me/2016/02/27/solid-principles-in-ruby/index.html">
+<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:description" content="原文链接: SOLID Principles in Ruby
+
+作为一名程序员无论你的水平高低，你都会想写出一手优秀的代码，但是想写优秀的代码并不容易，因此怎样才能提高我们的代码质量呢？下面来看下我们今天的主角 SOLID 原则">
+<meta property="og:updated_time" content="2016-02-29T10:01:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SOLID 原则在Ruby中的应用『译』">
+<meta name="twitter:description" content="原文链接: SOLID Principles in Ruby
+
+作为一名程序员无论你的水平高低，你都会想写出一手优秀的代码，但是想写优秀的代码并不容易，因此怎样才能提高我们的代码质量呢？下面来看下我们今天的主角 SOLID 原则">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">TedYin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">快乐比生命更重要</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/categories/翻译/">翻译</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/面向对象设计/" style="font-size: 10px;">面向对象设计</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">Half full stack developer.</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">TedYin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">TedYin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">快乐比生命更重要</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/categories/翻译/">翻译</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-solid-principles-in-ruby" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/27/solid-principles-in-ruby/" class="article-date">
+  	<time datetime="2016-02-27T15:27:00.000Z" itemprop="datePublished">2016-02-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      SOLID 原则在Ruby中的应用『译』
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象设计/">面向对象设计</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/翻译/">翻译</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><a href="http://eftimov.net/solid-principles" target="_blank" rel="external">原文链接: SOLID Principles in Ruby</a></p>
+</blockquote>
+<p>作为一名程序员无论你的水平高低，你都会想写出一手优秀的代码，但是想写优秀的代码并不容易，因此怎样才能提高我们的代码质量呢？下面来看下我们今天的主角 <code>SOLID 原则</code><br><a id="more"></a></p>
+<h2 id="SOLID-原则是什么"><a href="#SOLID-原则是什么" class="headerlink" title="SOLID 原则是什么"></a>SOLID 原则是什么</h2><p>SOLID 不是一个原则，它是一组面向对象设计原则的简称，它代表下面5种设计原则:</p>
+<ul>
+<li><strong>S</strong> ingle Responsibility Principle <em>单一职责原则</em></li>
+<li><strong>O</strong> pen/Closed Principle <em>开闭原则</em></li>
+<li><strong>L</strong> iskov Substitution Principle <em>里氏替换原则</em></li>
+<li><strong>I</strong> nterface Segregation Principle <em>接口分离原则</em></li>
+<li><strong>D</strong> ependency Inversion Principle <em>依赖倒置原则</em></li>
+</ul>
+<p>以上就是SOLID中的5种面向对象设计原则，下面分别看看他们具体指的是什么。</p>
+<h3 id="单一职责原则-SPR"><a href="#单一职责原则-SPR" class="headerlink" title="单一职责原则(SPR)"></a>单一职责原则(SPR)</h3><p>在我看来这个是最简单的一个设计原则，<code>SPR</code>的说明如下：</p>
+<blockquote>
+<p>每一个类都应该有且仅有一个职责，而且他的这个职责应该被完全封装在这个类里面。</p>
+</blockquote>
+<p>如何去判断你的代码是否符合这一原则的最好方式就是去问问自己：</p>
+<blockquote>
+<p>这个类到底做了什么？</p>
+</blockquote>
+<p>如果这个类干了不只一件事情的话，那么他就违反了<code>SPR</code>原则。下面来看一个<code>Student</code>类，每个<code>Student</code>对象都有<code>grades</code>属性。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:first_term_home_work</span>, <span class="symbol">:first_term_test</span>,</span><br><span class="line">    <span class="symbol">:first_term_paper</span></span><br><span class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:second_term_home_work</span>, <span class="symbol">:second_term_test</span>,</span><br><span class="line">    <span class="symbol">:second_term_paper</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">first_term_grade</span></span></span><br><span class="line">    (first_term_home_work + first_term_test + first_term_paper) / <span class="number">3</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">second_term_grade</span></span></span><br><span class="line">    (second_term_home_work + second_term_test + second_term_paper) / <span class="number">3</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>也许有些人已经意识到了，上面的写法是错误的，也许有些人还没有感觉到。不管有没有意识到，上面的代码显然是没有循序<code>SPR</code>原则的，原因就是 Student 类拥有计算每个学期平均分的逻辑，但是<code>Student</code>类是用来封装关于学生信息的而不是用来计算分数的，计算分数的逻辑应当放在<code>Grade</code>类中才对。下面我们遵循<code>SPR</code>原则重构一下代码，重构后的代码如下：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span></span><br><span class="line">    @terms = [</span><br><span class="line">      Grade.new(<span class="symbol">:first</span>),</span><br><span class="line">      Grade.new(<span class="symbol">:second</span>)</span><br><span class="line">      ]</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">first_term_grade</span></span></span><br><span class="line">    term(<span class="symbol">:first</span>).grade</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">second_term_grade</span></span></span><br><span class="line">    term(<span class="symbol">:second</span>).grade</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  private</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">term</span> <span class="title">reference</span></span></span><br><span class="line">    @terms.find &#123;|term| term.name == reference&#125;</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Grade</span></span></span><br><span class="line">  <span class="keyword">attr_reader</span> <span class="symbol">:name</span>, <span class="symbol">:home_work</span>, <span class="symbol">:test</span>, <span class="symbol">:paper</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(name)</span></span></span><br><span class="line">    @name      = name</span><br><span class="line">    @home_work = <span class="number">0</span></span><br><span class="line">    @test      = <span class="number">0</span></span><br><span class="line">    @paper     = <span class="number">0</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">grade</span></span></span><br><span class="line">    (home_work + test + paper) / <span class="number">3</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p>重构之后的代码<code>Student</code>类中的计算分数的逻辑移到了<code>Grade</code>类中，<code>Student</code>类中只有对<code>Grade</code>实例的引用。现在所有的类都遵循<code>SPR</code>原则，因为每个类都是职责单一的。</p>
+<h3 id="开闭原则-OCP"><a href="#开闭原则-OCP" class="headerlink" title="开闭原则(OCP)"></a>开闭原则(OCP)</h3><p>开闭原则的定义如下：</p>
+<blockquote>
+<p>一个类或者模块对扩展开放，对修改关闭</p>
+</blockquote>
+<p>什么意思呢？他的意思就是：一旦一个类已经实现了当时的需求，他就不应该为了去实现接下来的需求而被修改。你是不是觉得这样做没有意义？那我们下面看个例子来说明一下。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyLogger</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span></span><br><span class="line">    @format_string = <span class="string">"%s: %s\n"</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(msg)</span></span></span><br><span class="line">  	STDOUT.write @format_string % [Time.now, msg]</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p>这是一个简单的logger类，他可以将把给定的msg和当时的时间通过<code>STDOUT</code>格式化输出出来。非常简单对吧，下面来测试一下：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">irb&gt; MyLogger.new.log(<span class="string">'test!'</span>)</span><br><span class="line">=&gt; <span class="number">2016</span>-<span class="number">02</span>-<span class="number">28</span> <span class="number">16</span><span class="symbol">:</span><span class="number">16</span><span class="symbol">:</span><span class="number">32</span> +<span class="number">0200</span><span class="symbol">:</span> test!</span><br></pre></td></tr></table></figure></p>
+<p>测试OK，没什么问题，但是假如在以后的某一天，我们想改变一下输出的格式，想实现下面的日志格式<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=&gt; [LOG] <span class="number">2016</span>-<span class="number">02</span>-<span class="number">28</span> <span class="number">16</span><span class="symbol">:</span><span class="number">16</span><span class="symbol">:</span><span class="number">32</span> +<span class="number">0200</span><span class="symbol">:</span> test!</span><br></pre></td></tr></table></figure></p>
+<p>怎么办呢？假如现在由一个不懂<code>OCP</code>原则的程序员来实现上述格式，实现的代码如下：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyLogger</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span></span><br><span class="line">    @format_string = <span class="string">"[LOG] %s: %s\n"</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p>输出的结果如下：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">irb&gt; MyLogger.new.log(<span class="string">'test!'</span>)</span><br><span class="line">=&gt; [LOG] <span class="number">2016</span>-<span class="number">02</span>-<span class="number">28</span> <span class="number">16</span><span class="symbol">:</span><span class="number">16</span><span class="symbol">:</span><span class="number">32</span> +<span class="number">0200</span><span class="symbol">:</span> test!</span><br></pre></td></tr></table></figure></p>
+<p>输出的格式完全符合要求，一切都OK，但是这样做真的就对吗？<br>仔细想想，假如上面被修改的类是一个App中的核心类，对<code>format_string</code>方法的修改，可能会破坏那些依赖<code>MyLogger</code>类的方法使得他们不能正常的工作。也许在APP中存在许许多多的类都依赖刚才说的那些方法，但是现在我们修改了代码，破坏了这些类和方法。这就是在破坏<code>OCP</code>原则，这会导致灾难性的后果。</p>
+<p>既然不遵循<code>OCP</code>原则会有很严重的问题，那么实现上面修改日志格式需求的正确姿势是什么呢？毫无疑问当然是<code>继承</code>或者<code>组合</code>！<br>我们来看看下面使用继承的例子：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NewCoolLogger</span> &lt; MyLogger</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span></span><br><span class="line">    @format_string = <span class="string">"[LOG] %s: %s\n"</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">irb&gt; NewCoolLogger.new.log(<span class="string">'test!'</span>)</span><br><span class="line">=&gt; [LOG] <span class="number">2016</span>-<span class="number">02</span>-<span class="number">28</span> <span class="number">16</span><span class="symbol">:</span><span class="number">16</span><span class="symbol">:</span><span class="number">32</span> +<span class="number">0200</span><span class="symbol">:</span> test!</span><br></pre></td></tr></table></figure>
+<p>棒呆！和我们预期的一样，那<code>MyLogger</code>的输出呢？<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">irb&gt; MyLogger.new.log(<span class="string">'test!'</span>)</span><br><span class="line">=&gt; <span class="number">2016</span>-<span class="number">02</span>-<span class="number">28</span> <span class="number">16</span><span class="symbol">:</span><span class="number">16</span><span class="symbol">:</span><span class="number">32</span> +<span class="number">0200</span><span class="symbol">:</span> test!</span><br></pre></td></tr></table></figure></p>
+<p>还是棒呆！那么我刚刚都干了写啥呢？我们创建了一个新的<code>NewCoolLogger</code>类,<code>扩展(extend)</code>了<code>MyLogger</code>类。那些之前依赖老的logger方法的类和方法依然可以正常的工作，老的logger还是和以前一样提供相同的方法，新的logger则提供新的logger方法，这是我们所期待的。<br>我刚才说了两种重构方式，下面我们来看看使用另外一种方式<code>组合</code>来重构代码的例子：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyLogger</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(msg, <span class="symbol">formatter:</span> MyLogFormatter.new)</span></span></span><br><span class="line">    STDOUT.write formatter.format(msg)</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p>我们可以注意到，log方法多了一个可选参数<code>formatter</code>，对于日志格式化的事情本来就应该是<code>MyLogFormatter</code>类的事情，而不应该是logger类的事情。使用上面的方式重构更好，因为这样做了之后<code>MyLogger#log</code>可以接受各种各样不同的格式化方式，而且<code>MyLogger</code>也不在需要去关心具体的格式化格式，因为他只需要一条<code>String</code>，具体是什么格式的则由传入<code>MyLogger#log</code>个格式化类来确定。假如我们又要实现 Error Log 输出，现在简单了只需要传入一个<code>ErrorLogFormatter</code>实例即可输出带有 “[ERROR]” 前缀的日志。</p>
+<h3 id="里氏替换原则-LSP"><a href="#里氏替换原则-LSP" class="headerlink" title="里氏替换原则(LSP)"></a>里氏替换原则(LSP)</h3><p><a href="https://en.wikipedia.org/wiki/Barbara_Liskov" target="_blank" rel="external">Barbara Liskov</a>对<code>LSP</code>原则的定义如下：</p>
+<blockquote>
+<p>如果S是T的一个子类，那么不需要修改代码中的任何配置和属性，S的实例也可以替换T的实例对象，而且不影响代码的正常运行。</p>
+</blockquote>
+<p>坦白的讲，我觉得这个定义是非常难理解的，因此经过一番思考，总结下来如下：</p>
+<p>假如现在有一个<code>Bird</code>类，还有两个实例对象 obj1 和 obj2。obj1 是 Duck 类的对象，Duck 类是 Bird 类的子类，obj2 是 Pigeon 类的对象，Pigeon 类也是Bird 类的子类。<code>LSP</code>原则的意思是，obj2 是Bird子类的实例，obj1 是Bird子类的实例，因此我们应当把 obj1 和 obj2 等同对待，都当做Bird的实例对待。</p>
+<p>下面我们来看个例子来说明下：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">greet</span></span></span><br><span class="line">    puts <span class="string">"Hey there!"</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> &lt; Person</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">years_old</span><span class="params">(age)</span></span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"I'm <span class="subst">#&#123;age&#125;</span> years old."</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">person = Person.new</span><br><span class="line">student = Student.new</span><br><span class="line"></span><br><span class="line"><span class="comment"># LSP原则的意思是如果我知道 Person 拥有的接口，那么我应该也能猜到 Student 拥有的接口，因为 Student 类是 Person 的子类。</span></span><br><span class="line">student.greet</span><br><span class="line"><span class="comment"># returns "Hey there!"</span></span><br></pre></td></tr></table></figure></p>
+<p>以上就是对<code>LSP</code>原则的解释</p>
+<h3 id="接口分离原则-ISP"><a href="#接口分离原则-ISP" class="headerlink" title="接口分离原则(ISP)"></a>接口分离原则(ISP)</h3><p>接口分离原则的定义如下：</p>
+<blockquote>
+<p>不应该强迫客户端依赖一些他们用不到的方法或接口</p>
+</blockquote>
+<p>就像定义那样很简单，我们来看看代码说明一下：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">turn_on</span></span></span><br><span class="line">    <span class="comment"># turns on the computer</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">type</span></span></span><br><span class="line">  	<span class="comment"># type on the keyboard</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">change_hard_drive</span></span></span><br><span class="line">    <span class="comment"># opens the computer body</span></span><br><span class="line">    <span class="comment"># and changes the hard drive</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Programmer</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">use_computer</span></span></span><br><span class="line">    @computer.turn_on</span><br><span class="line">    @computer.type</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Technician</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">fix_computer</span></span></span><br><span class="line">    @computer.change_hard_drive</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p>在这个例子中有<code>Computer</code>，<code>Programer</code>，<code>Technician</code>三个类。其中<code>Programer</code>，<code>Technician</code>会使用到电脑，而且是以不同的方式使用，<code>Programer</code>实用的是<code>type</code>方法，<code>Technician</code>用的是<code>change_hard_drive</code>，按照<code>LSP</code>原则要求不应当强迫客户端依赖一些他们用不到的接口或者方法，<code>Programer</code>类用不到<code>change_hard_drive</code>方法，同样的<code>Technician</code>用不到<code>type</code>方法，但是一旦这两个方法发生变化，那么就有可能影响到<code>Programer</code>或者<code>Technician</code>类的正常使用。下面我们重构一下代码，来满足<code>LSP</code>原则<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">turn_on</span></span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">type</span></span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ComputerInternals</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">change_hard_drive</span></span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Programmer</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">use_computer</span></span></span><br><span class="line">    @computer.turn_on</span><br><span class="line">    @computer.type</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Technician</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">fix_computer</span></span></span><br><span class="line">    @computer_internals.change_hard_drive</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p>经过重构后<code>Technician</code>使用了<code>ComputerInternals</code>类的对象，这个类封装了从<code>Computer</code>中分离出来的方法<code>change_hard_drive</code>。现在<code>Computer</code>类可以受到<code>Programer</code>类的影响(写代码改变OS)，但是再也影响不到<code>Technician</code>类了。</p>
+<h3 id="依赖倒置原则-DIP"><a href="#依赖倒置原则-DIP" class="headerlink" title="依赖倒置原则(DIP)"></a>依赖倒置原则(DIP)</h3><p>依赖倒置原则代表了一种软件模块解耦的方式，他的定义有两部分：</p>
+<blockquote>
+<ol>
+<li>上层模块不应该依赖下层模块，他们应该都依赖抽象。</li>
+<li>抽象不能依赖具体实现，具体实现应该依赖抽象。</li>
+</ol>
+</blockquote>
+<p>我知道这个理解起来有点绕，但是在开始看具体的例子之前，我希望你不要把 <em>依赖倒置</em> 和 <em>依赖注入</em> 弄混淆，后者是一种软件技巧或者说是一种软件设计模式，而前者是面向对象设计原则的一种。<br>好了下面来看看具体的例子：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Report</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span></span><br><span class="line">    @body = <span class="string">"whatever"</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">print</span></span></span><br><span class="line">    XmlFormatter.new.generate @body</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">XmlFormatter</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">generate</span><span class="params">(body)</span></span></span><br><span class="line">    <span class="comment"># convert the body argument into XML</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p><code>Report</code>类是用来生成 XML 报表的，在他的初始化方法中，我们设置了报表内容(body)，<code>print</code>方法使用<code>XmlFormatter</code>类去将报表内容转换成 XML 格式。</p>
+<p>下面我们来看看<code>Report</code>这个类，从这个类的名字我们能看出来他是个一般的类，会返回某种类型的报表(report)，但是他没高所我们会返回哪种格式的报表。事实上对于上面这个例子我们能够很轻松的将<code>Report</code>重命名为<code>XmlReport</code>因为我们知道他的实现细节，知道他只实现了导出 XML 报表的功能，但是与其让<code>Report</code>变的更加具体(丢失更多的扩展性)，我们还不如好好想想怎么去将他更好的抽象。</p>
+<p>目前我们的类依赖<code>XmlReport</code>类和他的<code>generate</code>方法，<code>Report</code>依赖的是一个具体的实现而不是抽象，只有当提供格式化方法的类是<code>XmlFormatter</code>的时候，我们的<code>Report</code>类才能正常的工作。假如我们现在像导出 CSV 或者 JSON 格式的报表怎么办？那我们就只能提供更多的具体的方法，比如<code>print_xml</code>，<code>print_csv</code>，<code>print_json</code>等。这意味着<code>Report</code>类和具体实现绑的非常紧，耦合非常高，他依赖格式化类的类型，但却不依赖这些格式化类的抽象。</p>
+<blockquote>
+<p>译者注：Report 类就是只知道有这么多个格式化类，但是却不知道他们之间有什么共同特点，依赖这些具体的类却不依赖他们的共同特点，也就是不依赖抽象。假如现在又有新的格式，Report 还得去了解新的格式类，如果依赖他们共同拥有的一个格式化的接口，那Report就不用去操心你这个格式化的类到底是格式化成啥了，我直接调用这个格式化的方法就行了。</p>
+</blockquote>
+<p>下面我们重构一下代码：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Report</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span></span><br><span class="line">    @body = <span class="string">"whatever"</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">print</span><span class="params">(formatter)</span></span></span><br><span class="line">    formatter.generate @body</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">XmlFormatter</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">generate</span><span class="params">(body)</span></span></span><br><span class="line">    <span class="comment"># convert the body argument into XML</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p>注意<code>print</code>方法，他知道自己需要一个 formatter，但是他关心的是这个 formatter 的接口。更具体地讲，他只关心这个 formatter 能够给他提供的 <code>generate</code>方法，具体是什么样的 formatter 他不在乎，只要能提供<code>generate</code>方法，帮他完成格式化大业就行。这样设计大家有没有觉得更灵活呢？假如我们现在需要 CSV 格式的报表，我们只需要提供下面这个类就行了。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CSVFormatter</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">generate</span><span class="params">(body)</span></span></span><br><span class="line">    <span class="comment"># convert the body argument into CSV</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p><code>Report#print</code>方法将会接收一个<code>CSVFormatter</code>类的实例对象，这个实例对象能够将报表内容转换成 CSV 格式。</p>
+<p>OK，到此为止 <strong>SOLID</strong> 五中面向对象设计原则已经讲完了，希望在日常编写代码的过程中能好好应用。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/26/elasticsearch-batch-processing/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Elasticsearch 的批处理</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="solid-principles-in-ruby" data-title="SOLID 原则在Ruby中的应用『译』" data-url="http://www.tedyin.me/2016/02/27/solid-principles-in-ruby/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 TedYin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
