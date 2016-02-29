@@ -6,22 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Android HttpURLConnection VS HttpClient | TedYin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。
-##HttpClient与HttpURLConnection在Android中的比较
-Android中直接封装了Apache的HttpClie">
+  <meta name="description" content="在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android HttpURLConnection VS HttpClient">
 <meta property="og:url" content="http://www.tedyin.me/2014/12/22/httpclient-urlconnection/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。
-##HttpClient与HttpURLConnection在Android中的比较
-Android中直接封装了Apache的HttpClie">
-<meta property="og:updated_time" content="2016-02-29T02:47:58.000Z">
+<meta property="og:description" content="在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。">
+<meta property="og:updated_time" content="2016-02-29T09:30:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android HttpURLConnection VS HttpClient">
-<meta name="twitter:description" content="在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。
-##HttpClient与HttpURLConnection在Android中的比较
-Android中直接封装了Apache的HttpClie">
+<meta name="twitter:description" content="在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。">
   
   
     <link rel="icon" href="/favicon.png">
@@ -46,7 +40,7 @@ Android中直接封装了Apache的HttpClie">
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -73,11 +67,11 @@ Android中直接封装了Apache的HttpClie">
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -101,6 +95,10 @@ Android中直接封装了Apache的HttpClie">
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -110,7 +108,7 @@ Android中直接封装了Apache的HttpClie">
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -147,7 +145,7 @@ Android中直接封装了Apache的HttpClie">
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -163,6 +161,10 @@ Android中直接封装了Apache的HttpClie">
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -205,11 +207,11 @@ Android中直接封装了Apache的HttpClie">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。</p>
+        <p>在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。<br><a id="more"></a></p>
 <p>##HttpClient与HttpURLConnection在Android中的比较</p>
 <p>Android中直接封装了Apache的HttpClient来作为网络操的处理类，该类是非常强大的类，比较重量级，功能和方法非常丰富，因此带来了一个问题，那就是定制性非常差，修改起来非常麻烦。相比而言HttpURLConnection要轻量许多，方法较少而且都比较简单，因此定制性更强，修改起来容易，Android团队内部也更倾向使用定制性更好的HttpURLConnection来进行网络处理。</p>
 <p>但是因为在FROYO版本以及之前版本，Android对HttpURLConnection支持不好，HttpURLConnection有许多bug，所以在2.3版本之前建议使用HttpClient来进行网络操作。在FROYO以及之后的版本Android修复了HttpURLConnection的许多问题，而且在4.0之后HttpURLConnection还加入了对缓存的支持，使用下面方法可以在4.0版本中开启Http缓存:</p>
-<figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">private void enableHttpResponseCache()&#123;</span><br><span class="line">	try&#123;</span><br><span class="line">		long httpCacheSize = 10 * 1024 * 1024; // 10 MiB</span><br><span class="line">	    File httpCacheDir = new File(getCacheDir(), &quot;http&quot;);</span><br><span class="line">	    Class.forName(&quot;android.net.http.HttpResponseCache&quot;)</span><br><span class="line">	        .getMethod(&quot;install&quot;, File.class, long.class)</span><br><span class="line">	        .invoke(null, httpCacheDir, httpCacheSize);</span><br><span class="line">	&#125;cache(Exception httpResponseCacheNotAvailable)&#123;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> enableHttpResponseCache()&#123;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">		<span class="keyword">long</span> httpCacheSize = <span class="number">10</span> * <span class="number">1024</span> * <span class="number">1024</span>; <span class="comment">// 10 MiB</span></span><br><span class="line">	    <span class="keyword">File</span> httpCacheDir = <span class="keyword">new</span> <span class="keyword">File</span>(getCacheDir(), <span class="string">"http"</span>);</span><br><span class="line">	    <span class="keyword">Class</span>.forName(<span class="string">"android.net.http.HttpResponseCache"</span>)</span><br><span class="line">	        .getMethod(<span class="string">"install"</span>, <span class="keyword">File</span>.<span class="keyword">class</span>, <span class="keyword">long</span>.<span class="keyword">class</span>)</span><br><span class="line">	        .invoke(<span class="keyword">null</span>, httpCacheDir, httpCacheSize);</span><br><span class="line">	&#125;cache(Exception httpResponseCacheNotAvailable)&#123;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在客户端配置好缓存处理后，同样需要在服务端进行配置支持HttpCache，否则Cache是不会生效的。<br>在2.3以及以后的版本中，HttpURLConnection默认是支持<code>Accept-Type:gzip</code>的，只需要在服务端配置一下即可，在消息传输和获取的过程中使用压缩数据进行传输，这样会更加快速的传递数据，而且省电省流量。但是如果服务端支持gzip格式数据传输，那么在使用<code>getContentLength()</code>方法获取的就是压缩后的数据大小，这一定要注意。</p>
 <p>##到底使用哪一个？<br>上面已经说的很明确了，在2.3版本之前使用HttpClient进行网络请求，在FROYO版本之后使用HttpURLConnection进行网络请求，因为2.3以前的版本市场份额已经很小很小了，所以在以后的开发中可以略去选择直接使用HttpURLConnection进行网络操作，而且Android官方也会持续改进HttpURLConnection在Android中的性能。</p>
 <p>##参考<br>(参考)[<a href="http://android-developers.blogspot.tw/2011/09/androids-http-clients.html" target="_blank" rel="external">http://android-developers.blogspot.tw/2011/09/androids-http-clients.html</a>]</p>

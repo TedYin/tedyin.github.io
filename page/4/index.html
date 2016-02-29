@@ -39,7 +39,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -66,11 +66,11 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -94,6 +94,10 @@
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -103,7 +107,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -140,7 +144,7 @@
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -157,6 +161,10 @@
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
 				</div>
@@ -166,6 +174,412 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-http-cache" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/08/10/http-cache/" class="article-date">
+  	<time datetime="2014-08-10T11:45:00.000Z" itemprop="datePublished">2014-08-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/08/10/http-cache/">Http Cache 简介</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##什么是HTTP CACHE?</p>
+<p>Http Cache是一种客户端和服务器进行“高效交流”的机制。当我们使用浏览器去访问一个页面时，浏览器在显示该页面的时候也会将该页面缓存到本地，如果我们下次访问同一个页面，如果页面没有变化服务器就会返回304 Not Modified给浏览器，此时浏览器就不需要重新下载网页，直接显示本地缓存的网页即可。<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2014/08/10/http-cache/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Android-event-dispatch" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/08/03/Android-event-dispatch/" class="article-date">
+  	<time datetime="2014-08-03T13:51:00.000Z" itemprop="datePublished">2014-08-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/08/03/Android-event-dispatch/">Android 事件传递机制</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>Android中所有的事件都是基于“按下（ActionDown）”这个动作之后的。</li>
+<li>Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)来对View进行布局。所有的“UI控件(Button，TextView等)”都是继承自View，所有的“布局控件(RelativeLayout等)”，“容器控件(ListView等)”都是继承自ViewGroup，ViewGroup是继承自View的。
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2014/08/03/Android-event-dispatch/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-BitmapFactory-Options-参数详解" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/07/20/BitmapFactory-Options-参数详解/" class="article-date">
+  	<time datetime="2014-07-20T14:24:00.000Z" itemprop="datePublished">2014-07-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/07/20/BitmapFactory-Options-参数详解/">BitmapFactory.Options 参数详解</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>常用参数： <code>inJustDecodeBounds</code> <code>inSampleSize</code> <code>inPurgeable</code> <code>inInputShareable</code> <code>inTempStorage</code> <code>outWith</code> <code>outHeight</code> <code>outMimeType</code></p>
+<ol>
+<li>inMutable true 返回一个可变（可被修改）的Bitmap对象，false 返回一个不可变的Bitmap对象（即不可修改的）
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2014/07/20/BitmapFactory-Options-参数详解/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Code-Style" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/07/12/Code-Style/" class="article-date">
+  	<time datetime="2014-07-12T15:44:00.000Z" itemprop="datePublished">2014-07-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/07/12/Code-Style/">编码规范总结</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##Android 编码规范</p>
+<ol>
+<li>不许留下空的Catch语句，对Catch一定要处理。如果不处理请注明原因，或者向方法的调用者跑出异常。</li>
+<li>不要去捕获顶级异常，使用多个catch去捕获不同的小异常。</li>
+<li>不要使用finalizers，因为它的执行时机是不确定的。</li>
+<li>如果代码超过了40行就应该考虑在不损坏程序代码结构的情况下进行拆分！
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2014/07/12/Code-Style/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Loading-large-bitmap" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/07/06/Loading-large-bitmap/" class="article-date">
+  	<time datetime="2014-07-06T03:00:00.000Z" itemprop="datePublished">2014-07-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/07/06/Loading-large-bitmap/">Loading Large Bitmap</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在我们加载图片的时候，经常会出现这种情况，我们加载的图片的解析度已经远远超出我们设备的解析度，而且太<br>大的图片会占据比较大的内存带来大的内存开销，如果对这些内存回收管理不及时，很容易造成OutOfMemory运<br>行时异常，导致整个应用崩溃，因此为了避免这种情况的发生，我们在decode图片的时候应当根据自己设备的解<br>析度来解析，只需要解析出适合我们当前设备的图片即可，不需要解析出超高分辨率的图片，因为超高分辨率的图<br>片对我们的视觉体验带来不了任何帮助，反而会占用宝贵的内存，产生性能问题。下面我们将讨论如何将一张大图<br>片解析成一个符合当前设备内存要求的小图片。<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2014/07/06/Loading-large-bitmap/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-google-io-14" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/06/28/google-io-14/" class="article-date">
+  	<time datetime="2014-06-27T16:13:00.000Z" itemprop="datePublished">2014-06-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/06/28/google-io-14/">Google IO 2014 汇总（瞎扯）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Design"><a href="#Design" class="headerlink" title="Design"></a>Design</h2><h3 id="Material-design"><a href="#Material-design" class="headerlink" title="Material design"></a>Material design</h3><p>Material design是本届IO上发布的一种新的设计规范，使用了Google全新的动画以及UI库，将会应用到Google的全线产品。<br><a href="http://developer.android.com/preview/material/index.html">Material Design</a></p>
+<blockquote>
+<p>Material Design统一了Google的全线产品，使得所有产品在任何平台之间无缝切换，对用户体验有非常大的提升，无论何时何地我们的使用的服务都是不间断的，这一定会很爽。<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2014/06/28/google-io-14/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-OOM" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/06/22/OOM/" class="article-date">
+  	<time datetime="2014-06-21T16:30:00.000Z" itemprop="datePublished">2014-06-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/06/22/OOM/">OOM 的解决方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###OOM产生的原因</p>
+<ul>
+<li>Android原生系统规定对一个Application的内存限制为16M。(高分辨率的手机内存限制会高于16M,但是我们在编写程序的时候应当以最低标准为准，这样我们的应用就会更加健壮)
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2014/06/22/OOM/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-learn-action-bar" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -199,248 +613,7 @@
 <li>提供一种非常便捷和高效的导航方式</li>
 <li>支持不同页面间的导航功能切换</li>
 </ul>
-<p>是android在3.0时添加的一个重要组件。它可以通过support library的形式被集成到2.1及其以上的版本中使用。</p>
-<p>#ActionBar Use<br>下面主要介绍一下使用support v7 library中的ActionBar。</p>
-<p>###Add ActionBar</p>
-<ol>
-<li>先<a href="http://developer.android.com/tools/support-library/setup.html" target="_blank" rel="external">导入v7包</a>.</li>
-<li>你的Activity必须继承自ActionBarActivity</li>
-<li>在你的应用中使用Theme.AppComapt主题或者使用继承自Theme.AppCompat主题的自定义。</li>
-</ol>
-<p><em>注：Theme.AppCompat 相当于3.0中添加的Theme.Holo主题</em><br>这样在你的Activity中就完成了ActionBar的添加。</p>
-<p>###Removing the action bar<br>关闭ActionBar的方法如下:</p>
-<ul>
-<li>getSupportActionBar()得到ActionBar的对象，调用hide方法即可关闭ActionBar。如果想再次显示，则可以是用show方法即可</li>
-<li>使用Them.AppCompat.NoActonBar方法，不使用Actionbar</li>
-</ul>
-<blockquote>
-<p>注意</p>
-<ul>
-<li>support包中的getSupportXXX()方法就等同于在加入该控件的API level以上的SDK中调用 getXXX()方法。</li>
-<li>在使用ActionBar的show()和hide()方法的时候，会导致界面布局调整，整个界面会被重绘，增加性能成本，如果需要经常对ActionBar进行隐藏和显示操作，我们可以使用ActionBar Overlay来完成这个需求。ActionBar Overlay的实现方式是使用Custom的主题继承自Theme.AppCompat并且设置windowActionBarOverlay这个属性为true即可。它会使得ActionBar浮在Layout的上面，此时如果对ActionBar进行show或者hide操作，就不会进行界面重绘了。如果你的布局不想被ActionBar挡住，则可以在该布局的根一级的Layout中加入paddingTop 或者marginTop属性，给他们赋值为”?android:attr/actionBarSize”即可。</li>
-</ul>
-</blockquote>
-<p>###Add Action Items</p>
-<p>上面已经有了ActionBar，但是如何让这个ActionBar进行工作呢?因此我们需要给ActionBar添加内容。ActionBar相当于一个导航容器，他是一个什么都能接收到东西。你可以自定义许多内容给他，他都可以将这些东西组织并展现出来。ActionBar跟3.0之前的版本中的菜单一样，提供一堆功能导航，只是在3.0之后将它的作用明确了，尤其是在4.0之后配合Android Design一起使得它的功能性更明确了就是处理Activity中的动作交互。添加Action Item我们只需在res/menu/xxx_menu.xml中定义好要添加的Item内容，然后重载OnCreateOptionsMenu()方法，并且在其中使用MenuInflater将这个xml布局inflate成Menu对象，并且设置给ActionBar即可。</p>
-<pre><code>@Override
-public boolean onCreateOptionsMenu(Menu menu) {
-    // Inflate the menu items for use in the action bar
-    MenuInflater inflater = getMenuInflater();
-    inflater.inflate(R.menu.main_activity_actions, menu);
-    return super.onCreateOptionsMenu(menu);
-}
-</code></pre><p>xxx_menu.xml布局文件如下：</p>
-<pre><code>&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; &gt;
-    &lt;item android:id=&quot;@+id/action_search&quot;
-          android:icon=&quot;@drawable/ic_action_search&quot;
-          android:title=&quot;@string/action_search&quot;/&gt;
-    &lt;item android:id=&quot;@+id/action_compose&quot;
-          android:icon=&quot;@drawable/ic_action_compose&quot;
-          android:title=&quot;@string/action_compose&quot; 
-          yourStyle:showAsAction=&quot;ifRoome&quot;/&gt;
-&lt;/menu&gt;
-</code></pre><p><em>yourStyle:showAsAction</em>是需要用户自定义的属性，在3.0以上版本中属于Android的默认属性。<code>showAsAction</code>属性的选项有<code>ifRoom/always/never</code>,作用如下:</p>
-<ul>
-<li>ifRoom 表示如果有做够的空间，Action将会显示在ActionBar，否则会隐藏到overFlow中</li>
-<li>always 表示永远显示在ActionBar上</li>
-<li>never表示永不显示在ActionBar上，即永远显示在overflow中</li>
-</ul>
-<p>当用户点击上述按钮的时候会调用<code>onOptionsItemSelected(MenuItem item)</code>方法，并且将被点击的Item传入到Menu中去，因此我们可以重载该方法并且在该方法中处理按钮点击事件，和处理普通的点击事件一样。</p>
-<blockquote>
-<p>如果你是在Fragment中使用<code>OnCreateOptionsMenu</code>方法inflate一个Menu到ActionBar上，当你在Fragment中点击ActionBar中的Action时，如果你在<code>OnOptionsItemSelected</code>中使用了<code>super.onOptionsItemSelected</code>方法，系统会先调用Activity中的<code>OnOptionsItemSelected()</code>方法去处理，处理完成后才会调用Fragment中的这个方法处理，如果不加则会直接调用Fragment中的<code>OnOptionsItemSelected()</code>方法处理。</p>
-</blockquote>
-<p>###Using Split Action bar<br>Split ActionBar其实就是对ActionBar的分割，当用户使用窄屏幕的时候，如果在ActionBar上面不够放，系统会将Actions都放在屏幕的底部，来为导航和标题留出空间。使用Split Action Bar的效果图如下第1~2图。</p>
-<p><img src="http://7xii1s.com1.z0.glb.clouddn.com/201406090916.png" alt="normal ActionBar"> </p>
-<p>使用Split action bar 的方法如下:</p>
-<ul>
-<li>给<code>&lt;application&gt;</code>标签添加属性 <code>uiOptions=&quot;splitActionBarWhenNarrow&quot;</code>,使得所有的Activity都应用Split Action Bar或者给某些指定的<code>&lt;activity&gt;</code>标签添加该属性，指定某几个Activity应用Split Action Bar。这个属性只能用于API level 14及其以上，如果想对其以下的版本进行兼容，需要在<code>&lt;activity&gt;</code>标签下使用<code>&lt;meta-data&gt;</code>标签来指定</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity ... &gt;</span><br><span class="line">    &lt;meta-data</span><br><span class="line">        android:name=&quot;android.support.UI_OPTIONS&quot;</span><br><span class="line">        android:value=&quot;splitActionBarWhenNarrow&quot;/&gt;</span><br><span class="line">&lt;/activity&gt;</span><br></pre></td></tr></table></figure>
-<p>如果Activity使用了该属性，并且对于ActionBar上的icon和title分别使用<code>setDisplayShowHomeEnable(false)</code>和<code>setDisplayShowTitleEnable(false)</code>进行隐藏，那那么在有tab的情况下，main ActionBar也会被自动隐藏，效果如上图中第2~3图。</p>
-<p>###Navigating Up with the App Icon<br>Navigating Up返回到上一级Activity，有两种方法：</p>
-<ol>
-<li><p>在<code>&lt;activity&gt;</code>标签中设置<code>android:parentActivityName=&quot;me.tedyin.todo.MainActivity&quot;</code>（API level 16及其以上）即可，对于API level低于16的可以使用<code>&lt;meta-data&gt;</code>标签来指定</p>
-<p> &lt;activity  …             android:parentActivityName=”com.example.app.MainActivity”</p>
-<pre><code>&gt;
-&lt;meta-data
-    android:name=&quot;android:support.PARENT_ACTIVITY&quot;
-    android:value=&quot;com.example.app.MainActivity&quot;
-    /&gt;
-</code></pre> <activity>
-
-<blockquote>
-<p><em>注意：上面<code>android:parentActivityName</code>的值必须和下面meta-data的value中定义的值相同。</em></p>
-</blockquote>
-</activity></li>
-</ol>
-<ol>
-<li>在代码中使用<code>getSupportActionBar().setDisplayHomeAsUpEnable(true)</code>来开启navigate up 按钮。</li>
-</ol>
-<p>当Up Action 打开后，此时Icon前面会出现一个系统默认的返回按钮，表示可以返回到父Activity中。当点击该Up Action的时候，会调用<code>OnOptionsItemSelected(MenuItem)</code>方法，传入的是Id为<code>android.r.id.home</code>的<code>MenuItem</code>对象，我们可以重载上述方法来处理此点击事件。        </p>
-<blockquote>
-<p>如果我们的应用在关闭的情况下被第三方打开某个Activity，那么此时我们的activity则是在一个新的task stack中，此时该Activity的Logic Parent是不在该stack中的，为了保证操作的连贯性，你应该处理这种情况。我们可以使用NavUtils 来帮助我们处理，处理的过程如下:</p>
-<ol>
-<li>调用shouldUpReCreateTask(Context , Intent)来检查你的Activity是否存在一个App ‘s stack，包含你的Activity，如果返回true（不存在，需要重新创建），如果返回false（存在，不需要重新创建）。</li>
-<li>如果需要重新创建，则需要使用TaskStackBuilder来方便我们创新的task stack 。</li>
-</ol>
-</blockquote>
-<p>最佳实践如下:</p>
-<pre><code>//重载OnOptionsItemSelected(MenuItem)方法
-case android.R.id.home:
-    Intent upIntent = NavUtils.getParentActivityIntent(this);
-    if(NavUtils.shouldUpRecreateTask){
-        //需要重新创建一个Task，来保存当前Activity的Parent Activity 到新的task stack中
-        TaskStackBuilder.create(this).addNextIntentWithParentStack(upIntent).startActivitise();
-    }else{
-        //不需要的新建一个task来维护当前Activity和它的Parent Activity之间的stack关系，所以直接启动切换到父Activity即可
-        NavUtils.navigateUpTo(this,upIntent);
-    }
-break;
-</code></pre><blockquote>
-<p>如果是从Fragment中处理Navigation Up,我们需要覆写onSupportNavigateUp()方法去处理fragment transaction。通常我们会用popBackStack()方法处理fragment切换到Parent Fragment中去。</p>
-</blockquote>
-<p>###Adding an Action View<br>Action View就是显示在ActionBar上面的Widget，他可以不需要改变Activity Fragment，并且也不会替换原有的ActionBar，不会导致界面重绘等问题，可以快速提供一个丰富的Action交互空间。我们常见的Search操作就是使用的ActionView来实现的。</p>
-<p>####声明一个ActionView有如下方法:</p>
-<ul>
-<li>使用<code>actionLayout</code>属性来指定一个resource资源来生成一个ActionView</li>
-<li>使用<code>actionViewClass</code>属性来指定一个Widget来生成一个ActionView</li>
-</ul>
-<p>添加一个ActionView的方法如下:(此处添加一个Widget来作为ActionView)</p>
-<pre><code>&lt;menu ... &gt;
-    &lt;item  android:id = &quot;@+id/action_search&quot;
-        android:title=&quot;search&quot;
-        andorid:icon=&quot;@drawable/icon&quot;
-        yourStyle:showAsAction=&quot;ifRoom|collapseActionView&quot;
-        yourStyle:actionViewClass=&quot;android.support.v7.widget.SearchView&quot; 
-        &gt;
-&lt;/menu&gt;
-</code></pre><p>上述中collapseActionView的作用即为当点击Action Button时触发ActionView。</p>
-<p>上面声明了ActionView，我们可以在OnCreateOptionsMenu(Menu)方法中inflate出这个ActionView并将其加入到ActionBar中。</p>
-<pre><code>@Overried
-public void OnCreateOptionsMenu(Menu menu){
-    getMenuInflater().inflate(R.layout.menu_actions,  menu);
-    MenuItem searchItem = menu.findItem(R.id.action_search);
-    SearchView searchView = (SearchView)MenuItemCompat.getActionView(searchItem);
-    ...
-    return super.OnCreateOptionsMenu(menu);
-}
-</code></pre><p>使用MenuItemCompat的静态方法getActionView(MenuItem)即可得到ActionView。<br><em>在API leve 11及其以上，<code>MenuItem</code>对象也提供<code>getActionView()</code>方法，即：<code>menu.findItem(R.id.action_search).getActionView()</code></em></p>
-<p>###Handling collapsible action views<br>上面只讲述了如何打开Action view但是没有告诉你怎么collapse 一个 action view，下面就讨论一下如何collapse一个action view。当你点击返回键或者Up navigate button时，ActionView会自动收起。我们可以使用<code>OnActionExpandListener</code>来监听ActionView的打开与关闭。</p>
-<pre><code>@Override
-public void OnCreateOptionsMenu(Menu menu){
-    MenuItemCompat.setOnActionExpandListener(menuItem, new OnActionExpandListener(){
-        @Overried
-        public boolean onMenuItemActionCollapse(MenuItem item){
-            //do something
-        }
-        @Overried
-        public boolean onMenuItemActionExpand(MenuItem item){
-            //do something
-        }
-    });
-}
-</code></pre><p>###Add an Action Provider<br>每一个ActionProvider都已经定义好了自己的行为，因此你不需要再在OnOptionItemSelected()方法中对ActionProvider处理。虽然不用处理，但是如果你需要监听ActionProvider的行为的话，依然可以在OnOptionsItemSelected()方法中监听处理，但是一定要注意，然会值应该为false，否则ActionProvider无法收到点击事件。如果ActionProvider提供一个子菜单的话，那么子菜单中的点击事件不会调用OnOptionsItemSelected()方法。使用了ActionProvider我们需要处理的其实就是<br>ActionProvider使用方法如下:</p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-      xmlns:yourapp=&quot;http://schemas.android.com/apk/res-auto&quot; &gt;
-    &lt;item android:id=&quot;@+id/action_share&quot;
-          android:title=&quot;@string/share&quot;
-          yourStyle:showAsAction=&quot;ifRoom&quot;
-          yourStyle:actionProviderClass=&quot;android.support.v7.widget.ShareActionProvider&quot;
-          /&gt;
-    ...
-&lt;/menu&gt;    
-</code></pre><p>上述中<code>actionProviderClass</code>属性，在API Level 11以下需要自定义实现。添加完了布局文件，我们需要做的就是给在初始化ActionProvider的时候传入正确的Intent来保证他会按照我们设置的方式来工作。因为Context会变化，因此必须在每次更新的时候都要调用一次<code>setShareItent()</code>来保证我们Inent的正确。</p>
-<pre><code>private ShareActionProvider shareActionProvider;
-//...
-@Overried
-public boolean OnCreateOptionsMenu(Menu menu){
-    getMenuInflater.inflate(R.id.menu,menu);
-    //set up share action provider
-    MenuItem shareItem = menu.findItem(R.id.action_share);
-    shareActionProvider = (ShareActionProvider)MenuItemCompat.getActionProvider(shareItem);
-    //set share intent
-    Intent intent = new Intent(Intent.ACTION_SEND);
-    intent.setType(&quot;image/*&quot;);
-    shareActionProvider.setShareIntent(intent);
-    return supper.OnCreateOptionsMenu(menu);
-}
-</code></pre><p><code>ShareActionProvider</code>默认会根据用户的使用频率动态的调整每个Item的先后顺序，这个排序是保存在一个私有的文件<code>DEFAULT_SHARE_HISTORY_FIILE_NAME</code>中，我们可以使用<code>ShareActionProvider</code>对象的<code>setShareHistoryFileName(&quot;example.xml&quot;)</code>方法来指定一个排序文件，按照我们喜欢的方式进行自定义排序。</p>
-<p>###Creating a custom action provider<br>使用自定义的Action Provider可以很方便的让你去管理和重用那些Action动作，而不用你再去每个Activity或者Fragment中去处理Action的行为。<br>创建自定义Action Provider的步骤如下:</p>
-<ol>
-<li>继承ActionProvider这个类</li>
-<li>实现ActionProvider()这个构造方法，他会传递一个Application Context 给你，你需要保存这个Context为后面其他回调方法提供。</li>
-<li>实现<code>onCreateActionView(MenuItem menuItem)</code>方法，这个方法是用来inflate action view的。</li>
-<li>实现<code>onPerformDefaultAction()</code>这个方法是在触发Action的时候系统调用的。这个方法默认是不实现任何操作，并且返回false</li>
-</ol>
-<p><em>注:如果你的ActionProvider是放在Overflow中的，而且它有subMenu，那么在点击时<code>onPerformDefaultAction()</code>这个方法是不会被调用的</em></p>
-<p>###Adding  Navigation Tabs<br>Tabs 提供了方便的导航，他的添加方法如下:</p>
-<ol>
-<li>实现<code>ActionBar.TabListener</code>接口。这个接口提供了许多tab事件的回调方法，你可以在这个接口中处理和tab相关的操作。</li>
-<li>对于每个你想添加的tab你在初始化这个tab的时候，可以通过<code>setTabListener()</code>方法添加<code>TabListener</code>，也可以同过<code>setTabTitle(title)</code>来设置tab的属性等。</li>
-<li>当初始化好一个tab后可以使用<code>addTab(yourTab)</code>方法将它加入到ActionBar去。</li>
-<li>必须调用<code>setNavigationMode(NAVIGATION_MODE_TABS)</code>方法让tab显示出来。</li>
-</ol>
-<blockquote>
-<p>注意:</p>
-<ol>
-<li>ActionBar.TabListener的回调方法不会指定哪个fragment和具体的tab绑定，它只会提供当前选中了哪个tab，你需要自己根据需要绑定，下面介绍一种绑定实现.</li>
-<li>初始化一个Tab的方法: Tab tab = actionBar.newTab().setText(“tab”).setTabListener(tabListener);   然后 actionBar.addTab(tab);即可。</li>
-</ol>
-</blockquote>
-<pre><code>//TabListener的实现
-public static class TabListener&lt;T extends Fragment&gt; implements ActionBar.TabListener{
-    private Fragment mFragment;
-    private final String mTag;//用来唯一标识Fragment在FragmentTransaction中的key
-    private final Activity mActivity;//用来初始化Fragment
-    private final Class&lt;T&gt; mClass;//Frangment的类，用来初始化fragment
-    public TabListener(Activity activity, String keyTag, Class&lt;T&gt; clz){
-        this.mTag = keyTag;
-        this.mActivity = activity;
-        this.mClass = clz;
-    }
-    public void onTabSelected(Tab tab, FragmentTransaction ft){
-        // when tab selected
-        //如果没有初始化，则进行初始化
-        if(mFragment == null){
-            mFragment = Fragment.instantiate(mActivity, mClass.getName());
-            ft.add(android.R.id.content,mFragment,mTag);
-        }else{
-            //存在则直接attach显示
-            ft.attach(mFragment);
-        }
-    }
-    public void onTabUnSelected(Tab tab, FragmenTransaction ft){
-        //whne tab unselected
-        if(mFragment != null){
-            //detach ，因为别的Fragment要attach显示
-            ft.detach(mFragment);
-        }
-    }
-    public void onTabReselected(Tab tab. FragmentTransaction ft){
-        //user select the already selected tab , Usually do nothing. 因为他就是当前显示的，所以不需要操作什么。
-    }
-}
-</code></pre><blockquote>
-<p><strong>注意：在回调中我们禁止调用commit()方法来确认fragment transaction，因为系统会为我们调用它，如果我们自己调用的话会出现异常。你同样也不能将这个fragment transaction 加入到back task stack中！</strong></p>
-<p><em>上面的<code>android.R.id.content</code>是root view的Id，在不使用<code>setContentView</code>时使用它来作为Fragment的容器</em></p>
-</blockquote>
-<p>下面的代码使用了上面的TabListener，示例如下:</p>
-<pre><code>@Overried
-public void onCreate(Bundle savedInstanceState){
-    super.onCreate(savedInstanceState);
-    //use the android.R.id.content as the container for each fragment , it is the root view id. 因此不用setContentView()
-    //setup action bar for tabs
-    ActionBar actionBar = getSupportActionBar();
-    actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);//显示tabs
-    actionBar.setDisplayShowTitleEnable(false);
-    Tab tab1 = actionBar.newTab().setText(&quot;tab1&quot;).setTabListener(new TabListener&lt;Fragment&gt;(this,&quot;tab1&quot;,MFirstFragment.class));
-    actionBar.addTab(tab);
-    Tab tab2 = actionBar.newTab().setText(&quot;tab2&quot;).setTabListener(new TabListener&lt;Fragment&gt;(thsi,&quot;tab2&quot;,MSecondFragment.class));
-    actionBar.addTab(tab2);
-}
-</code></pre><p><em>未完待续~~</em></p>
-
+<p>是android在3.0时添加的一个重要组件。它可以通过support library的形式被集成到2.1及其以上的版本中使用。<br>
       
     </div>
     
@@ -450,240 +623,9 @@ public void onCreate(Bundle savedInstanceState){
       
 
       
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-SQLite-study" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/06/03/SQLite-study/" class="article-date">
-  	<time datetime="2014-06-03T14:39:00.000Z" itemprop="datePublished">2014-06-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/06/03/SQLite-study/">SQLite Study</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="SQLite学习"><a href="#SQLite学习" class="headerlink" title="SQLite学习"></a><center>SQLite学习</center></h1><p>##SQLite简介<br>SQLite是一个小型数据库，它被集成到Android系统中完成数据库部分。它不需要进行配置和管理，可以在Android系统中直接使用。</p>
-<p>##SQLite使用</p>
-<p>###1.SQLiteOpenHelper<br>SQLiteOpenHelper使用一个帮助类，通过继承它并实现onCreate方法和Upgrade方法，来管理我们的数据库。</p>
-<ul>
-<li>onCreate方法是framework层调用，当你要打开某个数据库，但是这个数据库不存在时，framework就会调用这个方法去创建一个数据库。</li>
-<li>onUpgrade方法是在对数据库进行更新时调用的，当你的数据库版本增加时，你可以通过调用这个方法修改数据库或者删除数据库然后通过调用onCreate方法重现创建数据库。</li>
-</ul>
-<p>另外SQLiteOpenHelper还提供了getReadableDatabase方法和getWriteableDatabase方法去获取一个SQLDatabase对象。<br>上述两方法中都会使用SQLiteDatabase对象作为参数，这个类就代表了数据库。</p>
-<p><strong>注意：</strong>对于数据库创建的最佳实践是，每个表都建一个类，并且在这个类中定义<em><code>static</code></em>的onCreate和onUpgrade方法，这些方法在SQLiteOpenHelper中被调用，这样你的SQLiteOpenHelper实现类就有很好的可读性了，即使你有很多的数据表。</p>
-<p>###2.SQLiteDatabase<br><code>SQLiteDatabase</code>类是整个android数据库的基础类，它提供了对数据库操作的增删改查方法，另外还可以通过<code>execSQL</code>方法来执行SQL语句。<br><code>ContentValues</code>是对key/value的一个包装，使用它可以将要插入或者要修改的数据以key/value的形式进行封装，在使用相应增改方法的时候直接使用。</p>
-<ul>
-<li>rawQuery 是SQLDatabase的方法，他可以使用SQL语句直接查询。</li>
-<li>query是推荐的查询方法，它的使用类似于Hibernate中的查询，只需要将参数查询条件等一参数的形式提供，就可以得到结果</li>
-<li>Cursor对象，这个是查询的结果使用它可以遍历整个查询出的数据内容（table）</li>
-<li>SQLiteBuilder是用来创建查询语句的</li>
-</ul>
-<p>###3.Cursor<br>这个类是查询结果的封装，使用他可以很方便的获取数据库查询结果。</p>
-<ul>
-<li>getCount()返回结果数据的条数</li>
-<li>moveFirst 将游标指向第一条查询结果</li>
-<li>moveNext 将游标指向下一条查询结果</li>
-<li>isAfterLast 检查是否已经到达end</li>
-</ul>
-<p><strong>注意：</strong><code>Cursor</code>在使用完成后需要调用close关闭。（TDOO：如果不关闭怎么办）</p>
-<p>###4.DAO在Android中的使用</p>
-<p>DAO的作用就是对外提供增删改查接口，在他的内部封装了SQLiteDatabase，以及SQLiteOpenHelper，将常用的增删改查以静态方法的形式对外提供。并且还封装了一些对数据进行初步加工的方法。DAO的存在就是将应用层和数据持久层相互隔离，应用层需要操作数据时，只通过DAO来和持久层交互。在持久层的实现中可以引入CursorLoader之类的东西。在Android中的最佳实践是使用ContentProvider来访做DAO与数据层进行交互，因为Android为此提供了安全而完善的机制访问数据层。</p>
-<p>##SQLite使用注意事项</p>
-<ul>
-<li>在对数据库进行操作的时候会访问文件系统，很有可能是耗时操作，因此建议放在异步线程进行数据库操作。</li>
-<li>应用创建的数据库的位置为DATA/data/包名/databases/数据库名，其中DATA是Environment.getDataDirectory() 方法返回的路径。</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Implementing-REST-Client-on-Android-4.0-and-below" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/06/03/Implementing-REST-Client-on-Android-4.0-and-below/" class="article-date">
-  	<time datetime="2014-06-03T14:19:00.000Z" itemprop="datePublished">2014-06-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/06/03/Implementing-REST-Client-on-Android-4.0-and-below/">Implementing REST Client on Android 4.0 and below</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#General Overview</p>
-<p>REST Client 是一个非常好的处理客户端与服务端之间交互的框架模型，他的机构如下：</p>
-<p><img src="http://7xii1s.com1.z0.glb.clouddn.com/framework.png" alt="framework"></p>
-<p>他的最佳实践有以下几点：</p>
-<ul>
-<li>使用<code>Loaders</code>相关的类来进行异步加载</li>
-<li>使用<code>Service</code></li>
-<li>使用<code>ContentProvider</code>通过他可以使得我们更方便的去访问数据库，<code>ContentProvider</code>是Android提供的对外暴露数据的接口，使用它可以很好的将我们的数据层和应用层进行隔离。<code>ContentProvider</code>不是线程安全的，因此我们需要使用<code>Loader</code>框架来配合使用<code>ContentProvider</code>。</li>
-</ul>
-<h1 id="REST-With-Loaders"><a href="#REST-With-Loaders" class="headerlink" title="REST With Loaders"></a>REST With Loaders</h1><p>Loaders的特性：</p>
-<ul>
-<li>可以被Activity和Fragment来运行，并且所有Loaders的状态都是由LoaderManager来管理，因此我们不用担心Loaders的使用，他的生命周期是受系统管理的。</li>
-<li>一般的REST调用都是一次性的，一旦你的Activity被放到background，你的REST调用可以被结束。</li>
-</ul>
-<p>REST 调用一般都是网络请求，也就是说一般都会是很耗时的操作，所以不应该放到主线程中进行，而是使用异步线程来执行网络操作，我们可以使用<code>AsyncTaskLoader</code>来实现这一目标，因此我们需要一个<code>RESTLoader</code>继承自A<code>AsyncTaskLoader</code>， 我们可以通过<code>LoaderManager</code>在Activity和Fragment中来调用<code>RESTLoader</code>。</p>
-<p>#Start Our Project</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-markdown-study" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/05/25/markdown-study/" class="article-date">
-  	<time datetime="2014-05-25T14:39:00.000Z" itemprop="datePublished">2014-05-25</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/05/25/markdown-study/">Markdown Study</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>写文章需要标题，表示标题的方法有：</p>
-<pre><code>使用三个=号，来代表主标题
-使用三个-号，来代表子标题
-如果三个-号上无文字，则会在文本中生成虚线
-除了上面的标题表示方式外，还看以使用#来表示标题：
-#表示一级标题
-##表示二级标题，一次类推#~######(6个)代表了1~6级的标题。
-</code></pre><p>##标题<br>对于一个大标题，一般我们都会分为几个部分来讲解或记录，这些部分的小标题我们可以使用“+ - * ”来表示，他们三者的意义是一样的，都会转换成一个点（·）这样的无序标题。要是我们写到逻辑比较强的地方要分为1、2、3等条目时，也就是有序标题，我们可以使用1. 2. 3.等数字加“.”的方式表示有序标题。</p>
-<p>##内容<br>标题写完了，下来我们要写具体的内容了，我们的文章是技术文章，需要用到架构图，我们可以用以下方式表示图片：<code>![别名](图片的url地址)</code>，前面的“!”不能去掉，因为去掉后，我们就只是显示一个链接，这个链接的名字就是“别名”。<br>当然如果我们想在给用户介绍，这个图片的来源以及图片作者的一些解释的时候，我们可以给图片加上Url链接效果：假如用x表示图片，那么这个链接效果就是<code>[x](目标链接Url)</code>，看到这里你就明白了，这个是可以嵌套使用的！</p>
-<p>添加完了架构图片，下来我们需要引用一段原作者的名言来概括一下这张图片，我们可以使用“&gt;被引用的文字”这种写法，来添加一段引用。（这个也是可以嵌套使用的）</p>
-<p>添加完引用后，我们要对作者的名言进行解释，我们需要添加一个注解，添加方法如下：</p>
-<pre><code>“这个是名言的注解[^keynote] ”
-&quot;[^keynote]: 这个是注解&quot;
-</code></pre><p>这个注解的方式就是Key-Value的形式，他会被markdown解析成注解的样式。</p>
-<p>解释完作者的名言我们要开始引用代码进行讲解了：</p>
-<pre><code>“    使用四个空格来表示代码块”
-</code></pre><p>这种用法主要是对于一些简单的代码进行表示和处理，或者也可以理解为一个文字区块，但是在这个区块中写道的一些特殊命令，markdown会按原文翻译，不会转述成他所表示的形式显示出来。如果有大量的代码要写的话，建议用下面的形式表示：</p>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">具体的代码</span><br></pre></td></tr></table></figure>
-</code></pre><p>这种格式支持40多种语言，基本上满足了我们的需求。</p>
-<p>引用完代码之后，我们需要对代码进行解释，在解释的时候我们需要对重要的词句进行加粗（使用<code>“**被加粗的文字**”</code>），或者用斜体（使用<code>“*需要斜体表示的文字*”</code>）进行强调。<br>在讲解时我们肯定会引入别的类名，这时需要用“ <code>`类名</code> ` ”来表示类名，这样就表示是文字内代码。</p>
-<p>对于一些比较复杂的逻辑，我们在解释可能会引入一些公式定理来解释，我们可以使用“$v=s/t$”来在行内表示公式定理，如果一整行都是公式定理，我们可以使用“$$整行公式$$”来表示。</p>
-<p>在我们介绍这个架构时，会有一些典型的错误，但是我们不希望不仔细的读者将它看成正确的例子，我们可以使用“<del>反例</del>”对中间的文字加上删除线，加以警示。</p>
-<p>假如我们写这篇文章时候，是和别人合作的，我们可以在最后用一个表格来表示，这个骗文章的作者，以及每个人写的部分，还有字数等信息。表格的写法如下：</p>
-<pre><code>|     作者     |      所写章节      |      字数      |
-|     --      |          --:      |      :--:     |    
-|     Ted     |      a.b.c章      |     1000字     |
-|     Annie   |      d.e.f章      |     1024字     |
-
-注意此部分，&quot;-&quot;的个数无所谓，但是至少一个
-</code></pre><p>上述中，“作者”column将会居左，“所写章节”column会居右，“字数”column会居中显示。</p>
-<p>好了，文章完成了，我们可以使用[TOC]来给文章加个目录，并且可以使用<br>Tags（标签）：标签1 标签2 标签3    来给文章加上标签。</p>
-<p>OK，文章可以发表了！</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
+        <p class="article-more-link">
+          <a  href="/2014/06/04/learn-action-bar/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -703,7 +645,7 @@ public void onCreate(Bundle savedInstanceState){
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
   
 </div>

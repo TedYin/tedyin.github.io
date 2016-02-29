@@ -8,23 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="SQL Constraints ：
 对于XXX约束进行添加删除，修改的操作模式一般如下：
-添加约束：CREATE TABLE xxxTable(字段1 字段类型 约束类型(PRIMARY KEY等)···字段N 字段类型 ···)
-CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(目标约束字段1，目标约束字段2…目标约束字段N)···字段N 字">
+添加约束：CREATE TABLE xxxTable(字段1 字段类型 约束类型(PRIMARY KEY等)···字段N 字段类型 ···)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL约束">
 <meta property="og:url" content="http://www.tedyin.me/2014/08/24/Sql-Constraints/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
 <meta property="og:description" content="SQL Constraints ：
 对于XXX约束进行添加删除，修改的操作模式一般如下：
-添加约束：CREATE TABLE xxxTable(字段1 字段类型 约束类型(PRIMARY KEY等)···字段N 字段类型 ···)
-CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(目标约束字段1，目标约束字段2…目标约束字段N)···字段N 字">
-<meta property="og:updated_time" content="2015-11-16T01:44:35.000Z">
+添加约束：CREATE TABLE xxxTable(字段1 字段类型 约束类型(PRIMARY KEY等)···字段N 字段类型 ···)">
+<meta property="og:updated_time" content="2016-02-29T09:32:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL约束">
 <meta name="twitter:description" content="SQL Constraints ：
 对于XXX约束进行添加删除，修改的操作模式一般如下：
-添加约束：CREATE TABLE xxxTable(字段1 字段类型 约束类型(PRIMARY KEY等)···字段N 字段类型 ···)
-CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(目标约束字段1，目标约束字段2…目标约束字段N)···字段N 字">
+添加约束：CREATE TABLE xxxTable(字段1 字段类型 约束类型(PRIMARY KEY等)···字段N 字段类型 ···)">
   
   
     <link rel="icon" href="/favicon.png">
@@ -49,7 +46,7 @@ CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -76,11 +73,11 @@ CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -104,6 +101,10 @@ CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -113,7 +114,7 @@ CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -150,7 +151,7 @@ CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -166,6 +167,10 @@ CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -210,8 +215,7 @@ CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(
       
         <p>SQL Constraints ：</p>
 <p>对于XXX约束进行添加删除，修改的操作模式一般如下：</p>
-<p>添加约束：<br>CREATE TABLE xxxTable(<br>字段1 字段类型 约束类型(PRIMARY KEY等)<br>···<br>字段N 字段类型 ···<br>)</p>
-<p>CREATE TABLE xxxTable(<br>字段1 字段类型 CONSTRAINT 约束名称 约束类型(目标约束字段1，目标约束字段2…目标约束字段N)<br>···<br>字段N 字段类型 ···<br>)</p>
+<p>添加约束：<br>CREATE TABLE xxxTable(<br>字段1 字段类型 约束类型(PRIMARY KEY等)<br>···<br>字段N 字段类型 ···<br>)<br><a id="more"></a><br>CREATE TABLE xxxTable(<br>字段1 字段类型 CONSTRAINT 约束名称 约束类型(目标约束字段1，目标约束字段2…目标约束字段N)<br>···<br>字段N 字段类型 ···<br>)</p>
 <p>修改约束：<br>ALERT TABLE xxxTable<br>ADD 约束类型 （目标约束字段1，目标2…目标N）</p>
 <p>ALERT TABLE xxxTable<br>ADD CONSTRAINT 约束名称 约束类型(目标约束字段1，目标2…目标N)</p>
 <p>删除约束：</p>
@@ -226,13 +230,13 @@ CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(
 <p>CREATE TABLE Persons<br>(<br>Id_P int NOT NULL,<br>LastName varchar(255) NOT NULL,<br>FirstName varchar(255),<br>Address varchar(255),<br>City varchar(255),<br>CONSTRAINT uc_PersonID UNIQUE (Id_P,LastName)<br>)</p>
 <p>如果一个表已经被创建，但是需要在某个字段上加上UNIQUE约束，操作如下：<br>ALERT TABLE tableName ADD UNIQUE (字段名称)</p>
 <p>如果需要给添加的UNIQUE命名，并且为多个列加上UNIQUE约束，操作如下：<br>ALERT TABLE tableName ADD CONSTRAINT 约束名称 UNIQUE (字段1，字段2…字段N)<br>注意：约束名称的命名规则一般是，uq<em>字段名 或者 uq</em>组名</p>
-<p>撤销UNIQUE：<br>MySql ：       ALERT TABLE tableName DROP INDEX 约束名<br>其他SQL：    ALERT TABLE tableName DROP CONSTRAINT 约束名 </p>
+<p>撤销UNIQUE：<br>MySql ：       ALERT TABLE tableName DROP INDEX 约束名<br>其他SQL：    ALERT TABLE tableName DROP CONSTRAINT 约束名</p>
 <ol>
 <li>PRIMARY KEY: 一个表中的主键，会自动生成一个UNIQUE约束，一个表中只能有一个主键<br>PRIMARY KEY 主键约束，每一个表中只能主键，而且有且仅有一个主键，主键列的值不能为NULL。一个表中可以有多个字段一起组成一个主键，但是主键只能有一个。添加删除主键的方式类似于添加或删除UNIQUE约束。</li>
 </ol>
 <p>ALTER TABLE Persons<br>ADD CONSTRAINT pk_PersonID PRIMARY KEY (Id_P,LastName)</p>
 <p>ALTER TABLE Persons<br>ADD  PRIMARY KEY (Id_P)</p>
-<p>ALTER TABLE Persons<br>DROP CONSTRAINT pk_PersonID </p>
+<p>ALTER TABLE Persons<br>DROP CONSTRAINT pk_PersonID</p>
 <p>ALTER TABLE Persons<br>DROP PRIMARY KEY</p>
 <ol>
 <li>FOREIGN KEY: 外键，一个表中的FOREIGN KEY指向另一个表中的PRIMARY KEY。</li>

@@ -6,34 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Android UI Tips | TedYin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###Tips:
-
+  <meta name="description" content="Tips:
 使用SparseArray代替HashMap等容器类。
 能复用时一定要复用，不能复用时尽量复用。复用一切！
 使用静态工厂方法去获取对象（使用Message时不要自己去new Message，要使用Message.obtain()方法去获取）这样可以减少不必要的对象，复用已有的对象。
 使用一个全局变量代替多个临时变量。
-使用Handler、AsyncTask、Loader、Int">
+使用Handler、AsyncTask、Loader、IntentS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android UI Tips">
 <meta property="og:url" content="http://www.tedyin.me/2015/01/18/android-ui-tips/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="###Tips:
-
+<meta property="og:description" content="Tips:
 使用SparseArray代替HashMap等容器类。
 能复用时一定要复用，不能复用时尽量复用。复用一切！
 使用静态工厂方法去获取对象（使用Message时不要自己去new Message，要使用Message.obtain()方法去获取）这样可以减少不必要的对象，复用已有的对象。
 使用一个全局变量代替多个临时变量。
-使用Handler、AsyncTask、Loader、Int">
-<meta property="og:updated_time" content="2015-11-16T01:44:35.000Z">
+使用Handler、AsyncTask、Loader、IntentS">
+<meta property="og:updated_time" content="2016-02-29T09:29:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android UI Tips">
-<meta name="twitter:description" content="###Tips:
-
+<meta name="twitter:description" content="Tips:
 使用SparseArray代替HashMap等容器类。
 能复用时一定要复用，不能复用时尽量复用。复用一切！
 使用静态工厂方法去获取对象（使用Message时不要自己去new Message，要使用Message.obtain()方法去获取）这样可以减少不必要的对象，复用已有的对象。
 使用一个全局变量代替多个临时变量。
-使用Handler、AsyncTask、Loader、Int">
+使用Handler、AsyncTask、Loader、IntentS">
   
   
     <link rel="icon" href="/favicon.png">
@@ -58,7 +55,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -85,11 +82,11 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -113,6 +110,10 @@
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -122,7 +123,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -159,7 +160,7 @@
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -175,6 +176,10 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -217,26 +222,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###Tips:</p>
-<ol>
+        <h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h3><ol>
 <li>使用SparseArray代替HashMap等容器类。</li>
 <li>能复用时一定要复用，不能复用时尽量复用。复用一切！</li>
 <li>使用静态工厂方法去获取对象（使用Message时不要自己去new Message，要使用Message.obtain()方法去获取）这样可以减少不必要的对象，复用已有的对象。</li>
 <li>使用一个全局变量代替多个临时变量。</li>
 <li>使用Handler、AsyncTask、Loader、IntentService处理异步任务，而非仅使用java.concurrent包</li>
 <li>给你的线程一个优先级，如果是处理后台任务的线程，设置他的优先级为Background。</li>
-<li>对于ListView的3种状态进行处理，从而优化代码，提升性能。(例如在滑动过程中停止图片的加载，等恢复正常后再继续加载图)</li>
-</ol>
-<p>###总结:</p>
-<ol>
-<li>不要阻塞Main Thread（UI Thread）</li>
+<li><p>对于ListView的3种状态进行处理，从而优化代码，提升性能。(例如在滑动过程中停止图片的加载，等恢复正常后再继续加载图)</p>
+<a id="more"></a>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h3></li>
+<li><p>不要阻塞Main Thread（UI Thread）</p>
+</li>
 <li>扁平化你的布局层次（能用一个Layout最好，可以使用merge代替FrameLayout）</li>
 <li>能复用就尽量复用一切可复用的东西。</li>
 <li>延迟加载一些不需要立即使用的内容。</li>
 <li>对你的Thread或者Task设置优先级，UI任务和Thread永远是最高级。</li>
 </ol>
-<p>###参考:</p>
-<p><a href="https://speakerdeck.com/cyrilmottier/optimizing-android-ui-pro-tips-for-creating-smooth-and-responsive-apps" target="_blank" rel="external">Android UI Tips</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考:"></a>参考:</h3><p><a href="https://speakerdeck.com/cyrilmottier/optimizing-android-ui-pro-tips-for-creating-smooth-and-responsive-apps" target="_blank" rel="external">Android UI Tips</a></p>
 
       
     </div>

@@ -4,33 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>TedYin&#39;s Blog</title>
+  <title>Elasticsearch 的批处理 | TedYin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ES的批处理
-前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档1curl -XPOST &amp;apos;localhost:9200/bank/account/_bulk?pretty&amp;apos; --data-binary &amp;quot;@accounts.json&amp;quot;
+  <meta name="description" content="前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档1curl -XPOST &apos;localhost:9200/bank/account/_bulk?pretty&apos; --data-binary &quot;@accounts.json&quot;
 
-
-
-@accounts.j">
+@accounts.json是存在当前目录下的一个json文件,里面存储了一个j">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TedYin's Blog">
+<meta property="og:title" content="Elasticsearch 的批处理">
 <meta property="og:url" content="http://www.tedyin.me/2016/01/26/elasticsearch-batch-processing/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="ES的批处理
-前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档1curl -XPOST &amp;apos;localhost:9200/bank/account/_bulk?pretty&amp;apos; --data-binary &amp;quot;@accounts.json&amp;quot;
+<meta property="og:description" content="前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档1curl -XPOST &apos;localhost:9200/bank/account/_bulk?pretty&apos; --data-binary &quot;@accounts.json&quot;
 
-
-
-@accounts.j">
-<meta property="og:updated_time" content="2016-02-29T01:48:20.000Z">
+@accounts.json是存在当前目录下的一个json文件,里面存储了一个j">
+<meta property="og:updated_time" content="2016-02-29T09:44:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TedYin's Blog">
-<meta name="twitter:description" content="ES的批处理
-前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档1curl -XPOST &amp;apos;localhost:9200/bank/account/_bulk?pretty&amp;apos; --data-binary &amp;quot;@accounts.json&amp;quot;
+<meta name="twitter:title" content="Elasticsearch 的批处理">
+<meta name="twitter:description" content="前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档1curl -XPOST &apos;localhost:9200/bank/account/_bulk?pretty&apos; --data-binary &quot;@accounts.json&quot;
 
-
-
-@accounts.j">
+@accounts.json是存在当前目录下的一个json文件,里面存储了一个j">
   
   
     <link rel="icon" href="/favicon.png">
@@ -55,7 +46,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -82,11 +73,11 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -110,6 +101,10 @@
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -119,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -156,7 +151,7 @@
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -172,6 +167,10 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -194,18 +193,37 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Elasticsearch 的批处理
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/elasticsearch/">elasticsearch</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="ES的批处理"><a href="#ES的批处理" class="headerlink" title="ES的批处理"></a>ES的批处理</h3><ul>
-<li>前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST &apos;localhost:9200/bank/account/_bulk?pretty&apos; --data-binary &quot;@accounts.json&quot;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+        <p>前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">curl</span> -XPOST <span class="string">'localhost:9200/bank/account/_bulk?pretty'</span> --data-binary <span class="string">"<span class="variable">@accounts</span>.json"</span></span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p><code>@accounts.json</code>是存在当前目录下的一个json文件,里面存储了一个josn数组,你可以让她存储任何结构相同的数组.</p>
 </blockquote>
-<p>所有的批量操作都是使用<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html" target="_blank" rel="external">_bluk API</a>来完成,上面的操作就是为<code>accounts.json</code>里面的数据建立索引.</p>
+<p>所有的批量操作都是使用<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html" target="_blank" rel="external">_bluk API</a>来完成,上面的操作就是为<code>accounts.json</code>里面的数据建立索引.<br><a id="more"></a></p>
 <ul>
-<li>除了批量操作数据之外,ES还可以对一条或多条数据进行多步骤操作.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST &apos;localhost:9200/blog/article/_bulk?pretty&apos; -d &apos;</span><br><span class="line">&#123;&quot;index&quot;:&#123;&quot;_id&quot;:&quot;1&quot;&#125;&#125;</span><br><span class="line">&#123;&quot;title&quot;: &quot;batch bulk api title 1&quot; &#125;</span><br><span class="line">&#123;&quot;update&quot;:&#123;&quot;_id&quot;:&quot;2&quot;&#125;&#125;</span><br><span class="line">&#123;&quot;doc&quot;: &#123;&quot;title&quot;: &quot;batch bulk api title 2&quot; &#125;&#125;</span><br><span class="line">&#123;&quot;delete&quot;:&#123;&quot;_id&quot;:&quot;3&quot;&#125;&#125;</span><br><span class="line">&apos;</span><br></pre></td></tr></table></figure>
+<li>除了批量操作数据之外,ES还可以对一条或多条数据进行多步骤操作.<figure class="highlight scilab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST <span class="string">'localhost:9200/blog/article/_bulk?pretty'</span> -d <span class="string">'</span><br><span class="line">&#123;"</span>index<span class="string">":&#123;"</span>_id<span class="string">":"</span><span class="number">1</span><span class="string">"&#125;&#125;</span><br><span class="line">&#123;"</span>title<span class="string">": "</span>batch bulk api title <span class="number">1</span><span class="string">" &#125;</span><br><span class="line">&#123;"</span>update<span class="string">":&#123;"</span>_id<span class="string">":"</span><span class="number">2</span><span class="string">"&#125;&#125;</span><br><span class="line">&#123;"</span>doc<span class="string">": &#123;"</span>title<span class="string">": "</span>batch bulk api title <span class="number">2</span><span class="string">" &#125;&#125;</span><br><span class="line">&#123;"</span>delete<span class="string">":&#123;"</span>_id<span class="string">":"</span><span class="number">3</span><span class="string">"&#125;&#125;</span><br><span class="line">'</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>上面的批量操作一共干了三件事情:</p>
@@ -242,7 +260,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="elasticsearch-batch-processing" data-title="" data-url="http://www.tedyin.me/2016/01/26/elasticsearch-batch-processing/"></div>
+	<div class="ds-thread" data-thread-key="elasticsearch-batch-processing" data-title="Elasticsearch 的批处理" data-url="http://www.tedyin.me/2016/01/26/elasticsearch-batch-processing/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

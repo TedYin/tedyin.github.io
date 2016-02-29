@@ -15,7 +15,7 @@
 <meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/page1.png">
 <meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/page2.png">
 <meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/page3.png">
-<meta property="og:updated_time" content="2016-02-29T07:15:49.000Z">
+<meta property="og:updated_time" content="2016-02-29T09:30:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ViewPager PageTransformer 应用">
 <meta name="twitter:description" content="最近项目中要有个需求就是做出一个可以滑动的列表，类似于Paper效果的动画，期初设想的比较复杂，自定义监控ViewPager的OnScroll事件，然后再在onPageScrolled中根据position, positionOffset, positionOffsetPixels等数据就算出滑动的百分比，通过滑动的百分比来控制动画播放的百分比。这样虽然也可以实现想要的效果，但是会很复杂，有许多中">
@@ -44,7 +44,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -71,11 +71,11 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -99,6 +99,10 @@
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -108,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -145,7 +149,7 @@
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -161,6 +165,10 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -203,8 +211,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近项目中要有个需求就是做出一个可以滑动的列表，类似于Paper效果的动画，期初设想的比较复杂，自定义监控ViewPager的OnScroll事件，然后再在onPageScrolled中根据<code>position</code>, <code>positionOffset</code>, <code>positionOffsetPixels</code>等数据就算出滑动的百分比，通过滑动的百分比来控制动画播放的百分比。这样虽然也可以实现想要的效果，但是会很复杂，有许多中间状态需要我们自己计算和保存，维护起来非常麻烦。</p>
-<p>在这些复杂的实现后，在朋友的建议下使用了<code>ViewPager.PageTransformer</code>来重新实现上述效果，瞬间简单了许多，很多中间状态不许需要自己去维护，PagerTransformer会帮你去维护，并且在他提供的方法中<code>transformPage(View page, float position)</code>已经帮你计算好了滑动百分比，根本不需要你再去计算，这个简直太贴心了。其实在滑动过程中对UI修改最重要的也是最麻烦的就是去计算滑动的百分比，现在有了这个百分比，你想实现什么动画就实现什么动画，简直太爽了。</p>
+        <p>最近项目中要有个需求就是做出一个可以滑动的列表，类似于Paper效果的动画，期初设想的比较复杂，自定义监控ViewPager的OnScroll事件，然后再在onPageScrolled中根据<code>position</code>, <code>positionOffset</code>, <code>positionOffsetPixels</code>等数据就算出滑动的百分比，通过滑动的百分比来控制动画播放的百分比。这样虽然也可以实现想要的效果，但是会很复杂，有许多中间状态需要我们自己计算和保存，维护起来非常麻烦。<br><a id="more"></a><br>在这些复杂的实现后，在朋友的建议下使用了<code>ViewPager.PageTransformer</code>来重新实现上述效果，瞬间简单了许多，很多中间状态不许需要自己去维护，PagerTransformer会帮你去维护，并且在他提供的方法中<code>transformPage(View page, float position)</code>已经帮你计算好了滑动百分比，根本不需要你再去计算，这个简直太贴心了。其实在滑动过程中对UI修改最重要的也是最麻烦的就是去计算滑动的百分比，现在有了这个百分比，你想实现什么动画就实现什么动画，简直太爽了。</p>
 <p>在使用ViewPager.PageTransformer的时候需要注意的就是他的接口方法中的postion，只要理解了它的用法，PageTransformer才算是用熟了。首先来介绍下position的用法：</p>
 <ul>
 <li><p>position 是一个float值，它代表了一个页面离开屏幕的百分比，以及另一个页面进入的百分比</p>
@@ -218,7 +225,7 @@
 <blockquote>
 <p>注意：<br>从右往左滑 &lt;——  position为负数<br>从左往右滑 ——&gt;  position为正数</p>
 </blockquote>
-<p>好了理解了上面所讲的内容就可以真正的去做出漂亮的动画了，下面给一个动画实例<br><figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public static class RotatePageTransformer implements ViewPager.PageTransformer &#123;</span><br><span class="line">    private static float MIN_TRAN = 50f;</span><br><span class="line">    private static int MIN_ROTATE = 15;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void transformPage(View view, float position) &#123;</span><br><span class="line">        if (position &lt;= 1) &#123;</span><br><span class="line">            float rotateFactor = MIN_ROTATE * position;</span><br><span class="line">            float tranFactor = MIN_TRAN * position;</span><br><span class="line">            if (position &lt; 0) &#123;</span><br><span class="line">                view.setTranslationY(-tranFactor);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                view.setTranslationY(tranFactor);</span><br><span class="line">            &#125;</span><br><span class="line">            view.setRotation(rotateFactor);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>好了理解了上面所讲的内容就可以真正的去做出漂亮的动画了，下面给一个动画实例<br><figure class="highlight arduino"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> RotatePageTransformer implements ViewPager.PageTransformer &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">float</span> MIN_TRAN = <span class="number">50</span>f;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> MIN_ROTATE = <span class="number">15</span>;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> transformPage(View view, <span class="keyword">float</span> <span class="built_in">position</span>) &#123;</span><br><span class="line">        <span class="built_in">if</span> (<span class="built_in">position</span> &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">float</span> rotateFactor = MIN_ROTATE * <span class="built_in">position</span>;</span><br><span class="line">            <span class="keyword">float</span> tranFactor = MIN_TRAN * <span class="built_in">position</span>;</span><br><span class="line">            <span class="built_in">if</span> (<span class="built_in">position</span> &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                view.setTranslationY(-tranFactor);</span><br><span class="line">            &#125; <span class="built_in">else</span> &#123;</span><br><span class="line">                view.setTranslationY(tranFactor);</span><br><span class="line">            &#125;</span><br><span class="line">            view.setRotation(rotateFactor);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>该动画的效果如下：<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/page1.png" alt="page1"><br><img src="http://7xii1s.com1.z0.glb.clouddn.com/page2.png" alt="page2"><br><img src="http://7xii1s.com1.z0.glb.clouddn.com/page3.png" alt="page3"></p>
 <p>在滑动的过程总中左边和右边的会以此导向一个方向并且在Y方向上有一定位移，等到中间后图片的夹角会消失，而且会向上移动一定的距离。</p>
 <p>好了，赶紧去体验一下ViewPager.PageTransformer吧。</p>

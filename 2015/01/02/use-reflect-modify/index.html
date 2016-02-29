@@ -6,24 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>使用反射自定义SearchView | TedYin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。
-下面来举个例子来说明一下如何使用反射来实现自定义SearchView的效果：
-比如SearchView中展开后的底部Hint背景有一个搜索的图标，但是我们要是">
+  <meta name="description" content="最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用反射自定义SearchView">
 <meta property="og:url" content="http://www.tedyin.me/2015/01/02/use-reflect-modify/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。
-下面来举个例子来说明一下如何使用反射来实现自定义SearchView的效果：
-比如SearchView中展开后的底部Hint背景有一个搜索的图标，但是我们要是">
+<meta property="og:description" content="最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。">
 <meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/search1.png">
 <meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/search2.png">
-<meta property="og:updated_time" content="2016-02-29T07:15:49.000Z">
+<meta property="og:updated_time" content="2016-02-29T09:29:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用反射自定义SearchView">
-<meta name="twitter:description" content="最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。
-下面来举个例子来说明一下如何使用反射来实现自定义SearchView的效果：
-比如SearchView中展开后的底部Hint背景有一个搜索的图标，但是我们要是">
+<meta name="twitter:description" content="最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。">
 <meta name="twitter:image" content="http://7xii1s.com1.z0.glb.clouddn.com/search1.png">
   
   
@@ -49,7 +43,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -76,11 +70,11 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -104,6 +98,10 @@
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -113,7 +111,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -150,7 +148,7 @@
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -166,6 +164,10 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -208,12 +210,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。</p>
-<p>下面来举个例子来说明一下如何使用反射来实现自定义SearchView的效果：</p>
+        <p>最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。<br><a id="more"></a><br>下面来举个例子来说明一下如何使用反射来实现自定义SearchView的效果：</p>
 <p>比如SearchView中展开后的底部Hint背景有一个搜索的图标，但是我们要是想隐藏该图标是没有办法直接隐藏的，因此我们可以使用反射来进行动态修改，为了可以使用反射，因此我们要查看SearchView的源码然后找出该图标的所属控件，然后使用反射动态修改该控件的属性，从而达到隐藏该图标的目的。<br>下面来看下具体步骤：</p>
-<p>###查看源码<br>经过查看SearchView的源码，我们发现这个图标是SearchView中的 SearchAutoComplete的Hint属性，源码如下：<br><figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">if (mQueryHint != null) &#123;</span><br><span class="line">    mQueryTextView.setHint(getDecoratedHint(mQueryHint));</span><br><span class="line">&#125; else if (mSearchable != null) &#123;</span><br><span class="line">    CharSequence hint = null;</span><br><span class="line">    int hintId = mSearchable.getHintId();</span><br><span class="line">    if (hintId != 0) &#123;</span><br><span class="line">        hint = getContext().getString(hintId);</span><br><span class="line">    &#125;</span><br><span class="line">    if (hint != null) &#123;</span><br><span class="line">        mQueryTextView.setHint(getDecoratedHint(hint));</span><br><span class="line">    &#125;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    mQueryTextView.setHint(getDecoratedHint(&quot;&quot;));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>###查看源码<br>经过查看SearchView的源码，我们发现这个图标是SearchView中的 SearchAutoComplete的Hint属性，源码如下：<br><figure class="highlight axapta"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (mQueryHint != <span class="keyword">null</span>) &#123;</span><br><span class="line">    mQueryTextView.setHint(getDecoratedHint(mQueryHint));</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (mSearchable != <span class="keyword">null</span>) &#123;</span><br><span class="line">    CharSequence <span class="keyword">hint</span> = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">int</span> hintId = mSearchable.getHintId();</span><br><span class="line">    <span class="keyword">if</span> (hintId != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">hint</span> = getContext().getString(hintId);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">hint</span> != <span class="keyword">null</span>) &#123;</span><br><span class="line">        mQueryTextView.setHint(getDecoratedHint(<span class="keyword">hint</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    mQueryTextView.setHint(getDecoratedHint(<span class="string">""</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>###使用反射修改SearchView<br>从上述代码可以看出，显示Hint的是<code>mQueryHint</code>,因此只要将这个Hint值设为“”空字符串就可以隐藏该icon。下面使用反射的方式获取mQueryTextView这个private级别的控件,并将Hint设为空字符串，代码如下：</p>
-<figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">private void hideCloseSearchIcon(SearchView searchView) &#123;</span><br><span class="line">	SearchAutoComplete mQueryTextView = (SearchAutoComplete) SystemUiHelper.getFieldByReflect(</span><br><span class="line">			&quot;mQueryTextView&quot;, SearchView.class, searchView);</span><br><span class="line">	mQueryTextView.setHint(R.string.hint_search);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static Object getFieldByReflect(String fieldName, Class&lt;?&gt; claz, Object target) &#123;</span><br><span class="line">	try &#123;</span><br><span class="line">		Field searchField = claz.getDeclaredField(fieldName);</span><br><span class="line">		searchField.setAccessible(true);</span><br><span class="line">		return searchField.get(target);</span><br><span class="line">	&#125; catch (NoSuchFieldException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125; catch (IllegalAccessException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	return null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight aspectj"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">void</span> <span class="title">hideCloseSearchIcon</span><span class="params">(SearchView searchView)</span> </span>&#123;</span><br><span class="line">	SearchAutoComplete mQueryTextView = (SearchAutoComplete) SystemUiHelper.getFieldByReflect(</span><br><span class="line">			<span class="string">"mQueryTextView"</span>, SearchView.class, searchView);</span><br><span class="line">	mQueryTextView.setHint(R.string.hint_search);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="function">Object <span class="title">getFieldByReflect</span><span class="params">(String fieldName, Class&lt;?&gt; claz, Object <span class="keyword">target</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		Field searchField = claz.getDeclaredField(fieldName);</span><br><span class="line">		searchField.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">		<span class="function"><span class="keyword">return</span> searchField.<span class="title">get</span><span class="params">(<span class="keyword">target</span>)</span></span>;</span><br><span class="line">	&#125; <span class="keyword">catch</span> (NoSuchFieldException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这样就可以将SearchView中输入框旁边的icon去掉了，下面看下对比图：</p>
 <p>去掉之前的样子：<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/search1.png" alt="search1"><br>去掉之后的样子：<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/search2.png" alt="search2"></p>
 <p>同理，可以使用反射做很多类似的修改和操作,只有你想不到的没有你做不到的。</p>

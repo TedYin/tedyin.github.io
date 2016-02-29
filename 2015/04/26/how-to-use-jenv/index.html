@@ -8,26 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具Jenv，用它来终结我们的Java版本管理之痛。
 
-介绍Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。
-
-本文以">
+介绍Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How To Use Jenv To Master Your Java Environnement">
 <meta property="og:url" content="http://www.tedyin.me/2015/04/26/how-to-use-jenv/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
 <meta property="og:description" content="对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具Jenv，用它来终结我们的Java版本管理之痛。
 
-介绍Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。
-
-本文以">
-<meta property="og:updated_time" content="2016-02-29T02:47:58.000Z">
+介绍Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。">
+<meta property="og:updated_time" content="2016-02-29T09:37:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How To Use Jenv To Master Your Java Environnement">
 <meta name="twitter:description" content="对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具Jenv，用它来终结我们的Java版本管理之痛。
 
-介绍Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。
-
-本文以">
+介绍Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。">
   
   
     <link rel="icon" href="/favicon.png">
@@ -52,7 +46,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -79,11 +73,11 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -107,6 +101,10 @@
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -116,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -153,7 +151,7 @@
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -169,6 +167,10 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -214,18 +216,18 @@
         <blockquote>
 <p>对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具<code>Jenv</code>，用它来终结我们的Java版本管理之痛。</p>
 </blockquote>
-<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。</p>
+<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。<br><a id="more"></a></p>
 <blockquote>
 <p>本文以Mac系统位例进行介绍。</p>
 </blockquote>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ol>
 <li><p>将代码下载到<code>~/.jenv</code>目录下</p>
-<figure class="highlight plain"><figcaption><span>lang: bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/gcuisinier/jenv.git ~/.jenv</span><br></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><figcaption><span>lang: bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">clone</span> <span class="title">https</span>://github.com/gcuisinier/jenv.git ~/.jenv</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>将<code>~/.jenv/bin</code>加入到<code>$PATH</code>环境变量中</p>
 </li>
 <li><p>添加初始化Jenv的脚本到环境变量中</p>
-<figure class="highlight plain"><figcaption><span>lang: bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo &apos;eval &quot;$(jenv init -)&quot;&apos; &gt;&gt; ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><figcaption><span>lang: bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo <span class="string">'eval "$(jenv init -)"'</span> <span class="meta">&gt;&gt; </span>~<span class="regexp">/.bash_profile</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重启命令行，使PATH的设置生效，现在可已使用jenv来管理JDK版本了。</p>
 </li>
@@ -257,11 +259,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/05/02/jcenter/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/05/03/android-issue/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          使用Gradle将代码上传到JCenter
+          Android开发中遇到的小问题汇总
         
       </div>
     </a>

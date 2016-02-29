@@ -6,26 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Android View Lifecycle | TedYin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。
-##什么是View先来看看官方文档的解释：
-
-This class represents the basic building block for user interface components. A View occupies a">
+  <meta name="description" content="在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android View Lifecycle">
 <meta property="og:url" content="http://www.tedyin.me/2015/03/11/android-view-lifecycle/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。
-##什么是View先来看看官方文档的解释：
-
-This class represents the basic building block for user interface components. A View occupies a">
+<meta property="og:description" content="在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。">
 <meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/view_lifecycle.png">
-<meta property="og:updated_time" content="2016-02-29T07:15:49.000Z">
+<meta property="og:updated_time" content="2016-02-29T09:29:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android View Lifecycle">
-<meta name="twitter:description" content="在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。
-##什么是View先来看看官方文档的解释：
-
-This class represents the basic building block for user interface components. A View occupies a">
+<meta name="twitter:description" content="在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。">
 <meta name="twitter:image" content="http://7xii1s.com1.z0.glb.clouddn.com/view_lifecycle.png">
   
   
@@ -51,7 +42,7 @@ This class represents the basic building block for user interface components. A 
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -78,11 +69,11 @@ This class represents the basic building block for user interface components. A 
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -106,6 +97,10 @@ This class represents the basic building block for user interface components. A 
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -115,7 +110,7 @@ This class represents the basic building block for user interface components. A 
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -152,7 +147,7 @@ This class represents the basic building block for user interface components. A 
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -168,6 +163,10 @@ This class represents the basic building block for user interface components. A 
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -210,7 +209,7 @@ This class represents the basic building block for user interface components. A 
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。</p>
+        <p>在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。<br><a id="more"></a></p>
 <p>##什么是View<br>先来看看官方文档的解释：</p>
 <blockquote>
 <p>This class represents the basic building block for user interface components. A View occupies a rectangular area on the screen and is responsible for drawing and event handling. View is the base class for widgets, which are used to create interactive UI components (buttons, text fields, etc.). The ViewGroup subclass is the base class for layouts, which are invisible containers that hold other Views (or other ViewGroups) and define their layout properties.</p>

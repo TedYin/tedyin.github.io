@@ -6,19 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Handling Runtime Changes | TedYin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##Runtime Changes 是什么在Android运行期间，当设备的一些属性改变时，为了更好的使得App适应设备的改变，Android会主动destory当前的Activity，并且重新创建并启动它，以适应设备属性的改变。这样做的目的是为了更好的方便我们处理这些Change。
-##常见的改变常见的当以下情况其中之一发生时都会引起Activity被Destory并且重新调用onCreate去">
+  <meta name="description" content="##Runtime Changes 是什么在Android运行期间，当设备的一些属性改变时，为了更好的使得App适应设备的改变，Android会主动destory当前的Activity，并且重新创建并启动它，以适应设备属性的改变。这样做的目的是为了更好的方便我们处理这些Change。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Handling Runtime Changes">
 <meta property="og:url" content="http://www.tedyin.me/2014/09/21/handling-congfig-change/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="##Runtime Changes 是什么在Android运行期间，当设备的一些属性改变时，为了更好的使得App适应设备的改变，Android会主动destory当前的Activity，并且重新创建并启动它，以适应设备属性的改变。这样做的目的是为了更好的方便我们处理这些Change。
-##常见的改变常见的当以下情况其中之一发生时都会引起Activity被Destory并且重新调用onCreate去">
-<meta property="og:updated_time" content="2016-02-29T02:47:58.000Z">
+<meta property="og:description" content="##Runtime Changes 是什么在Android运行期间，当设备的一些属性改变时，为了更好的使得App适应设备的改变，Android会主动destory当前的Activity，并且重新创建并启动它，以适应设备属性的改变。这样做的目的是为了更好的方便我们处理这些Change。">
+<meta property="og:updated_time" content="2016-02-29T09:31:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Handling Runtime Changes">
-<meta name="twitter:description" content="##Runtime Changes 是什么在Android运行期间，当设备的一些属性改变时，为了更好的使得App适应设备的改变，Android会主动destory当前的Activity，并且重新创建并启动它，以适应设备属性的改变。这样做的目的是为了更好的方便我们处理这些Change。
-##常见的改变常见的当以下情况其中之一发生时都会引起Activity被Destory并且重新调用onCreate去">
+<meta name="twitter:description" content="##Runtime Changes 是什么在Android运行期间，当设备的一些属性改变时，为了更好的使得App适应设备的改变，Android会主动destory当前的Activity，并且重新创建并启动它，以适应设备属性的改变。这样做的目的是为了更好的方便我们处理这些Change。">
   
   
     <link rel="icon" href="/favicon.png">
@@ -43,7 +40,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -70,11 +67,11 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -98,6 +95,10 @@
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -107,7 +108,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -144,7 +145,7 @@
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -160,6 +161,10 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -202,7 +207,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##Runtime Changes 是什么<br>在Android运行期间，当设备的一些属性改变时，为了更好的使得App适应设备的改变，Android会主动destory当前的Activity，并且重新创建并启动它，以适应设备属性的改变。这样做的目的是为了更好的方便我们处理这些Change。</p>
+        <p>##Runtime Changes 是什么<br>在Android运行期间，当设备的一些属性改变时，为了更好的使得App适应设备的改变，Android会主动destory当前的Activity，并且重新创建并启动它，以适应设备属性的改变。这样做的目的是为了更好的方便我们处理这些Change。<br><a id="more"></a></p>
 <p>##常见的改变<br>常见的当以下情况其中之一发生时都会引起Activity被Destory并且重新调用onCreate去创建启动</p>
 <ul>
 <li>当屏幕方向改变时</li>
@@ -225,7 +230,7 @@
 <li>在onCreate方法中调用 setRetainInstance(true)方法</li>
 <li>把这个Fragment添加到FragmentManager中，确保当Activity再次启动时还可以得到该Fragment的引用。</li>
 </ol>
-<figure class="highlight plain"><figcaption><span>lang: Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public class DataFragment extends Framgent&#123;</span><br><span class="line">     private MyDataObject mData;</span><br><span class="line">     public void onCreate(Bundle savedInstanceState)&#123;</span><br><span class="line">          // retain this fragment </span><br><span class="line">          setRetainInstance(true);</span><br><span class="line">     &#125;     </span><br><span class="line">     </span><br><span class="line">     public MyDataObject getData()&#123;</span><br><span class="line">          return mData;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">     public void setData(MyDataObject data)&#123;</span><br><span class="line">          this.data = mData;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>lang: Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataFragment</span> <span class="keyword">extends</span> <span class="title">Framgent</span></span>&#123;</span><br><span class="line">     <span class="keyword">private</span> MyDataObject mData;</span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span></span>&#123;</span><br><span class="line">          <span class="comment">// retain this fragment</span></span><br><span class="line">          setRetainInstance(<span class="keyword">true</span>);</span><br><span class="line">     &#125;     </span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> MyDataObject <span class="title">getData</span><span class="params">()</span></span>&#123;</span><br><span class="line">          <span class="keyword">return</span> mData;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setData</span><span class="params">(MyDataObject data)</span></span>&#123;</span><br><span class="line">          <span class="keyword">this</span>.data = mData;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
 <li>注意：在Fragment中保存数据时，禁止保存和Activity绑定的数据，比如View，Adapter或Drawable等。因为Activity会被销毁后再重新启动，当重启后View等对象中引用的Activity已经失效，会引起错误导致程序崩溃。</li>
@@ -235,15 +240,15 @@
 </ul>
 </blockquote>
 <p>当Activity重启之后，可通过FragmentManager获取，保存数据的Fragment，然后从Fragment中恢复保存的数据，代码如下:</p>
-<figure class="highlight plain"><figcaption><span>lang: Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public class MyActivity extends Activity&#123;</span><br><span class="line"></span><br><span class="line">     private MyDataObject mData;</span><br><span class="line">     private DataFragment dataFragment;</span><br><span class="line">     @Override</span><br><span class="line">    public void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.main);</span><br><span class="line"></span><br><span class="line">        // find the retained fragment on activity restarts</span><br><span class="line">        FragmentManager fm = getFragmentManager();</span><br><span class="line">        dataFragment = (DataFragment) fm.findFragmentByTag(“data”);</span><br><span class="line"></span><br><span class="line">        // create the fragment and data the first time</span><br><span class="line">        if (dataFragment == null) &#123;</span><br><span class="line">            // add the fragment</span><br><span class="line">            dataFragment = new DataFragment();</span><br><span class="line">            fm.beginTransaction().add(dataFragment, “data”).commit();</span><br><span class="line">            // load the data from the web</span><br><span class="line">            dataFragment.setData(loadMyData());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // the data is available in dataFragment.getData()</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onDestroy() &#123;</span><br><span class="line">        super.onDestroy();</span><br><span class="line">        // store the data in the fragment</span><br><span class="line">        dataFragment.setData(collectMyLoadedData());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scala"><figcaption><span>lang: Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">MyActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">private</span> <span class="type">MyDataObject</span> mData;</span><br><span class="line">     <span class="keyword">private</span> <span class="type">DataFragment</span> dataFragment;</span><br><span class="line">     <span class="meta">@Override</span></span><br><span class="line">    public void onCreate(<span class="type">Bundle</span> savedInstanceState) &#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(<span class="type">R</span>.layout.main);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// find the retained fragment on activity restarts</span></span><br><span class="line">        <span class="type">FragmentManager</span> fm = getFragmentManager();</span><br><span class="line">        dataFragment = (<span class="type">DataFragment</span>) fm.findFragmentByTag(“data”);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// create the fragment and data the first time</span></span><br><span class="line">        <span class="keyword">if</span> (dataFragment == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="comment">// add the fragment</span></span><br><span class="line">            dataFragment = <span class="keyword">new</span> <span class="type">DataFragment</span>();</span><br><span class="line">            fm.beginTransaction().add(dataFragment, “data”).commit();</span><br><span class="line">            <span class="comment">// load the data from the web</span></span><br><span class="line">            dataFragment.setData(loadMyData());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// the data is available in dataFragment.getData()</span></span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    public void onDestroy() &#123;</span><br><span class="line">        <span class="keyword">super</span>.onDestroy();</span><br><span class="line">        <span class="comment">// store the data in the fragment</span></span><br><span class="line">        dataFragment.setData(collectMyLoadedData());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这样就可以在Activity重启之后获取保存的状态对象了。</p>
 <blockquote>
 <p>这里是将Fragment当容器来使用，利用了它的特性，存储Activity的状态对象。而且在获取时，由FragmentManager来管理Fragment的状态，这样既方便又安全。</p>
 </blockquote>
 <p>###自定义处理Configuration的变化<br>如果在Configuration变化时没有资源文件的更新(横竖屏不同布局)，或者因为性能的要求，不需要重启当前Activity的话，我们可以通过自定义处理Configuration的变化来代替系统的默认处理(重启Activity)。使用<code>&lt;activity&gt;</code>标签下的<code>&lt;android:configChanges&gt;</code>属性来指定需要自定义处理的属性变换。代码如下:</p>
-<figure class="highlight plain"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;activity android:name=&quot;.MyActivity&quot;</span><br><span class="line">    android:configChanges=&quot;orientation|keyboardHidden|screenSize&quot;</span><br><span class="line">    android:label=&quot;@string/app_name&quot;]]&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".MyActivity"</span></span><br><span class="line">    <span class="attr">android:configChanges</span>=<span class="string">"orientation|keyboardHidden|screenSize"</span></span><br><span class="line">    <span class="attr">android:label</span>=<span class="string">"@string/app_name"</span><span class="string">]]</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>当在<code>&lt;activity&gt;</code>中配置好之后，我们可以通过重写<code>onConfigurationChanged(Configuration)</code>方法来自定义处理Configuration的属性变化。</p>
-<figure class="highlight plain"><figcaption><span>lang: Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">@Overried</span><br><span class="line">public void onConfigurationChanged(Configuration newConfig)&#123;</span><br><span class="line">     super.onConfigurationChanged(newConfig);</span><br><span class="line"></span><br><span class="line">    // Checks the orientation of the screen</span><br><span class="line">    if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) &#123;</span><br><span class="line">        Toast.makeText(this, &quot;landscape&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125; else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT)&#123;</span><br><span class="line">        Toast.makeText(this, &quot;portrait&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight aspectj"><figcaption><span>lang: Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Overried</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onConfigurationChanged</span><span class="params">(Configuration newConfig)</span></span>&#123;</span><br><span class="line">     <span class="keyword">super</span>.onConfigurationChanged(newConfig);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Checks the orientation of the screen</span></span><br><span class="line">    <span class="keyword">if</span> (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) &#123;</span><br><span class="line">        Toast.makeText(<span class="keyword">this</span>, <span class="string">"landscape"</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125; <span class="function"><span class="keyword">else</span> <span class="title">if</span> <span class="params">(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT)</span></span>&#123;</span><br><span class="line">        Toast.makeText(<span class="keyword">this</span>, <span class="string">"portrait"</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注意：在3.2版本 API level 13之后，<code>screen size</code>属性的改变也会引起Activity的销毁并重启。而且congfigChanges的属性都是Integer的，如果是自定义处理属性改变，那么在属性改变后所需要重新加载的数据都要重新设置一遍。比如，某个图片横屏和竖屏是不同的，那么就需要在onConfigurationChanged()方法中重新设置该图片的资源。</p>
 </blockquote>

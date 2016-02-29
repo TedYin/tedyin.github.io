@@ -8,26 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="常用参数： inJustDecodeBounds inSampleSize inPurgeable inInputShareable inTempStorage outWith outHeight outMimeType
 
-inMutable true 返回一个可变（可被修改）的Bitmap对象，false 返回一个不可变的Bitmap对象（即不可修改的）
-
-inJustDecodeBounds">
+inMutable true 返回一个可变（可被修改）的Bitmap对象，false 返回一个不可变的Bitmap对象（即不可修改的）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BitmapFactory.Options 参数详解">
 <meta property="og:url" content="http://www.tedyin.me/2014/07/20/BitmapFactory-Options-参数详解/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
 <meta property="og:description" content="常用参数： inJustDecodeBounds inSampleSize inPurgeable inInputShareable inTempStorage outWith outHeight outMimeType
 
-inMutable true 返回一个可变（可被修改）的Bitmap对象，false 返回一个不可变的Bitmap对象（即不可修改的）
-
-inJustDecodeBounds">
-<meta property="og:updated_time" content="2015-11-16T01:44:35.000Z">
+inMutable true 返回一个可变（可被修改）的Bitmap对象，false 返回一个不可变的Bitmap对象（即不可修改的）">
+<meta property="og:updated_time" content="2016-02-29T09:35:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BitmapFactory.Options 参数详解">
 <meta name="twitter:description" content="常用参数： inJustDecodeBounds inSampleSize inPurgeable inInputShareable inTempStorage outWith outHeight outMimeType
 
-inMutable true 返回一个可变（可被修改）的Bitmap对象，false 返回一个不可变的Bitmap对象（即不可修改的）
-
-inJustDecodeBounds">
+inMutable true 返回一个可变（可被修改）的Bitmap对象，false 返回一个不可变的Bitmap对象（即不可修改的）">
   
   
     <link rel="icon" href="/favicon.png">
@@ -52,7 +46,7 @@ inJustDecodeBounds">
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -79,11 +73,11 @@ inJustDecodeBounds">
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -107,6 +101,10 @@ inJustDecodeBounds">
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -116,7 +114,7 @@ inJustDecodeBounds">
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -153,7 +151,7 @@ inJustDecodeBounds">
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -169,6 +167,10 @@ inJustDecodeBounds">
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -213,8 +215,7 @@ inJustDecodeBounds">
       
         <p>常用参数： <code>inJustDecodeBounds</code> <code>inSampleSize</code> <code>inPurgeable</code> <code>inInputShareable</code> <code>inTempStorage</code> <code>outWith</code> <code>outHeight</code> <code>outMimeType</code></p>
 <ol>
-<li><p>inMutable true 返回一个可变（可被修改）的Bitmap对象，false 返回一个不可变的Bitmap对象（即不可修改的）</p>
-</li>
+<li>inMutable true 返回一个可变（可被修改）的Bitmap对象，false 返回一个不可变的Bitmap对象（即不可修改的）<a id="more"></a></li>
 <li><p>inJustDecodeBounds 为true时，只是获取图片的信息，并不对图片进行解析，所以可以通过Options获取图片的信息，false时返回解析后的Bitmap对象</p>
 </li>
 <li><p>inSampleSize 默认为1，小于1的值也当1处理。eg： 200 <em> 200 的图片，if inSampleSize == 1 then 200 </em> 200<br>if inSampleSize == 2 then 100 * 100； 整个图片的大小变为原来的1/4 (即1/2^2)</p>

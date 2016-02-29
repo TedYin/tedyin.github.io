@@ -6,19 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>SSH的原理与使用 | TedYin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是SSHSSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。
-SSH登录远程主机的过程假设有客户端要远程登录服务器，使用SSH">
+  <meta name="description" content="什么是SSHSSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSH的原理与使用">
 <meta property="og:url" content="http://www.tedyin.me/2014/10/19/ssh-use/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="什么是SSHSSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。
-SSH登录远程主机的过程假设有客户端要远程登录服务器，使用SSH">
-<meta property="og:updated_time" content="2015-11-16T01:44:35.000Z">
+<meta property="og:description" content="什么是SSHSSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。">
+<meta property="og:updated_time" content="2016-02-29T09:31:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSH的原理与使用">
-<meta name="twitter:description" content="什么是SSHSSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。
-SSH登录远程主机的过程假设有客户端要远程登录服务器，使用SSH">
+<meta name="twitter:description" content="什么是SSHSSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。">
   
   
     <link rel="icon" href="/favicon.png">
@@ -43,7 +40,7 @@ SSH登录远程主机的过程假设有客户端要远程登录服务器，使�
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -70,11 +67,11 @@ SSH登录远程主机的过程假设有客户端要远程登录服务器，使�
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -98,6 +95,10 @@ SSH登录远程主机的过程假设有客户端要远程登录服务器，使�
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -107,7 +108,7 @@ SSH登录远程主机的过程假设有客户端要远程登录服务器，使�
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -144,7 +145,7 @@ SSH登录远程主机的过程假设有客户端要远程登录服务器，使�
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -160,6 +161,10 @@ SSH登录远程主机的过程假设有客户端要远程登录服务器，使�
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -202,7 +207,7 @@ SSH登录远程主机的过程假设有客户端要远程登录服务器，使�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是SSH"><a href="#什么是SSH" class="headerlink" title="什么是SSH"></a>什么是SSH</h2><p>SSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。</p>
+        <h2 id="什么是SSH"><a href="#什么是SSH" class="headerlink" title="什么是SSH"></a>什么是SSH</h2><p>SSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。<br><a id="more"></a></p>
 <h2 id="SSH登录远程主机的过程"><a href="#SSH登录远程主机的过程" class="headerlink" title="SSH登录远程主机的过程"></a>SSH登录远程主机的过程</h2><p>假设有客户端要远程登录服务器，使用SSH登录的过程如下：</p>
 <ol>
 <li>客户端向服务端发起连接请求，服务端收到请求后，返回给客户端一个公钥。</li>
@@ -211,7 +216,7 @@ SSH登录远程主机的过程假设有客户端要远程登录服务器，使�
 <li>如果用户合法，则简历连接，否则拒绝连接。</li>
 </ol>
 <p>在上述登录过程中，如果用户是第一次登录远程主机，那么在用户收到远程主机的公钥后，本地终端就会提示用户注意远程主机是否为真实的目标主机，提示信息一般如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host &apos;host (12.18.429.21)&apos; can&apos;t be established.</span><br><span class="line">　　RSA key fingerprint is 98:2e:d7:e0:de:9f:ac:67:28:c2:42:2d:37:16:58:4d.</span><br><span class="line">　　Are you sure you want to continue connecting (yes/no)?</span><br></pre></td></tr></table></figure>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity <span class="keyword">of</span> host <span class="comment">'host (12.18.429.21)' can't be established.</span></span><br><span class="line">　　RSA <span class="keyword">key</span> fingerprint <span class="keyword">is</span> <span class="number">98</span>:<span class="number">2</span>e:d7:e0:de:<span class="number">9</span>f:ac:<span class="number">67</span>:<span class="number">28</span>:c2:<span class="number">42</span>:<span class="number">2</span>d:<span class="number">37</span>:<span class="number">16</span>:<span class="number">58</span>:<span class="number">4</span>d.</span><br><span class="line">　　Are you sure you want <span class="keyword">to</span> <span class="keyword">continue</span> connecting (yes/no)?</span><br></pre></td></tr></table></figure>
 <p>在用户根据IP地址和服务端指纹信息确定之后，SSH程序会将该主机信息保存在本地，当下次再登录该主机时，将会直接体使用户输入密码来登录，将不再会提示用户所登录的主机信息。</p>
 <p>###中间人攻击</p>
 <p>在用户首次登录的时之所以提示用户登录信息，是因为在逻辑上SSH有个漏洞，假如用户在一个开放网络中，在服务端和客户端之间存在一个第三方的主机(中间人主机)，而且用户登录时被中间人主机拦截，并向客户端返回了自己伪造的公钥，但是用户并未检查所登录的主机是否为目标主机，此时使用伪造的公钥将用户数据加密后传给中间人主机，这样中间人主机就可以拿到用户的登录信息，这就会导致严重的安全事故。因此在为了避免中间人攻击，我们需要在首次登录时，检查目标主机的信息是否为我们所要登录的目标主机，确认之后在进行登录操作。</p>
@@ -219,9 +224,9 @@ SSH登录远程主机的过程假设有客户端要远程登录服务器，使�
 <p>使用公钥登录后，用户就不必再去每次都输入用户名和密码，而是直接建立连接，也很好的避免了中间人攻击的问题，是一个比较好的解决办法，只是相比直接用口令登录要麻烦一点，不过一劳永逸，刚开始麻烦后面就简单多了。</p>
 <p>##SSH登录使用</p>
 <p>使用SSH登录非常简单，命令如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//ssh [username]@[server ip/domain]</span><br><span class="line"></span><br><span class="line">ssh user@server.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//ssh <span class="string">[username]</span>@<span class="string">[server ip/domain]</span></span><br><span class="line"></span><br><span class="line">ssh user@server.com</span><br></pre></td></tr></table></figure>
 <p>指定端口登录：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//ssh -P port [username]@[server ip/domain]</span><br><span class="line"></span><br><span class="line">ssh -P 2222 user@server.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//ssh -P port <span class="string">[username]</span>@<span class="string">[server ip/domain]</span></span><br><span class="line"></span><br><span class="line">ssh -P <span class="number">2222</span> user@server.com</span><br></pre></td></tr></table></figure>
 <p>SSH的默认端口号是22，可以通过<code>-P</code>参数来指定端口号。</p>
 <p>SSH登录时的默认端口是22，如果服务端根据自身需要，要求客户端使用别的端口(例如2222)进行登录时，我们可以在客户端使用-P参数来指定登录端口</p>
 <p>##参考<br><a href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html" target="_blank" rel="external">ssh原理以及使用</a></p>

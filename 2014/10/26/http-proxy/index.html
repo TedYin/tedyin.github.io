@@ -6,19 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Http代理设置 | TedYin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android应用程序访问互联网时，如果处于WIFI或者CMNET、UNINET或者3GNET，CTNET等接入方式时，无需设置代理即可顺利的访问网络，但是如果处于WAP环境下，那么就需要首先设置代理，之后才能访问互联网。跟设置超时一样，设置代理同样有HttpClient和HttpURLConnection两种方式：
-##HttpClient方式lang: java123456HttpClient">
+  <meta name="description" content="Android应用程序访问互联网时，如果处于WIFI或者CMNET、UNINET或者3GNET，CTNET等接入方式时，无需设置代理即可顺利的访问网络，但是如果处于WAP环境下，那么就需要首先设置代理，之后才能访问互联网。跟设置超时一样，设置代理同样有HttpClient和HttpURLConnection两种方式：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Http代理设置">
 <meta property="og:url" content="http://www.tedyin.me/2014/10/26/http-proxy/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="Android应用程序访问互联网时，如果处于WIFI或者CMNET、UNINET或者3GNET，CTNET等接入方式时，无需设置代理即可顺利的访问网络，但是如果处于WAP环境下，那么就需要首先设置代理，之后才能访问互联网。跟设置超时一样，设置代理同样有HttpClient和HttpURLConnection两种方式：
-##HttpClient方式lang: java123456HttpClient">
-<meta property="og:updated_time" content="2016-02-29T02:47:58.000Z">
+<meta property="og:description" content="Android应用程序访问互联网时，如果处于WIFI或者CMNET、UNINET或者3GNET，CTNET等接入方式时，无需设置代理即可顺利的访问网络，但是如果处于WAP环境下，那么就需要首先设置代理，之后才能访问互联网。跟设置超时一样，设置代理同样有HttpClient和HttpURLConnection两种方式：">
+<meta property="og:updated_time" content="2016-02-29T09:31:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Http代理设置">
-<meta name="twitter:description" content="Android应用程序访问互联网时，如果处于WIFI或者CMNET、UNINET或者3GNET，CTNET等接入方式时，无需设置代理即可顺利的访问网络，但是如果处于WAP环境下，那么就需要首先设置代理，之后才能访问互联网。跟设置超时一样，设置代理同样有HttpClient和HttpURLConnection两种方式：
-##HttpClient方式lang: java123456HttpClient">
+<meta name="twitter:description" content="Android应用程序访问互联网时，如果处于WIFI或者CMNET、UNINET或者3GNET，CTNET等接入方式时，无需设置代理即可顺利的访问网络，但是如果处于WAP环境下，那么就需要首先设置代理，之后才能访问互联网。跟设置超时一样，设置代理同样有HttpClient和HttpURLConnection两种方式：">
   
   
     <link rel="icon" href="/favicon.png">
@@ -43,7 +40,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -70,11 +67,11 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -98,6 +95,10 @@
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -107,7 +108,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -144,7 +145,7 @@
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -160,6 +161,10 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -202,11 +207,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Android应用程序访问互联网时，如果处于WIFI或者CMNET、UNINET或者3GNET，CTNET等接入方式时，无需设置代理即可顺利的访问网络，但是如果处于WAP环境下，那么就需要首先设置代理，之后才能访问互联网。跟设置超时一样，设置代理同样有HttpClient和HttpURLConnection两种方式：</p>
-<p>##HttpClient方式<br><figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">HttpClient httpClient = new DefaultHttpClient();</span><br><span class="line">String host = Proxy.getDefaultHost(); //默认代理服务器地址</span><br><span class="line">int port = Proxy.getDefaultPort(); //默认代理服务器端口号</span><br><span class="line">HttpHost httpHost = new HttpHost(host, port);</span><br><span class="line">HttpParams params = httpClient.getParams();</span><br><span class="line">params.setParameter(ConnRouteParams.DEFAULT_PROXY, httpHost); //设置默认代理</span><br></pre></td></tr></table></figure></p>
-<p>##HttpURLConnection方式</p>
-<figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">String host = android.net.Proxy.getDefaultHost(); // 默认代理服务器地址</span><br><span class="line">int port = android.net.Proxy.getDefaultPort(); // 默认代理服务器端口号</span><br><span class="line">SocketAddress socketAddr = new InetSocketAddress(host, port);</span><br><span class="line">// 构造代理对象</span><br><span class="line">java.net.Proxy proxy = new java.net.Proxy(java.net.Proxy.Type.HTTP, socketAddr);</span><br><span class="line">try &#123;</span><br><span class="line">  URL url = new URL(&quot;www.baidu.com&quot;);</span><br><span class="line">  // 设置代理</span><br><span class="line">  HttpURLConnection conn = (HttpURLConnection) url.openConnection(proxy);</span><br><span class="line">&#125; catch (MalformedURLException e) &#123;</span><br><span class="line">  e.printStackTrace();</span><br><span class="line">&#125; catch (IOException e) &#123;</span><br><span class="line">  e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>##参考<br><a href="http://blog.csdn.net/ace1985/article/details/7844159" target="_blank" rel="external">Android通过WAP方式联网</a> </p>
+        <p>Android应用程序访问互联网时，如果处于WIFI或者CMNET、UNINET或者3GNET，CTNET等接入方式时，无需设置代理即可顺利的访问网络，但是如果处于WAP环境下，那么就需要首先设置代理，之后才能访问互联网。跟设置超时一样，设置代理同样有HttpClient和HttpURLConnection两种方式：<br><a id="more"></a></p>
+<h2 id="HttpClient方式"><a href="#HttpClient方式" class="headerlink" title="HttpClient方式"></a>HttpClient方式</h2><figure class="highlight qml"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">HttpClient httpClient = <span class="keyword">new</span> DefaultHttpClient();</span><br><span class="line"><span class="built_in">String</span> host = <span class="built_in">Proxy</span>.getDefaultHost(); <span class="comment">//默认代理服务器地址</span></span><br><span class="line"><span class="built_in">int</span> port = <span class="built_in">Proxy</span>.getDefaultPort(); <span class="comment">//默认代理服务器端口号</span></span><br><span class="line">HttpHost httpHost = <span class="keyword">new</span> HttpHost(host, port);</span><br><span class="line">HttpParams params = httpClient.getParams();</span><br><span class="line">params.setParameter(ConnRouteParams.DEFAULT_PROXY, httpHost); <span class="comment">//设置默认代理</span></span><br></pre></td></tr></table></figure>
+<h2 id="HttpURLConnection方式"><a href="#HttpURLConnection方式" class="headerlink" title="HttpURLConnection方式"></a>HttpURLConnection方式</h2><figure class="highlight qml"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span> host = android.net.Proxy.getDefaultHost(); <span class="comment">// 默认代理服务器地址</span></span><br><span class="line"><span class="built_in">int</span> port = android.net.Proxy.getDefaultPort(); <span class="comment">// 默认代理服务器端口号</span></span><br><span class="line">SocketAddress socketAddr = <span class="keyword">new</span> InetSocketAddress(host, port);</span><br><span class="line"><span class="comment">// 构造代理对象</span></span><br><span class="line">java.net.Proxy proxy = <span class="keyword">new</span> java.net.Proxy(java.net.Proxy.Type.HTTP, socketAddr);</span><br><span class="line"><span class="decorator"><span class="keyword">try</span></span> &#123;</span><br><span class="line">  URL <span class="built_in">url</span> = <span class="keyword">new</span> URL(<span class="string">"www.baidu.com"</span>);</span><br><span class="line">  <span class="comment">// 设置代理</span></span><br><span class="line">  HttpURLConnection conn = (HttpURLConnection) <span class="built_in">url</span>.openConnection(proxy);</span><br><span class="line">&#125; <span class="keyword">catch</span> (MalformedURLException e) &#123;</span><br><span class="line">  e.printStackTrace();</span><br><span class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">  e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>##参考<br><a href="http://blog.csdn.net/ace1985/article/details/7844159" target="_blank" rel="external">Android通过WAP方式联网</a></p>
 
       
     </div>

@@ -16,7 +16,7 @@ Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)�
 Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)来对View进行布局。所有的“UI控件(Button，TextView等)”都是继承自View，所有的“布局控件(RelativeLayout等)”，“容器控件(ListView等)”都是继承自ViewGroup，ViewGroup">
 <meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/charflow.jpg">
 <meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/over.jpg">
-<meta property="og:updated_time" content="2016-02-29T07:15:49.000Z">
+<meta property="og:updated_time" content="2016-02-29T09:35:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android 事件传递机制">
 <meta name="twitter:description" content="Android中所有的事件都是基于“按下（ActionDown）”这个动作之后的。
@@ -46,7 +46,7 @@ Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)�
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -73,11 +73,11 @@ Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)�
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -101,6 +101,10 @@ Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)�
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -110,7 +114,7 @@ Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)�
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -147,7 +151,7 @@ Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)�
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -163,6 +167,10 @@ Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)�
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -207,9 +215,9 @@ Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)�
       
         <ol>
 <li>Android中所有的事件都是基于“按下（ActionDown）”这个动作之后的。</li>
-<li>Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)来对View进行布局。所有的“UI控件(Button，TextView等)”都是继承自View，所有的“布局控件(RelativeLayout等)”，“容器控件(ListView等)”都是继承自ViewGroup，ViewGroup是继承自View的。</li>
+<li>Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)来对View进行布局。所有的“UI控件(Button，TextView等)”都是继承自View，所有的“布局控件(RelativeLayout等)”，“容器控件(ListView等)”都是继承自ViewGroup，ViewGroup是继承自View的。<a id="more"></a>
+事件主要在ViewGroup和View之间进行传递，他们处理对事件的方法如下：</li>
 </ol>
-<p>事件主要在ViewGroup和View之间进行传递，他们处理对事件的方法如下：</p>
 <p>View：<br>          public boolean dispatchTouchEvent(MotionEvent event)<br>          public boolean onTouchEvent(MotionEvent event)<br>ViewGroup:<br>          public boolean dispatchTouchEvent(MotionEvent event)<br>          public boolean onTouchEvent(MotionEvent event)<br>          public boolean onInterceptTouchEvent(MotionEvent event)</p>
 <p>这些方法中都会接收一个MotionEvent对象，该类继承自InputEvent，MotionEvent是用户的动作行为的封装类，我们可以通过MotionEvent对象内部的信息就可以获取用户的行为。</p>
 <p>以上三个方法的作用：</p>

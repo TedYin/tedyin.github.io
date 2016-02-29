@@ -6,19 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>MySQL添加外键 | TedYin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##什么是外键外键（Foreign Key），是SQL中的一种约束。假设有一个表A，外键约束的是它和别的表之间的参照关系，假如A表中的某个字段（或者某几个字段）是别的表中的数据，如果别的表没有这个数据A中的相应字段也不能有这些数据，那么A表中的这几个字段和别的表中的这几个字段就存在某种约束，这种约束就称为外键。
-##添加外键的步骤假设有A、B两个表，A中的aid的取值必须在B中的bid的某个值，即">
+  <meta name="description" content="##什么是外键外键（Foreign Key），是SQL中的一种约束。假设有一个表A，外键约束的是它和别的表之间的参照关系，假如A表中的某个字段（或者某几个字段）是别的表中的数据，如果别的表没有这个数据A中的相应字段也不能有这些数据，那么A表中的这几个字段和别的表中的这几个字段就存在某种约束，这种约束就称为外键。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL添加外键">
 <meta property="og:url" content="http://www.tedyin.me/2014/08/31/mysql-add-foreignkey/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="##什么是外键外键（Foreign Key），是SQL中的一种约束。假设有一个表A，外键约束的是它和别的表之间的参照关系，假如A表中的某个字段（或者某几个字段）是别的表中的数据，如果别的表没有这个数据A中的相应字段也不能有这些数据，那么A表中的这几个字段和别的表中的这几个字段就存在某种约束，这种约束就称为外键。
-##添加外键的步骤假设有A、B两个表，A中的aid的取值必须在B中的bid的某个值，即">
-<meta property="og:updated_time" content="2015-11-16T01:44:35.000Z">
+<meta property="og:description" content="##什么是外键外键（Foreign Key），是SQL中的一种约束。假设有一个表A，外键约束的是它和别的表之间的参照关系，假如A表中的某个字段（或者某几个字段）是别的表中的数据，如果别的表没有这个数据A中的相应字段也不能有这些数据，那么A表中的这几个字段和别的表中的这几个字段就存在某种约束，这种约束就称为外键。">
+<meta property="og:updated_time" content="2016-02-29T09:41:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL添加外键">
-<meta name="twitter:description" content="##什么是外键外键（Foreign Key），是SQL中的一种约束。假设有一个表A，外键约束的是它和别的表之间的参照关系，假如A表中的某个字段（或者某几个字段）是别的表中的数据，如果别的表没有这个数据A中的相应字段也不能有这些数据，那么A表中的这几个字段和别的表中的这几个字段就存在某种约束，这种约束就称为外键。
-##添加外键的步骤假设有A、B两个表，A中的aid的取值必须在B中的bid的某个值，即">
+<meta name="twitter:description" content="##什么是外键外键（Foreign Key），是SQL中的一种约束。假设有一个表A，外键约束的是它和别的表之间的参照关系，假如A表中的某个字段（或者某几个字段）是别的表中的数据，如果别的表没有这个数据A中的相应字段也不能有这些数据，那么A表中的这几个字段和别的表中的这几个字段就存在某种约束，这种约束就称为外键。">
   
   
     <link rel="icon" href="/favicon.png">
@@ -43,7 +40,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -70,11 +67,11 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -98,6 +95,10 @@
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -107,7 +108,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -144,7 +145,7 @@
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -160,6 +161,10 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -194,6 +199,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -202,14 +211,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##什么是外键<br>外键（Foreign Key），是SQL中的一种约束。假设有一个表A，外键约束的是它和别的表之间的参照关系，假如A表中的某个字段（或者某几个字段）是别的表中的数据，如果别的表没有这个数据A中的相应字段也不能有这些数据，那么A表中的这几个字段和别的表中的这几个字段就存在某种约束，这种约束就称为外键。</p>
+        <p>##什么是外键<br>外键（Foreign Key），是SQL中的一种约束。假设有一个表A，外键约束的是它和别的表之间的参照关系，假如A表中的某个字段（或者某几个字段）是别的表中的数据，如果别的表没有这个数据A中的相应字段也不能有这些数据，那么A表中的这几个字段和别的表中的这几个字段就存在某种约束，这种约束就称为外键。<br><a id="more"></a></p>
 <p>##添加外键的步骤<br>假设有A、B两个表，A中的aid的取值必须在B中的bid的某个值，即aid references bid</p>
-<p>###1. 需要在参考字段(aid)和被参考字段(bid)，之间建立索引<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alter table A add index IDX_aid (aid); ——为A的aid字段添加索引</span><br><span class="line">alter table B add index IDX_bid (bid); ——为B的bid字段添加索引</span><br></pre></td></tr></table></figure></p>
+<p>###1. 需要在参考字段(aid)和被参考字段(bid)，之间建立索引<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> A <span class="keyword">add</span> <span class="keyword">index</span> IDX_aid (aid); ——为A的aid字段添加索引</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> B <span class="keyword">add</span> <span class="keyword">index</span> IDX_bid (bid); ——为B的bid字段添加索引</span><br></pre></td></tr></table></figure></p>
 <p>###2. 建立好索引之后，为A表添加到B表的外键约束</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">—— 添加约束</span><br><span class="line">alter table A add constraint FK_aid_bid</span><br><span class="line">foreign key (aid)</span><br><span class="line">references B.bid;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">—— 添加约束</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> A <span class="keyword">add</span> <span class="keyword">constraint</span> FK_aid_bid</span><br><span class="line">foreign <span class="keyword">key</span> (aid)</span><br><span class="line"><span class="keyword">references</span> B.bid;</span><br></pre></td></tr></table></figure>
 <p>这样就建立好了aid到bid的外键，aid的值只能是bid的值中某个，不可能是别的</p>
 <p>##级联操作<br>上述约束建立好了，如果bid发生了变化，我么也希望aid跟着一起变化，那怎么办呢？这个“一起变化”的希望，实际上就是一个级联操作。可以通过<code>on update cascade</code>这句约束来实现。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">—— 添加约束</span><br><span class="line">alter table A add constraint FK_aid_bid</span><br><span class="line">foreign key (aid)</span><br><span class="line">references B(bid)</span><br><span class="line">on update cascade;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">—— 添加约束</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> A <span class="keyword">add</span> <span class="keyword">constraint</span> FK_aid_bid</span><br><span class="line">foreign <span class="keyword">key</span> (aid)</span><br><span class="line"><span class="keyword">references</span> B(bid)</span><br><span class="line"><span class="keyword">on</span> <span class="keyword">update</span> <span class="keyword">cascade</span>;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>加入<code>on update cascade</code>之后将会对aid进行同步更新。除<code>cascade</code>之外，我们还可以通过<code>restrict</code>来禁止在bid发生变化时也使得aid发生变更，我们还可以使用<code>set null</code>约束，来使得在bid发生变更后将相应的aid置为null。</p>
 </li>
@@ -217,12 +226,12 @@
 </li>
 </ul>
 <p>##删除外键</p>
-<p>###指定外键名称时删除外键<br>如果现在aid不需要再参考bid了，我们可以删除掉这个约束。<br>上面在定义外键的时候，给这个外键取了个名字<code>FK_aid_bid</code>，因此我们可以通过这个外键的名字来删除外键。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table A drop foreign key FK_aid_bid;</span><br></pre></td></tr></table></figure></p>
+<p>###指定外键名称时删除外键<br>如果现在aid不需要再参考bid了，我们可以删除掉这个约束。<br>上面在定义外键的时候，给这个外键取了个名字<code>FK_aid_bid</code>，因此我们可以通过这个外键的名字来删除外键。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> A <span class="keyword">drop</span> foreign <span class="keyword">key</span> FK_aid_bid;</span><br></pre></td></tr></table></figure></p>
 <p>这样就可以删除掉外键了，但是之前建立的索引不会被删除，如果要删除索引，需要自己手动删除。</p>
-<p>###未指定外键名称时删除外键<br>如果在建立外键时并没有指定外键名称<em>eg: fk_symbol</em>，那怎么办？实际上如果没有指定外键名，MySql会默认加上这个外键名，获取这个默认外键名称的方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create table tableName;</span><br></pre></td></tr></table></figure></p>
+<p>###未指定外键名称时删除外键<br>如果在建立外键时并没有指定外键名称<em>eg: fk_symbol</em>，那怎么办？实际上如果没有指定外键名，MySql会默认加上这个外键名，获取这个默认外键名称的方法如下：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">table</span> tableName;</span><br></pre></td></tr></table></figure></p>
 <p>即可查看到该表的详细创建信息，里面就有MySql默认生成的外键名称，拿到该名称就可以删除该外键了。</p>
 <p>##遇到的问题<br>在创建外键的过程中我遇到无法创建的问题，解决办法：<br>为了得到详细的错误原因，可以使用下面方法来获取出错的详细信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW ENGINE INNODB STATUS\G</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> <span class="keyword">ENGINE</span> <span class="keyword">INNODB</span> <span class="keyword">STATUS</span>\G</span><br></pre></td></tr></table></figure>
 <p>###常见的错误原因：</p>
 <ul>
 <li>没有建立索引</li>

@@ -7,37 +7,19 @@
   <title>Implementing REST Client on Android 4.0 and below | TedYin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="#General Overview
-REST Client 是一个非常好的处理客户端与服务端之间交互的框架模型，他的机构如下：
-
-他的最佳实践有以下几点：
-
-使用Loaders相关的类来进行异步加载
-使用Service
-使用ContentProvider通过他可以使得我们更方便的去访问数据库，ContentProvider是Android提供的对外暴露数据的接口，使用它可以很好的将我们的数据层和应">
+REST Client 是一个非常好的处理客户端与服务端之间交互的框架模型，他的机构如下：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Implementing REST Client on Android 4.0 and below">
 <meta property="og:url" content="http://www.tedyin.me/2014/06/03/Implementing-REST-Client-on-Android-4.0-and-below/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
 <meta property="og:description" content="#General Overview
-REST Client 是一个非常好的处理客户端与服务端之间交互的框架模型，他的机构如下：
-
-他的最佳实践有以下几点：
-
-使用Loaders相关的类来进行异步加载
-使用Service
-使用ContentProvider通过他可以使得我们更方便的去访问数据库，ContentProvider是Android提供的对外暴露数据的接口，使用它可以很好的将我们的数据层和应">
+REST Client 是一个非常好的处理客户端与服务端之间交互的框架模型，他的机构如下：">
 <meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/framework.png">
-<meta property="og:updated_time" content="2016-02-29T07:15:49.000Z">
+<meta property="og:updated_time" content="2016-02-29T09:35:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Implementing REST Client on Android 4.0 and below">
 <meta name="twitter:description" content="#General Overview
-REST Client 是一个非常好的处理客户端与服务端之间交互的框架模型，他的机构如下：
-
-他的最佳实践有以下几点：
-
-使用Loaders相关的类来进行异步加载
-使用Service
-使用ContentProvider通过他可以使得我们更方便的去访问数据库，ContentProvider是Android提供的对外暴露数据的接口，使用它可以很好的将我们的数据层和应">
+REST Client 是一个非常好的处理客户端与服务端之间交互的框架模型，他的机构如下：">
 <meta name="twitter:image" content="http://7xii1s.com1.z0.glb.clouddn.com/framework.png">
   
   
@@ -63,7 +45,7 @@ REST Client 是一个非常好的处理客户端与服务端之间交互的框�
 		</hgroup>
 
 		
-		<p class="header-subtitle">快乐比生命更重要！</p>
+		<p class="header-subtitle">快乐比生命更重要</p>
 		
 
 		
@@ -90,11 +72,11 @@ REST Client 是一个非常好的处理客户端与服务端之间交互的框�
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
+						<li>菜单</li>
+						<li>标签</li>
 						
 						
-						<li>A propos</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -118,6 +100,10 @@ REST Client 是一个非常好的处理客户端与服务端之间交互的框�
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
+								<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
+					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
@@ -127,7 +113,7 @@ REST Client 是一个非常好的处理客户端与服务端之间交互的框�
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -164,7 +150,7 @@ REST Client 是一个非常好的处理客户端与服务端之间交互的框�
 			  <h1 class="header-author">TedYin</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">快乐比生命更重要！</p>
+			<p class="header-subtitle">快乐比生命更重要</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -180,6 +166,10 @@ REST Client 是一个非常好的处理客户端与服务端之间交互的框�
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/TedYin" title="twitter">twitter</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tedworld.time@gmail.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -224,8 +214,7 @@ REST Client 是一个非常好的处理客户端与服务端之间交互的框�
       
         <p>#General Overview</p>
 <p>REST Client 是一个非常好的处理客户端与服务端之间交互的框架模型，他的机构如下：</p>
-<p><img src="http://7xii1s.com1.z0.glb.clouddn.com/framework.png" alt="framework"></p>
-<p>他的最佳实践有以下几点：</p>
+<p><img src="http://7xii1s.com1.z0.glb.clouddn.com/framework.png" alt="framework"><br><a id="more"></a><br>他的最佳实践有以下几点：</p>
 <ul>
 <li>使用<code>Loaders</code>相关的类来进行异步加载</li>
 <li>使用<code>Service</code></li>
@@ -258,7 +247,7 @@ REST Client 是一个非常好的处理客户端与服务端之间交互的框�
   
   
     <a href="/2014/05/25/markdown-study/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Markdown Study</div>
+      <div class="article-nav-title">Markdown 学习</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
