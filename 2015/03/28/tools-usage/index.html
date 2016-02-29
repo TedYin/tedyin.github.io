@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Android Tools Attribute | TedYin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Android tools提供了一组非常有用的属性方法来方便我们开发，tools所指定的所有属性在打包的时候都不会打包到APK里，它只是辅助开发的一组工具属性，本文基于Android Studio，快捷建使用Mac OSX 10.5+ KeyMap，下面以IDE来表示Android Studio。
+##tools : context使用context属性来告诉IDE，这个布局文件是哪个Activi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Tools Attribute">
+<meta property="og:url" content="http://www.tedyin.me/2015/03/28/tools-usage/index.html">
+<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:description" content="Android tools提供了一组非常有用的属性方法来方便我们开发，tools所指定的所有属性在打包的时候都不会打包到APK里，它只是辅助开发的一组工具属性，本文基于Android Studio，快捷建使用Mac OSX 10.5+ KeyMap，下面以IDE来表示Android Studio。
+##tools : context使用context属性来告诉IDE，这个布局文件是哪个Activi">
+<meta property="og:image" content="http://www.tedyin.me/images/tools_1.png">
+<meta property="og:image" content="http://www.tedyin.me/images/tools_2.png">
+<meta property="og:updated_time" content="2016-02-29T02:47:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Tools Attribute">
+<meta name="twitter:description" content="Android tools提供了一组非常有用的属性方法来方便我们开发，tools所指定的所有属性在打包的时候都不会打包到APK里，它只是辅助开发的一组工具属性，本文基于Android Studio，快捷建使用Mac OSX 10.5+ KeyMap，下面以IDE来表示Android Studio。
+##tools : context使用context属性来告诉IDE，这个布局文件是哪个Activi">
+<meta name="twitter:image" content="http://www.tedyin.me/images/tools_1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="TedYin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">TedYin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">快乐比生命更重要！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">TedYin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">TedYin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">快乐比生命更重要！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-tools-usage" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/28/tools-usage/" class="article-date">
+  	<time datetime="2015-03-28T14:29:00.000Z" itemprop="datePublished">2015-03-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android Tools Attribute
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Android tools提供了一组非常有用的属性方法来方便我们开发，tools所指定的所有属性在打包的时候都不会打包到APK里，它只是辅助开发的一组工具属性，本文基于Android Studio，快捷建使用Mac OSX 10.5+ KeyMap，下面以IDE来表示Android Studio。</p>
+<p>##tools : context<br>使用context属性来告诉IDE，这个布局文件是哪个Activity的布局文件，所以在预览的时候需要根据这个Activity的主题属性来显示，而不是使用默认的主题来进行预览。除了这个作用之外还有另外一点，在IDE中使用Go to Related files（快捷键CMD+Ctrl+Up）功能来帮助找到相关的布局文件。context属性在填写的时候，需要填上Activity的完整包名。<br><img src="http://www.tedyin.me/images/tools_1.png" alt="p1"></p>
+<p>##tools:menu<br>如果你已经使用了context属性指定过了对应的Activity，那么IDE默认会自己去检查OnCreateOptionsMenu里面使用了哪个menu布局，然后在预览的时候加载该布局。使用menu属性可以覆盖上述默认操作。如果不想显示menu则可以设置tools:menu=“”即可。另外还可以使用menu属性定义多个菜单资源，如果不想显示menu则可以给menu属性赋值为空，例如：tools:menu=“”即可。另外，还可以在预览的时预览任意个你想看到的menu菜单项，而不是直接预览menu布局里面的内容。实现这样的效果十分简单，只需要在menu后面写上对应的菜单项的Id并用“ , ”隔开即可。举个例子：<br><code>tools:menu=“action_search,action_add&quot;</code><br>还有一点需要注意的就是，在使用Theme.AppCompat时，menu这个属性不起作用。</p>
+<p>##tools:actionBarNavMod<br>使用该属性告诉IDE我要显示的ActionBar的模式，包含了三个选项standard、tabs、list，该属性只有在Holo主题下有用，在其他主题下无法使用。</p>
+<p>##tools:listitem，tools:listheader，tools:listfooter<br>从名字就可以看出他们的意思，这是一组属性，我们可以使用这些属性分别告诉IDE一下信息:</p>
+<ol>
+<li>listitem是告诉IDE这个列表里面的Item内容是什么，在预览的时候可以和Item一起预览，而不是傻傻的默认显示一行文字。</li>
+<li>listheader是告诉IDE这个列表的头部是什么，并一起预览</li>
+<li>listfooter是告诉IDE这个列表的底部是什么，并一起预览需要注意的一点是，listheader和listfooter对GridView是没有效果的。</li>
+</ol>
+<p>##tools:layout<br>用这个属性告诉IDE，这个Layout在预览的时候应该显示什么东西，而不是显示一片空白。<br><img src="http://www.tedyin.me/images/tools_2.png" alt="p2"></p>
+<p>##补充：</p>
+<ol>
+<li>tools:text属性用来显示要预览的文字，预览时会覆盖text属性的内容。</li>
+<li>tools:src属性用来显示要预览的图片资源。</li>
+</ol>
+<p>#tools 中对Lint处理的属性</p>
+<p>##tools:ignore<br>该属性对那些有“强迫症”的患者非常有用，经常我们在布局文件中写完ImageView后，都会提示少了Description，每次看见那个小黄线的提示就会觉得非常别扭，但是有了这个属性，就不用担心了，只要在ImageView的属性设置后面加上tools:ignore=“contentDescription”即可立马解决问题。除了上述用法外，还可以用在别的想忽略警告的地方。</p>
+<p>##tools:targetApi<br>这个属性从名字就可以看出是用来指定API的。如果我们的minSdk是11，但是我们用了一个在API 14后才有的控件，在布局编辑器里就会报错，那么在报错的控件下面使用targetApi并指定对应的API即可解决问题。<br><figure class="highlight plain"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;ripple xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">android:color=&quot;@color/accent_color&quot;</span><br><span class="line">tools:targetApi=&quot;LOLLIPOP&quot; /&gt;</span><br></pre></td></tr></table></figure><br>好了，tools的用法基本就介绍完了，详细的列表可以<a href="http://tools.android.com/tech-docs/tools-attributes" target="_blank" rel="external">参考这里</a></p>
+<p>##参考<br><a href="https://medium.com/sebs-top-tips/tools-of-the-trade-part-2-b91271892d10" target="_blank" rel="external">英文</a><br><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0309/2567.html" target="_blank" rel="external">中文版</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/04/03/parcelable-vs-serializable/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Parcelable Vs Serializable
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/03/11/android-view-lifecycle/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android View Lifecycle</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="tools-usage" data-title="Android Tools Attribute" data-url="http://www.tedyin.me/2015/03/28/tools-usage/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 TedYin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Elasticsearch CRUD | TedYin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="有了对ES的基本概念后,下面要做的就是了解如何与ES进行交流,ES非常贴心的提供了一套REST API让大家与他进行交流.这些API能做的事情包括以下几点
+
+检查你的集群,节点以及索引的状态信息
+管理你的集群,节点以及索引等的数据
+执行高级的搜索操作等总之有了这套REST API你几乎可以让ES干它所能干的所有事.
+
+状态查询API可以使用_cat API去查询集群节点索引等的状态.
+查询集群健康">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Elasticsearch CRUD">
+<meta property="og:url" content="http://www.tedyin.me/2016/01/25/elasticsearch-crud/index.html">
+<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:description" content="有了对ES的基本概念后,下面要做的就是了解如何与ES进行交流,ES非常贴心的提供了一套REST API让大家与他进行交流.这些API能做的事情包括以下几点
+
+检查你的集群,节点以及索引的状态信息
+管理你的集群,节点以及索引等的数据
+执行高级的搜索操作等总之有了这套REST API你几乎可以让ES干它所能干的所有事.
+
+状态查询API可以使用_cat API去查询集群节点索引等的状态.
+查询集群健康">
+<meta property="og:updated_time" content="2016-02-29T02:47:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Elasticsearch CRUD">
+<meta name="twitter:description" content="有了对ES的基本概念后,下面要做的就是了解如何与ES进行交流,ES非常贴心的提供了一套REST API让大家与他进行交流.这些API能做的事情包括以下几点
+
+检查你的集群,节点以及索引的状态信息
+管理你的集群,节点以及索引等的数据
+执行高级的搜索操作等总之有了这套REST API你几乎可以让ES干它所能干的所有事.
+
+状态查询API可以使用_cat API去查询集群节点索引等的状态.
+查询集群健康">
+  
+    <link rel="alternative" href="/atom.xml" title="TedYin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">TedYin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">快乐比生命更重要！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">TedYin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">TedYin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">快乐比生命更重要！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-elasticsearch-crud" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/25/elasticsearch-crud/" class="article-date">
+  	<time datetime="2016-01-25T02:22:00.000Z" itemprop="datePublished">2016-01-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Elasticsearch CRUD
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有了对ES的基本概念后,下面要做的就是了解如何与ES进行交流,ES非常贴心的提供了一套REST API让大家与他进行交流.这些API能做的事情包括以下几点</p>
+<ul>
+<li>检查你的集群,节点以及索引的状态信息</li>
+<li>管理你的集群,节点以及索引等的数据</li>
+<li>执行高级的搜索操作等<br>总之有了这套REST API你几乎可以让ES干它所能干的所有事.</li>
+</ul>
+<h2 id="状态查询API"><a href="#状态查询API" class="headerlink" title="状态查询API"></a>状态查询API</h2><p>可以使用<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat.html" target="_blank" rel="external">_cat API</a>去查询集群节点索引等的状态.</p>
+<h3 id="查询集群健康状态"><a href="#查询集群健康状态" class="headerlink" title="查询集群健康状态"></a>查询集群健康状态</h3><ol>
+<li><code>clur localhost:9200/_cat/health?v</code>查看集群状态,返回结果里有一个<code>status</code>的状态,它有三个值<code>green</code>,<code>yellow</code>,<code>red</code></li>
+</ol>
+<blockquote>
+<ul>
+<li><p><code>green</code>表示一切OK,可以提供搜索服务</p>
+</li>
+<li><p><code>yellow</code>表示所有的索引及其他状态都正常,但是副本数据不完整,有些分片没有副本数据,但是可以提供正常的搜索服务</p>
+</li>
+<li><p><code>red</code> 表示部分数据丢失,能提供部分搜索服务</p>
+</li>
+</ul>
+<p>如果你是在本机上跑一个单节点的集群,那么<code>status</code>会是<code>yellow</code>的是因为,如果是单个节点,ES创建索引时并不会真的去分配副本,因为将副本和分片放在同一个节点里是无意义的,所以此处会返回<code>yellow</code>给出警告,如果当有新的Node加入,并且副本被分配到了新的节点里,这个索引的<code>status</code>就会变成<code>green</code></p>
+</blockquote>
+<ol>
+<li><code>curl localhost:9200/_cat/nodes?v</code>查看节点状态</li>
+<li><code>curl localhost:9200/_cat/indices?v</code>查看索引状态`</li>
+</ol>
+<h2 id="索引和文档CRUD"><a href="#索引和文档CRUD" class="headerlink" title="索引和文档CRUD"></a>索引和文档CRUD</h2><h3 id="目标数据"><a href="#目标数据" class="headerlink" title="目标数据"></a>目标数据</h3><figure class="highlight plain"><figcaption><span>lang: json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">      &quot;id&quot;: &quot;1&quot;,</span><br><span class="line">      &quot;title&quot;: &quot;New version of Elasticsearch released!&quot;,</span><br><span class="line">      &quot;content&quot;: &quot;Version 1.0 released today!&quot;,</span><br><span class="line">      &quot;priority&quot;: 10,</span><br><span class="line">      &quot;tags&quot;: [&quot;announce&quot;, &quot;elasticsearch&quot;, &quot;release&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到JSON文档包含一组字段, <code>&quot;id&quot;: &quot;1&quot;</code>一个字段,<code>&quot;content&quot;: &quot;Version 1.0 released today!&quot;</code>另一个字段,他们都有各自的类型ES会识别出这些类型.</p>
+<h3 id="建立索引"><a href="#建立索引" class="headerlink" title="建立索引"></a>建立索引</h3><p>ES为我们提供了一个强大的<code>REST API</code>用来操作ES服务,使用下面的命令来为上面的数据建立索引</p>
+<h4 id="手动指定文档唯一标识符"><a href="#手动指定文档唯一标识符" class="headerlink" title="手动指定文档唯一标识符"></a>手动指定文档唯一标识符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST http://localhost:9200/blog/article/1 -d &apos;&#123;</span><br><span class="line">      &quot;id&quot;: &quot;1&quot;,</span><br><span class="line">      &quot;title&quot;: &quot;New version of Elasticsearch released!&quot;,</span><br><span class="line">      &quot;content&quot;: &quot;Version 1.0 released today!&quot;,</span><br><span class="line">      &quot;priority&quot;: 10,</span><br><span class="line">      &quot;tags&quot;: [&quot;announce&quot;, &quot;elasticsearch&quot;, &quot;release&quot;]</span><br><span class="line">&#125;&apos;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>blog</code> <code>article</code> <code>1</code> 分别是我们建立的<code>索引</code>名称 <code>文档</code>名称 和<code>唯一标识符</code></p>
+</blockquote>
+<p>执行成功后的返回结果:<br><figure class="highlight plain"><figcaption><span>lang: json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;_index&quot;:&quot;blog&quot;,</span><br><span class="line">	&quot;_type&quot;:&quot;article&quot;,</span><br><span class="line">	&quot;_id&quot;:&quot;1&quot;,</span><br><span class="line">	&quot;_version&quot;:1,</span><br><span class="line">	&quot;_shards&quot;:</span><br><span class="line">		&#123;</span><br><span class="line">			&quot;total&quot;:2,</span><br><span class="line">			&quot;successful&quot;:1,</span><br><span class="line">			&quot;failed&quot;:0</span><br><span class="line">		&#125;,</span><br><span class="line">	&quot;created&quot;:true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>_index: 表示建立索引的名称<code>blog</code>(database name)</li>
+<li>_type: 表示索引的类型 <code>article</code>(table name)</li>
+<li>_Id: 表示文档的唯一标识符 <code>1</code> (可以理解为表的primary key)</li>
+<li>_version: 表示版本信息,该值由ES维护,每次更新索引的时候<code>_version</code>会自动递增</li>
+<li>_shards: 表示其分片信息</li>
+</ul>
+<blockquote>
+<p>如果重复创建Id相同的Document时,只会由ES去更新Document,相应的<code>_version</code>也会递增</p>
+</blockquote>
+<h4 id="自动生成文档的唯一标识符"><a href="#自动生成文档的唯一标识符" class="headerlink" title="自动生成文档的唯一标识符"></a>自动生成文档的唯一标识符</h4><p>只需要将<code>put</code>操作换成<code>post</code>即可,ES会自动为我们的<code>Document</code>生成唯一的标识符.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST http://localhost:9200/blog/article -d &apos;&#123;</span><br><span class="line">      &quot;id&quot;: &quot;1&quot;,</span><br><span class="line">      &quot;title&quot;: &quot;New version of Elasticsearch released!&quot;,</span><br><span class="line">      &quot;content&quot;: &quot;Version 1.0 released today!&quot;,</span><br><span class="line">      &quot;priority&quot;: 10,</span><br><span class="line">      &quot;tags&quot;: [&quot;announce&quot;, &quot;elasticsearch&quot;, &quot;release&quot;]</span><br><span class="line">&#125;&apos;</span><br></pre></td></tr></table></figure></p>
+<p>返回结果:<br><figure class="highlight plain"><figcaption><span>lang: json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;_index&quot;:&quot;blog&quot;,</span><br><span class="line">	&quot;_type&quot;:&quot;article&quot;,</span><br><span class="line">	&quot;_id&quot;:&quot;AVJe9pBhG_DRWvBx76jq&quot;,</span><br><span class="line">	&quot;_version&quot;:1,</span><br><span class="line">	&quot;_shards&quot;:</span><br><span class="line">		&#123;</span><br><span class="line">			&quot;total&quot;:2,</span><br><span class="line">			&quot;successful&quot;:1,</span><br><span class="line">			&quot;failed&quot;:0</span><br><span class="line">		&#125;,</span><br><span class="line">	&quot;created&quot;:true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>上面<code>AVJe9pBhG_DRWvBx76jq</code>是由ES自动生成的文档的唯一标识</li>
+</ul>
+<h4 id="创建空的索引"><a href="#创建空的索引" class="headerlink" title="创建空的索引"></a>创建空的索引</h4><p>除了创建包含有文档和类型的索引之外,还可以穿件一个空的索引,里面不包含任何Document和Type<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST localhost:9200/empty_index</span><br></pre></td></tr></table></figure></p>
+<p>返回结果:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;acknowledged&quot;:true&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>一般情况下我们不需要这么做,直接创建正常的索引就行了,如果索引里面没有数据,那么这个索引也是多余的.</li>
+</ul>
+<h3 id="更新文档"><a href="#更新文档" class="headerlink" title="更新文档"></a>更新文档</h3><p>在更新文档的时候,ES并不是直接对已经经过索引的文档进行修改,而是删除旧的文档,并使用新的数据重新索引</p>
+<ul>
+<li><p>只更新<code>title</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST localhost:9200/blog/article/1/_update?pretty -d &apos;&#123;</span><br><span class="line">  &quot;doc&quot;: &#123; &quot;title&quot;: &quot;New Title&quot; &#125;</span><br><span class="line">&#125;&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新<code>title</code>, 并添加<code>author</code>字段.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST localhost:9200/blog/article/1/_update?pretty -d &apos;&#123;</span><br><span class="line">  &quot;doc&quot;: &#123; &quot;title&quot;: &quot;New Title again !&quot;, &quot;author&quot;: &quot;ES&quot; &#125;</span><br><span class="line">&#125;&apos;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="删除文档"><a href="#删除文档" class="headerlink" title="删除文档"></a>删除文档</h3><p>删除之前创建的index: blog, type: article, id: 1 的文档<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -XDELETE localhost:9200/blog/article/1</span><br></pre></td></tr></table></figure></p>
+<p>返回结果:<br><figure class="highlight plain"><figcaption><span>lang: json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;found&quot;:true,</span><br><span class="line">	&quot;_index&quot;:&quot;blog&quot;,</span><br><span class="line">	&quot;_type&quot;:&quot;article&quot;,</span><br><span class="line">	&quot;_id&quot;:&quot;1&quot;,</span><br><span class="line">	&quot;_version&quot;:3,</span><br><span class="line">	&quot;_shards&quot;:&#123;</span><br><span class="line">		&quot;total&quot;:2,</span><br><span class="line">		&quot;successful&quot;:1,</span><br><span class="line">		&quot;failed&quot;:0</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="删除索引"><a href="#删除索引" class="headerlink" title="删除索引"></a>删除索引</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -XDELETE localhost:9200/blog/article/1</span><br></pre></td></tr></table></figure>
+<p>返回结果:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;acknowledged&quot;:true&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>与创建空索引成功的返回值一样,只返回这个?,是不是意味着ES并没有真正的删除索引内部的数据呢?而是对那些数据进行了标记,然后再以后创建新的索引的时候直接覆盖掉这些数据呢?这个需要进一步研究一下.</p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>以上ES的REST API 都是按照下面的协议来定义的:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X&lt;REST Verb&gt; &lt;Node&gt;:&lt;Port&gt;/&lt;Index&gt;/&lt;Type&gt;/&lt;ID&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html" target="_blank" rel="external">Elasticsearch Getting Started</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/01/26/elasticsearch-batch-processing/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/24/elasticsearch-basic-concepts/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Elasticsearch Basic Concepts</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="elasticsearch-crud" data-title="Elasticsearch CRUD" data-url="http://www.tedyin.me/2016/01/25/elasticsearch-crud/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 TedYin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

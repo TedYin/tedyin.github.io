@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>MySQL添加外键 | TedYin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##什么是外键外键（Foreign Key），是SQL中的一种约束。假设有一个表A，外键约束的是它和别的表之间的参照关系，假如A表中的某个字段（或者某几个字段）是别的表中的数据，如果别的表没有这个数据A中的相应字段也不能有这些数据，那么A表中的这几个字段和别的表中的这几个字段就存在某种约束，这种约束就称为外键。
+##添加外键的步骤假设有A、B两个表，A中的aid的取值必须在B中的bid的某个值，即">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL添加外键">
+<meta property="og:url" content="http://www.tedyin.me/2014/08/31/mysql-add-foreignkey/index.html">
+<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:description" content="##什么是外键外键（Foreign Key），是SQL中的一种约束。假设有一个表A，外键约束的是它和别的表之间的参照关系，假如A表中的某个字段（或者某几个字段）是别的表中的数据，如果别的表没有这个数据A中的相应字段也不能有这些数据，那么A表中的这几个字段和别的表中的这几个字段就存在某种约束，这种约束就称为外键。
+##添加外键的步骤假设有A、B两个表，A中的aid的取值必须在B中的bid的某个值，即">
+<meta property="og:updated_time" content="2015-11-16T01:44:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL添加外键">
+<meta name="twitter:description" content="##什么是外键外键（Foreign Key），是SQL中的一种约束。假设有一个表A，外键约束的是它和别的表之间的参照关系，假如A表中的某个字段（或者某几个字段）是别的表中的数据，如果别的表没有这个数据A中的相应字段也不能有这些数据，那么A表中的这几个字段和别的表中的这几个字段就存在某种约束，这种约束就称为外键。
+##添加外键的步骤假设有A、B两个表，A中的aid的取值必须在B中的bid的某个值，即">
+  
+    <link rel="alternative" href="/atom.xml" title="TedYin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">TedYin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">快乐比生命更重要！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">TedYin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">TedYin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">快乐比生命更重要！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-mysql-add-foreignkey" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/08/31/mysql-add-foreignkey/" class="article-date">
+  	<time datetime="2014-08-31T03:19:20.000Z" itemprop="datePublished">2014-08-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL添加外键
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##什么是外键<br>外键（Foreign Key），是SQL中的一种约束。假设有一个表A，外键约束的是它和别的表之间的参照关系，假如A表中的某个字段（或者某几个字段）是别的表中的数据，如果别的表没有这个数据A中的相应字段也不能有这些数据，那么A表中的这几个字段和别的表中的这几个字段就存在某种约束，这种约束就称为外键。</p>
+<p>##添加外键的步骤<br>假设有A、B两个表，A中的aid的取值必须在B中的bid的某个值，即aid references bid</p>
+<p>###1. 需要在参考字段(aid)和被参考字段(bid)，之间建立索引<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alter table A add index IDX_aid (aid); ——为A的aid字段添加索引</span><br><span class="line">alter table B add index IDX_bid (bid); ——为B的bid字段添加索引</span><br></pre></td></tr></table></figure></p>
+<p>###2. 建立好索引之后，为A表添加到B表的外键约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">—— 添加约束</span><br><span class="line">alter table A add constraint FK_aid_bid</span><br><span class="line">foreign key (aid)</span><br><span class="line">references B.bid;</span><br></pre></td></tr></table></figure>
+<p>这样就建立好了aid到bid的外键，aid的值只能是bid的值中某个，不可能是别的</p>
+<p>##级联操作<br>上述约束建立好了，如果bid发生了变化，我么也希望aid跟着一起变化，那怎么办呢？这个“一起变化”的希望，实际上就是一个级联操作。可以通过<code>on update cascade</code>这句约束来实现。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">—— 添加约束</span><br><span class="line">alter table A add constraint FK_aid_bid</span><br><span class="line">foreign key (aid)</span><br><span class="line">references B(bid)</span><br><span class="line">on update cascade;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>加入<code>on update cascade</code>之后将会对aid进行同步更新。除<code>cascade</code>之外，我们还可以通过<code>restrict</code>来禁止在bid发生变化时也使得aid发生变更，我们还可以使用<code>set null</code>约束，来使得在bid发生变更后将相应的aid置为null。</p>
+</li>
+<li><p>除了可以监控update的操作外，我们还可以使用<code>on delete [cascade | ···]</code>作为条件判断，当发生上面的条件时，可以使用<code>cascade</code>、<code>restrict</code>、<code>set null</code>等对外键进行操作。</p>
+</li>
+</ul>
+<p>##删除外键</p>
+<p>###指定外键名称时删除外键<br>如果现在aid不需要再参考bid了，我们可以删除掉这个约束。<br>上面在定义外键的时候，给这个外键取了个名字<code>FK_aid_bid</code>，因此我们可以通过这个外键的名字来删除外键。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table A drop foreign key FK_aid_bid;</span><br></pre></td></tr></table></figure></p>
+<p>这样就可以删除掉外键了，但是之前建立的索引不会被删除，如果要删除索引，需要自己手动删除。</p>
+<p>###未指定外键名称时删除外键<br>如果在建立外键时并没有指定外键名称<em>eg: fk_symbol</em>，那怎么办？实际上如果没有指定外键名，MySql会默认加上这个外键名，获取这个默认外键名称的方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create table tableName;</span><br></pre></td></tr></table></figure></p>
+<p>即可查看到该表的详细创建信息，里面就有MySql默认生成的外键名称，拿到该名称就可以删除该外键了。</p>
+<p>##遇到的问题<br>在创建外键的过程中我遇到无法创建的问题，解决办法：<br>为了得到详细的错误原因，可以使用下面方法来获取出错的详细信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW ENGINE INNODB STATUS\G</span><br></pre></td></tr></table></figure>
+<p>###常见的错误原因：</p>
+<ul>
+<li>没有建立索引</li>
+<li>外键(aid)和参考字段(bid)的值类型不一样</li>
+<li>创建外键的SQL有误</li>
+</ul>
+<p>##参考<br><a href="http://fykyx521.iteye.com/blog/428352" target="_blank" rel="external">添加外键</a><br><a href="http://database.51cto.com/art/201010/229146.htm" target="_blank" rel="external">外键删除</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/09/08/style-and-theme/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Theme And Style
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/08/24/Sql-Constraints/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SQL约束</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="mysql-add-foreignkey" data-title="MySQL添加外键" data-url="http://www.tedyin.me/2014/08/31/mysql-add-foreignkey/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 TedYin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

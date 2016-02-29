@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Log4J介绍 | TedYin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##Log4J是什么？
+Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Log4J介绍">
+<meta property="og:url" content="http://www.tedyin.me/2014/10/12/log4j/index.html">
+<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:description" content="##Log4J是什么？
+Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对">
+<meta property="og:updated_time" content="2016-02-29T06:32:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Log4J介绍">
+<meta name="twitter:description" content="##Log4J是什么？
+Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对">
+  
+    <link rel="alternative" href="/atom.xml" title="TedYin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">TedYin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">快乐比生命更重要！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">TedYin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">TedYin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">快乐比生命更重要！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-log4j" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/10/12/log4j/" class="article-date">
+  	<time datetime="2014-10-12T13:37:00.000Z" itemprop="datePublished">2014-10-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Log4J介绍
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##Log4J是什么？</p>
+<p>Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对服务集群的日志进行统一管理。</p>
+<p>##Log4J学习</p>
+<p>Log4J三大组件：</p>
+<ol>
+<li>Logger（记录器）：只管记录日志（根据日志级别记录），不管日志存储在什么地方。</li>
+<li>Appender（存放器）：将Logger记录的日志，存放到配置文件中所指向的地方，只处理日志的存放过程。</li>
+<li>Layout（布局）：将日志进行格式化后再输出，也就是说他是用来让日志看这更顺眼的。当然如何算顺眼，由你在配置文件中设定。</li>
+</ol>
+<blockquote>
+<p>一个Logger可以有多个Appender，可以同时输出到多个设备上，每一个Appender都有一个Layout来格式化输出内容。</p>
+</blockquote>
+<p>###Logger 组件<br>有一个超类，log4j.rootLogger这个超类永远存在，可以使用Logger类中的getRootLogger()方法来获得这个对象的引用。</p>
+<p>Logger组件的继承关系：</p>
+<ol>
+<li>如果子类Logger没有定义日志级别，那么它将继承父类的日志级别。</li>
+<li>如果把子类Logger的组件的additivity设置为false(默认为true)，那子类将不会继承父类的Appender，否则将继承父类所有的Appender。</li>
+</ol>
+<p>###Appender 组件<br>Appender用来决定日志要输出到什么地方，支持一下目的地：</p>
+<ol>
+<li>控制台Console</li>
+<li>文件File</li>
+<li>GUI组件</li>
+<li>套接口服务器（Remote Socket Server）</li>
+<li>NT的事件记录器</li>
+<li>UNIX守护进程（输出到某个进程中去）(待验证)</li>
+</ol>
+<p>###Layout 组件<br>Layout组件决定日志的输出格式,有如下几类：</p>
+<ol>
+<li>org.apache.log4j.HTMLLayout     以Html格式输出日志</li>
+<li>org.apache.log4j.PatternLayout  以自定义Pattern的模式输出日志</li>
+<li>org.apache.log4j.SimpleLayout   包含日志信息的级别和，日志字符串</li>
+<li>org.apache.log4j.TTCCLayout     包含日志产生的线程，时间，类别等详细信息</li>
+</ol>
+<p>##日志级别<br>日志级别分为5种：</p>
+<ul>
+<li>fatal      严重错误，会导致系统崩溃</li>
+<li>error     虽然出错，但是系统依然可以运行  </li>
+<li>warn     警告，系统此处会有发生潜在错误的可能性</li>
+<li>info       一般的运行时信息</li>
+<li>debug  调试信息，粒度很细</li>
+</ul>
+<p>除了上述5中级别外，还有两种特殊级别的日志分类：</p>
+<ul>
+<li>off        关闭日志，级别最高</li>
+<li>all         打开日志，级别最低</li>
+</ul>
+<p>以上日志的级别高低排序如下：<br>off &gt; fatal &gt; error &gt; warn &gt; info &gt; debug &gt; all<br>当日配置的志级别为info时所有的Debug日志将不会输出。</p>
+<p>Log4J建议使用上述中的4种分别是：error、warn、info、debug</p>
+<p>##Log4J 应用<br>对于应用，无非就是配置和使用，先来看看如何在程序中配置Log4J</p>
+<p>###Log4J的配置<br>Log4J支持XML配置和properties文件两种方式进行配置，此处介绍后一种。</p>
+<p>####set Logger<br>log4j.rootLogger=INFO,infoLog,file</p>
+<p>####infoLog logger<br>log4j.appender.infoLog=org.apache.log4j.ConsoleAppender // 配置Appender<br>log4j.appender.infoLog.layout=org.apache.log4j.PatternLayout // 配置Layout<br>log4j.appender.infoLog.layout.ConversionPattern=%d-[TS] %p %t %c - %m%n </p>
+<p>####file logger<br>log4j.appender.file=org.apache.log4j.FileAppender // 定义Appender<br>log4j.appender.file.File=log.txt<br>log4j.appender.file.layout=org.apache.log4j.PatternLayout // 定义Layout<br>log4j.appender.file.layout.ConversionPattern=%d-[TS] %p %t %c - %m%n// 自定义Layout格式</p>
+<p>####Error log<br>log4j.errorLog=ERROR, errorLog</p>
+<p>####errorLog logger<br>log4j.appender.errorLog=org.apache.log4j.FileAppender<br>log4j.appender.errorLog.File=errorLog.txt<br>log4j.appender.errorLog.layout=org.apache.log4j.PatternLayout<br>log4j.appender.errorLog.layout.ConversionPattern=%d-[TS] %p %t %c - %m%n</p>
+<p><em>详细的使用请参考Log4J的<a href="http://logging.apache.org/log4j/1.2/apidocs/" target="_blank" rel="external">API</a></em></p>
+<p>##Log4J在程序中的应用</p>
+<ol>
+<li>先将log4j-xxx.jar导入工程中。</li>
+<li>新建log4j.properties配置文件，并加入配置。</li>
+<li>在程序中使用Log4J的API。</li>
+</ol>
+<p>##参考：<br><a href="http://blog.csdn.net/lyc557/article/details/3964459" target="_blank" rel="external">日志级别</a><br><a href="http://www.iteye.com/topic/158409" target="_blank" rel="external">Log4J的使用</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/10/19/ssh-use/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          SSH的原理与使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/09/28/group-resource/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Providing Resources</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="log4j" data-title="Log4J介绍" data-url="http://www.tedyin.me/2014/10/12/log4j/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 TedYin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

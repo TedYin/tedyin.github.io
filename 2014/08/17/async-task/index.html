@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>AsyncTask的执行过程 | TedYin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##AsyncTask是什么？
+AsyncTask是Android系统提供的用来执行异步任务的工具类，它提供了一系列可覆盖的方法，可以对任务执行的各个时期进行操作。
+##AsyncTask是如何实现UI线程与非UI线程切换的？
+AsyncTask内部封装了一个Handler，和一个ThreadPool，具体的任务交给ThreadPool中的线程来处理，并且使用Handler来通知UI线程将异步处理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AsyncTask的执行过程">
+<meta property="og:url" content="http://www.tedyin.me/2014/08/17/async-task/index.html">
+<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:description" content="##AsyncTask是什么？
+AsyncTask是Android系统提供的用来执行异步任务的工具类，它提供了一系列可覆盖的方法，可以对任务执行的各个时期进行操作。
+##AsyncTask是如何实现UI线程与非UI线程切换的？
+AsyncTask内部封装了一个Handler，和一个ThreadPool，具体的任务交给ThreadPool中的线程来处理，并且使用Handler来通知UI线程将异步处理">
+<meta property="og:image" content="http://www.tedyin.me/images/sDefaultExecutor.jpg">
+<meta property="og:image" content="http://www.tedyin.me/images/postResult.jpg">
+<meta property="og:image" content="http://www.tedyin.me/images/asyncTaskResult.jpg">
+<meta property="og:image" content="http://www.tedyin.me/images/sHandler.jpg">
+<meta property="og:image" content="http://www.tedyin.me/images/finish.jpg">
+<meta property="og:updated_time" content="2016-01-26T05:51:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AsyncTask的执行过程">
+<meta name="twitter:description" content="##AsyncTask是什么？
+AsyncTask是Android系统提供的用来执行异步任务的工具类，它提供了一系列可覆盖的方法，可以对任务执行的各个时期进行操作。
+##AsyncTask是如何实现UI线程与非UI线程切换的？
+AsyncTask内部封装了一个Handler，和一个ThreadPool，具体的任务交给ThreadPool中的线程来处理，并且使用Handler来通知UI线程将异步处理">
+<meta name="twitter:image" content="http://www.tedyin.me/images/sDefaultExecutor.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="TedYin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">TedYin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">快乐比生命更重要！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">TedYin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">TedYin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">快乐比生命更重要！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-async-task" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/08/17/async-task/" class="article-date">
+  	<time datetime="2014-08-17T10:50:00.000Z" itemprop="datePublished">2014-08-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AsyncTask的执行过程
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##AsyncTask是什么？</p>
+<p>AsyncTask是Android系统提供的用来执行异步任务的工具类，它提供了一系列可覆盖的方法，可以对任务执行的各个时期进行操作。</p>
+<p>##AsyncTask是如何实现UI线程与非UI线程切换的？</p>
+<p>AsyncTask内部封装了一个Handler，和一个ThreadPool，具体的任务交给ThreadPool中的线程来处理，并且使用Handler来通知UI线程将异步处理的结果更新到UI上去。</p>
+<p>##AsyncTask的执行过程是怎样的？</p>
+<ul>
+<li>在执行一个AsyncTask之前我们需要创建一个AsyncTask的对象，创建AsyncTask对象asyncTask。</li>
+<li>创建好对象之后我们调用AsyncTask对象的execute方法来启动AsyncTask这个异步任务。</li>
+<li>这里需要注意的是AsyncTask必须在UI线程中启动。</li>
+</ul>
+<p>AsyncTask启动后它首先会在UI线程中调用<code>onPreExecute()</code>方法，来做一些启动异步任务前的准备工作，比如说显示Loading动画等。接下来会调用sDefaultExecutor会调用它自己的execute方法并把FutureTask对象传入。在sDefaultExecutor的execute()方法中，会先将FutureTask对象封装成一个Runnable对象加入到一个ArrayDeque<runnable>队列中等待调度（防止多线程并发一起的重复调用），接下来从ArrayDeque取出FutureTask然后交给其内部自定义的一个线程池（TPE）来处理这个Runnable任务。TPE拿到这个Runnable任务后，交给其WorkerThread然后异步的运行这个Runnable。其中sDefaultExecutor的实现代码如下：<br><img src="http://www.tedyin.me/images/sDefaultExecutor.jpg" alt="sDefaultExecutor"></runnable></p>
+<p>AsyncTask在new一个Task的时候，会创建一个FutureTask，在这个FutureTask中会传入一个实现了Callable接口的对象，在这个Callable对象的call()方法中才会真正调用doInBackground()这个方法，在doInBackground()方法执行结束后，会返回处理的结果Result（泛型），然后调用AsyncTask的私有方法postResult()来传递Result到UI线程中。该方法内部先将Result和AsyncTask对象包装成AsyncTaskResult对象，然后通过Handler将该对象传递到UI线程，然后在UI线程中调用onPostExecute(Result result)这个被重载的方法进行UI处理。</p>
+<p>postResult()的方法如下：<br><img src="http://www.tedyin.me/images/postResult.jpg" alt="postResult"></p>
+<p>其中AsyncTaskResult的实现如下：<br><img src="http://www.tedyin.me/images/asyncTaskResult.jpg" alt="asyncTaskResult"></p>
+<p>其中封装了AsyncTask和Result对象，另外一个就是sHandler，它是在AsyncTask初始化的时候就直接生成的静态对象，sHandler的实现如下：<br><img src="http://www.tedyin.me/images/sHandler.jpg" alt="sHandler"></p>
+<p>在Handler中(UI线程中)调用mTask.finish()方法结束AsyncTask,该方法的实现如下：<br><img src="http://www.tedyin.me/images/finish.jpg" alt="finish"></p>
+<p>可以看出在该方法中调用了方法onPostExecute(Result result)，这样AsyncTask就执行结束了，这就是整个AsyncTask的整个执行过程！</p>
+<p>注：在FutureTask在被创建时会重写父类的done()方法</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/08/24/Sql-Constraints/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          SQL约束
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/08/10/http-cache/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Http Cache 简介</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="async-task" data-title="AsyncTask的执行过程" data-url="http://www.tedyin.me/2014/08/17/async-task/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 TedYin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>TedYin&#39;s Blog</title>
+  <subtitle>快乐比生命更重要！</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.tedyin.me/"/>
+  <updated>2016-02-29T01:31:18.000Z</updated>
+  <id>http://www.tedyin.me/</id>
+  
+  <author>
+    <name>TedYin</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://www.tedyin.me/2016/02/29/hello-world/"/>
+    <id>http://www.tedyin.me/2016/02/29/hello-world/</id>
+    <published>2016-02-29T01:31:18.000Z</published>
+    <updated>2016-02-29T01:31:18.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;http://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;http://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;http://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;http://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;http://hexo.io
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.tedyin.me/2016/01/26/elasticsearch-batch-processing/"/>
+    <id>http://www.tedyin.me/2016/01/26/elasticsearch-batch-processing/</id>
+    <published>2016-01-26T14:00:00.000Z</published>
+    <updated>2016-02-29T01:48:20.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;ES的批处理&quot;&gt;&lt;a href=&quot;#ES的批处理&quot; class=&quot;headerlink&quot; title=&quot;ES的批处理&quot;&gt;&lt;/a&gt;ES的批处理&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -XPOST &amp;apos;localhost:9200/bank/account/_bulk?pretty&amp;apos; --data-binary &amp;quot;@accounts.json&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;@accounts.json&lt;/code&gt;是存在当前目录下的一个json文件,里面存储了一个josn数组,你可以让她存储任何结构相同的数组.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所有的批量操作都是使用&lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;_bluk API&lt;/a&gt;来完成,上面的操作就是为&lt;code&gt;accounts.json&lt;/code&gt;里面的数据建立索引.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;除了批量操作数据之外,ES还可以对一条或多条数据进行多步骤操作.&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -XPOST &amp;apos;localhost:9200/blog/article/_bulk?pretty&amp;apos; -d &amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;index&amp;quot;:&amp;#123;&amp;quot;_id&amp;quot;:&amp;quot;1&amp;quot;&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;title&amp;quot;: &amp;quot;batch bulk api title 1&amp;quot; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;update&amp;quot;:&amp;#123;&amp;quot;_id&amp;quot;:&amp;quot;2&amp;quot;&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;doc&amp;quot;: &amp;#123;&amp;quot;title&amp;quot;: &amp;quot;batch bulk api title 2&amp;quot; &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;delete&amp;quot;:&amp;#123;&amp;quot;_id&amp;quot;:&amp;quot;3&amp;quot;&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上面的批量操作一共干了三件事情:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将id是1的Document重新以新的数据重新索引,因此该Document的version会自增1&lt;/li&gt;
+&lt;li&gt;更新了id是2的Document中的&lt;code&gt;title&lt;/code&gt;数据,只是更新数据,并不涉及到重新索引所以version不会变化&lt;/li&gt;
+&lt;li&gt;删除了id为3的文档&lt;br&gt;更多的批处理操作可以参考&lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bulk API&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/_batch_processing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Elasticsearch Batch Processing&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Elasticsearch Bulk API&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;ES的批处理&quot;&gt;&lt;a href=&quot;#ES的批处理&quot; class=&quot;headerlink&quot; title=&quot;ES的批处理&quot;&gt;&lt;/a&gt;ES的批处理&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Elasticsearch CRUD</title>
+    <link href="http://www.tedyin.me/2016/01/25/elasticsearch-crud/"/>
+    <id>http://www.tedyin.me/2016/01/25/elasticsearch-crud/</id>
+    <published>2016-01-25T02:22:00.000Z</published>
+    <updated>2016-02-29T02:47:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;有了对ES的基本概念后,下面要做的就是了解如何与ES进行交流,ES非常贴心的提供了一套REST API让大家与他进行交流.这些API能做的事情包括以下几点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查你的集群,节点以及索引的状态信息&lt;/li&gt;
+&lt;li&gt;管理你的集群,节点以及索引等的数据&lt;/li&gt;
+&lt;li&gt;执行高级的搜索操作等&lt;br&gt;总之有了这套REST API你几乎可以让ES干它所能干的所有事.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;状态查询API&quot;&gt;&lt;a href=&quot;#状态查询API&quot; class=&quot;headerlink&quot; title=&quot;状态查询API&quot;&gt;&lt;/a&gt;状态查询API&lt;/h2&gt;&lt;p&gt;可以使用&lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/cat.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;_cat API&lt;/a&gt;去查询集群节点索引等的状态.&lt;/p&gt;
+&lt;h3 id=&quot;查询集群健康状态&quot;&gt;&lt;a href=&quot;#查询集群健康状态&quot; class=&quot;headerlink&quot; title=&quot;查询集群健康状态&quot;&gt;&lt;/a&gt;查询集群健康状态&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;clur localhost:9200/_cat/health?v&lt;/code&gt;查看集群状态,返回结果里有一个&lt;code&gt;status&lt;/code&gt;的状态,它有三个值&lt;code&gt;green&lt;/code&gt;,&lt;code&gt;yellow&lt;/code&gt;,&lt;code&gt;red&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;green&lt;/code&gt;表示一切OK,可以提供搜索服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;yellow&lt;/code&gt;表示所有的索引及其他状态都正常,但是副本数据不完整,有些分片没有副本数据,但是可以提供正常的搜索服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;red&lt;/code&gt; 表示部分数据丢失,能提供部分搜索服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你是在本机上跑一个单节点的集群,那么&lt;code&gt;status&lt;/code&gt;会是&lt;code&gt;yellow&lt;/code&gt;的是因为,如果是单个节点,ES创建索引时并不会真的去分配副本,因为将副本和分片放在同一个节点里是无意义的,所以此处会返回&lt;code&gt;yellow&lt;/code&gt;给出警告,如果当有新的Node加入,并且副本被分配到了新的节点里,这个索引的&lt;code&gt;status&lt;/code&gt;就会变成&lt;code&gt;green&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;curl localhost:9200/_cat/nodes?v&lt;/code&gt;查看节点状态&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;curl localhost:9200/_cat/indices?v&lt;/code&gt;查看索引状态`&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;索引和文档CRUD&quot;&gt;&lt;a href=&quot;#索引和文档CRUD&quot; class=&quot;headerlink&quot; title=&quot;索引和文档CRUD&quot;&gt;&lt;/a&gt;索引和文档CRUD&lt;/h2&gt;&lt;h3 id=&quot;目标数据&quot;&gt;&lt;a href=&quot;#目标数据&quot; class=&quot;headerlink&quot; title=&quot;目标数据&quot;&gt;&lt;/a&gt;目标数据&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: json&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;title&amp;quot;: &amp;quot;New version of Elasticsearch released!&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;content&amp;quot;: &amp;quot;Version 1.0 released today!&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;priority&amp;quot;: 10,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;tags&amp;quot;: [&amp;quot;announce&amp;quot;, &amp;quot;elasticsearch&amp;quot;, &amp;quot;release&amp;quot;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;可以看到JSON文档包含一组字段, &lt;code&gt;&amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;&lt;/code&gt;一个字段,&lt;code&gt;&amp;quot;content&amp;quot;: &amp;quot;Version 1.0 released today!&amp;quot;&lt;/code&gt;另一个字段,他们都有各自的类型ES会识别出这些类型.&lt;/p&gt;
+&lt;h3 id=&quot;建立索引&quot;&gt;&lt;a href=&quot;#建立索引&quot; class=&quot;headerlink&quot; title=&quot;建立索引&quot;&gt;&lt;/a&gt;建立索引&lt;/h3&gt;&lt;p&gt;ES为我们提供了一个强大的&lt;code&gt;REST API&lt;/code&gt;用来操作ES服务,使用下面的命令来为上面的数据建立索引&lt;/p&gt;
+&lt;h4 id=&quot;手动指定文档唯一标识符&quot;&gt;&lt;a href=&quot;#手动指定文档唯一标识符&quot; class=&quot;headerlink&quot; title=&quot;手动指定文档唯一标识符&quot;&gt;&lt;/a&gt;手动指定文档唯一标识符&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -XPOST http://localhost:9200/blog/article/1 -d &amp;apos;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;title&amp;quot;: &amp;quot;New version of Elasticsearch released!&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;content&amp;quot;: &amp;quot;Version 1.0 released today!&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;priority&amp;quot;: 10,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;tags&amp;quot;: [&amp;quot;announce&amp;quot;, &amp;quot;elasticsearch&amp;quot;, &amp;quot;release&amp;quot;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;blog&lt;/code&gt; &lt;code&gt;article&lt;/code&gt; &lt;code&gt;1&lt;/code&gt; 分别是我们建立的&lt;code&gt;索引&lt;/code&gt;名称 &lt;code&gt;文档&lt;/code&gt;名称 和&lt;code&gt;唯一标识符&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;执行成功后的返回结果:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: json&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_index&amp;quot;:&amp;quot;blog&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_type&amp;quot;:&amp;quot;article&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_id&amp;quot;:&amp;quot;1&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_version&amp;quot;:1,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_shards&amp;quot;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;quot;total&amp;quot;:2,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;quot;successful&amp;quot;:1,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;quot;failed&amp;quot;:0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;created&amp;quot;:true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;_index: 表示建立索引的名称&lt;code&gt;blog&lt;/code&gt;(database name)&lt;/li&gt;
+&lt;li&gt;_type: 表示索引的类型 &lt;code&gt;article&lt;/code&gt;(table name)&lt;/li&gt;
+&lt;li&gt;_Id: 表示文档的唯一标识符 &lt;code&gt;1&lt;/code&gt; (可以理解为表的primary key)&lt;/li&gt;
+&lt;li&gt;_version: 表示版本信息,该值由ES维护,每次更新索引的时候&lt;code&gt;_version&lt;/code&gt;会自动递增&lt;/li&gt;
+&lt;li&gt;_shards: 表示其分片信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果重复创建Id相同的Document时,只会由ES去更新Document,相应的&lt;code&gt;_version&lt;/code&gt;也会递增&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;自动生成文档的唯一标识符&quot;&gt;&lt;a href=&quot;#自动生成文档的唯一标识符&quot; class=&quot;headerlink&quot; title=&quot;自动生成文档的唯一标识符&quot;&gt;&lt;/a&gt;自动生成文档的唯一标识符&lt;/h4&gt;&lt;p&gt;只需要将&lt;code&gt;put&lt;/code&gt;操作换成&lt;code&gt;post&lt;/code&gt;即可,ES会自动为我们的&lt;code&gt;Document&lt;/code&gt;生成唯一的标识符.&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -XPOST http://localhost:9200/blog/article -d &amp;apos;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;title&amp;quot;: &amp;quot;New version of Elasticsearch released!&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;content&amp;quot;: &amp;quot;Version 1.0 released today!&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;priority&amp;quot;: 10,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;quot;tags&amp;quot;: [&amp;quot;announce&amp;quot;, &amp;quot;elasticsearch&amp;quot;, &amp;quot;release&amp;quot;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;返回结果:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: json&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_index&amp;quot;:&amp;quot;blog&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_type&amp;quot;:&amp;quot;article&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_id&amp;quot;:&amp;quot;AVJe9pBhG_DRWvBx76jq&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_version&amp;quot;:1,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_shards&amp;quot;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;quot;total&amp;quot;:2,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;quot;successful&amp;quot;:1,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;quot;failed&amp;quot;:0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;created&amp;quot;:true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上面&lt;code&gt;AVJe9pBhG_DRWvBx76jq&lt;/code&gt;是由ES自动生成的文档的唯一标识&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;创建空的索引&quot;&gt;&lt;a href=&quot;#创建空的索引&quot; class=&quot;headerlink&quot; title=&quot;创建空的索引&quot;&gt;&lt;/a&gt;创建空的索引&lt;/h4&gt;&lt;p&gt;除了创建包含有文档和类型的索引之外,还可以穿件一个空的索引,里面不包含任何Document和Type&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -XPOST localhost:9200/empty_index&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;返回结果:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;acknowledged&amp;quot;:true&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一般情况下我们不需要这么做,直接创建正常的索引就行了,如果索引里面没有数据,那么这个索引也是多余的.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;更新文档&quot;&gt;&lt;a href=&quot;#更新文档&quot; class=&quot;headerlink&quot; title=&quot;更新文档&quot;&gt;&lt;/a&gt;更新文档&lt;/h3&gt;&lt;p&gt;在更新文档的时候,ES并不是直接对已经经过索引的文档进行修改,而是删除旧的文档,并使用新的数据重新索引&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;只更新&lt;code&gt;title&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -XPOST localhost:9200/blog/article/1/_update?pretty -d &amp;apos;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;quot;doc&amp;quot;: &amp;#123; &amp;quot;title&amp;quot;: &amp;quot;New Title&amp;quot; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;更新&lt;code&gt;title&lt;/code&gt;, 并添加&lt;code&gt;author&lt;/code&gt;字段.&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -XPOST localhost:9200/blog/article/1/_update?pretty -d &amp;apos;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;quot;doc&amp;quot;: &amp;#123; &amp;quot;title&amp;quot;: &amp;quot;New Title again !&amp;quot;, &amp;quot;author&amp;quot;: &amp;quot;ES&amp;quot; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;删除文档&quot;&gt;&lt;a href=&quot;#删除文档&quot; class=&quot;headerlink&quot; title=&quot;删除文档&quot;&gt;&lt;/a&gt;删除文档&lt;/h3&gt;&lt;p&gt;删除之前创建的index: blog, type: article, id: 1 的文档&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -XDELETE localhost:9200/blog/article/1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;返回结果:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: json&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;found&amp;quot;:true,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_index&amp;quot;:&amp;quot;blog&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_type&amp;quot;:&amp;quot;article&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_id&amp;quot;:&amp;quot;1&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_version&amp;quot;:3,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;quot;_shards&amp;quot;:&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;quot;total&amp;quot;:2,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;quot;successful&amp;quot;:1,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;quot;failed&amp;quot;:0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;删除索引&quot;&gt;&lt;a href=&quot;#删除索引&quot; class=&quot;headerlink&quot; title=&quot;删除索引&quot;&gt;&lt;/a&gt;删除索引&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -XDELETE localhost:9200/blog/article/1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;返回结果:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;acknowledged&amp;quot;:true&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;与创建空索引成功的返回值一样,只返回这个?,是不是意味着ES并没有真正的删除索引内部的数据呢?而是对那些数据进行了标记,然后再以后创建新的索引的时候直接覆盖掉这些数据呢?这个需要进一步研究一下.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h3&gt;&lt;p&gt;以上ES的REST API 都是按照下面的协议来定义的:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -X&amp;lt;REST Verb&amp;gt; &amp;lt;Node&amp;gt;:&amp;lt;Port&amp;gt;/&amp;lt;Index&amp;gt;/&amp;lt;Type&amp;gt;/&amp;lt;ID&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Elasticsearch Getting Started&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有了对ES的基本概念后,下面要做的就是了解如何与ES进行交流,ES非常贴心的提供了一套REST API让大家与他进行交流.这些API能做的事情包括以下几点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查你的集群,节点以及索引的状态信息&lt;/li&gt;
+&lt;li&gt;管理你的集群,节点以及索引等的数据&lt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Elasticsearch Basic Concepts</title>
+    <link href="http://www.tedyin.me/2016/01/24/elasticsearch-basic-concepts/"/>
+    <id>http://www.tedyin.me/2016/01/24/elasticsearch-basic-concepts/</id>
+    <published>2016-01-24T12:22:00.000Z</published>
+    <updated>2016-01-21T07:21:48.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h3&gt;&lt;h4 id=&quot;Cluster-集群&quot;&gt;&lt;a href=&quot;#Cluster-集群&quot; class=&quot;headerlink&quot; title=&quot;Cluster 集群&quot;&gt;&lt;/a&gt;Cluster 集群&lt;/h4&gt;&lt;p&gt;Cluster 包含了多个运行ES的节点,每个集群都有一个唯一的名字,用来区分不同的集群,含有相同&lt;code&gt;cluster name&lt;/code&gt;的&lt;code&gt;Node&lt;/code&gt;属于同一个集群&lt;/p&gt;
+&lt;h4 id=&quot;Node-节点&quot;&gt;&lt;a href=&quot;#Node-节点&quot; class=&quot;headerlink&quot; title=&quot;Node 节点&quot;&gt;&lt;/a&gt;Node 节点&lt;/h4&gt;&lt;p&gt;运行ES的一个实例&lt;/p&gt;
+&lt;h4 id=&quot;Index-索引&quot;&gt;&lt;a href=&quot;#Index-索引&quot; class=&quot;headerlink&quot; title=&quot;Index 索引&quot;&gt;&lt;/a&gt;Index 索引&lt;/h4&gt;&lt;p&gt;相当于MySql 的一个Database,他是Document的集合,每个索引都由他的名称来区分,而且他的名称全是小写的.这个名称可以代表索引,去进行查询更新删除等操作&lt;/p&gt;
+&lt;h4 id=&quot;Type-类型&quot;&gt;&lt;a href=&quot;#Type-类型&quot; class=&quot;headerlink&quot; title=&quot;Type 类型&quot;&gt;&lt;/a&gt;Type 类型&lt;/h4&gt;&lt;p&gt;可以理解为Database中的一张表,在一个索引内可以定义多个Type,每一个Type都相当于是对整个索引的一个逻辑分类,就像在一个Database中可以定义多个table,每个table都相当于Database中的一个逻辑分类一样.&lt;/p&gt;
+&lt;h4 id=&quot;Document-文档&quot;&gt;&lt;a href=&quot;#Document-文档&quot; class=&quot;headerlink&quot; title=&quot;Document 文档&quot;&gt;&lt;/a&gt;Document 文档&lt;/h4&gt;&lt;p&gt;相当于Table中的一行记录(元组),一个Document是ES中可以被索引的最基本的数据单元,就像Database里每条记录也是一个最基本的单元.每个Document可以包含一个或多个Field.&lt;/p&gt;
+&lt;h4 id=&quot;Field-字段&quot;&gt;&lt;a href=&quot;#Field-字段&quot; class=&quot;headerlink&quot; title=&quot;Field 字段&quot;&gt;&lt;/a&gt;Field 字段&lt;/h4&gt;&lt;p&gt;与MySQL中的字段类似,但是ES中的字段是带有值的&lt;/p&gt;
+&lt;h4 id=&quot;Shards-amp-Replicas-分片-amp-副本&quot;&gt;&lt;a href=&quot;#Shards-amp-Replicas-分片-amp-副本&quot; class=&quot;headerlink&quot; title=&quot;Shards &amp;amp; Replicas  分片&amp;amp;副本:&quot;&gt;&lt;/a&gt;Shards &amp;amp; Replicas  分片&amp;amp;副本:&lt;/h4&gt;&lt;p&gt;当一个Node上的索引大到该Node的磁盘无法存储这个索引或者索引太大导致搜索效率低下的时候,就可以将这个庞大的索引分成多个分片(Shards),存储在多个Node上,这样就解决了无法存储和搜索低效的问题,因此分片存在有两个中要的原因:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以对庞大的索引进行水平切分,这个操作类似于对大表的水平切分&lt;/li&gt;
+&lt;li&gt;因为切分成了多个分片,因此就可以并行去进行查询,这样就可以提高查询效率.&lt;br&gt;对于Shards怎样去分发到多个Node,以及搜索完成后讲数据汇总到发起请求的节点,这些工作都是由ES来自动完成的,不需要我们去关心.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因为服务器存在一定的宕机风险,因此如果所有的Shard都放在某个Node上,如果宕机了,索引就会丢失,因此为了解决这个问题需要对Shards进行备份生产Replica Shards 也叫做Replicas, Replica的主要作用有两个:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解决Node宕机后,索引丢失的问题&lt;/li&gt;
+&lt;li&gt;提高搜索效率,因为Replicas不会放下一个Node下,所以处理搜索请求的时候多个节点可以并行对Replicas进行查询,提高吞吐量.&lt;br&gt;总得来说,每个Index可以被切分成多个分片,每个分片可以有0个或多个副本,在创建索引的时候可以指定分片数和副本数,在成功创建索引后,依然可以通过ES提供的&lt;code&gt;_cat&lt;/code&gt;API来修改副本数,但是不能去修改分片数.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一个ES的Shard就是一个Lucene的索引,每个Lucene索引可以存储Integer.MAX_VALUE-128 = 2,147,483,519个Document. 默认情况下一个ES索引有5个分片,每个分片有1个副本,也就是说当你创建一个索引时会产生5个分片,每个分片会有1个副本,总共就相当于1个索引有10个分片.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Elasticsearch Basic Concepts&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h3&gt;&lt;h4 id=&quot;Cluster-集群&quot;&gt;&lt;a href=&quot;#Cluster-集群&quot; class=&quot;headerlink&quot; titl
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android开发中遇到的小问题汇总</title>
+    <link href="http://www.tedyin.me/2015/05/03/android-issue/"/>
+    <id>http://www.tedyin.me/2015/05/03/android-issue/</id>
+    <published>2015-05-03T14:53:00.000Z</published>
+    <updated>2015-11-16T01:44:35.000Z</updated>
+    
+    <content type="html">&lt;p&gt;在实际的项目开发过程中，经常会遇到一些莫名其妙的问题，或者很容易忽略的但是会造成很多麻烦的小问题，这篇帖子用来记录下这些问题，并给出注意事项或者解决方法，后续会不断更新所遇到的问题和解决方法。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Fragment中使用onActivityResult方法无效不能有效的回调&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;###解决方法&lt;br&gt;在Fragment中不要使用getActivity().startActivityForResult()方法去启动Activity，而应该直接使用startActivity方法去启动Activity，否则会被挂载Fragment的Activity中的onActivityResult的方法截获，导致Fragment的onActivityResult方法无法被回调。&lt;/p&gt;
+&lt;p&gt;###参考&lt;br&gt;&lt;a href=&quot;http://stackoverflow.com/questions/6147884/onactivityresult-not-being-called-in-fragment&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考Stackoverflow&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ViewPager.setCurrentItem(0)后onPageSelect方法没有被触发&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;###解决方法&lt;br&gt;调用完setCurrentItem(0)后再手动调用加载函数。原因是ViewPager内部的mCurrentItem默认值为0，设置了setCurrentItem（0）之后dispatchSelect为false认为已经调用过了onPageSelect方法，因此在第一次调用完setCurrentItem(0)时无效。&lt;/p&gt;
+&lt;p&gt;###参考&lt;br&gt;&lt;a href=&quot;http://stackoverflow.com/questions/11794269/onpageselected-isnt-triggered-when-calling-setcurrentitem0&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考Stackoverflow&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在实际的项目开发过程中，经常会遇到一些莫名其妙的问题，或者很容易忽略的但是会造成很多麻烦的小问题，这篇帖子用来记录下这些问题，并给出注意事项或者解决方法，后续会不断更新所遇到的问题和解决方法。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Fragment中使用onActivityResult
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用Gradle将代码上传到JCenter</title>
+    <link href="http://www.tedyin.me/2015/05/02/jcenter/"/>
+    <id>http://www.tedyin.me/2015/05/02/jcenter/</id>
+    <published>2015-05-02T14:22:22.000Z</published>
+    <updated>2016-01-22T05:37:19.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>How To Use Jenv To Master Your Java Environnement</title>
+    <link href="http://www.tedyin.me/2015/04/26/how-to-use-jenv/"/>
+    <id>http://www.tedyin.me/2015/04/26/how-to-use-jenv/</id>
+    <published>2015-04-26T12:22:00.000Z</published>
+    <updated>2016-02-29T02:47:58.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具&lt;code&gt;Jenv&lt;/code&gt;，用它来终结我们的Java版本管理之痛。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文以Mac系统位例进行介绍。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;将代码下载到&lt;code&gt;~/.jenv&lt;/code&gt;目录下&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git clone https://github.com/gcuisinier/jenv.git ~/.jenv&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将&lt;code&gt;~/.jenv/bin&lt;/code&gt;加入到&lt;code&gt;$PATH&lt;/code&gt;环境变量中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加初始化Jenv的脚本到环境变量中&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ echo &amp;apos;eval &amp;quot;$(jenv init -)&amp;quot;&amp;apos; &amp;gt;&amp;gt; ~/.bash_profile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重启命令行，使PATH的设置生效，现在可已使用jenv来管理JDK版本了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot; title=&quot;使用&quot;&gt;&lt;/a&gt;使用&lt;/h1&gt;&lt;p&gt;下面介绍几个最常用的Jenv命令&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;jenv version&lt;/code&gt; 显示当前正在使用的JDK版本号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;jenv versions&lt;/code&gt; 显示当前系统上已将安装的所有JDK版本号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;jenv local [java version]&lt;/code&gt; 指定当前目录下要使用的JDK版本号，只在该目录及其子目录内有效，在该目录以外还是使用原有的JDK版本。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;jenv global [java version]&lt;/code&gt; 指定全局的JDK版本号，在整个系统中有效。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;jenv info java&lt;/code&gt; 检查&lt;code&gt;JAVA_HOME&lt;/code&gt;设置是否有效，如果有效会输出&lt;code&gt;JAVA_HOME&lt;/code&gt;的路径&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;jenv local --unset&lt;/code&gt; 消除jenv local的设置，恢复使用默认的JDK版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;该项目Github地址&quot;&gt;&lt;a href=&quot;#该项目Github地址&quot; class=&quot;headerlink&quot; title=&quot;该项目Github地址&quot;&gt;&lt;/a&gt;该项目Github地址&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/gcuisinier/jenv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Jenv&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具&lt;code&gt;Jenv&lt;/code&gt;，用它来终结我们的Java版本管理之痛。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Parcelable Vs Serializable</title>
+    <link href="http://www.tedyin.me/2015/04/03/parcelable-vs-serializable/"/>
+    <id>http://www.tedyin.me/2015/04/03/parcelable-vs-serializable/</id>
+    <published>2015-04-03T14:28:00.000Z</published>
+    <updated>2016-02-29T02:47:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;今天说一下对象序列化时的两个接口&lt;code&gt;Serializable&lt;/code&gt;和&lt;code&gt;Parcelable&lt;/code&gt;，前者是Java中的老面孔了，大家也都非常熟悉了，后者是Android提供的新面孔，既然Java本身就有序列化的接口为什么Android还要重新造轮子呢？当然Google也不是傻子，肯定是前面那个轮子不能满足他们的要求，所以他们才重新造出了&lt;code&gt;Parcelable&lt;/code&gt;这个接口。&lt;/p&gt;
+&lt;h2 id=&quot;Serializable接口的使用&quot;&gt;&lt;a href=&quot;#Serializable接口的使用&quot; class=&quot;headerlink&quot; title=&quot;Serializable接口的使用&quot;&gt;&lt;/a&gt;Serializable接口的使用&lt;/h2&gt;&lt;p&gt;首先来看看&lt;code&gt;Serializable&lt;/code&gt;如何使用。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public class SerializableClass implements Serializable&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	String name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	int age;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	float height;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	List&amp;lt;Skill&amp;gt; skillList;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	static class Skill implements Serializable&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		String skillName;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		boolean gotIt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;好了，这样就可以直接将这个类序列化后使用Intent/Bundle进行传递了。使用起来非常简单，只需要实现&lt;code&gt;Serializable&lt;/code&gt;接口即可。&lt;code&gt;Serializable&lt;/code&gt;接口是一个标志接口，只要实现了这个接口，你就不需要做任何操作，Java会使用Reflection(反射技术)将类进行序列化和反序列化，非常的简单方便。但是有一个问题就是&lt;strong&gt;效率太低&lt;/strong&gt;,在序列化和反序列化过程中会创建许多中间对象，会使得GC多次被调用，从而影响到程序的性能，我们都知道在GC被触发后进行垃圾回收的过程中，线程是被挂起的，APP会处于无响应状态，尽管这个过程持续的时间很短很短只有几十毫秒，但如果多次重复必定会影响到用户体验，一次Google的大牛们就不淡定了，这么差的性能怎么忍得了？但是如何破呢？答案就是&lt;code&gt;Parcelable&lt;/code&gt;，他们造出了&lt;code&gt;Parcelable&lt;/code&gt;来解决这个问题。&lt;/p&gt;
+&lt;p&gt;##Parcelable接口的使用&lt;br&gt;和上面一样，还是先来看看&lt;code&gt;Parcelable&lt;/code&gt;接口是如何使用的。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;81&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public class ParcelableClass implements Parcelable&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	String name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	int age;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	float height;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	List&amp;lt;Skill&amp;gt; skillList;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	static final Parcelable.Creator&amp;lt;ParcelableClass&amp;gt; CREATOR &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		= new Parcelable.Creator&amp;lt;ParcelableClass&amp;gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		@Overried&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		ParcelableClass createFromParcel(Parcel in)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			return new ParcelableClass(in);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		@Overried&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		ParcelableClass[] newArray(int size)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			return new ParcelableClass[size];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	ParcelableClass(Parcel in)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		this.name = in.readString();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		this.age = in.readInt();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		this.height = in.readFloat();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		this.skillList = new ArrayList&amp;lt;Skill&amp;gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		in.readTypedList(skillList,Skill.CREATOR);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	@Overried&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	void writeToParcel(Parcel dest, int flags)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		dest.writeString(this.name);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		dest.writeInt(this.age);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		dest.writeFloat(this.height);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		dest.writeTypedList(this.skillList);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	@Overried&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	int describeContents()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		return 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	static class Skill implements Parcelable&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		String skillName;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		boolean gotIt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		static final Parcelable.Creator&amp;lt;Skill&amp;gt; CREATOR &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			= new Parcelable.Creator&amp;lt;Skill&amp;gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			@Overried&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			Skill createFromParcel(Parcel in)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				return new Skill(in);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			@Overried&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			Skill[] newArray(int size)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				return new Skill[size];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		Skill(Parcel in)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			this.skillName = in.readString();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			this.gotIt = in.readBoolean();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		@Overried&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		int describeContents()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			return 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		@Overried&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		void writeToParcel(Parcel dest, int flags)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			dest.writeString(skillName);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			dest.writeBoolean(gotIt ? 1 : 0);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	static class Skill implements Parcelable&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		String skillName;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		boolean gotIt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;终于写完了，这比刚才使用&lt;code&gt;Serializable&lt;/code&gt;接口时的代码长了好几倍，代码的可读性也大不如刚刚的代码，但是为了性能上的提升，这么做也是值得的，与性能相比代码多点难点又算得了什么呢？何况这个代码也不是很难，而且是有迹可循的:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;每个实现了Parcelable的接口都需要实现一个&lt;code&gt;Parcelable.Creator&lt;/code&gt;对象。&lt;/li&gt;
+&lt;li&gt;提供一个以Parcel为参数的构造函数。&lt;/li&gt;
+&lt;li&gt;实现&lt;code&gt;describeContents()&lt;/code&gt;方法&lt;/li&gt;
+&lt;li&gt;实现&lt;code&gt;writeToParcel(Parcel dest, int flags)&lt;/code&gt;方法。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这样就OK了,下面来看看废了一番周折写出来的序列化方法到底比原生的好了多少，有图有真相！！&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/parcelable_vs_serializable.png&quot; alt=&quot;parcelable&quot;&gt;&lt;/p&gt;
+&lt;p&gt;OMG !这差距，使用&lt;code&gt;Parcelable&lt;/code&gt;虽然复杂点，但是这性能提升，真是值了！&lt;/p&gt;
+&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.developerphil.com/parcelable-vs-serializable/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Parcelable vs Serializable&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天说一下对象序列化时的两个接口&lt;code&gt;Serializable&lt;/code&gt;和&lt;code&gt;Parcelable&lt;/code&gt;，前者是Java中的老面孔了，大家也都非常熟悉了，后者是Android提供的新面孔，既然Java本身就有序列化的接口为什么Android还要重新
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android Tools Attribute</title>
+    <link href="http://www.tedyin.me/2015/03/28/tools-usage/"/>
+    <id>http://www.tedyin.me/2015/03/28/tools-usage/</id>
+    <published>2015-03-28T14:29:00.000Z</published>
+    <updated>2016-02-29T02:47:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Android tools提供了一组非常有用的属性方法来方便我们开发，tools所指定的所有属性在打包的时候都不会打包到APK里，它只是辅助开发的一组工具属性，本文基于Android Studio，快捷建使用Mac OSX 10.5+ KeyMap，下面以IDE来表示Android Studio。&lt;/p&gt;
+&lt;p&gt;##tools : context&lt;br&gt;使用context属性来告诉IDE，这个布局文件是哪个Activity的布局文件，所以在预览的时候需要根据这个Activity的主题属性来显示，而不是使用默认的主题来进行预览。除了这个作用之外还有另外一点，在IDE中使用Go to Related files（快捷键CMD+Ctrl+Up）功能来帮助找到相关的布局文件。context属性在填写的时候，需要填上Activity的完整包名。&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/tools_1.png&quot; alt=&quot;p1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;##tools:menu&lt;br&gt;如果你已经使用了context属性指定过了对应的Activity，那么IDE默认会自己去检查OnCreateOptionsMenu里面使用了哪个menu布局，然后在预览的时候加载该布局。使用menu属性可以覆盖上述默认操作。如果不想显示menu则可以设置tools:menu=“”即可。另外还可以使用menu属性定义多个菜单资源，如果不想显示menu则可以给menu属性赋值为空，例如：tools:menu=“”即可。另外，还可以在预览的时预览任意个你想看到的menu菜单项，而不是直接预览menu布局里面的内容。实现这样的效果十分简单，只需要在menu后面写上对应的菜单项的Id并用“ , ”隔开即可。举个例子：&lt;br&gt;&lt;code&gt;tools:menu=“action_search,action_add&amp;quot;&lt;/code&gt;&lt;br&gt;还有一点需要注意的就是，在使用Theme.AppCompat时，menu这个属性不起作用。&lt;/p&gt;
+&lt;p&gt;##tools:actionBarNavMod&lt;br&gt;使用该属性告诉IDE我要显示的ActionBar的模式，包含了三个选项standard、tabs、list，该属性只有在Holo主题下有用，在其他主题下无法使用。&lt;/p&gt;
+&lt;p&gt;##tools:listitem，tools:listheader，tools:listfooter&lt;br&gt;从名字就可以看出他们的意思，这是一组属性，我们可以使用这些属性分别告诉IDE一下信息:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;listitem是告诉IDE这个列表里面的Item内容是什么，在预览的时候可以和Item一起预览，而不是傻傻的默认显示一行文字。&lt;/li&gt;
+&lt;li&gt;listheader是告诉IDE这个列表的头部是什么，并一起预览&lt;/li&gt;
+&lt;li&gt;listfooter是告诉IDE这个列表的底部是什么，并一起预览需要注意的一点是，listheader和listfooter对GridView是没有效果的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;##tools:layout&lt;br&gt;用这个属性告诉IDE，这个Layout在预览的时候应该显示什么东西，而不是显示一片空白。&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/tools_2.png&quot; alt=&quot;p2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;##补充：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;tools:text属性用来显示要预览的文字，预览时会覆盖text属性的内容。&lt;/li&gt;
+&lt;li&gt;tools:src属性用来显示要预览的图片资源。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;#tools 中对Lint处理的属性&lt;/p&gt;
+&lt;p&gt;##tools:ignore&lt;br&gt;该属性对那些有“强迫症”的患者非常有用，经常我们在布局文件中写完ImageView后，都会提示少了Description，每次看见那个小黄线的提示就会觉得非常别扭，但是有了这个属性，就不用担心了，只要在ImageView的属性设置后面加上tools:ignore=“contentDescription”即可立马解决问题。除了上述用法外，还可以用在别的想忽略警告的地方。&lt;/p&gt;
+&lt;p&gt;##tools:targetApi&lt;br&gt;这个属性从名字就可以看出是用来指定API的。如果我们的minSdk是11，但是我们用了一个在API 14后才有的控件，在布局编辑器里就会报错，那么在报错的控件下面使用targetApi并指定对应的API即可解决问题。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: xml&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;ripple xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android:color=&amp;quot;@color/accent_color&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tools:targetApi=&amp;quot;LOLLIPOP&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;好了，tools的用法基本就介绍完了，详细的列表可以&lt;a href=&quot;http://tools.android.com/tech-docs/tools-attributes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考这里&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;##参考&lt;br&gt;&lt;a href=&quot;https://medium.com/sebs-top-tips/tools-of-the-trade-part-2-b91271892d10&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;英文&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0309/2567.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;中文版&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Android tools提供了一组非常有用的属性方法来方便我们开发，tools所指定的所有属性在打包的时候都不会打包到APK里，它只是辅助开发的一组工具属性，本文基于Android Studio，快捷建使用Mac OSX 10.5+ KeyMap，下面以IDE来表示And
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android View Lifecycle</title>
+    <link href="http://www.tedyin.me/2015/03/11/android-view-lifecycle/"/>
+    <id>http://www.tedyin.me/2015/03/11/android-view-lifecycle/</id>
+    <published>2015-03-11T13:00:00.000Z</published>
+    <updated>2016-01-26T05:51:31.000Z</updated>
+    
+    <content type="html">&lt;p&gt;在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。&lt;/p&gt;
+&lt;p&gt;##什么是View&lt;br&gt;先来看看官方文档的解释：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This class represents the basic building block for user interface components. A View occupies a rectangular area on the screen and is responsible for drawing and event handling. View is the base class for widgets, which are used to create interactive UI components (buttons, text fields, etc.). The ViewGroup subclass is the base class for layouts, which are invisible containers that hold other Views (or other ViewGroups) and define their layout properties.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也就是说View是最基础的UI组件，所有的其他的UI组件都是从View类中衍生出来的，可见View的地位是多么的高，所以需要掌握View的各个细节。&lt;/p&gt;
+&lt;p&gt;##View生命周期中用到的方法&lt;/p&gt;
+&lt;p&gt;###1. View的创建期：&lt;br&gt;使用View的构造函数进行创建，在这个过程中，如果有自定义的属性的话，也需要在这个期间进行处理。当View和他的子View全部从XML中inflate结束后，会调用&lt;code&gt;View#onFinishInflate()&lt;/code&gt;方法。&lt;/p&gt;
+&lt;p&gt;###2. View的布局过程&lt;br&gt;整个布局过程做的就是处理View的大小和位置相关的信息。&lt;br&gt;&lt;code&gt;View#onMesure()&lt;/code&gt;方法的作用就是计算每个控件在屏幕上的尺寸大小。&lt;code&gt;View#onLayout&lt;/code&gt;方法的作用就是设置所有控件的大小和位置。&lt;br&gt;&lt;code&gt;View#onSizeChanged&lt;/code&gt;方法的作用是当View的大小改变会调用此方法。&lt;/p&gt;
+&lt;p&gt;###3. View的渲染&lt;br&gt;View的渲染过程会调用onDraw方法。&lt;/p&gt;
+&lt;p&gt;###4. View对事件的处理&lt;br&gt;处理View事件方法有&lt;code&gt;View#onKeyDown()&lt;/code&gt;当设备的物理按键按下后会触发该方法；&lt;code&gt;View#onKeyUp()&lt;/code&gt;当设备的物理按键弹起的时候就会触发该方法；&lt;code&gt;View#onTrackballEvent()&lt;/code&gt;当轨迹球被触动的时候会触发该方法；&lt;br&gt;&lt;code&gt;View#onTouchEvent()&lt;/code&gt;当设备的屏幕有来自用户的触摸操作时会回调该法，比如某些滑动操作我们就可以在该方法中拦截处理，可以根据用户的不同滑动距离和滑动速度等用户操作，给出许多不同的反馈，提供更好的用户体验。&lt;/p&gt;
+&lt;p&gt;###5. View对焦点的处理&lt;br&gt;处理焦点相关事件的回调方法为&lt;code&gt;View#onFocusChanged()&lt;/code&gt;当控件的焦点发生改变，会触发该方法。&lt;/p&gt;
+&lt;p&gt;###6. View在根节点上的挂载和删除&lt;br&gt;当View通过构造函数创建出来后，如果不挂载到Window上时，是无法显示出来的。当View要挂载到Window上时会调用&lt;code&gt;Veiw#onAttachedToWindow()&lt;/code&gt;方法；当View被销毁后要从Window上去除时会调用&lt;code&gt;View#onDetachedFromWindow()&lt;/code&gt;方法；当Window隐藏或者可见时会调用&lt;code&gt;View#onWindowVisibilityChanged()&lt;/code&gt;方法。通过这几个方法我们可以处理一些初始化的操作，和一些在View被销毁后进行的内存回收或者善后的工作。&lt;/p&gt;
+&lt;p&gt;##View的生命周期示意图&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/view_lifecycle.png&quot; alt=&quot;view_lifecycle&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。&lt;/p&gt;
+&lt;p&gt;##什么是View&lt;br&gt;先来看看官方文档的解释：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Th
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android UI Tips</title>
+    <link href="http://www.tedyin.me/2015/01/18/android-ui-tips/"/>
+    <id>http://www.tedyin.me/2015/01/18/android-ui-tips/</id>
+    <published>2015-01-18T15:30:00.000Z</published>
+    <updated>2015-11-16T01:44:35.000Z</updated>
+    
+    <content type="html">&lt;p&gt;###Tips:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用SparseArray代替HashMap等容器类。&lt;/li&gt;
+&lt;li&gt;能复用时一定要复用，不能复用时尽量复用。复用一切！&lt;/li&gt;
+&lt;li&gt;使用静态工厂方法去获取对象（使用Message时不要自己去new Message，要使用Message.obtain()方法去获取）这样可以减少不必要的对象，复用已有的对象。&lt;/li&gt;
+&lt;li&gt;使用一个全局变量代替多个临时变量。&lt;/li&gt;
+&lt;li&gt;使用Handler、AsyncTask、Loader、IntentService处理异步任务，而非仅使用java.concurrent包&lt;/li&gt;
+&lt;li&gt;给你的线程一个优先级，如果是处理后台任务的线程，设置他的优先级为Background。&lt;/li&gt;
+&lt;li&gt;对于ListView的3种状态进行处理，从而优化代码，提升性能。(例如在滑动过程中停止图片的加载，等恢复正常后再继续加载图)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;###总结:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;不要阻塞Main Thread（UI Thread）&lt;/li&gt;
+&lt;li&gt;扁平化你的布局层次（能用一个Layout最好，可以使用merge代替FrameLayout）&lt;/li&gt;
+&lt;li&gt;能复用就尽量复用一切可复用的东西。&lt;/li&gt;
+&lt;li&gt;延迟加载一些不需要立即使用的内容。&lt;/li&gt;
+&lt;li&gt;对你的Thread或者Task设置优先级，UI任务和Thread永远是最高级。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;###参考:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/cyrilmottier/optimizing-android-ui-pro-tips-for-creating-smooth-and-responsive-apps&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android UI Tips&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###Tips:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用SparseArray代替HashMap等容器类。&lt;/li&gt;
+&lt;li&gt;能复用时一定要复用，不能复用时尽量复用。复用一切！&lt;/li&gt;
+&lt;li&gt;使用静态工厂方法去获取对象（使用Message时不要自己去new Message，要使
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用反射自定义SearchView</title>
+    <link href="http://www.tedyin.me/2015/01/02/use-reflect-modify/"/>
+    <id>http://www.tedyin.me/2015/01/02/use-reflect-modify/</id>
+    <published>2015-01-02T02:00:00.000Z</published>
+    <updated>2016-02-29T02:47:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。&lt;/p&gt;
+&lt;p&gt;下面来举个例子来说明一下如何使用反射来实现自定义SearchView的效果：&lt;/p&gt;
+&lt;p&gt;比如SearchView中展开后的底部Hint背景有一个搜索的图标，但是我们要是想隐藏该图标是没有办法直接隐藏的，因此我们可以使用反射来进行动态修改，为了可以使用反射，因此我们要查看SearchView的源码然后找出该图标的所属控件，然后使用反射动态修改该控件的属性，从而达到隐藏该图标的目的。&lt;br&gt;下面来看下具体步骤：&lt;/p&gt;
+&lt;p&gt;###查看源码&lt;br&gt;经过查看SearchView的源码，我们发现这个图标是SearchView中的 SearchAutoComplete的Hint属性，源码如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;if (mQueryHint != null) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    mQueryTextView.setHint(getDecoratedHint(mQueryHint));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; else if (mSearchable != null) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    CharSequence hint = null;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int hintId = mSearchable.getHintId();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    if (hintId != 0) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        hint = getContext().getString(hintId);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    if (hint != null) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        mQueryTextView.setHint(getDecoratedHint(hint));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; else &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    mQueryTextView.setHint(getDecoratedHint(&amp;quot;&amp;quot;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;###使用反射修改SearchView&lt;br&gt;从上述代码可以看出，显示Hint的是&lt;code&gt;mQueryHint&lt;/code&gt;,因此只要将这个Hint值设为“”空字符串就可以隐藏该icon。下面使用反射的方式获取mQueryTextView这个private级别的控件,并将Hint设为空字符串，代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;private void hideCloseSearchIcon(SearchView searchView) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	SearchAutoComplete mQueryTextView = (SearchAutoComplete) SystemUiHelper.getFieldByReflect(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;quot;mQueryTextView&amp;quot;, SearchView.class, searchView);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	mQueryTextView.setHint(R.string.hint_search);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public static Object getFieldByReflect(String fieldName, Class&amp;lt;?&amp;gt; claz, Object target) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	try &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		Field searchField = claz.getDeclaredField(fieldName);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		searchField.setAccessible(true);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		return searchField.get(target);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; catch (NoSuchFieldException e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		e.printStackTrace();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; catch (IllegalAccessException e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		e.printStackTrace();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	return null;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这样就可以将SearchView中输入框旁边的icon去掉了，下面看下对比图：&lt;/p&gt;
+&lt;p&gt;去掉之前的样子：&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/search1.png&quot; alt=&quot;search1&quot;&gt;&lt;br&gt;去掉之后的样子：&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/search2.png&quot; alt=&quot;search2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;同理，可以使用反射做很多类似的修改和操作,只有你想不到的没有你做不到的。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。&lt;/p&gt;
+&lt;p&gt;下面来举个例子来说
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android HttpURLConnection VS HttpClient</title>
+    <link href="http://www.tedyin.me/2014/12/22/httpclient-urlconnection/"/>
+    <id>http://www.tedyin.me/2014/12/22/httpclient-urlconnection/</id>
+    <published>2014-12-22T15:40:00.000Z</published>
+    <updated>2016-02-29T02:47:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。&lt;/p&gt;
+&lt;p&gt;##HttpClient与HttpURLConnection在Android中的比较&lt;/p&gt;
+&lt;p&gt;Android中直接封装了Apache的HttpClient来作为网络操的处理类，该类是非常强大的类，比较重量级，功能和方法非常丰富，因此带来了一个问题，那就是定制性非常差，修改起来非常麻烦。相比而言HttpURLConnection要轻量许多，方法较少而且都比较简单，因此定制性更强，修改起来容易，Android团队内部也更倾向使用定制性更好的HttpURLConnection来进行网络处理。&lt;/p&gt;
+&lt;p&gt;但是因为在FROYO版本以及之前版本，Android对HttpURLConnection支持不好，HttpURLConnection有许多bug，所以在2.3版本之前建议使用HttpClient来进行网络操作。在FROYO以及之后的版本Android修复了HttpURLConnection的许多问题，而且在4.0之后HttpURLConnection还加入了对缓存的支持，使用下面方法可以在4.0版本中开启Http缓存:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;private void enableHttpResponseCache()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	try&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		long httpCacheSize = 10 * 1024 * 1024; // 10 MiB&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    File httpCacheDir = new File(getCacheDir(), &amp;quot;http&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    Class.forName(&amp;quot;android.net.http.HttpResponseCache&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	        .getMethod(&amp;quot;install&amp;quot;, File.class, long.class)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	        .invoke(null, httpCacheDir, httpCacheSize);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;cache(Exception httpResponseCacheNotAvailable)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在客户端配置好缓存处理后，同样需要在服务端进行配置支持HttpCache，否则Cache是不会生效的。&lt;br&gt;在2.3以及以后的版本中，HttpURLConnection默认是支持&lt;code&gt;Accept-Type:gzip&lt;/code&gt;的，只需要在服务端配置一下即可，在消息传输和获取的过程中使用压缩数据进行传输，这样会更加快速的传递数据，而且省电省流量。但是如果服务端支持gzip格式数据传输，那么在使用&lt;code&gt;getContentLength()&lt;/code&gt;方法获取的就是压缩后的数据大小，这一定要注意。&lt;/p&gt;
+&lt;p&gt;##到底使用哪一个？&lt;br&gt;上面已经说的很明确了，在2.3版本之前使用HttpClient进行网络请求，在FROYO版本之后使用HttpURLConnection进行网络请求，因为2.3以前的版本市场份额已经很小很小了，所以在以后的开发中可以略去选择直接使用HttpURLConnection进行网络操作，而且Android官方也会持续改进HttpURLConnection在Android中的性能。&lt;/p&gt;
+&lt;p&gt;##参考&lt;br&gt;(参考)[&lt;a href=&quot;http://android-developers.blogspot.tw/2011/09/androids-http-clients.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://android-developers.blogspot.tw/2011/09/androids-http-clients.html&lt;/a&gt;]&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。&lt;/p&gt;
+&lt;p&gt;#
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ViewPager PageTransformer 应用</title>
+    <link href="http://www.tedyin.me/2014/12/21/pager-transformer/"/>
+    <id>http://www.tedyin.me/2014/12/21/pager-transformer/</id>
+    <published>2014-12-21T13:07:00.000Z</published>
+    <updated>2016-02-29T02:47:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;最近项目中要有个需求就是做出一个可以滑动的列表，类似于Paper效果的动画，期初设想的比较复杂，自定义监控ViewPager的OnScroll事件，然后再在onPageScrolled中根据&lt;code&gt;position&lt;/code&gt;, &lt;code&gt;positionOffset&lt;/code&gt;, &lt;code&gt;positionOffsetPixels&lt;/code&gt;等数据就算出滑动的百分比，通过滑动的百分比来控制动画播放的百分比。这样虽然也可以实现想要的效果，但是会很复杂，有许多中间状态需要我们自己计算和保存，维护起来非常麻烦。&lt;/p&gt;
+&lt;p&gt;在这些复杂的实现后，在朋友的建议下使用了&lt;code&gt;ViewPager.PageTransformer&lt;/code&gt;来重新实现上述效果，瞬间简单了许多，很多中间状态不许需要自己去维护，PagerTransformer会帮你去维护，并且在他提供的方法中&lt;code&gt;transformPage(View page, float position)&lt;/code&gt;已经帮你计算好了滑动百分比，根本不需要你再去计算，这个简直太贴心了。其实在滑动过程中对UI修改最重要的也是最麻烦的就是去计算滑动的百分比，现在有了这个百分比，你想实现什么动画就实现什么动画，简直太爽了。&lt;/p&gt;
+&lt;p&gt;在使用ViewPager.PageTransformer的时候需要注意的就是他的接口方法中的postion，只要理解了它的用法，PageTransformer才算是用熟了。首先来介绍下position的用法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;position 是一个float值，它代表了一个页面离开屏幕的百分比，以及另一个页面进入的百分比&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;position = 0  : page完全被展示，也就是说page处于屏幕的正中间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;position = 1  : page完全处于屏幕的右边&lt;/li&gt;
+&lt;li&gt;position = -1 : page完全处于屏幕的左边&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果用户拖拽position=0(当前屏幕正中央的page)的page从右往左滑动，当只滑动一半的时候，原来position = 0的page其position会由0逐渐变为 -0.5，position=1的page（屏幕右侧的page）其position会由1逐渐变为 0.5。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：&lt;br&gt;从右往左滑 &amp;lt;——  position为负数&lt;br&gt;从左往右滑 ——&amp;gt;  position为正数&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;好了理解了上面所讲的内容就可以真正的去做出漂亮的动画了，下面给一个动画实例&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public static class RotatePageTransformer implements ViewPager.PageTransformer &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    private static float MIN_TRAN = 50f;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    private static int MIN_ROTATE = 15;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    @Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public void transformPage(View view, float position) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        if (position &amp;lt;= 1) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            float rotateFactor = MIN_ROTATE * position;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            float tranFactor = MIN_TRAN * position;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            if (position &amp;lt; 0) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                view.setTranslationY(-tranFactor);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125; else &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                view.setTranslationY(tranFactor);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            view.setRotation(rotateFactor);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;该动画的效果如下：&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/page1.png&quot; alt=&quot;page1&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/page2.png&quot; alt=&quot;page2&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/page3.png&quot; alt=&quot;page3&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在滑动的过程总中左边和右边的会以此导向一个方向并且在Y方向上有一定位移，等到中间后图片的夹角会消失，而且会向上移动一定的距离。&lt;/p&gt;
+&lt;p&gt;好了，赶紧去体验一下ViewPager.PageTransformer吧。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近项目中要有个需求就是做出一个可以滑动的列表，类似于Paper效果的动画，期初设想的比较复杂，自定义监控ViewPager的OnScroll事件，然后再在onPageScrolled中根据&lt;code&gt;position&lt;/code&gt;, &lt;code&gt;positionOffse
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>单例模式的使用</title>
+    <link href="http://www.tedyin.me/2014/12/14/singlton/"/>
+    <id>http://www.tedyin.me/2014/12/14/singlton/</id>
+    <published>2014-12-14T15:20:00.000Z</published>
+    <updated>2016-02-29T02:47:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;单例模式大家应该已经很熟悉了，但是在使用单例模式的时候，我们经常会忽略一个问题，那就是多线程情况下的单例模式的使用。一般单例模式的实现会有下面两种，分别是懒汉式和饿汉式。&lt;/p&gt;
+&lt;p&gt;##懒汉式实现&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//懒汉式实现&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class Singleton&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    private static Singleton instance = null;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    private Singleton()&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public static newInstance()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        if(null == instance)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            instance = new Singleton();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        return instance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public void doSomething()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        // Do something ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;##饿汉式&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//饿汉式&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class Singleton&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    private static Singleton instance = new Singleton();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    private Singleton()&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public static Singleton newInstance()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        return instance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public void doSomething()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        // Do something ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;懒汉式和饿汉式的最大区别就是加载单例的时机的不同，也就是说空间和时间的问题。懒汉式是用空间换时间的典型，相反的饿汉式就是使用时间换空间的典型，上面的例子只是举了一个很简单的情况，假如这个单例对象很大非常占用内存，那么选择上述两种方式就会有很大的不同，要根据情况而确定到底使用哪一种。&lt;/p&gt;
+&lt;p&gt;但是不论选择上面的哪一种都会有一个问题那就是在多线程的情况下，如果是首次加载单例，就会出现生成多个单例的情况，这样如果是生成一个很大的单例对象的时候，加入这个单例对象的构造过程很复杂很耗时，那么在多线程情况下就会很容易出错，而且很耗内存，那么如何使用线程安全的单例模式呢？我们可以使用JVM自身来加载我们的单例模式，这样JVM自身在Load类的时候是线程安全的，因此我们可以利用这点写出线程安全的类。&lt;/p&gt;
+&lt;p&gt;##线程安全的类&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public class Singleton&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //内部类，在装载该内部类时才会去创建单利对象&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    private static class SingletonHolder&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        public static Singleton instance = new Singleton();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    private Singleton()&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public static Singleton newInstance()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        return SingletonHolder.instance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public void doSomething()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        //do something&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;利用JVM自身的特性之后，我们就再也不用担心多线程下单例模式的加载问题了。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;单例模式大家应该已经很熟悉了，但是在使用单例模式的时候，我们经常会忽略一个问题，那就是多线程情况下的单例模式的使用。一般单例模式的实现会有下面两种，分别是懒汉式和饿汉式。&lt;/p&gt;
+&lt;p&gt;##懒汉式实现&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Irregular Shape</title>
+    <link href="http://www.tedyin.me/2014/11/15/irregular-shape-1/"/>
+    <id>http://www.tedyin.me/2014/11/15/irregular-shape-1/</id>
+    <published>2014-11-15T15:52:00.000Z</published>
+    <updated>2016-02-29T02:47:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;接下来几周的内容是一系列文章，来讲解Android中不规则图形的创建和使用。今天先来介绍一下圆角图片的实现。&lt;/p&gt;
+&lt;p&gt;有一个好消息要告诉大家，那就是在API 20中Android已经默认提供了圆角矩形的图片，RoundRectShape Drawable，但是不好的消息是大多数的人的手机版本都是20或者以上的，因此还是自己动手丰衣足食吧。&lt;/p&gt;
+&lt;p&gt;实现这种效果的方式有很多先来讨论第一种，最笨效果最差的实现。&lt;/p&gt;
+&lt;h2 id=&quot;使用图层方式实现&quot;&gt;&lt;a href=&quot;#使用图层方式实现&quot; class=&quot;headerlink&quot; title=&quot;使用图层方式实现&quot;&gt;&lt;/a&gt;使用图层方式实现&lt;/h2&gt;&lt;p&gt;使用这种方法实现的话，我们需要使用到两张图片，一张是原图，另外一张就是与原图大小尺寸完全相同的模板图片比如下面两幅：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.tedyin.me/images/dog.jpg&quot; alt=&quot;dog&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/mask.png&quot; alt=&quot;mask&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里使用绿色的原因只是为了大家看的清楚而已。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;有了这两张图之后，我们可以加载这两张图片到内存中，然后使用&lt;code&gt;PoterDuffXfermode&lt;/code&gt;类来将这两个图片合成为一张图片，就可以生成一个圆角图片的效果了。具体的代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public Bitmap combineImage(Bitmap srcBitmap, Bitmap maskBitmap)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Bitmap resultBmp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	int width = srcBitmap.getWidth()&amp;gt;maskBitmap.getWidth()?srcBitmap.getWidth():maskBitmap.getWidth();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	int height = srcBitmap.getHeight()&amp;gt;maskBitmap.getHeight()?srcBitmap.getHeight():maskBitmap.getHeight();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	resultBmp = Bitmap.createBitmap(width,height,Bitmap.Config.ARGB_8888);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Paint paint = new Paint();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode_SRC_ATOP));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Canvas canvas = new Canvas(resultBmp);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	canvas.drawBitmap(srcBitmap, 0, 0, null);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    canvas.drawBitmap(maskBitmap, 0, 0, paint);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;合成后的效果如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.tedyin.me/images/dog_mask.jpg&quot; alt=&quot;dog_mask&quot;&gt;&lt;/p&gt;
+&lt;p&gt;OK，圆角矩形图片效果实现。但是这个方法实质上是最差劲的，它有如下几个缺点:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;如果图片的形状有很多种，我们需要为每种图片都生成一张mask图片，这样效率会很低，而且工作量会加大很多。&lt;/li&gt;
+&lt;li&gt;适配性会变得很差，如果是圆角矩形图片，在大屏手机上拉伸回导致圆角效果失真。&lt;/li&gt;
+&lt;li&gt;还有个最大的问题，就是性能问题，如果图片尺寸很大，我们加载到内存中很可能出现内存溢出的情况，这样就得不偿失了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因此这个方法的可用性较低，不推荐使用。但是此处为什么要介绍这个方法呢，最主要的是这个处理思路，我们可以使用上述的而方法来处理一些水印效果或者其他图片合成的效果，这样才是上述方法最好的使用方式。&lt;/p&gt;
+&lt;p&gt;接下来看看如何使用高效的方法创建圆角矩形。&lt;/p&gt;
+&lt;p&gt;##使用BitmapShader来创建圆角矩形&lt;br&gt;先来介绍一下使用BitmapShader的思路，其实这个很类似于我们平常使用Canvas画图形的方式，只是我们平时在画圆角矩形时填充Canvas的是纯色，这里为了得到圆角图片，我们可以使用上面的思路，将填充物由纯色改为我们要画的图片即可。具体的实现方式如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;private Bitmap processBitmap(Bitmap bitmap) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Bitmap bmp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	bmp = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	BitmapShader shader = new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	// 随机设置一个圆角的半径大小&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	float raidus = getResources().getDisplayMetrics().density * 6 + 0.5f;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Canvas canvas = new Canvas(bmp);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Paint paint = new Paint();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	paint.setAntiAlias(true);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	paint.setShader(shader); // 将要填充的shader交给Paint&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	RectF rect = new RectF(0, 0, bitmap.getWidth(), bitmap.getHeight());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	canvas.drawRoundRect(rect, raidus, raidus, paint);// 在RectF上绘制圆角图片&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	return bmp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;使用上述代码即可实现圆角矩形的绘制，绘制的结果如下：&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/dog2.png&quot; alt=&quot;dog2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;同样的道理，我们可以使用上述方式，绘制出三角形，椭圆，多边形等各种各样的图片，思路和绘制圆角矩形是一样的。都是使用RectF来确定大体形状，然后使用带有BitmapShader的Paint来填充即可实现。&lt;/p&gt;
+&lt;p&gt;上面介绍了如何创建圆角矩形的方法，下面来介绍一下不规则图形的方法。&lt;/p&gt;
+&lt;p&gt;###创建聊天气泡背景效果的图片&lt;/p&gt;
+&lt;p&gt;创建这类图片的大体思路和上面是一致的，也是要使用&lt;code&gt;BitmapShader&lt;/code&gt;这个类来进行。实现思路如下，我们可以先创建一个圆角矩形的图片，然后再在这个圆角矩形的基础之上绘制一个三角形，就可以实现带有气泡效果的图片了。现在已经知道了如何去画一个圆角矩形，那么一半工作已经算是完成了，下来要做的就是再绘制出一个三角形，然后和圆角矩形拼接在一起即可。但是现在有一个问题，&lt;code&gt;Canvas&lt;/code&gt;并没有提供画三角形的方法，我们怎么办呢？在Canvas中提供了两个基本方法&lt;code&gt;movetTo()&lt;/code&gt;和&lt;code&gt;lineTo()&lt;/code&gt;方法，这两个方法可以让我们移动画笔画出直线，这样的话我们就可以使用这两个方法来自己动手画出三角形了（其实和Canvas封装的方法一样，只是要自己动手，显得有些麻烦）。是不是觉得很爽呢？其实这样做是有问题的，这样做智能画出一个三角形的轮廓，不会填充成一个完整的三角形。幸亏另外一个类也支持这些方法，那就是&lt;code&gt;Path&lt;/code&gt;类，我们可以使用&lt;code&gt;Path&lt;/code&gt;类画出一个路径，然后使用&lt;code&gt;Shader&lt;/code&gt;来填充这个路径所包围的空间（路径类似于PhotoShop中的选区的概念）。有了这么一个牛逼的类，理论上讲我们是什么都可以画出来的，只要你能勾勒出那个路径，我们就能画出来。&lt;/p&gt;
+&lt;p&gt;好了，废话那么多下来看看如何用代码来是想上述气泡图片。&lt;/p&gt;
+&lt;p&gt;首先来画三角形的路径&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 新建一个Path类&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Path triangle = new Path();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 下来从0点开始一次画三条线，最终首尾相连，形成一个三角形&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;triangle.moveTo(0, TRIANGLE_OFFSET);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;triangle.lineTo(TRIANGLE_WIDTH, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    TRIANGLE_OFFSET - (TRIANGLE_HEIGHT / 2));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;triangle.lineTo(TRIANGLE_WIDTH, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    TRIANGLE_OFFSET + (TRIANGLE_HEIGHT / 2));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 然后close这个Path，这样一个三角形的Path就绘制完成了&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;triangle.close();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;画完三角形的Path后，下面要做的就是，将该路径所围成的图像画在圆角矩形上，然后再用Shader填充即可。&lt;br&gt;完整代码如下&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;private static final float RADIUS_FACTOR = 8.0f;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;private static final int TRIANGLE_WIDTH = 120;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;private static final int TRIANGLE_HEIGHT = 100;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;private static final int TRIANGLE_OFFSET = 300;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public Bitmap processImage(Bitmap bitmap) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Bitmap bmp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    bmp = Bitmap.createBitmap(bitmap.getWidth(), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        bitmap.getHeight(), Bitmap.Config.ARGB_8888);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    BitmapShader shader = new BitmapShader(bitmap, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        BitmapShader.TileMode.CLAMP, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        BitmapShader.TileMode.CLAMP);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    float radius = Math.min(bitmap.getWidth(), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        bitmap.getHeight()) / RADIUS_FACTOR;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Canvas canvas = new Canvas(bmp);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Paint paint = new Paint();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    paint.setAntiAlias(true);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    paint.setShader(shader);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    RectF rect = new RectF(TRIANGLE_WIDTH, 0, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        bitmap.getWidth(), bitmap.getHeight());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    canvas.drawRoundRect(rect, radius, radius, paint);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Path triangle = new Path();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    triangle.moveTo(0, TRIANGLE_OFFSET);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    triangle.lineTo(TRIANGLE_WIDTH, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        TRIANGLE_OFFSET - (TRIANGLE_HEIGHT / 2));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    triangle.lineTo(TRIANGLE_WIDTH, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        TRIANGLE_OFFSET + (TRIANGLE_HEIGHT / 2));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    triangle.close();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    canvas.drawPath(triangle, paint);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    return bmp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;最终得到的效果图如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.tedyin.me/images/dog3.jpg&quot; alt=&quot;dog3&quot;&gt;&lt;/p&gt;
+&lt;p&gt;只要用好Path、Shader以及Canvas类，理论上什么图形都可以实现。&lt;/p&gt;
+&lt;p&gt;##终结&lt;br&gt;上面说了Path、Shader、Rect、Canvas等，下面我们就可以是用上述介绍的方法和类来实现一些更加复杂的图形，作为这篇文章的终结。下面我们用上述介绍的内容来绘制一张心形的图片。&lt;br&gt;首先说一下绘制心形图片的思路，其实这个思路和上面绘制图片的思路大同小异，最主要的思想就是使用Path画出路径，然后使用Shader来填充这个路径包围的部分。&lt;/p&gt;
+&lt;p&gt;大体上我们将绘制步骤分为下面4步&lt;/p&gt;
+&lt;p&gt;###创建好画布(Canvas)、画笔(Paint)以及要绘制图像的区域Bitmap&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Bitmap bmp = Bitmap.createBitmap(bitmap.getWidth(), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    bitmap.getHeight(), Bitmap.Config.ARGB_8888);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;BitmapShader shader = new BitmapShader(bitmap, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    BitmapShader.TileMode.CLAMP, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    BitmapShader.TileMode.CLAMP);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Canvas canvas = new Canvas(bmp);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Paint paint = new Paint();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;paint.setAntiAlias(true);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;paint.setShader(shader);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;因为后面要绘制不规则图形路径，有一些需要计算的地方，因此我们需要将&lt;code&gt;bitmap&lt;/code&gt;的宽高记录下来。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;float width = bitmap.getWidth();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;float height = bitmap.getHeight();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;保存好宽高后，下来需要初始化Path，Region以及Matrix，这些都会在绘制心形图案时用到。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Path oval = new Path();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Matrix matrix = new Matrix();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Region region = new Region();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RectF ovalRect = new RectF(width / 8, 0, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    width - (width / 8), height);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;下面来开始绘制心形图案的第二步，先绘制一个椭圆，这个椭圆的高度与我们的&lt;code&gt;bitmap&lt;/code&gt;的高度一样，宽度是&lt;code&gt;bimap&lt;/code&gt;的四分之三，这个宽度是来决定心形图片的宽窄的，可自行定义。&lt;br&gt;下面来绘制椭圆Path&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;RectF ovalRect = new RectF(width / 8, 0, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    width - (width / 8), height);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;oval.addOval(ovalRect, Path.Direction.CW);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;这个&lt;code&gt;oval&lt;/code&gt;就是上面已经定义过的椭圆路径，在此处进行填充，这个路径渲染出来的效果如下：&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/dog4.jpg&quot; alt=&quot;dog4&quot;&gt;&lt;/p&gt;
+&lt;p&gt;绘制出椭圆后，下来我们将其进行旋转，使用上面定义好的&lt;code&gt;Matrix&lt;/code&gt;对象来完成旋转的操作：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;matrix.postRotate(30, width / 2, height / 2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;oval.transform(matrix, oval);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Matrix是一个很强大的类，我们可以借助它实现很多关于图片的操作。&lt;/p&gt;
+&lt;p&gt;旋转后的效果如下：&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/dog5.jpg&quot; alt=&quot;dog5&quot;&gt;&lt;/p&gt;
+&lt;p&gt;有了这样的效果之后，下来要做的就是，用一个矩形路径和这个被旋转的椭圆合并出半个心形路径，然后填充这个半个心形路径就可以到半个心形图片。这里使用上面定义好的&lt;code&gt;Region&lt;/code&gt;类，Region就是一个矩形类，我们用这个类和半个椭圆类结合起来就可以拼出半个心形的路径来，具体的拼接方法如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;// 将oval椭圆的路径和矩形Region路径合并&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;region.setPath(oval, new Region((int)width / 2, 0, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    (int)width, (int)height));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 画出该路径&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;canvas.drawPath(region.getBoundaryPath(), paint);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;画出后的效果如下：&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/dog6.jpg&quot; alt=&quot;dog6&quot;&gt;&lt;/p&gt;
+&lt;p&gt;好了，这样就画出了半个心形图片，重复上面的操作就可以画出另外一半的心形图片了，方法如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;oval.addOval(ovalRect, Path.Direction.CW);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;matrix.postRotate(-30, width / 2, height / 2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;oval.transform(matrix, oval);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;region.setPath(oval, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    new Region(0, 0, (int)width / 2, (int)height));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;canvas.drawPath(region.getBoundaryPath(), paint);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;效果如下：&lt;br&gt;&lt;img src=&quot;http://www.tedyin.me/images/dog7.jpg&quot; alt=&quot;dog7&quot;&gt;&lt;/p&gt;
+&lt;p&gt;总结：只要用好Path、Shader、RectF所有的图形都可以迎刃而解，但是有一点需要注意的就是，这些操作都是比较消耗性能的操作，所以使用的时候需要注意性能问题。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;接下来几周的内容是一系列文章，来讲解Android中不规则图形的创建和使用。今天先来介绍一下圆角图片的实现。&lt;/p&gt;
+&lt;p&gt;有一个好消息要告诉大家，那就是在API 20中Android已经默认提供了圆角矩形的图片，RoundRectShape Drawable，但是不好的消
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Http代理设置</title>
+    <link href="http://www.tedyin.me/2014/10/26/http-proxy/"/>
+    <id>http://www.tedyin.me/2014/10/26/http-proxy/</id>
+    <published>2014-10-26T13:10:00.000Z</published>
+    <updated>2016-02-29T02:47:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Android应用程序访问互联网时，如果处于WIFI或者CMNET、UNINET或者3GNET，CTNET等接入方式时，无需设置代理即可顺利的访问网络，但是如果处于WAP环境下，那么就需要首先设置代理，之后才能访问互联网。跟设置超时一样，设置代理同样有HttpClient和HttpURLConnection两种方式：&lt;/p&gt;
+&lt;p&gt;##HttpClient方式&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;HttpClient httpClient = new DefaultHttpClient();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;String host = Proxy.getDefaultHost(); //默认代理服务器地址&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int port = Proxy.getDefaultPort(); //默认代理服务器端口号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;HttpHost httpHost = new HttpHost(host, port);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;HttpParams params = httpClient.getParams();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;params.setParameter(ConnRouteParams.DEFAULT_PROXY, httpHost); //设置默认代理&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;##HttpURLConnection方式&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;String host = android.net.Proxy.getDefaultHost(); // 默认代理服务器地址&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int port = android.net.Proxy.getDefaultPort(); // 默认代理服务器端口号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;SocketAddress socketAddr = new InetSocketAddress(host, port);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 构造代理对象&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;java.net.Proxy proxy = new java.net.Proxy(java.net.Proxy.Type.HTTP, socketAddr);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;try &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  URL url = new URL(&amp;quot;www.baidu.com&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  // 设置代理&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  HttpURLConnection conn = (HttpURLConnection) url.openConnection(proxy);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; catch (MalformedURLException e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  e.printStackTrace();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; catch (IOException e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  e.printStackTrace();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;##参考&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/ace1985/article/details/7844159&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android通过WAP方式联网&lt;/a&gt; &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Android应用程序访问互联网时，如果处于WIFI或者CMNET、UNINET或者3GNET，CTNET等接入方式时，无需设置代理即可顺利的访问网络，但是如果处于WAP环境下，那么就需要首先设置代理，之后才能访问互联网。跟设置超时一样，设置代理同样有HttpClient和
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SSH的原理与使用</title>
+    <link href="http://www.tedyin.me/2014/10/19/ssh-use/"/>
+    <id>http://www.tedyin.me/2014/10/19/ssh-use/</id>
+    <published>2014-10-19T08:02:00.000Z</published>
+    <updated>2015-11-16T01:44:35.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;什么是SSH&quot;&gt;&lt;a href=&quot;#什么是SSH&quot; class=&quot;headerlink&quot; title=&quot;什么是SSH&quot;&gt;&lt;/a&gt;什么是SSH&lt;/h2&gt;&lt;p&gt;SSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。&lt;/p&gt;
+&lt;h2 id=&quot;SSH登录远程主机的过程&quot;&gt;&lt;a href=&quot;#SSH登录远程主机的过程&quot; class=&quot;headerlink&quot; title=&quot;SSH登录远程主机的过程&quot;&gt;&lt;/a&gt;SSH登录远程主机的过程&lt;/h2&gt;&lt;p&gt;假设有客户端要远程登录服务器，使用SSH登录的过程如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;客户端向服务端发起连接请求，服务端收到请求后，返回给客户端一个公钥。&lt;/li&gt;
+&lt;li&gt;客户端使用该公钥加密用户明和登录密码，然后将加密后的数据传递给服务端。&lt;/li&gt;
+&lt;li&gt;服务端收到用户传递过来的加密数据后，使用自己的私钥解密，检查用户是否为合法用户。&lt;/li&gt;
+&lt;li&gt;如果用户合法，则简历连接，否则拒绝连接。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在上述登录过程中，如果用户是第一次登录远程主机，那么在用户收到远程主机的公钥后，本地终端就会提示用户注意远程主机是否为真实的目标主机，提示信息一般如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;The authenticity of host &amp;apos;host (12.18.429.21)&amp;apos; can&amp;apos;t be established.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　RSA key fingerprint is 98:2e:d7:e0:de:9f:ac:67:28:c2:42:2d:37:16:58:4d.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　Are you sure you want to continue connecting (yes/no)?&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在用户根据IP地址和服务端指纹信息确定之后，SSH程序会将该主机信息保存在本地，当下次再登录该主机时，将会直接体使用户输入密码来登录，将不再会提示用户所登录的主机信息。&lt;/p&gt;
+&lt;p&gt;###中间人攻击&lt;/p&gt;
+&lt;p&gt;在用户首次登录的时之所以提示用户登录信息，是因为在逻辑上SSH有个漏洞，假如用户在一个开放网络中，在服务端和客户端之间存在一个第三方的主机(中间人主机)，而且用户登录时被中间人主机拦截，并向客户端返回了自己伪造的公钥，但是用户并未检查所登录的主机是否为目标主机，此时使用伪造的公钥将用户数据加密后传给中间人主机，这样中间人主机就可以拿到用户的登录信息，这就会导致严重的安全事故。因此在为了避免中间人攻击，我们需要在首次登录时，检查目标主机的信息是否为我们所要登录的目标主机，确认之后在进行登录操作。&lt;/p&gt;
+&lt;p&gt;###使用公钥登录&lt;br&gt;为了更好的避免中间人攻击，并且方便我们使用SSH登录，我们可以使用SSH提供的公钥登录，我们可以在本地使用&lt;code&gt;ssh-keygen&lt;/code&gt;命令生成一组公钥和私钥默认为(id_rsa.pub和id_rsa)，然后我们将公钥存储在我们要登录的服务端。当使用公钥登录时，客户端发起连接，服务端会随机发送一串字符串，客户端使用私钥加密后再回传给服务端，服务端收到用户回传的加密数据和，使用先前用户存储在服务端的公钥进行解密，然后检查数据是否正确，如果正确则建立连接，否则拒绝连接，并返回拒绝原因。&lt;/p&gt;
+&lt;p&gt;使用公钥登录后，用户就不必再去每次都输入用户名和密码，而是直接建立连接，也很好的避免了中间人攻击的问题，是一个比较好的解决办法，只是相比直接用口令登录要麻烦一点，不过一劳永逸，刚开始麻烦后面就简单多了。&lt;/p&gt;
+&lt;p&gt;##SSH登录使用&lt;/p&gt;
+&lt;p&gt;使用SSH登录非常简单，命令如下:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//ssh [username]@[server ip/domain]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ssh user@server.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;指定端口登录：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//ssh -P port [username]@[server ip/domain]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ssh -P 2222 user@server.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;SSH的默认端口号是22，可以通过&lt;code&gt;-P&lt;/code&gt;参数来指定端口号。&lt;/p&gt;
+&lt;p&gt;SSH登录时的默认端口是22，如果服务端根据自身需要，要求客户端使用别的端口(例如2222)进行登录时，我们可以在客户端使用-P参数来指定登录端口&lt;/p&gt;
+&lt;p&gt;##参考&lt;br&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ssh原理以及使用&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是SSH&quot;&gt;&lt;a href=&quot;#什么是SSH&quot; class=&quot;headerlink&quot; title=&quot;什么是SSH&quot;&gt;&lt;/a&gt;什么是SSH&lt;/h2&gt;&lt;p&gt;SSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Log4J介绍</title>
+    <link href="http://www.tedyin.me/2014/10/12/log4j/"/>
+    <id>http://www.tedyin.me/2014/10/12/log4j/</id>
+    <published>2014-10-12T13:37:00.000Z</published>
+    <updated>2016-02-29T06:32:56.000Z</updated>
+    
+    <content type="html">&lt;p&gt;##Log4J是什么？&lt;/p&gt;
+&lt;p&gt;Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对服务集群的日志进行统一管理。&lt;/p&gt;
+&lt;p&gt;##Log4J学习&lt;/p&gt;
+&lt;p&gt;Log4J三大组件：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Logger（记录器）：只管记录日志（根据日志级别记录），不管日志存储在什么地方。&lt;/li&gt;
+&lt;li&gt;Appender（存放器）：将Logger记录的日志，存放到配置文件中所指向的地方，只处理日志的存放过程。&lt;/li&gt;
+&lt;li&gt;Layout（布局）：将日志进行格式化后再输出，也就是说他是用来让日志看这更顺眼的。当然如何算顺眼，由你在配置文件中设定。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一个Logger可以有多个Appender，可以同时输出到多个设备上，每一个Appender都有一个Layout来格式化输出内容。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;###Logger 组件&lt;br&gt;有一个超类，log4j.rootLogger这个超类永远存在，可以使用Logger类中的getRootLogger()方法来获得这个对象的引用。&lt;/p&gt;
+&lt;p&gt;Logger组件的继承关系：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如果子类Logger没有定义日志级别，那么它将继承父类的日志级别。&lt;/li&gt;
+&lt;li&gt;如果把子类Logger的组件的additivity设置为false(默认为true)，那子类将不会继承父类的Appender，否则将继承父类所有的Appender。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;###Appender 组件&lt;br&gt;Appender用来决定日志要输出到什么地方，支持一下目的地：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;控制台Console&lt;/li&gt;
+&lt;li&gt;文件File&lt;/li&gt;
+&lt;li&gt;GUI组件&lt;/li&gt;
+&lt;li&gt;套接口服务器（Remote Socket Server）&lt;/li&gt;
+&lt;li&gt;NT的事件记录器&lt;/li&gt;
+&lt;li&gt;UNIX守护进程（输出到某个进程中去）(待验证)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;###Layout 组件&lt;br&gt;Layout组件决定日志的输出格式,有如下几类：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;org.apache.log4j.HTMLLayout     以Html格式输出日志&lt;/li&gt;
+&lt;li&gt;org.apache.log4j.PatternLayout  以自定义Pattern的模式输出日志&lt;/li&gt;
+&lt;li&gt;org.apache.log4j.SimpleLayout   包含日志信息的级别和，日志字符串&lt;/li&gt;
+&lt;li&gt;org.apache.log4j.TTCCLayout     包含日志产生的线程，时间，类别等详细信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;##日志级别&lt;br&gt;日志级别分为5种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;fatal      严重错误，会导致系统崩溃&lt;/li&gt;
+&lt;li&gt;error     虽然出错，但是系统依然可以运行  &lt;/li&gt;
+&lt;li&gt;warn     警告，系统此处会有发生潜在错误的可能性&lt;/li&gt;
+&lt;li&gt;info       一般的运行时信息&lt;/li&gt;
+&lt;li&gt;debug  调试信息，粒度很细&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;除了上述5中级别外，还有两种特殊级别的日志分类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;off        关闭日志，级别最高&lt;/li&gt;
+&lt;li&gt;all         打开日志，级别最低&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上日志的级别高低排序如下：&lt;br&gt;off &amp;gt; fatal &amp;gt; error &amp;gt; warn &amp;gt; info &amp;gt; debug &amp;gt; all&lt;br&gt;当日配置的志级别为info时所有的Debug日志将不会输出。&lt;/p&gt;
+&lt;p&gt;Log4J建议使用上述中的4种分别是：error、warn、info、debug&lt;/p&gt;
+&lt;p&gt;##Log4J 应用&lt;br&gt;对于应用，无非就是配置和使用，先来看看如何在程序中配置Log4J&lt;/p&gt;
+&lt;p&gt;###Log4J的配置&lt;br&gt;Log4J支持XML配置和properties文件两种方式进行配置，此处介绍后一种。&lt;/p&gt;
+&lt;p&gt;####set Logger&lt;br&gt;log4j.rootLogger=INFO,infoLog,file&lt;/p&gt;
+&lt;p&gt;####infoLog logger&lt;br&gt;log4j.appender.infoLog=org.apache.log4j.ConsoleAppender // 配置Appender&lt;br&gt;log4j.appender.infoLog.layout=org.apache.log4j.PatternLayout // 配置Layout&lt;br&gt;log4j.appender.infoLog.layout.ConversionPattern=%d-[TS] %p %t %c - %m%n &lt;/p&gt;
+&lt;p&gt;####file logger&lt;br&gt;log4j.appender.file=org.apache.log4j.FileAppender // 定义Appender&lt;br&gt;log4j.appender.file.File=log.txt&lt;br&gt;log4j.appender.file.layout=org.apache.log4j.PatternLayout // 定义Layout&lt;br&gt;log4j.appender.file.layout.ConversionPattern=%d-[TS] %p %t %c - %m%n// 自定义Layout格式&lt;/p&gt;
+&lt;p&gt;####Error log&lt;br&gt;log4j.errorLog=ERROR, errorLog&lt;/p&gt;
+&lt;p&gt;####errorLog logger&lt;br&gt;log4j.appender.errorLog=org.apache.log4j.FileAppender&lt;br&gt;log4j.appender.errorLog.File=errorLog.txt&lt;br&gt;log4j.appender.errorLog.layout=org.apache.log4j.PatternLayout&lt;br&gt;log4j.appender.errorLog.layout.ConversionPattern=%d-[TS] %p %t %c - %m%n&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;详细的使用请参考Log4J的&lt;a href=&quot;http://logging.apache.org/log4j/1.2/apidocs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;API&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;##Log4J在程序中的应用&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先将log4j-xxx.jar导入工程中。&lt;/li&gt;
+&lt;li&gt;新建log4j.properties配置文件，并加入配置。&lt;/li&gt;
+&lt;li&gt;在程序中使用Log4J的API。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;##参考：&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/lyc557/article/details/3964459&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;日志级别&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.iteye.com/topic/158409&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Log4J的使用&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##Log4J是什么？&lt;/p&gt;
+&lt;p&gt;Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Providing Resources</title>
+    <link href="http://www.tedyin.me/2014/09/28/group-resource/"/>
+    <id>http://www.tedyin.me/2014/09/28/group-resource/</id>
+    <published>2014-09-28T11:08:00.000Z</published>
+    <updated>2016-02-29T02:47:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;现在的Android系统运行在各种尺寸的机器上，对于开发者，我们需要让我们的应用适应这些大大小小的屏幕确实比较困难，但是Android给我们提供了一套简单而且方便的机制来帮助我们完成适配，首先我们来看看资源文件的组织方式。&lt;/p&gt;
+&lt;p&gt;##组织资源文件&lt;br&gt;众所周知资源文件都存放在&lt;code&gt;res/&lt;/code&gt;目录下的各个文件夹中，这些文件夹都有着各自不同的意义。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;animator/&lt;/code&gt; 存放属性动画(property animation)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;anim/&lt;/code&gt; 存放Tween动画&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;color/&lt;/code&gt; 存放颜色状态的xml文件（即：按钮按下什么颜色，正常什么颜色之类的selector文件）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;drawable/&lt;/code&gt; 存放图片文件(.png/.9.png/.gif/.jpg/.xml)xml可以为帧动画的animation-list文件，也可以为shape类型文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;layout/&lt;/code&gt; 存放布局文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;menu/&lt;/code&gt; 存放Options Menu 或者 Context Menu 或者Sub Menu&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;raw/&lt;/code&gt; 存放多媒体文件，该文件夹下的文件在生成APK时不会被压缩成二进制，会保存其原有的格式。这点类似于&lt;code&gt;asset/&lt;/code&gt;文件夹。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;values/&lt;/code&gt; 该文件夹下存放了App中核心的数值文件，包括&lt;code&gt;strings.xml&lt;/code&gt;,&lt;code&gt;style.xml&lt;/code&gt;,&lt;code&gt;array.xml&lt;/code&gt;,&lt;code&gt;integers.xml&lt;/code&gt;,&lt;code&gt;attrs.xml&lt;/code&gt;,&lt;code&gt;colors.xml&lt;/code&gt;,&lt;code&gt;dimens.xml&lt;/code&gt;等APP中需要的颜色样式，距离数值字符串等文件，具体的样式类型可参考具体的Resource部分。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;xml/&lt;/code&gt;该文件夹下存放Runtime中能获取的或需要的xml类型的各种文件，可以通过&lt;code&gt;Resources.getXML(int resId)&lt;/code&gt;来获取该文件的解析器&lt;code&gt;XmlResourceParser&lt;/code&gt;对象。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;asset/&lt;/code&gt;与&lt;code&gt;res/raw&lt;/code&gt;下的文件在生成APK包时，都不会被压缩。他们的区别是&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;asset/&lt;/code&gt;文件夹下的文件不会在R.java文件中生成映射，因此不能通过Id来引用，但是&lt;code&gt;res/raw/&lt;/code&gt;下的文件可以在R.java下生成映射，可以通过Id进行索引。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;asset/&lt;/code&gt;文件夹下可以再继续添加文件夹，但是&lt;code&gt;res/raw/&lt;/code&gt;下不许再出现子文件夹。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;asset/&lt;/code&gt;下的文件或文件夹通过&lt;code&gt;AssetManager&lt;/code&gt;类来访问，&lt;code&gt;res/raw/&lt;/code&gt;文件夹下的文件通过&lt;code&gt;Resources.openRawResource(int resId)&lt;/code&gt;来访问。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;##适配不同的屏幕&lt;/p&gt;
+&lt;p&gt;上述说明了资源文件的基本结构，上述的结构中是Android资源文件组织的最基本结构，如果要适配不同的屏幕，就需要在上述基础上使用更复杂的文件结构来适配不同的布局。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在&lt;code&gt;res/&lt;/code&gt;下创建&lt;code&gt;&amp;lt;resources_name&amp;gt;-&amp;lt;config_qualifier&amp;gt;&lt;/code&gt;这种格式的文件夹，&lt;code&gt;&amp;lt;config_qualifier&amp;gt;&lt;/code&gt;的属性可以添加多个，中间使用&lt;code&gt;-&lt;/code&gt;隔开即可,但是要注意分类的顺序，大类属性在前，小类属性在后即可(大类属性中包含了小类属性)，前面的属性包含后面的属性举例如下:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: xml&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;res/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    drawable/   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        icon.png&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        background.png    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    drawable-hdpi/  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        icon.png&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        background.png  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    drawable-hdpi-landscape/  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	icon.png&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	background.png&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上述&lt;code&gt;drawable&lt;/code&gt;就是规定格式中的&lt;code&gt;&amp;lt;resources_name&amp;gt;&lt;/code&gt;，&lt;code&gt;hdpi&lt;/code&gt;就是规定格式中的&lt;code&gt;&amp;lt;config_qualifier&amp;gt;&lt;/code&gt;。只要按照规定格式&lt;code&gt;&amp;lt;config_qualifier&amp;gt;&lt;/code&gt;部分的内容可以自定义，但是不推荐这样做。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用了所有的&lt;code&gt;&amp;lt;config_qualifier&amp;gt;&lt;/code&gt;的资源文件夹命名，排列的顺序是按照优先级排列的，结果为：&lt;br&gt;values-mcc310-en-sw320dp-w720dp-h720dp-large-long-port-car-night-ldpi-notouch-keysexposed-nokeys-navexposed-nonav-v7&lt;br&gt;具体的解释下:&lt;br&gt;values-mcc310(sim卡运营商)-en(语言)-sw320dp(屏幕最小宽度)-w720dp(屏幕最佳宽度)-h720dp(屏幕最佳高度)-large(屏幕尺寸)-long(屏幕长短边模式)-port(当前屏幕横竖屏显示模式)-car(dock模式)-night(白天或夜晚)-ldpi(屏幕最佳dpi)-notouch(触摸屏模类型)-keysexposed(键盘类型)-nokey(硬按键类型)-navexposed(方向键是否可用)-nonav(方向键类型)-v7(android系统版本API level 7)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;多套资源的命名必须和默认的(drawable、layout等)相同。具体的文件命名和组织结构可参考&lt;a href=&quot;http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;不同资源的命名和组织&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;##为多个尺寸屏幕提供最好的适配&lt;br&gt;为了适配大多数的机型，在组织App的资源文件时必须提供一套默认的资源数据，这样做的目的就是在无法找到合适的&lt;code&gt;&amp;lt;config_qualifier&amp;gt;&lt;/code&gt;数据的时候可以使用默认的资源，而不至于找不到资源文件而崩溃，在API level 4以后，drawable资源可以不需要指定默认的资源文件，因为Android会根据屏幕的信息自己找到合适的图片资源并进行必要的缩放，但是此处还是推荐大家指定所有的默认资源！&lt;/p&gt;
+&lt;p&gt;##Android是如何找到最合适的资源文件的&lt;/p&gt;
+&lt;p&gt;如果提供了多套资源文件时，Android在运行时会根据设备的属性找到合适的资源文件来使用。Android查找合适的资源文件的过程是一个循环排除的过程，它会读取一堆设备的属性，然后根据这些属性循环过滤所有的资源文件，最后只剩下唯一的一个即为最优的资源文件。对于图片资源的查找，如果找不到最合适的，它会找接近最优解的资源，如果有两类图片资源都是次优解，一类是低像素的图片，一类是高像素的图片，Android会采用将高像素的图像缩小的策略来适配，而不会采用将低像素的图片放大的操作。因此理论上只要提供一套&lt;code&gt;xxxhdpi&lt;/code&gt;的图片即可。但是一定要注意一点，选取图片像素高的进行放大，并不是说我们只用一套&lt;code&gt;xlarge&lt;/code&gt;的图像就可以适配所以机型了。因为Android在排除资源的时候，如果当前的机型的屏幕类型是Normal Screen，而资源文件都是&lt;code&gt;xlarge&lt;/code&gt;类型的没有Normal类型的，那么系统也不会使用这套资源，这样会导致程序崩溃，提示资源不可用或者无法找到等错误，因此在提供多套资源的时候尽量不要省略，一定要提供给默认的资源。&lt;/p&gt;
+&lt;p&gt;循环排除算法的流程图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.tedyin.me/images/201409182210.png&quot; alt=&quot;循环排除流程图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;##参考&lt;br&gt;&lt;a href=&quot;http://www.cnblogs.com/leizhenzi/archive/2011/10/18/2216428.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;raw和asset的区别&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://developer.android.com/guide/topics/resources/providing-resources.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;资源文件的组织&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://ivan-ru.iteye.com/blog/1711414&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;文件夹属性的使用&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;现在的Android系统运行在各种尺寸的机器上，对于开发者，我们需要让我们的应用适应这些大大小小的屏幕确实比较困难，但是Android给我们提供了一套简单而且方便的机制来帮助我们完成适配，首先我们来看看资源文件的组织方式。&lt;/p&gt;
+&lt;p&gt;##组织资源文件&lt;br&gt;众所周知资源
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

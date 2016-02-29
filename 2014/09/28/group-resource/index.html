@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Providing Resources | TedYin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="现在的Android系统运行在各种尺寸的机器上，对于开发者，我们需要让我们的应用适应这些大大小小的屏幕确实比较困难，但是Android给我们提供了一套简单而且方便的机制来帮助我们完成适配，首先我们来看看资源文件的组织方式。
+##组织资源文件众所周知资源文件都存放在res/目录下的各个文件夹中，这些文件夹都有着各自不同的意义。
+
+animator/ 存放属性动画(property animation">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Providing Resources">
+<meta property="og:url" content="http://www.tedyin.me/2014/09/28/group-resource/index.html">
+<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:description" content="现在的Android系统运行在各种尺寸的机器上，对于开发者，我们需要让我们的应用适应这些大大小小的屏幕确实比较困难，但是Android给我们提供了一套简单而且方便的机制来帮助我们完成适配，首先我们来看看资源文件的组织方式。
+##组织资源文件众所周知资源文件都存放在res/目录下的各个文件夹中，这些文件夹都有着各自不同的意义。
+
+animator/ 存放属性动画(property animation">
+<meta property="og:image" content="http://www.tedyin.me/images/201409182210.png">
+<meta property="og:updated_time" content="2016-02-29T02:47:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Providing Resources">
+<meta name="twitter:description" content="现在的Android系统运行在各种尺寸的机器上，对于开发者，我们需要让我们的应用适应这些大大小小的屏幕确实比较困难，但是Android给我们提供了一套简单而且方便的机制来帮助我们完成适配，首先我们来看看资源文件的组织方式。
+##组织资源文件众所周知资源文件都存放在res/目录下的各个文件夹中，这些文件夹都有着各自不同的意义。
+
+animator/ 存放属性动画(property animation">
+<meta name="twitter:image" content="http://www.tedyin.me/images/201409182210.png">
+  
+    <link rel="alternative" href="/atom.xml" title="TedYin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">TedYin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">快乐比生命更重要！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">TedYin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">TedYin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">快乐比生命更重要！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-group-resource" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/28/group-resource/" class="article-date">
+  	<time datetime="2014-09-28T11:08:00.000Z" itemprop="datePublished">2014-09-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Providing Resources
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>现在的Android系统运行在各种尺寸的机器上，对于开发者，我们需要让我们的应用适应这些大大小小的屏幕确实比较困难，但是Android给我们提供了一套简单而且方便的机制来帮助我们完成适配，首先我们来看看资源文件的组织方式。</p>
+<p>##组织资源文件<br>众所周知资源文件都存放在<code>res/</code>目录下的各个文件夹中，这些文件夹都有着各自不同的意义。</p>
+<ul>
+<li><code>animator/</code> 存放属性动画(property animation)</li>
+<li><code>anim/</code> 存放Tween动画</li>
+<li><code>color/</code> 存放颜色状态的xml文件（即：按钮按下什么颜色，正常什么颜色之类的selector文件）</li>
+<li><code>drawable/</code> 存放图片文件(.png/.9.png/.gif/.jpg/.xml)xml可以为帧动画的animation-list文件，也可以为shape类型文件</li>
+<li><code>layout/</code> 存放布局文件</li>
+<li><code>menu/</code> 存放Options Menu 或者 Context Menu 或者Sub Menu</li>
+<li><code>raw/</code> 存放多媒体文件，该文件夹下的文件在生成APK时不会被压缩成二进制，会保存其原有的格式。这点类似于<code>asset/</code>文件夹。</li>
+<li><code>values/</code> 该文件夹下存放了App中核心的数值文件，包括<code>strings.xml</code>,<code>style.xml</code>,<code>array.xml</code>,<code>integers.xml</code>,<code>attrs.xml</code>,<code>colors.xml</code>,<code>dimens.xml</code>等APP中需要的颜色样式，距离数值字符串等文件，具体的样式类型可参考具体的Resource部分。</li>
+<li><code>xml/</code>该文件夹下存放Runtime中能获取的或需要的xml类型的各种文件，可以通过<code>Resources.getXML(int resId)</code>来获取该文件的解析器<code>XmlResourceParser</code>对象。</li>
+</ul>
+<blockquote>
+<p><code>asset/</code>与<code>res/raw</code>下的文件在生成APK包时，都不会被压缩。他们的区别是</p>
+<ul>
+<li><code>asset/</code>文件夹下的文件不会在R.java文件中生成映射，因此不能通过Id来引用，但是<code>res/raw/</code>下的文件可以在R.java下生成映射，可以通过Id进行索引。</li>
+<li><code>asset/</code>文件夹下可以再继续添加文件夹，但是<code>res/raw/</code>下不许再出现子文件夹。</li>
+<li><code>asset/</code>下的文件或文件夹通过<code>AssetManager</code>类来访问，<code>res/raw/</code>文件夹下的文件通过<code>Resources.openRawResource(int resId)</code>来访问。</li>
+</ul>
+</blockquote>
+<p>##适配不同的屏幕</p>
+<p>上述说明了资源文件的基本结构，上述的结构中是Android资源文件组织的最基本结构，如果要适配不同的屏幕，就需要在上述基础上使用更复杂的文件结构来适配不同的布局。</p>
+<ol>
+<li>在<code>res/</code>下创建<code>&lt;resources_name&gt;-&lt;config_qualifier&gt;</code>这种格式的文件夹，<code>&lt;config_qualifier&gt;</code>的属性可以添加多个，中间使用<code>-</code>隔开即可,但是要注意分类的顺序，大类属性在前，小类属性在后即可(大类属性中包含了小类属性)，前面的属性包含后面的属性举例如下:</li>
+</ol>
+<figure class="highlight plain"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">res/</span><br><span class="line">    drawable/   </span><br><span class="line">        icon.png</span><br><span class="line">        background.png    </span><br><span class="line">    drawable-hdpi/  </span><br><span class="line">        icon.png</span><br><span class="line">        background.png  </span><br><span class="line">    drawable-hdpi-landscape/  </span><br><span class="line">    	icon.png</span><br><span class="line">    	background.png</span><br></pre></td></tr></table></figure>
+<p>上述<code>drawable</code>就是规定格式中的<code>&lt;resources_name&gt;</code>，<code>hdpi</code>就是规定格式中的<code>&lt;config_qualifier&gt;</code>。只要按照规定格式<code>&lt;config_qualifier&gt;</code>部分的内容可以自定义，但是不推荐这样做。</p>
+<blockquote>
+<p>使用了所有的<code>&lt;config_qualifier&gt;</code>的资源文件夹命名，排列的顺序是按照优先级排列的，结果为：<br>values-mcc310-en-sw320dp-w720dp-h720dp-large-long-port-car-night-ldpi-notouch-keysexposed-nokeys-navexposed-nonav-v7<br>具体的解释下:<br>values-mcc310(sim卡运营商)-en(语言)-sw320dp(屏幕最小宽度)-w720dp(屏幕最佳宽度)-h720dp(屏幕最佳高度)-large(屏幕尺寸)-long(屏幕长短边模式)-port(当前屏幕横竖屏显示模式)-car(dock模式)-night(白天或夜晚)-ldpi(屏幕最佳dpi)-notouch(触摸屏模类型)-keysexposed(键盘类型)-nokey(硬按键类型)-navexposed(方向键是否可用)-nonav(方向键类型)-v7(android系统版本API level 7)</p>
+</blockquote>
+<ol>
+<li>多套资源的命名必须和默认的(drawable、layout等)相同。具体的文件命名和组织结构可参考<a href="http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources" target="_blank" rel="external">不同资源的命名和组织</a></li>
+</ol>
+<p>##为多个尺寸屏幕提供最好的适配<br>为了适配大多数的机型，在组织App的资源文件时必须提供一套默认的资源数据，这样做的目的就是在无法找到合适的<code>&lt;config_qualifier&gt;</code>数据的时候可以使用默认的资源，而不至于找不到资源文件而崩溃，在API level 4以后，drawable资源可以不需要指定默认的资源文件，因为Android会根据屏幕的信息自己找到合适的图片资源并进行必要的缩放，但是此处还是推荐大家指定所有的默认资源！</p>
+<p>##Android是如何找到最合适的资源文件的</p>
+<p>如果提供了多套资源文件时，Android在运行时会根据设备的属性找到合适的资源文件来使用。Android查找合适的资源文件的过程是一个循环排除的过程，它会读取一堆设备的属性，然后根据这些属性循环过滤所有的资源文件，最后只剩下唯一的一个即为最优的资源文件。对于图片资源的查找，如果找不到最合适的，它会找接近最优解的资源，如果有两类图片资源都是次优解，一类是低像素的图片，一类是高像素的图片，Android会采用将高像素的图像缩小的策略来适配，而不会采用将低像素的图片放大的操作。因此理论上只要提供一套<code>xxxhdpi</code>的图片即可。但是一定要注意一点，选取图片像素高的进行放大，并不是说我们只用一套<code>xlarge</code>的图像就可以适配所以机型了。因为Android在排除资源的时候，如果当前的机型的屏幕类型是Normal Screen，而资源文件都是<code>xlarge</code>类型的没有Normal类型的，那么系统也不会使用这套资源，这样会导致程序崩溃，提示资源不可用或者无法找到等错误，因此在提供多套资源的时候尽量不要省略，一定要提供给默认的资源。</p>
+<p>循环排除算法的流程图：</p>
+<p><img src="http://www.tedyin.me/images/201409182210.png" alt="循环排除流程图"></p>
+<p>##参考<br><a href="http://www.cnblogs.com/leizhenzi/archive/2011/10/18/2216428.html" target="_blank" rel="external">raw和asset的区别</a><br><a href="http://developer.android.com/guide/topics/resources/providing-resources.html" target="_blank" rel="external">资源文件的组织</a><br><a href="http://ivan-ru.iteye.com/blog/1711414" target="_blank" rel="external">文件夹属性的使用</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/10/12/log4j/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Log4J介绍
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/09/21/handling-congfig-change/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Handling Runtime Changes</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="group-resource" data-title="Providing Resources" data-url="http://www.tedyin.me/2014/09/28/group-resource/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 TedYin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

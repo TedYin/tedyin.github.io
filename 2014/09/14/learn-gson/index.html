@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Gson的使用 | TedYin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Gson概述Gson是Google内部为了使用的一个将Java对象序列化为JSON的Java类库，从2008年5月Google开源此项目后被广泛使用。类似的项目还有FastJson、JackSon等。
+Gson使用###Gson对基本数据类型的解析
+lang: java12345678910111213141516Gson gson = new Gson();toJson：gson.toJson(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gson的使用">
+<meta property="og:url" content="http://www.tedyin.me/2014/09/14/learn-gson/index.html">
+<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:description" content="Gson概述Gson是Google内部为了使用的一个将Java对象序列化为JSON的Java类库，从2008年5月Google开源此项目后被广泛使用。类似的项目还有FastJson、JackSon等。
+Gson使用###Gson对基本数据类型的解析
+lang: java12345678910111213141516Gson gson = new Gson();toJson：gson.toJson(">
+<meta property="og:updated_time" content="2016-02-29T02:47:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gson的使用">
+<meta name="twitter:description" content="Gson概述Gson是Google内部为了使用的一个将Java对象序列化为JSON的Java类库，从2008年5月Google开源此项目后被广泛使用。类似的项目还有FastJson、JackSon等。
+Gson使用###Gson对基本数据类型的解析
+lang: java12345678910111213141516Gson gson = new Gson();toJson：gson.toJson(">
+  
+    <link rel="alternative" href="/atom.xml" title="TedYin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">TedYin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">快乐比生命更重要！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">TedYin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">TedYin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">快乐比生命更重要！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-learn-gson" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/14/learn-gson/" class="article-date">
+  	<time datetime="2014-09-14T14:15:00.000Z" itemprop="datePublished">2014-09-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Gson的使用
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Gson概述"><a href="#Gson概述" class="headerlink" title="Gson概述"></a>Gson概述</h2><p>Gson是Google内部为了使用的一个将Java对象序列化为JSON的Java类库，从2008年5月Google开源此项目后被广泛使用。类似的项目还有<a href="https://github.com/alibaba/fastjson/wiki" target="_blank" rel="external">FastJson</a>、<a href="http://jackson.codehaus.org" target="_blank" rel="external">JackSon</a>等。</p>
+<h2 id="Gson使用"><a href="#Gson使用" class="headerlink" title="Gson使用"></a>Gson使用</h2><p>###Gson对基本数据类型的解析</p>
+<figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Gson gson = new Gson();</span><br><span class="line">toJson：</span><br><span class="line">gson.toJson(1) --&gt; 1</span><br><span class="line">gson.toJson(&quot;abc&quot;) --&gt; abc</span><br><span class="line">gson.toJson(new Long(10)) --&gt;10</span><br><span class="line">gson.toJson(new int[]&#123;1,2,3&#125;) --&gt;[1,2,3]</span><br><span class="line">gson.toJson(new String[]&#123;&quot;aa&quot;,&quot;bb&quot;,&quot;cc&quot;&#125;) --&gt; [&quot;aa&quot;,&quot;bb&quot;,&quot;cc&quot;]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fromJson：</span><br><span class="line">int one = gson.fromJson(&quot;1&quot;,int.class);</span><br><span class="line">int[] ints = gson.fromJson(&quot;[1,2,3]&quot;,int[].class);</span><br><span class="line">Integer integer = gson.fromJson(&quot;1&quot;,Integer.class);</span><br><span class="line">Boolean boolean = gson.fromJson(&quot;false&quot;,Boolean.calss);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>###Gson解析对象</p>
+<figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">String playerJson = gson.toJson(new Player());</span><br><span class="line">Player player = gson.fromJson(playerJson,Player.class);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>###Gson对集合类的解析</p>
+<figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">toJson:</span><br><span class="line">Collection&lt;Integer&gt; collection = 新建一个集合类，并存入1,2,3,4</span><br><span class="line">gson.toJson(collection) --&gt; [1,2,3,4]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fromJson:</span><br><span class="line">Type type = new TypeToken&lt;Collection&lt;Integer&gt;&gt;()&#123;&#125;.getType();//匿名内部类</span><br><span class="line"></span><br><span class="line">Collection&lt;Integer&gt; collection = gson.fromJson(json,type);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="使用Gson的几点注意事项"><a href="#使用Gson的几点注意事项" class="headerlink" title="使用Gson的几点注意事项"></a>使用Gson的几点注意事项</h2><blockquote>
+<p>eg:使用Gson解析A.class</p>
+</blockquote>
+<ol>
+<li>如果A含有内部类且不是static的，则在解析是会忽略该内部类。</li>
+<li>Gson会自动加载A.class中所引用的类，并对其进行解析。(类似于克隆)</li>
+<li>如果A中含有transient修饰的变量时，Gson会忽略该变量。</li>
+<li>如果A中含有组合类型，Gson在双向解析时都会忽略</li>
+<li>如果A中的变量赋值为null，Gson在toJson的时候会忽略该变量，在输出的json中也不会含有该字段(变量)。</li>
+<li>如果A中有字段(变量)id，但json中没有，则id会初始化为对应的默认值(int 0,obj null)<br>如果A中没有字段(变量)id，但json中有，则生成A对象时会忽略id这个变量。</li>
+<li>Gson是不含有状态量的对象，因此只需要初始化一次就可以反复使用。</li>
+<li>Gson提供了另外一种构造器GsonBuilder类，来为用户提供需要自定义的Gson解析对象。</li>
+</ol>
+<p>##Gson还提供了很多自定义的功能</p>
+<ul>
+<li>使用@Since(versionCode)可以指定相应的版本对某个变量进行解析或者忽略。</li>
+<li>还可以使用GsonBuilder的excludeFieldsWithModifiers()方法来忽略某些特殊修饰词进行修饰的成员变量的解析。</li>
+<li>支持用户自定义的解析策略<br>更多自定义的功能，可以查看<a href="https://sites.google.com/site/gson/gson-user-guide" target="_blank" rel="external">Gson的帮助文档</a>。</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/09/21/handling-congfig-change/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Handling Runtime Changes
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/09/08/style-and-theme/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Theme And Style</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="learn-gson" data-title="Gson的使用" data-url="http://www.tedyin.me/2014/09/14/learn-gson/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 TedYin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

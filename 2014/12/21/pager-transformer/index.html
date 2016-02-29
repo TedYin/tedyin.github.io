@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>ViewPager PageTransformer 应用 | TedYin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最近项目中要有个需求就是做出一个可以滑动的列表，类似于Paper效果的动画，期初设想的比较复杂，自定义监控ViewPager的OnScroll事件，然后再在onPageScrolled中根据position, positionOffset, positionOffsetPixels等数据就算出滑动的百分比，通过滑动的百分比来控制动画播放的百分比。这样虽然也可以实现想要的效果，但是会很复杂，有许多中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ViewPager PageTransformer 应用">
+<meta property="og:url" content="http://www.tedyin.me/2014/12/21/pager-transformer/index.html">
+<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:description" content="最近项目中要有个需求就是做出一个可以滑动的列表，类似于Paper效果的动画，期初设想的比较复杂，自定义监控ViewPager的OnScroll事件，然后再在onPageScrolled中根据position, positionOffset, positionOffsetPixels等数据就算出滑动的百分比，通过滑动的百分比来控制动画播放的百分比。这样虽然也可以实现想要的效果，但是会很复杂，有许多中">
+<meta property="og:image" content="http://www.tedyin.me/images/page1.png">
+<meta property="og:image" content="http://www.tedyin.me/images/page2.png">
+<meta property="og:image" content="http://www.tedyin.me/images/page3.png">
+<meta property="og:updated_time" content="2016-02-29T02:47:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ViewPager PageTransformer 应用">
+<meta name="twitter:description" content="最近项目中要有个需求就是做出一个可以滑动的列表，类似于Paper效果的动画，期初设想的比较复杂，自定义监控ViewPager的OnScroll事件，然后再在onPageScrolled中根据position, positionOffset, positionOffsetPixels等数据就算出滑动的百分比，通过滑动的百分比来控制动画播放的百分比。这样虽然也可以实现想要的效果，但是会很复杂，有许多中">
+<meta name="twitter:image" content="http://www.tedyin.me/images/page1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="TedYin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">TedYin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">快乐比生命更重要！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">TedYin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">TedYin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">快乐比生命更重要！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-pager-transformer" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/12/21/pager-transformer/" class="article-date">
+  	<time datetime="2014-12-21T13:07:00.000Z" itemprop="datePublished">2014-12-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ViewPager PageTransformer 应用
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近项目中要有个需求就是做出一个可以滑动的列表，类似于Paper效果的动画，期初设想的比较复杂，自定义监控ViewPager的OnScroll事件，然后再在onPageScrolled中根据<code>position</code>, <code>positionOffset</code>, <code>positionOffsetPixels</code>等数据就算出滑动的百分比，通过滑动的百分比来控制动画播放的百分比。这样虽然也可以实现想要的效果，但是会很复杂，有许多中间状态需要我们自己计算和保存，维护起来非常麻烦。</p>
+<p>在这些复杂的实现后，在朋友的建议下使用了<code>ViewPager.PageTransformer</code>来重新实现上述效果，瞬间简单了许多，很多中间状态不许需要自己去维护，PagerTransformer会帮你去维护，并且在他提供的方法中<code>transformPage(View page, float position)</code>已经帮你计算好了滑动百分比，根本不需要你再去计算，这个简直太贴心了。其实在滑动过程中对UI修改最重要的也是最麻烦的就是去计算滑动的百分比，现在有了这个百分比，你想实现什么动画就实现什么动画，简直太爽了。</p>
+<p>在使用ViewPager.PageTransformer的时候需要注意的就是他的接口方法中的postion，只要理解了它的用法，PageTransformer才算是用熟了。首先来介绍下position的用法：</p>
+<ul>
+<li><p>position 是一个float值，它代表了一个页面离开屏幕的百分比，以及另一个页面进入的百分比</p>
+</li>
+<li><p>position = 0  : page完全被展示，也就是说page处于屏幕的正中间</p>
+</li>
+<li>position = 1  : page完全处于屏幕的右边</li>
+<li>position = -1 : page完全处于屏幕的左边</li>
+</ul>
+<p>如果用户拖拽position=0(当前屏幕正中央的page)的page从右往左滑动，当只滑动一半的时候，原来position = 0的page其position会由0逐渐变为 -0.5，position=1的page（屏幕右侧的page）其position会由1逐渐变为 0.5。</p>
+<blockquote>
+<p>注意：<br>从右往左滑 &lt;——  position为负数<br>从左往右滑 ——&gt;  position为正数</p>
+</blockquote>
+<p>好了理解了上面所讲的内容就可以真正的去做出漂亮的动画了，下面给一个动画实例<br><figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public static class RotatePageTransformer implements ViewPager.PageTransformer &#123;</span><br><span class="line">    private static float MIN_TRAN = 50f;</span><br><span class="line">    private static int MIN_ROTATE = 15;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void transformPage(View view, float position) &#123;</span><br><span class="line">        if (position &lt;= 1) &#123;</span><br><span class="line">            float rotateFactor = MIN_ROTATE * position;</span><br><span class="line">            float tranFactor = MIN_TRAN * position;</span><br><span class="line">            if (position &lt; 0) &#123;</span><br><span class="line">                view.setTranslationY(-tranFactor);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                view.setTranslationY(tranFactor);</span><br><span class="line">            &#125;</span><br><span class="line">            view.setRotation(rotateFactor);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>该动画的效果如下：<br><img src="http://www.tedyin.me/images/page1.png" alt="page1"><br><img src="http://www.tedyin.me/images/page2.png" alt="page2"><br><img src="http://www.tedyin.me/images/page3.png" alt="page3"></p>
+<p>在滑动的过程总中左边和右边的会以此导向一个方向并且在Y方向上有一定位移，等到中间后图片的夹角会消失，而且会向上移动一定的距离。</p>
+<p>好了，赶紧去体验一下ViewPager.PageTransformer吧。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/12/22/httpclient-urlconnection/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Android HttpURLConnection VS HttpClient
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/12/14/singlton/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">单例模式的使用</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="pager-transformer" data-title="ViewPager PageTransformer 应用" data-url="http://www.tedyin.me/2014/12/21/pager-transformer/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 TedYin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

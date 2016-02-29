@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>SQL约束 | TedYin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="SQL Constraints ：
+对于XXX约束进行添加删除，修改的操作模式一般如下：
+添加约束：CREATE TABLE xxxTable(字段1 字段类型 约束类型(PRIMARY KEY等)···字段N 字段类型 ···)
+CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(目标约束字段1，目标约束字段2…目标约束字段N)···字段N 字">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL约束">
+<meta property="og:url" content="http://www.tedyin.me/2014/08/24/Sql-Constraints/index.html">
+<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:description" content="SQL Constraints ：
+对于XXX约束进行添加删除，修改的操作模式一般如下：
+添加约束：CREATE TABLE xxxTable(字段1 字段类型 约束类型(PRIMARY KEY等)···字段N 字段类型 ···)
+CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(目标约束字段1，目标约束字段2…目标约束字段N)···字段N 字">
+<meta property="og:updated_time" content="2015-11-16T01:44:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SQL约束">
+<meta name="twitter:description" content="SQL Constraints ：
+对于XXX约束进行添加删除，修改的操作模式一般如下：
+添加约束：CREATE TABLE xxxTable(字段1 字段类型 约束类型(PRIMARY KEY等)···字段N 字段类型 ···)
+CREATE TABLE xxxTable(字段1 字段类型 CONSTRAINT 约束名称 约束类型(目标约束字段1，目标约束字段2…目标约束字段N)···字段N 字">
+  
+    <link rel="alternative" href="/atom.xml" title="TedYin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">TedYin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">快乐比生命更重要！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">TedYin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xii1s.com1.z0.glb.clouddn.com/me.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">TedYin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">快乐比生命更重要！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-Sql-Constraints" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/08/24/Sql-Constraints/" class="article-date">
+  	<time datetime="2014-08-24T13:17:00.000Z" itemprop="datePublished">2014-08-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      SQL约束
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>SQL Constraints ：</p>
+<p>对于XXX约束进行添加删除，修改的操作模式一般如下：</p>
+<p>添加约束：<br>CREATE TABLE xxxTable(<br>字段1 字段类型 约束类型(PRIMARY KEY等)<br>···<br>字段N 字段类型 ···<br>)</p>
+<p>CREATE TABLE xxxTable(<br>字段1 字段类型 CONSTRAINT 约束名称 约束类型(目标约束字段1，目标约束字段2…目标约束字段N)<br>···<br>字段N 字段类型 ···<br>)</p>
+<p>修改约束：<br>ALERT TABLE xxxTable<br>ADD 约束类型 （目标约束字段1，目标2…目标N）</p>
+<p>ALERT TABLE xxxTable<br>ADD CONSTRAINT 约束名称 约束类型(目标约束字段1，目标2…目标N)</p>
+<p>删除约束：</p>
+<p>ALERT TABLE xxxTable<br>DROP 约束类型 约束名称          MySQL</p>
+<p>ALERT TABLE xxxTable<br>DROP CONSTRAINT 约束名称    其他SQL的操作</p>
+<ol>
+<li><p>NOT NULL ：强制约束字段不能为NULL</p>
+</li>
+<li><p>UNIQUE：唯一标识一个元组，一个表中可以多个UNIQUE约束的字段<br>如果需要为多个列定义UNIQUE约束可以这样操作：</p>
+</li>
+</ol>
+<p>CREATE TABLE Persons<br>(<br>Id_P int NOT NULL,<br>LastName varchar(255) NOT NULL,<br>FirstName varchar(255),<br>Address varchar(255),<br>City varchar(255),<br>CONSTRAINT uc_PersonID UNIQUE (Id_P,LastName)<br>)</p>
+<p>如果一个表已经被创建，但是需要在某个字段上加上UNIQUE约束，操作如下：<br>ALERT TABLE tableName ADD UNIQUE (字段名称)</p>
+<p>如果需要给添加的UNIQUE命名，并且为多个列加上UNIQUE约束，操作如下：<br>ALERT TABLE tableName ADD CONSTRAINT 约束名称 UNIQUE (字段1，字段2…字段N)<br>注意：约束名称的命名规则一般是，uq<em>字段名 或者 uq</em>组名</p>
+<p>撤销UNIQUE：<br>MySql ：       ALERT TABLE tableName DROP INDEX 约束名<br>其他SQL：    ALERT TABLE tableName DROP CONSTRAINT 约束名 </p>
+<ol>
+<li>PRIMARY KEY: 一个表中的主键，会自动生成一个UNIQUE约束，一个表中只能有一个主键<br>PRIMARY KEY 主键约束，每一个表中只能主键，而且有且仅有一个主键，主键列的值不能为NULL。一个表中可以有多个字段一起组成一个主键，但是主键只能有一个。添加删除主键的方式类似于添加或删除UNIQUE约束。</li>
+</ol>
+<p>ALTER TABLE Persons<br>ADD CONSTRAINT pk_PersonID PRIMARY KEY (Id_P,LastName)</p>
+<p>ALTER TABLE Persons<br>ADD  PRIMARY KEY (Id_P)</p>
+<p>ALTER TABLE Persons<br>DROP CONSTRAINT pk_PersonID </p>
+<p>ALTER TABLE Persons<br>DROP PRIMARY KEY</p>
+<ol>
+<li>FOREIGN KEY: 外键，一个表中的FOREIGN KEY指向另一个表中的PRIMARY KEY。</li>
+</ol>
+<p>FOREIGN KEY用于预防破坏表之间连接的操作，也可约束非法插入的数据。生成或删除FROGIN KEY的方法与生成其他约束的方法相同。</p>
+<ol>
+<li><p>CHECK：自检约束，如果某列或者某几列定义了该约束，那么在对该表进行操作的时候，这列或者这几列会检查操作是否符合他们各自的约束条件，如果符合约束条件那么允许操作，否则操作失败。</p>
+</li>
+<li><p>DEFAULT:该约束会向列中插入默认值，如果列没有其他的值，那么会将默认值加入到该列中。</p>
+</li>
+</ol>
+<p>创建表时加入默认值：</p>
+<p>CREATE TABLE Orders<br>(<br>     Id_O int NOT NULL,<br>     OrderNo int NOT NULL,<br>     Id_P int,<br>     OrderDate date DEFAULT GETDATE()<br>)</p>
+<p>向以经存在的表加入默认值：</p>
+<p>ALTER TABLE Persons<br>ALTER City SET DEFAULT ‘ShangHai’</p>
+<p>删除默认值：</p>
+<p>ALTER TABLE Persons<br>ALTER City DROP DEFAULT</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/08/31/mysql-add-foreignkey/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          MySQL添加外键
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/08/17/async-task/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">AsyncTask的执行过程</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Sql-Constraints" data-title="SQL约束" data-url="http://www.tedyin.me/2014/08/24/Sql-Constraints/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 TedYin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
