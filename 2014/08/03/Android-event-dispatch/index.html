@@ -14,14 +14,14 @@ Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)�
 <meta property="og:site_name" content="TedYin's Blog">
 <meta property="og:description" content="Android中所有的事件都是基于“按下（ActionDown）”这个动作之后的。
 Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)来对View进行布局。所有的“UI控件(Button，TextView等)”都是继承自View，所有的“布局控件(RelativeLayout等)”，“容器控件(ListView等)”都是继承自ViewGroup，ViewGroup">
-<meta property="og:image" content="http://www.tedyin.me/images/charflow.jpg">
-<meta property="og:image" content="http://www.tedyin.me/images/over.jpg">
-<meta property="og:updated_time" content="2016-01-26T05:51:31.000Z">
+<meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/charflow.jpg">
+<meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/over.jpg">
+<meta property="og:updated_time" content="2016-02-29T07:15:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android 事件传递机制">
 <meta name="twitter:description" content="Android中所有的事件都是基于“按下（ActionDown）”这个动作之后的。
 Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)来对View进行布局。所有的“UI控件(Button，TextView等)”都是继承自View，所有的“布局控件(RelativeLayout等)”，“容器控件(ListView等)”都是继承自ViewGroup，ViewGroup">
-<meta name="twitter:image" content="http://www.tedyin.me/images/charflow.jpg">
+<meta name="twitter:image" content="http://7xii1s.com1.z0.glb.clouddn.com/charflow.jpg">
   
   
     <link rel="icon" href="/favicon.png">
@@ -77,7 +77,7 @@ Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)�
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>A propos</li>
 						
 					</ul>
 				</div>
@@ -223,7 +223,7 @@ Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)�
 <li>onInterceptTouchEvent：它是ViewGroup中才有的方法，它的作用就是拦截事件，返回true表示事件被拦截，将不再向下传递。而是交给自身的onTouchEvent处理。该方法默认返回false，即不进行拦截。</li>
 </ul>
 <p>Touch事件的传递过程：<br>     先由Activity的dispatchTouchEvent分发给具体的UI组件(比如被点击的Button)，然后由TargetView的dispatchTouchEvent再进行分发，然后由自己的OnTouchEvent处理，在处理过程中，先调用注册在自己身上的onTouchListener对象中的onTouch方法。然后在执行OnTouchEvent方法，当OnTouchEvent执行完毕后，会调用View的onClick方法，该方法是在OnTouchEvent方法中处理ACTION_UP的这个分支中处理的performClick方法中调用的。<br>     因此onTouch会在onClick之前调用，onClick方法会在ACTION_UP的时候调用，而不是在ACTION_DOWN的时候调用。执行了onTouch方法的时候如果返回true时dispatchTouchEvent也会返回true，事件就不会再往下执行了，也就不会再去执行onTouchEvent方法了，也就不会再去执行onClick方法了。</p>
-<p>事件传递的流程图：<br><img src="http://www.tedyin.me/images/charflow.jpg" alt="event"></p>
+<p>事件传递的流程图：<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/charflow.jpg" alt="event"></p>
 <p>对于嵌套布局的事件传递是：</p>
 <ol>
 <li><p>Activity —&gt;  ViewGroup   —&gt;  View</p>
@@ -233,7 +233,7 @@ Android中所有的视图都继承自View，通过各种布局组件(ViewGroup)�
 <li><p>onInterceptTouchEvent方法的作用是拦截MotionEvent，它是ViewGroup特有的方法，如果在ViewGroup中它返回true表示事件被拦截，那么事件就不会再传递到View中去了。表现的现象就是你点击Layout中的一个Button但是调用的却是Layout中的onClick方法。</p>
 </li>
 </ol>
-<p>常用控件之间的继承关系：<br><img src="http://www.tedyin.me/images/over.jpg" alt="overried"></p>
+<p>常用控件之间的继承关系：<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/over.jpg" alt="overried"></p>
 
       
     </div>

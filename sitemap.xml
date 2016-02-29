@@ -2,16 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.tedyin.me/2014/10/12/log4j/</loc>
+    <loc>http://www.tedyin.me/2014/08/17/async-task/</loc>
     
-    <lastmod>2016-02-29T06:32:56.000Z</lastmod>
+    <lastmod>2016-02-29T07:15:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2014/09/28/group-resource/</loc>
+    
+    <lastmod>2016-02-29T07:15:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2014/11/15/irregular-shape-1/</loc>
+    
+    <lastmod>2016-02-29T07:15:49.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.tedyin.me/2014/12/21/pager-transformer/</loc>
     
-    <lastmod>2016-02-29T02:47:58.000Z</lastmod>
+    <lastmod>2016-02-29T07:15:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2014/06/06/Tough-regime-cranks-out-test-winners/</loc>
+    
+    <lastmod>2016-02-29T07:15:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2014/06/04/learn-action-bar/</loc>
+    
+    <lastmod>2016-02-29T07:15:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2015/03/11/android-view-lifecycle/</loc>
+    
+    <lastmod>2016-02-29T07:15:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2015/04/03/parcelable-vs-serializable/</loc>
+    
+    <lastmod>2016-02-29T07:15:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2014/08/03/Android-event-dispatch/</loc>
+    
+    <lastmod>2016-02-29T07:15:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2015/03/28/tools-usage/</loc>
+    
+    <lastmod>2016-02-29T07:15:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2015/01/02/use-reflect-modify/</loc>
+    
+    <lastmod>2016-02-29T07:15:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2014/06/03/Implementing-REST-Client-on-Android-4.0-and-below/</loc>
+    
+    <lastmod>2016-02-29T07:15:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2014/10/12/log4j/</loc>
+    
+    <lastmod>2016-02-29T06:32:56.000Z</lastmod>
     
   </url>
   
@@ -23,21 +100,21 @@
   </url>
   
   <url>
-    <loc>http://www.tedyin.me/2015/04/03/parcelable-vs-serializable/</loc>
+    <loc>http://www.tedyin.me/2014/09/08/style-and-theme/</loc>
     
     <lastmod>2016-02-29T02:47:58.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.tedyin.me/2015/03/28/tools-usage/</loc>
+    <loc>http://www.tedyin.me/2014/09/14/learn-gson/</loc>
     
     <lastmod>2016-02-29T02:47:58.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.tedyin.me/2015/01/02/use-reflect-modify/</loc>
+    <loc>http://www.tedyin.me/2014/09/21/handling-congfig-change/</loc>
     
     <lastmod>2016-02-29T02:47:58.000Z</lastmod>
     
@@ -58,20 +135,6 @@
   </url>
   
   <url>
-    <loc>http://www.tedyin.me/2014/12/14/singlton/</loc>
-    
-    <lastmod>2016-02-29T02:47:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2014/11/15/irregular-shape-1/</loc>
-    
-    <lastmod>2016-02-29T02:47:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.tedyin.me/2014/10/26/http-proxy/</loc>
     
     <lastmod>2016-02-29T02:47:58.000Z</lastmod>
@@ -79,28 +142,7 @@
   </url>
   
   <url>
-    <loc>http://www.tedyin.me/2014/09/28/group-resource/</loc>
-    
-    <lastmod>2016-02-29T02:47:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2014/09/21/handling-congfig-change/</loc>
-    
-    <lastmod>2016-02-29T02:47:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2014/09/14/learn-gson/</loc>
-    
-    <lastmod>2016-02-29T02:47:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2014/09/08/style-and-theme/</loc>
+    <loc>http://www.tedyin.me/2014/12/14/singlton/</loc>
     
     <lastmod>2016-02-29T02:47:58.000Z</lastmod>
     
@@ -110,48 +152,6 @@
     <loc>http://www.tedyin.me/2016/01/26/elasticsearch-batch-processing/</loc>
     
     <lastmod>2016-02-29T01:48:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2014/08/17/async-task/</loc>
-    
-    <lastmod>2016-01-26T05:51:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2014/08/03/Android-event-dispatch/</loc>
-    
-    <lastmod>2016-01-26T05:51:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2015/03/11/android-view-lifecycle/</loc>
-    
-    <lastmod>2016-01-26T05:51:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2014/06/04/learn-action-bar/</loc>
-    
-    <lastmod>2016-01-26T05:51:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2014/06/06/Tough-regime-cranks-out-test-winners/</loc>
-    
-    <lastmod>2016-01-26T05:51:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2014/06/03/Implementing-REST-Client-on-Android-4.0-and-below/</loc>
-    
-    <lastmod>2016-01-26T05:51:31.000Z</lastmod>
     
   </url>
   
@@ -170,28 +170,7 @@
   </url>
   
   <url>
-    <loc>http://www.tedyin.me/2014/06/28/google-io-14/</loc>
-    
-    <lastmod>2015-11-16T01:44:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2014/07/06/Loading-large-bitmap/</loc>
-    
-    <lastmod>2015-11-16T01:44:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2014/08/24/Sql-Constraints/</loc>
-    
-    <lastmod>2015-11-16T01:44:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2015/01/18/android-ui-tips/</loc>
+    <loc>http://www.tedyin.me/2015/05/03/android-issue/</loc>
     
     <lastmod>2015-11-16T01:44:35.000Z</lastmod>
     
@@ -205,14 +184,7 @@
   </url>
   
   <url>
-    <loc>http://www.tedyin.me/2014/06/22/OOM/</loc>
-    
-    <lastmod>2015-11-16T01:44:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.tedyin.me/2014/10/19/ssh-use/</loc>
+    <loc>http://www.tedyin.me/2014/08/24/Sql-Constraints/</loc>
     
     <lastmod>2015-11-16T01:44:35.000Z</lastmod>
     
@@ -226,7 +198,14 @@
   </url>
   
   <url>
-    <loc>http://www.tedyin.me/2015/05/03/android-issue/</loc>
+    <loc>http://www.tedyin.me/2014/07/12/Code-Style/</loc>
+    
+    <lastmod>2015-11-16T01:44:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2015/01/18/android-ui-tips/</loc>
     
     <lastmod>2015-11-16T01:44:35.000Z</lastmod>
     
@@ -247,7 +226,28 @@
   </url>
   
   <url>
-    <loc>http://www.tedyin.me/2014/07/12/Code-Style/</loc>
+    <loc>http://www.tedyin.me/2014/07/06/Loading-large-bitmap/</loc>
+    
+    <lastmod>2015-11-16T01:44:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2014/10/19/ssh-use/</loc>
+    
+    <lastmod>2015-11-16T01:44:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2014/06/28/google-io-14/</loc>
+    
+    <lastmod>2015-11-16T01:44:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.tedyin.me/2014/06/22/OOM/</loc>
     
     <lastmod>2015-11-16T01:44:35.000Z</lastmod>
     

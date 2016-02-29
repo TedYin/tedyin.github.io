@@ -70,7 +70,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>A propos</li>
 						
 					</ul>
 				</div>
@@ -250,7 +250,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
 <p>如果你是在Fragment中使用<code>OnCreateOptionsMenu</code>方法inflate一个Menu到ActionBar上，当你在Fragment中点击ActionBar中的Action时，如果你在<code>OnOptionsItemSelected</code>中使用了<code>super.onOptionsItemSelected</code>方法，系统会先调用Activity中的<code>OnOptionsItemSelected()</code>方法去处理，处理完成后才会调用Fragment中的这个方法处理，如果不加则会直接调用Fragment中的<code>OnOptionsItemSelected()</code>方法处理。</p>
 </blockquote>
 <p>###Using Split Action bar<br>Split ActionBar其实就是对ActionBar的分割，当用户使用窄屏幕的时候，如果在ActionBar上面不够放，系统会将Actions都放在屏幕的底部，来为导航和标题留出空间。使用Split Action Bar的效果图如下第1~2图。</p>
-<p><img src="http://www.tedyin.me/images/201406090916.png" alt="normal ActionBar"> </p>
+<p><img src="http://7xii1s.com1.z0.glb.clouddn.com/201406090916.png" alt="normal ActionBar"> </p>
 <p>使用Split action bar 的方法如下:</p>
 <ul>
 <li>给<code>&lt;application&gt;</code>标签添加属性 <code>uiOptions=&quot;splitActionBarWhenNarrow&quot;</code>,使得所有的Activity都应用Split Action Bar或者给某些指定的<code>&lt;activity&gt;</code>标签添加该属性，指定某几个Activity应用Split Action Bar。这个属性只能用于API level 14及其以上，如果想对其以下的版本进行兼容，需要在<code>&lt;activity&gt;</code>标签下使用<code>&lt;meta-data&gt;</code>标签来指定</li>
@@ -577,7 +577,7 @@ public void onCreate(Bundle savedInstanceState){
       
         <p>#General Overview</p>
 <p>REST Client 是一个非常好的处理客户端与服务端之间交互的框架模型，他的机构如下：</p>
-<p><img src="http://www.tedyin.me/images/framework.png" alt="framework"></p>
+<p><img src="http://7xii1s.com1.z0.glb.clouddn.com/framework.png" alt="framework"></p>
 <p>他的最佳实践有以下几点：</p>
 <ul>
 <li>使用<code>Loaders</code>相关的类来进行异步加载</li>

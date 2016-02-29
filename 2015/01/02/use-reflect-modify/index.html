@@ -16,15 +16,15 @@
 <meta property="og:description" content="最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。
 下面来举个例子来说明一下如何使用反射来实现自定义SearchView的效果：
 比如SearchView中展开后的底部Hint背景有一个搜索的图标，但是我们要是">
-<meta property="og:image" content="http://www.tedyin.me/images/search1.png">
-<meta property="og:image" content="http://www.tedyin.me/images/search2.png">
-<meta property="og:updated_time" content="2016-02-29T02:47:58.000Z">
+<meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/search1.png">
+<meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/search2.png">
+<meta property="og:updated_time" content="2016-02-29T07:15:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用反射自定义SearchView">
 <meta name="twitter:description" content="最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。
 下面来举个例子来说明一下如何使用反射来实现自定义SearchView的效果：
 比如SearchView中展开后的底部Hint背景有一个搜索的图标，但是我们要是">
-<meta name="twitter:image" content="http://www.tedyin.me/images/search1.png">
+<meta name="twitter:image" content="http://7xii1s.com1.z0.glb.clouddn.com/search1.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -80,7 +80,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>A propos</li>
 						
 					</ul>
 				</div>
@@ -215,7 +215,7 @@
 <p>###使用反射修改SearchView<br>从上述代码可以看出，显示Hint的是<code>mQueryHint</code>,因此只要将这个Hint值设为“”空字符串就可以隐藏该icon。下面使用反射的方式获取mQueryTextView这个private级别的控件,并将Hint设为空字符串，代码如下：</p>
 <figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">private void hideCloseSearchIcon(SearchView searchView) &#123;</span><br><span class="line">	SearchAutoComplete mQueryTextView = (SearchAutoComplete) SystemUiHelper.getFieldByReflect(</span><br><span class="line">			&quot;mQueryTextView&quot;, SearchView.class, searchView);</span><br><span class="line">	mQueryTextView.setHint(R.string.hint_search);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static Object getFieldByReflect(String fieldName, Class&lt;?&gt; claz, Object target) &#123;</span><br><span class="line">	try &#123;</span><br><span class="line">		Field searchField = claz.getDeclaredField(fieldName);</span><br><span class="line">		searchField.setAccessible(true);</span><br><span class="line">		return searchField.get(target);</span><br><span class="line">	&#125; catch (NoSuchFieldException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125; catch (IllegalAccessException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	return null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这样就可以将SearchView中输入框旁边的icon去掉了，下面看下对比图：</p>
-<p>去掉之前的样子：<br><img src="http://www.tedyin.me/images/search1.png" alt="search1"><br>去掉之后的样子：<br><img src="http://www.tedyin.me/images/search2.png" alt="search2"></p>
+<p>去掉之前的样子：<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/search1.png" alt="search1"><br>去掉之后的样子：<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/search2.png" alt="search2"></p>
 <p>同理，可以使用反射做很多类似的修改和操作,只有你想不到的没有你做不到的。</p>
 
       

@@ -70,7 +70,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>A propos</li>
 						
 					</ul>
 				</div>
@@ -664,7 +664,7 @@
 <li>实现<code>writeToParcel(Parcel dest, int flags)</code>方法。</li>
 </ol>
 </blockquote>
-<p>这样就OK了,下面来看看废了一番周折写出来的序列化方法到底比原生的好了多少，有图有真相！！<br><img src="http://www.tedyin.me/images/parcelable_vs_serializable.png" alt="parcelable"></p>
+<p>这样就OK了,下面来看看废了一番周折写出来的序列化方法到底比原生的好了多少，有图有真相！！<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/parcelable_vs_serializable.png" alt="parcelable"></p>
 <p>OMG !这差距，使用<code>Parcelable</code>虽然复杂点，但是这性能提升，真是值了！</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.developerphil.com/parcelable-vs-serializable/" target="_blank" rel="external">Parcelable vs Serializable</a></p>
 
@@ -720,7 +720,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Android tools提供了一组非常有用的属性方法来方便我们开发，tools所指定的所有属性在打包的时候都不会打包到APK里，它只是辅助开发的一组工具属性，本文基于Android Studio，快捷建使用Mac OSX 10.5+ KeyMap，下面以IDE来表示Android Studio。</p>
-<p>##tools : context<br>使用context属性来告诉IDE，这个布局文件是哪个Activity的布局文件，所以在预览的时候需要根据这个Activity的主题属性来显示，而不是使用默认的主题来进行预览。除了这个作用之外还有另外一点，在IDE中使用Go to Related files（快捷键CMD+Ctrl+Up）功能来帮助找到相关的布局文件。context属性在填写的时候，需要填上Activity的完整包名。<br><img src="http://www.tedyin.me/images/tools_1.png" alt="p1"></p>
+<p>##tools : context<br>使用context属性来告诉IDE，这个布局文件是哪个Activity的布局文件，所以在预览的时候需要根据这个Activity的主题属性来显示，而不是使用默认的主题来进行预览。除了这个作用之外还有另外一点，在IDE中使用Go to Related files（快捷键CMD+Ctrl+Up）功能来帮助找到相关的布局文件。context属性在填写的时候，需要填上Activity的完整包名。<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/tools_1.png" alt="p1"></p>
 <p>##tools:menu<br>如果你已经使用了context属性指定过了对应的Activity，那么IDE默认会自己去检查OnCreateOptionsMenu里面使用了哪个menu布局，然后在预览的时候加载该布局。使用menu属性可以覆盖上述默认操作。如果不想显示menu则可以设置tools:menu=“”即可。另外还可以使用menu属性定义多个菜单资源，如果不想显示menu则可以给menu属性赋值为空，例如：tools:menu=“”即可。另外，还可以在预览的时预览任意个你想看到的menu菜单项，而不是直接预览menu布局里面的内容。实现这样的效果十分简单，只需要在menu后面写上对应的菜单项的Id并用“ , ”隔开即可。举个例子：<br><code>tools:menu=“action_search,action_add&quot;</code><br>还有一点需要注意的就是，在使用Theme.AppCompat时，menu这个属性不起作用。</p>
 <p>##tools:actionBarNavMod<br>使用该属性告诉IDE我要显示的ActionBar的模式，包含了三个选项standard、tabs、list，该属性只有在Holo主题下有用，在其他主题下无法使用。</p>
 <p>##tools:listitem，tools:listheader，tools:listfooter<br>从名字就可以看出他们的意思，这是一组属性，我们可以使用这些属性分别告诉IDE一下信息:</p>
@@ -729,7 +729,7 @@
 <li>listheader是告诉IDE这个列表的头部是什么，并一起预览</li>
 <li>listfooter是告诉IDE这个列表的底部是什么，并一起预览需要注意的一点是，listheader和listfooter对GridView是没有效果的。</li>
 </ol>
-<p>##tools:layout<br>用这个属性告诉IDE，这个Layout在预览的时候应该显示什么东西，而不是显示一片空白。<br><img src="http://www.tedyin.me/images/tools_2.png" alt="p2"></p>
+<p>##tools:layout<br>用这个属性告诉IDE，这个Layout在预览的时候应该显示什么东西，而不是显示一片空白。<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/tools_2.png" alt="p2"></p>
 <p>##补充：</p>
 <ol>
 <li>tools:text属性用来显示要预览的文字，预览时会覆盖text属性的内容。</li>
@@ -804,7 +804,7 @@
 <p>###4. View对事件的处理<br>处理View事件方法有<code>View#onKeyDown()</code>当设备的物理按键按下后会触发该方法；<code>View#onKeyUp()</code>当设备的物理按键弹起的时候就会触发该方法；<code>View#onTrackballEvent()</code>当轨迹球被触动的时候会触发该方法；<br><code>View#onTouchEvent()</code>当设备的屏幕有来自用户的触摸操作时会回调该法，比如某些滑动操作我们就可以在该方法中拦截处理，可以根据用户的不同滑动距离和滑动速度等用户操作，给出许多不同的反馈，提供更好的用户体验。</p>
 <p>###5. View对焦点的处理<br>处理焦点相关事件的回调方法为<code>View#onFocusChanged()</code>当控件的焦点发生改变，会触发该方法。</p>
 <p>###6. View在根节点上的挂载和删除<br>当View通过构造函数创建出来后，如果不挂载到Window上时，是无法显示出来的。当View要挂载到Window上时会调用<code>Veiw#onAttachedToWindow()</code>方法；当View被销毁后要从Window上去除时会调用<code>View#onDetachedFromWindow()</code>方法；当Window隐藏或者可见时会调用<code>View#onWindowVisibilityChanged()</code>方法。通过这几个方法我们可以处理一些初始化的操作，和一些在View被销毁后进行的内存回收或者善后的工作。</p>
-<p>##View的生命周期示意图<br><img src="http://www.tedyin.me/images/view_lifecycle.png" alt="view_lifecycle"></p>
+<p>##View的生命周期示意图<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/view_lifecycle.png" alt="view_lifecycle"></p>
 
       
     </div>
@@ -936,7 +936,7 @@
 <p>###使用反射修改SearchView<br>从上述代码可以看出，显示Hint的是<code>mQueryHint</code>,因此只要将这个Hint值设为“”空字符串就可以隐藏该icon。下面使用反射的方式获取mQueryTextView这个private级别的控件,并将Hint设为空字符串，代码如下：</p>
 <figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">private void hideCloseSearchIcon(SearchView searchView) &#123;</span><br><span class="line">	SearchAutoComplete mQueryTextView = (SearchAutoComplete) SystemUiHelper.getFieldByReflect(</span><br><span class="line">			&quot;mQueryTextView&quot;, SearchView.class, searchView);</span><br><span class="line">	mQueryTextView.setHint(R.string.hint_search);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static Object getFieldByReflect(String fieldName, Class&lt;?&gt; claz, Object target) &#123;</span><br><span class="line">	try &#123;</span><br><span class="line">		Field searchField = claz.getDeclaredField(fieldName);</span><br><span class="line">		searchField.setAccessible(true);</span><br><span class="line">		return searchField.get(target);</span><br><span class="line">	&#125; catch (NoSuchFieldException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125; catch (IllegalAccessException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	return null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这样就可以将SearchView中输入框旁边的icon去掉了，下面看下对比图：</p>
-<p>去掉之前的样子：<br><img src="http://www.tedyin.me/images/search1.png" alt="search1"><br>去掉之后的样子：<br><img src="http://www.tedyin.me/images/search2.png" alt="search2"></p>
+<p>去掉之前的样子：<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/search1.png" alt="search1"><br>去掉之后的样子：<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/search2.png" alt="search2"></p>
 <p>同理，可以使用反射做很多类似的修改和操作,只有你想不到的没有你做不到的。</p>
 
       

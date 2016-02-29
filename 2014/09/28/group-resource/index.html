@@ -18,15 +18,15 @@ animator/ 存放属性动画(property animation">
 ##组织资源文件众所周知资源文件都存放在res/目录下的各个文件夹中，这些文件夹都有着各自不同的意义。
 
 animator/ 存放属性动画(property animation">
-<meta property="og:image" content="http://www.tedyin.me/images/201409182210.png">
-<meta property="og:updated_time" content="2016-02-29T02:47:58.000Z">
+<meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/201409182210.png">
+<meta property="og:updated_time" content="2016-02-29T07:15:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Providing Resources">
 <meta name="twitter:description" content="现在的Android系统运行在各种尺寸的机器上，对于开发者，我们需要让我们的应用适应这些大大小小的屏幕确实比较困难，但是Android给我们提供了一套简单而且方便的机制来帮助我们完成适配，首先我们来看看资源文件的组织方式。
 ##组织资源文件众所周知资源文件都存放在res/目录下的各个文件夹中，这些文件夹都有着各自不同的意义。
 
 animator/ 存放属性动画(property animation">
-<meta name="twitter:image" content="http://www.tedyin.me/images/201409182210.png">
+<meta name="twitter:image" content="http://7xii1s.com1.z0.glb.clouddn.com/201409182210.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -82,7 +82,7 @@ animator/ 存放属性动画(property animation">
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>A propos</li>
 						
 					</ul>
 				</div>
@@ -248,7 +248,7 @@ animator/ 存放属性动画(property animation">
 <p>##Android是如何找到最合适的资源文件的</p>
 <p>如果提供了多套资源文件时，Android在运行时会根据设备的属性找到合适的资源文件来使用。Android查找合适的资源文件的过程是一个循环排除的过程，它会读取一堆设备的属性，然后根据这些属性循环过滤所有的资源文件，最后只剩下唯一的一个即为最优的资源文件。对于图片资源的查找，如果找不到最合适的，它会找接近最优解的资源，如果有两类图片资源都是次优解，一类是低像素的图片，一类是高像素的图片，Android会采用将高像素的图像缩小的策略来适配，而不会采用将低像素的图片放大的操作。因此理论上只要提供一套<code>xxxhdpi</code>的图片即可。但是一定要注意一点，选取图片像素高的进行放大，并不是说我们只用一套<code>xlarge</code>的图像就可以适配所以机型了。因为Android在排除资源的时候，如果当前的机型的屏幕类型是Normal Screen，而资源文件都是<code>xlarge</code>类型的没有Normal类型的，那么系统也不会使用这套资源，这样会导致程序崩溃，提示资源不可用或者无法找到等错误，因此在提供多套资源的时候尽量不要省略，一定要提供给默认的资源。</p>
 <p>循环排除算法的流程图：</p>
-<p><img src="http://www.tedyin.me/images/201409182210.png" alt="循环排除流程图"></p>
+<p><img src="http://7xii1s.com1.z0.glb.clouddn.com/201409182210.png" alt="循环排除流程图"></p>
 <p>##参考<br><a href="http://www.cnblogs.com/leizhenzi/archive/2011/10/18/2216428.html" target="_blank" rel="external">raw和asset的区别</a><br><a href="http://developer.android.com/guide/topics/resources/providing-resources.html" target="_blank" rel="external">资源文件的组织</a><br><a href="http://ivan-ru.iteye.com/blog/1711414" target="_blank" rel="external">文件夹属性的使用</a></p>
 
       
