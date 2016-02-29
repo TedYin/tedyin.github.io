@@ -6,17 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>TedYin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Half Programer">
+  <meta name="description" content="Half full stack developer.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TedYin's Blog">
 <meta property="og:url" content="http://www.tedyin.me/page/2/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="Half Programer">
+<meta property="og:description" content="Half full stack developer.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TedYin's Blog">
-<meta name="twitter:description" content="Half Programer">
-  
-    <link rel="alternative" href="/atom.xml" title="TedYin&#39;s Blog" type="application/atom+xml">
+<meta name="twitter:description" content="Half full stack developer.">
   
   
     <link rel="icon" href="/favicon.png">
@@ -56,11 +54,6 @@
 							<div class="ribbon"></div>
 						</div>
 						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
 						
 						<div class="icon-wrap icon-me hide" data-idx="3">
 							<div class="user"></div>
@@ -76,10 +69,8 @@
 						<li>Menu</li>
 						<li>Tags</li>
 						
-						<li>Links</li>
 						
-						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -103,7 +94,7 @@
 							
 								<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 					        
-								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
 						</div>
 					</nav>
@@ -118,30 +109,12 @@
 				
 				
 				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
-			        
-			        </div>
-				</section>
-				
 
 				
 				
-				<section class="switch-part switch-part4">
+				<section class="switch-part switch-part3">
 				
-					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+					<div id="js-aboutme">Half full stack developer.</div>
 				</section>
 				
 			</div>
@@ -184,7 +157,7 @@
 					
 						<a class="github" target="_blank" href="https://github.com/TedYin" title="github">github</a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
 				</div>
 			</nav>
@@ -193,67 +166,6 @@
 </nav>
 
       <div class="body-wrap">
-  
-    <article id="post-use-reflect-modify" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/01/02/use-reflect-modify/" class="article-date">
-  	<time datetime="2015-01-02T02:00:00.000Z" itemprop="datePublished">2015-01-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/02/use-reflect-modify/">使用反射自定义SearchView</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近在优化代码，发现Android support v7包中的SearchView，开放的方法很少，导致SearchView自定义比较麻烦。所以在网上搜索解决办法，发现借助Java强大的反射功能来动态修改SearchView是最合适的方法。</p>
-<p>下面来举个例子来说明一下如何使用反射来实现自定义SearchView的效果：</p>
-<p>比如SearchView中展开后的底部Hint背景有一个搜索的图标，但是我们要是想隐藏该图标是没有办法直接隐藏的，因此我们可以使用反射来进行动态修改，为了可以使用反射，因此我们要查看SearchView的源码然后找出该图标的所属控件，然后使用反射动态修改该控件的属性，从而达到隐藏该图标的目的。<br>下面来看下具体步骤：</p>
-<p>###查看源码<br>经过查看SearchView的源码，我们发现这个图标是SearchView中的 SearchAutoComplete的Hint属性，源码如下：<br><figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">if (mQueryHint != null) &#123;</span><br><span class="line">    mQueryTextView.setHint(getDecoratedHint(mQueryHint));</span><br><span class="line">&#125; else if (mSearchable != null) &#123;</span><br><span class="line">    CharSequence hint = null;</span><br><span class="line">    int hintId = mSearchable.getHintId();</span><br><span class="line">    if (hintId != 0) &#123;</span><br><span class="line">        hint = getContext().getString(hintId);</span><br><span class="line">    &#125;</span><br><span class="line">    if (hint != null) &#123;</span><br><span class="line">        mQueryTextView.setHint(getDecoratedHint(hint));</span><br><span class="line">    &#125;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    mQueryTextView.setHint(getDecoratedHint(&quot;&quot;));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>###使用反射修改SearchView<br>从上述代码可以看出，显示Hint的是<code>mQueryHint</code>,因此只要将这个Hint值设为“”空字符串就可以隐藏该icon。下面使用反射的方式获取mQueryTextView这个private级别的控件,并将Hint设为空字符串，代码如下：</p>
-<figure class="highlight plain"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">private void hideCloseSearchIcon(SearchView searchView) &#123;</span><br><span class="line">	SearchAutoComplete mQueryTextView = (SearchAutoComplete) SystemUiHelper.getFieldByReflect(</span><br><span class="line">			&quot;mQueryTextView&quot;, SearchView.class, searchView);</span><br><span class="line">	mQueryTextView.setHint(R.string.hint_search);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static Object getFieldByReflect(String fieldName, Class&lt;?&gt; claz, Object target) &#123;</span><br><span class="line">	try &#123;</span><br><span class="line">		Field searchField = claz.getDeclaredField(fieldName);</span><br><span class="line">		searchField.setAccessible(true);</span><br><span class="line">		return searchField.get(target);</span><br><span class="line">	&#125; catch (NoSuchFieldException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125; catch (IllegalAccessException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	return null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样就可以将SearchView中输入框旁边的icon去掉了，下面看下对比图：</p>
-<p>去掉之前的样子：<br><img src="http://www.tedyin.me/images/search1.png" alt="search1"><br>去掉之后的样子：<br><img src="http://www.tedyin.me/images/search2.png" alt="search2"></p>
-<p>同理，可以使用反射做很多类似的修改和操作,只有你想不到的没有你做不到的。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
   
     <article id="post-httpclient-urlconnection" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -1033,6 +945,93 @@
 <li>还可以使用GsonBuilder的excludeFieldsWithModifiers()方法来忽略某些特殊修饰词进行修饰的成员变量的解析。</li>
 <li>支持用户自定义的解析策略<br>更多自定义的功能，可以查看<a href="https://sites.google.com/site/gson/gson-user-guide" target="_blank" rel="external">Gson的帮助文档</a>。</li>
 </ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-style-and-theme" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/08/style-and-theme/" class="article-date">
+  	<time datetime="2014-09-08T12:34:00.000Z" itemprop="datePublished">2014-09-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/08/style-and-theme/">Theme And Style</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##Theme和Style的区别</p>
+<ul>
+<li>Theme是应用到一个Activity或者整个Application上的Style，而不是应用于某个View上，应用于某个View上的叫做Style。</li>
+<li>Theme是针对窗体级别，改变窗体样式的，Style是针对窗体中的UI控件的，用来控件或者Layout的样式。</li>
+<li>Theme和Style在定义的时候是一样的，都是定义在<code>/res/values/</code>目录下。</li>
+<li>每个<code>&lt;style&gt;</code>都可以被应用到Application/Activity或者应用到某个View，应用到App的时候就叫Theme，应用到View的时候就叫Style。</li>
+</ul>
+<p>##定义一个Style</p>
+<blockquote>
+<p>在<code>&lt;resource&gt;</code>下的每个子节点 ，在编译的时候都会被转化为对象，通过他们定义的Style的名字来引用。</p>
+</blockquote>
+<p>如果想自定义一个Style要从何下手呢？完全从头做起？那你就错了，在定义Style的时候，不需要从头做起，<br>只需要继承Android提供的Style，并且对你需要自定义的属性进行修改即可。</p>
+<p>例如：继承TextView的默认Style，并对其进行修改</p>
+<figure class="highlight plain"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;style name=&quot;GreenText&quot; parent=&quot;@android:style/TextAppearance&quot;&gt;</span><br><span class="line">        &lt;item name=&quot;android:textColor&quot;&gt;#00FF00&lt;/item&gt;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>如果你想继承自己定义的Style，而不是系统默认的Style的话，你可以直接在自定义Style名后面加上“.”再<br>加新的属性名即可，不需要再去写<code>parent</code>。例如：创建一个新的Style并继承上面自定义的GreenText</p>
+<figure class="highlight plain"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style name=“GreenText.Big&quot;&gt;</span><br><span class="line">        &lt;item name=&quot;android:textSize”&gt;30sp&lt;/item&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>##Style的属性（Properties）<br>从上面的介绍知道了如何自定义一个Style，你只需继承Android默认的Style并且重写其中你需要自定义的字<br>段，那么都有哪些自定义的字段是可以重写的呢？你可以从<code>R.attr</code>获得所有可以重写的属性信息。但是不是所<br>有的<code>R.attr</code>中的属性都适用于某个指定的View，你需要参考指定的View的属性信息来确定哪些信息是可以被<br>重写的。如果你给一个View指定了一些它不支持的属性，他会自动忽略这些属性。有些属性不适合于任何View，<br>他只对Window有效这些属性只能用作Theme的属性去使用，如何区分哪些是对View有效哪些对其无效呢？<br>在<code>R.attr</code>中所有以<code>Window</code>开头的属性都是对View无效的，只能用做Theme属性去使用，其余的可以<br>用View的属性。</p>
+<p>##Style的应用<br>应用Style的方式有两种:</p>
+<ol>
+<li>对于一个独立的View使用Style，只需要在View的布局文件中加入<code>style=“@style/xxxStyle”</code>即可。</li>
+<li>对整个Application或者 Activity使用Style(这个Style就是Theme)，只需要<br>在Android manifest文件的<application>或者<activity>标签内加上<code>android:theme</code>属性即可。</activity></application></li>
+</ol>
+<p>当Style应用给一个View的时候，这个Style只会对这个View有效，如果这个View是一个ViewGroup的话，<br>那么也仅仅是对这个ViewGroup这个控件有效，对于ViewGroup内部的View是没有任何效果的。如果想对这<br>个ViewGroup中的所有View都有效的话，那么应该将这个Style当做Theme来使用，而非Style来使用。<br>(当Theme使用的意思就是将这个Style应用到这个ViewGroup所在的Activity或者整个Application)</p>
+<p>##Theme的选择<br>在选择使用什么样的Theme的时候，需要根据系统所支持的版本来确定，高版本的系统中会提供一些Theme是低<br>版本中不含有的。因此为了对各个版本兼容，Android在res目录下生成了多个values目录来提供对不同版本的<br>兼容。</p>
+<p>举例如下：<br>假如当前版本为3.0以下，我们可以在res/values目录下定义style.xml:</p>
+<figure class="highlight plain"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;resources&gt;</span><br><span class="line">     ···</span><br><span class="line">    &lt;style name=&quot;LightThemeSelector&quot; parent=&quot;android:Theme.Light”&gt;</span><br><span class="line">          ···</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">     ···</span><br><span class="line">&lt;/resources&gt;</span><br></pre></td></tr></table></figure>
+<p>假如当前版本为3.0~4.0之间我们可以在res/values-v11目录下定义style.xml:</p>
+<figure class="highlight plain"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;resources&gt;</span><br><span class="line">     ···</span><br><span class="line">    &lt;style name=&quot;LightThemeSelector&quot; parent=“android:Theme.Holo.Light”&gt;</span><br><span class="line">          ···</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">     ···</span><br><span class="line">&lt;/resources&gt;</span><br></pre></td></tr></table></figure>
+<p>Holo主题是在API 11后提供的。如果在API 14以上，我们可以在res/values-v14目录下定义。<br>这样就可以很好的兼容多个版本，保持视觉上的统一。</p>
+<p>##如何去引用资源</p>
+<p>引用可以通过：@、？来引用。那么这两者的区别在哪里呢？“?”主要用来引用私有资源，“@”主要用来引用公有<br>资源。因为Android的资源Style等之间存在着继承关系，因此”?”就相当于类中的”this”,而”@“则相当于一<br>个公共的对象（R），来对资源进行引用。通常”?”引用的资源都是当前包(目录)中的，而”@“引用的资源既可以<br>是当前目录中的也可以不同目录中的。在对Android属性继承修改的时候，我们可能需要别的属性，如果该属性<br>在父类中不存在的话，那么我们可以在<code>res/values/attrs.xml</code>中通过<code>declare-styleable</code>标签来定<br>义我们所需要的属性资源以及这些属性资源的<code>format</code>格式，然后就可以在Style文件中直接使用。</p>
+<p>##资源<br><a href="https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/res/res/values/styles.xml" target="_blank" rel="external">Android的Style资源</a></p>
+<p><a href="https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/res/res/values/themes.xml" target="_blank" rel="external">Android的Theme资源</a></p>
+<p><a href="http://developer.android.com/reference/android/R.attr.html" target="_blank" rel="external">Android的属性资源</a></p>
+<p><a href="http://developer.android.com/reference/android/R.styleable.html#Theme" target="_blank" rel="external">可以在Theme中使用的属性</a></p>
 
       
     </div>
