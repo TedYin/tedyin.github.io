@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/</loc>
+    
+    <lastmod>2016-03-06T10:13:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.tedyin.me/2016/02/27/solid-principles-in-ruby/</loc>
     
     <lastmod>2016-03-02T03:41:37.000Z</lastmod>
