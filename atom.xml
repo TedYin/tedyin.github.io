@@ -4,9 +4,9 @@
   <subtitle>快乐比生命更重要</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.tedyin.me/"/>
-  <updated>2016-03-06T10:13:34.000Z</updated>
-  <id>http://www.tedyin.me/</id>
+  <link href="http://tedyin.me/"/>
+  <updated>2016-03-10T06:28:04.000Z</updated>
+  <id>http://tedyin.me/</id>
   
   <author>
     <name>TedYin</name>
@@ -17,13 +17,13 @@
   
   <entry>
     <title>让你的Rails应用更加健壮的5种姿势『译』</title>
-    <link href="http://www.tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/"/>
-    <id>http://www.tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/</id>
+    <link href="http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/"/>
+    <id>http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/</id>
     <published>2016-03-06T09:58:43.000Z</published>
-    <updated>2016-03-06T10:13:34.000Z</updated>
+    <updated>2016-03-10T06:28:04.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://brewhouse.io/2016/02/26/five-practices-for-robust-ruby-on-rails-applications.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文链接: Five Practices for Robust Ruby on Rails Applications&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://www.tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&quot;&gt;http://www.tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://brewhouse.io/2016/02/26/five-practices-for-robust-ruby-on-rails-applications.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文链接: Five Practices for Robust Ruby on Rails Applications&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&quot;&gt;http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;无论什么时候，当我发现项目里面存在 bug 或者数据不一致，但却又很难找到是哪里出了问题时，我总是会感叹：“他们(the developer)只需要再多敲几下键盘，这些事情就不会发生了。”&lt;/p&gt;
 &lt;p&gt;在&lt;a href=&quot;http://brewhouse.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Brewhouse&lt;/a&gt;的工作中，我们会应用下面5种最佳实践，让我们的 Rails 应用更加健壮。因为这些方法可以让代码在遇到问题时，可以尽早地、明确地、快速地的抛出问题，告诉我们哪里出错了。我们可以通过捕捉这些错误信息来确保我们所有的数据和操作都是正确有效的。&lt;/p&gt;
@@ -49,7 +49,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://brewhouse.io/2016/02/26/five-practices-for-robust-ruby-on-rails-applications.html&quot;&gt;原文链接: Five Practices for Robust Ruby on Rails Applications&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://www.tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&quot;&gt;http://www.tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://brewhouse.io/2016/02/26/five-practices-for-robust-ruby-on-rails-applications.html&quot;&gt;原文链接: Five Practices for Robust Ruby on Rails Applications&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&quot;&gt;http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;无论什么时候，当我发现项目里面存在 bug 或者数据不一致，但却又很难找到是哪里出了问题时，我总是会感叹：“他们(the developer)只需要再多敲几下键盘，这些事情就不会发生了。”&lt;/p&gt;
 &lt;p&gt;在&lt;a href=&quot;http://brewhouse.io/&quot;&gt;Brewhouse&lt;/a&gt;的工作中，我们会应用下面5种最佳实践，让我们的 Rails 应用更加健壮。因为这些方法可以让代码在遇到问题时，可以尽早地、明确地、快速地的抛出问题，告诉我们哪里出错了。我们可以通过捕捉这些错误信息来确保我们所有的数据和操作都是正确有效的。&lt;/p&gt;
@@ -57,21 +57,21 @@
     </summary>
     
     
-      <category term="翻译" scheme="http://www.tedyin.me/tags/%E7%BF%BB%E8%AF%91/"/>
+      <category term="翻译" scheme="http://tedyin.me/tags/%E7%BF%BB%E8%AF%91/"/>
     
-      <category term="ruby on rails" scheme="http://www.tedyin.me/tags/ruby-on-rails/"/>
+      <category term="ruby on rails" scheme="http://tedyin.me/tags/ruby-on-rails/"/>
     
   </entry>
   
   <entry>
     <title>SOLID 原则在Ruby中的应用『译』</title>
-    <link href="http://www.tedyin.me/2016/02/27/solid-principles-in-ruby/"/>
-    <id>http://www.tedyin.me/2016/02/27/solid-principles-in-ruby/</id>
+    <link href="http://tedyin.me/2016/02/27/solid-principles-in-ruby/"/>
+    <id>http://tedyin.me/2016/02/27/solid-principles-in-ruby/</id>
     <published>2016-02-27T15:27:00.000Z</published>
-    <updated>2016-03-02T03:41:37.000Z</updated>
+    <updated>2016-03-10T06:28:04.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://eftimov.net/solid-principles&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文链接: SOLID Principles in Ruby&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://www.tedyin.me/2016/02/27/solid-principles-in-ruby/&quot;&gt;http://www.tedyin.me/2016/02/27/solid-principles-in-ruby/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://eftimov.net/solid-principles&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文链接: SOLID Principles in Ruby&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/02/27/solid-principles-in-ruby/&quot;&gt;http://tedyin.me/2016/02/27/solid-principles-in-ruby/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;作为一名程序员无论你的水平高低，你都会想写出一手优秀的代码，但是想写优秀的代码并不容易，因此怎样才能提高我们的代码质量呢？下面来看下我们今天的主角 &lt;code&gt;SOLID 原则&lt;/code&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;SOLID-原则是什么&quot;&gt;&lt;a href=&quot;#SOLID-原则是什么&quot; class=&quot;headerlink&quot; title=&quot;SOLID 原则是什么&quot;&gt;&lt;/a&gt;SOLID 原则是什么&lt;/h2&gt;&lt;p&gt;SOLID 不是一个原则，他是一组面向对象设计原则的简称，他代表下面5种设计原则:&lt;/p&gt;
@@ -151,23 +151,23 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://eftimov.net/solid-principles&quot;&gt;原文链接: SOLID Principles in Ruby&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://www.tedyin.me/2016/02/27/solid-principles-in-ruby/&quot;&gt;http://www.tedyin.me/2016/02/27/solid-principles-in-ruby/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://eftimov.net/solid-principles&quot;&gt;原文链接: SOLID Principles in Ruby&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/02/27/solid-principles-in-ruby/&quot;&gt;http://tedyin.me/2016/02/27/solid-principles-in-ruby/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;作为一名程序员无论你的水平高低，你都会想写出一手优秀的代码，但是想写优秀的代码并不容易，因此怎样才能提高我们的代码质量呢？下面来看下我们今天的主角 &lt;code&gt;SOLID 原则&lt;/code&gt;&lt;br&gt;
     
     </summary>
     
     
-      <category term="翻译" scheme="http://www.tedyin.me/tags/%E7%BF%BB%E8%AF%91/"/>
+      <category term="翻译" scheme="http://tedyin.me/tags/%E7%BF%BB%E8%AF%91/"/>
     
-      <category term="面向对象设计" scheme="http://www.tedyin.me/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1/"/>
+      <category term="面向对象设计" scheme="http://tedyin.me/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
   <entry>
     <title>Elasticsearch 的批处理</title>
-    <link href="http://www.tedyin.me/2016/01/26/elasticsearch-batch-processing/"/>
-    <id>http://www.tedyin.me/2016/01/26/elasticsearch-batch-processing/</id>
+    <link href="http://tedyin.me/2016/01/26/elasticsearch-batch-processing/"/>
+    <id>http://tedyin.me/2016/01/26/elasticsearch-batch-processing/</id>
     <published>2016-01-26T14:00:00.000Z</published>
     <updated>2016-02-29T09:44:11.000Z</updated>
     
@@ -200,14 +200,14 @@
     </summary>
     
     
-      <category term="elasticsearch" scheme="http://www.tedyin.me/tags/elasticsearch/"/>
+      <category term="elasticsearch" scheme="http://tedyin.me/tags/elasticsearch/"/>
     
   </entry>
   
   <entry>
     <title>Elasticsearch CRUD</title>
-    <link href="http://www.tedyin.me/2016/01/25/elasticsearch-crud/"/>
-    <id>http://www.tedyin.me/2016/01/25/elasticsearch-crud/</id>
+    <link href="http://tedyin.me/2016/01/25/elasticsearch-crud/"/>
+    <id>http://tedyin.me/2016/01/25/elasticsearch-crud/</id>
     <published>2016-01-25T02:22:00.000Z</published>
     <updated>2016-02-29T09:43:52.000Z</updated>
     
@@ -295,14 +295,14 @@
     </summary>
     
     
-      <category term="elasticsearch" scheme="http://www.tedyin.me/tags/elasticsearch/"/>
+      <category term="elasticsearch" scheme="http://tedyin.me/tags/elasticsearch/"/>
     
   </entry>
   
   <entry>
     <title>Elasticsearch Basic Concepts</title>
-    <link href="http://www.tedyin.me/2016/01/24/elasticsearch-basic-concepts/"/>
-    <id>http://www.tedyin.me/2016/01/24/elasticsearch-basic-concepts/</id>
+    <link href="http://tedyin.me/2016/01/24/elasticsearch-basic-concepts/"/>
+    <id>http://tedyin.me/2016/01/24/elasticsearch-basic-concepts/</id>
     <published>2016-01-24T12:22:00.000Z</published>
     <updated>2016-02-29T09:43:25.000Z</updated>
     
@@ -339,8 +339,8 @@
   
   <entry>
     <title>Android开发中遇到的小问题汇总</title>
-    <link href="http://www.tedyin.me/2015/05/03/android-issue/"/>
-    <id>http://www.tedyin.me/2015/05/03/android-issue/</id>
+    <link href="http://tedyin.me/2015/05/03/android-issue/"/>
+    <id>http://tedyin.me/2015/05/03/android-issue/</id>
     <published>2015-05-03T14:53:00.000Z</published>
     <updated>2016-02-29T09:29:11.000Z</updated>
     
@@ -366,14 +366,14 @@
     </summary>
     
     
-      <category term="android" scheme="http://www.tedyin.me/tags/android/"/>
+      <category term="android" scheme="http://tedyin.me/tags/android/"/>
     
   </entry>
   
   <entry>
     <title>How To Use Jenv To Master Your Java Environnement</title>
-    <link href="http://www.tedyin.me/2015/04/26/how-to-use-jenv/"/>
-    <id>http://www.tedyin.me/2015/04/26/how-to-use-jenv/</id>
+    <link href="http://tedyin.me/2015/04/26/how-to-use-jenv/"/>
+    <id>http://tedyin.me/2015/04/26/how-to-use-jenv/</id>
     <published>2015-04-26T12:22:00.000Z</published>
     <updated>2016-02-29T09:37:41.000Z</updated>
     
@@ -430,8 +430,8 @@
   
   <entry>
     <title>Parcelable Vs Serializable</title>
-    <link href="http://www.tedyin.me/2015/04/03/parcelable-vs-serializable/"/>
-    <id>http://www.tedyin.me/2015/04/03/parcelable-vs-serializable/</id>
+    <link href="http://tedyin.me/2015/04/03/parcelable-vs-serializable/"/>
+    <id>http://tedyin.me/2015/04/03/parcelable-vs-serializable/</id>
     <published>2015-04-03T14:28:00.000Z</published>
     <updated>2016-02-29T09:29:20.000Z</updated>
     
@@ -463,8 +463,8 @@
   
   <entry>
     <title>Android Tools Attribute</title>
-    <link href="http://www.tedyin.me/2015/03/28/tools-usage/"/>
-    <id>http://www.tedyin.me/2015/03/28/tools-usage/</id>
+    <link href="http://tedyin.me/2015/03/28/tools-usage/"/>
+    <id>http://tedyin.me/2015/03/28/tools-usage/</id>
     <published>2015-03-28T14:29:00.000Z</published>
     <updated>2016-02-29T09:29:24.000Z</updated>
     
@@ -501,8 +501,8 @@
   
   <entry>
     <title>Android View Lifecycle</title>
-    <link href="http://www.tedyin.me/2015/03/11/android-view-lifecycle/"/>
-    <id>http://www.tedyin.me/2015/03/11/android-view-lifecycle/</id>
+    <link href="http://tedyin.me/2015/03/11/android-view-lifecycle/"/>
+    <id>http://tedyin.me/2015/03/11/android-view-lifecycle/</id>
     <published>2015-03-11T13:00:00.000Z</published>
     <updated>2016-02-29T09:29:29.000Z</updated>
     
@@ -533,8 +533,8 @@
   
   <entry>
     <title>Android UI Tips</title>
-    <link href="http://www.tedyin.me/2015/01/18/android-ui-tips/"/>
-    <id>http://www.tedyin.me/2015/01/18/android-ui-tips/</id>
+    <link href="http://tedyin.me/2015/01/18/android-ui-tips/"/>
+    <id>http://tedyin.me/2015/01/18/android-ui-tips/</id>
     <published>2015-01-18T15:30:00.000Z</published>
     <updated>2016-02-29T09:29:47.000Z</updated>
     
@@ -576,8 +576,8 @@
   
   <entry>
     <title>使用反射自定义SearchView</title>
-    <link href="http://www.tedyin.me/2015/01/02/use-reflect-modify/"/>
-    <id>http://www.tedyin.me/2015/01/02/use-reflect-modify/</id>
+    <link href="http://tedyin.me/2015/01/02/use-reflect-modify/"/>
+    <id>http://tedyin.me/2015/01/02/use-reflect-modify/</id>
     <published>2015-01-02T02:00:00.000Z</published>
     <updated>2016-02-29T09:29:59.000Z</updated>
     
@@ -602,8 +602,8 @@
   
   <entry>
     <title>Android HttpURLConnection VS HttpClient</title>
-    <link href="http://www.tedyin.me/2014/12/22/httpclient-urlconnection/"/>
-    <id>http://www.tedyin.me/2014/12/22/httpclient-urlconnection/</id>
+    <link href="http://tedyin.me/2014/12/22/httpclient-urlconnection/"/>
+    <id>http://tedyin.me/2014/12/22/httpclient-urlconnection/</id>
     <published>2014-12-22T15:40:00.000Z</published>
     <updated>2016-02-29T09:30:19.000Z</updated>
     
@@ -628,8 +628,8 @@
   
   <entry>
     <title>ViewPager PageTransformer 应用</title>
-    <link href="http://www.tedyin.me/2014/12/21/pager-transformer/"/>
-    <id>http://www.tedyin.me/2014/12/21/pager-transformer/</id>
+    <link href="http://tedyin.me/2014/12/21/pager-transformer/"/>
+    <id>http://tedyin.me/2014/12/21/pager-transformer/</id>
     <published>2014-12-21T13:07:00.000Z</published>
     <updated>2016-02-29T09:30:22.000Z</updated>
     
@@ -664,8 +664,8 @@
   
   <entry>
     <title>单例模式的使用</title>
-    <link href="http://www.tedyin.me/2014/12/14/singlton/"/>
-    <id>http://www.tedyin.me/2014/12/14/singlton/</id>
+    <link href="http://tedyin.me/2014/12/14/singlton/"/>
+    <id>http://tedyin.me/2014/12/14/singlton/</id>
     <published>2014-12-14T15:20:00.000Z</published>
     <updated>2016-02-29T09:30:29.000Z</updated>
     
@@ -688,8 +688,8 @@
   
   <entry>
     <title>Irregular Shape</title>
-    <link href="http://www.tedyin.me/2014/11/15/irregular-shape-1/"/>
-    <id>http://www.tedyin.me/2014/11/15/irregular-shape-1/</id>
+    <link href="http://tedyin.me/2014/11/15/irregular-shape-1/"/>
+    <id>http://tedyin.me/2014/11/15/irregular-shape-1/</id>
     <published>2014-11-15T15:52:00.000Z</published>
     <updated>2016-02-29T09:30:33.000Z</updated>
     
@@ -753,8 +753,8 @@
   
   <entry>
     <title>Http代理设置</title>
-    <link href="http://www.tedyin.me/2014/10/26/http-proxy/"/>
-    <id>http://www.tedyin.me/2014/10/26/http-proxy/</id>
+    <link href="http://tedyin.me/2014/10/26/http-proxy/"/>
+    <id>http://tedyin.me/2014/10/26/http-proxy/</id>
     <published>2014-10-26T13:10:00.000Z</published>
     <updated>2016-02-29T09:31:38.000Z</updated>
     
@@ -775,8 +775,8 @@
   
   <entry>
     <title>SSH的原理与使用</title>
-    <link href="http://www.tedyin.me/2014/10/19/ssh-use/"/>
-    <id>http://www.tedyin.me/2014/10/19/ssh-use/</id>
+    <link href="http://tedyin.me/2014/10/19/ssh-use/"/>
+    <id>http://tedyin.me/2014/10/19/ssh-use/</id>
     <published>2014-10-19T08:02:00.000Z</published>
     <updated>2016-02-29T09:31:47.000Z</updated>
     
@@ -816,8 +816,8 @@
   
   <entry>
     <title>Log4J介绍</title>
-    <link href="http://www.tedyin.me/2014/10/12/log4j/"/>
-    <id>http://www.tedyin.me/2014/10/12/log4j/</id>
+    <link href="http://tedyin.me/2014/10/12/log4j/"/>
+    <id>http://tedyin.me/2014/10/12/log4j/</id>
     <published>2014-10-12T13:37:00.000Z</published>
     <updated>2016-02-29T09:31:52.000Z</updated>
     
@@ -899,8 +899,8 @@
   
   <entry>
     <title>Providing Resources</title>
-    <link href="http://www.tedyin.me/2014/09/28/group-resource/"/>
-    <id>http://www.tedyin.me/2014/09/28/group-resource/</id>
+    <link href="http://tedyin.me/2014/09/28/group-resource/"/>
+    <id>http://tedyin.me/2014/09/28/group-resource/</id>
     <published>2014-09-28T11:08:00.000Z</published>
     <updated>2016-02-29T09:31:55.000Z</updated>
     
