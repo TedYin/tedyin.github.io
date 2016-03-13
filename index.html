@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/ruby-on-rails/" style="font-size: 10px;">ruby on rails</a> <a href="/tags/翻译/" style="font-size: 20px;">翻译</a> <a href="/tags/面向对象设计/" style="font-size: 10px;">面向对象设计</a>
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/ruby-on-rails/" style="font-size: 10px;">ruby on rails</a> <a href="/tags/翻译/" style="font-size: 20px;">翻译</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象设计/" style="font-size: 10px;">面向对象设计</a>
 					</div>
 				</section>
 				
@@ -178,6 +178,75 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-singlton-pattern" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/13/singlton-pattern/" class="article-date">
+  	<time datetime="2016-03-13T06:47:18.000Z" itemprop="datePublished">2016-03-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/13/singlton-pattern/">你真的会用单例模式吗</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>转载请注明出处：<a href="http://tedyin.me/2016/03/13/singlton-pattern/">http://tedyin.me/2016/03/13/singlton-pattern/</a></p>
+</blockquote>
+<p>今天给大家介绍一下<code>单例模式</code>,就是这个出场率特别高的模式，是个程序员基本都用过他，没用过至少也都知道他。可是我们真的了解他吗？</p>
+<p>单例模式通常的实现方式分为以下两种：</p>
+<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">newInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>&#123;</span><br><span class="line">    	<span class="comment">// Do something ...</span></span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/设计模式/">设计模式</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/13/singlton-pattern/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-five-practices-for-robust-ruby-on-rails-applications" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -593,62 +662,6 @@
       
         <p class="article-more-link">
           <a  href="/2015/04/26/how-to-use-jenv/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-parcelable-vs-serializable" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/04/03/parcelable-vs-serializable/" class="article-date">
-  	<time datetime="2015-04-03T14:28:00.000Z" itemprop="datePublished">2015-04-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/03/parcelable-vs-serializable/">Parcelable Vs Serializable</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天说一下对象序列化时的两个接口<code>Serializable</code>和<code>Parcelable</code>，前者是Java中的老面孔了，大家也都非常熟悉了，后者是Android提供的新面孔，既然Java本身就有序列化的接口为什么Android还要重新造轮子呢？当然Google也不是傻子，肯定是前面那个轮子不能满足他们的要求，所以他们才重新造出了<code>Parcelable</code>这个接口。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/04/03/parcelable-vs-serializable/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

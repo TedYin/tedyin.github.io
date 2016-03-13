@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tedyin.me/"/>
-  <updated>2016-03-10T06:28:04.000Z</updated>
+  <updated>2016-03-13T06:53:53.000Z</updated>
   <id>http://tedyin.me/</id>
   
   <author>
@@ -14,6 +14,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你真的会用单例模式吗</title>
+    <link href="http://tedyin.me/2016/03/13/singlton-pattern/"/>
+    <id>http://tedyin.me/2016/03/13/singlton-pattern/</id>
+    <published>2016-03-13T06:47:18.000Z</published>
+    <updated>2016-03-13T06:53:53.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/13/singlton-pattern/&quot;&gt;http://tedyin.me/2016/03/13/singlton-pattern/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天给大家介绍一下&lt;code&gt;单例模式&lt;/code&gt;,就是这个出场率特别高的模式，是个程序员基本都用过他，没用过至少也都知道他。可是我们真的了解他吗？&lt;/p&gt;
+&lt;p&gt;单例模式通常的实现方式分为以下两种：&lt;/p&gt;
+&lt;h3 id=&quot;饿汉式&quot;&gt;&lt;a href=&quot;#饿汉式&quot; class=&quot;headerlink&quot; title=&quot;饿汉式&quot;&gt;&lt;/a&gt;饿汉式&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton instance = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Singleton();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton &lt;span class=&quot;title&quot;&gt;newInstance&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; instance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	&lt;span class=&quot;comment&quot;&gt;// Do something ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;code&gt;饿汉式&lt;/code&gt;是最简单的实现方式，这种实现方式适合那些在初始化时就要用到单例的情况，这种方式简单粗暴，如果不单例初始化非常快，而且占用内存非常小的时候这种方式是比较合适的，直接在应用启动时加载并初始化。&lt;br&gt;但是，如果单例初始化的操作耗时比较长而应用对于启动速度又有要求，或者单例的占用内存比较大，再或者单例只是在某个特定场景的情况下才会被使用，而一般情况下是不会使用时，使用&lt;code&gt;饿汉式&lt;/code&gt;的单例模式就是不合适的，这时候就需要用到&lt;code&gt;懒汉式&lt;/code&gt;的方式去按需延迟加载单例。&lt;/p&gt;
+&lt;h3 id=&quot;懒汉式&quot;&gt;&lt;a href=&quot;#懒汉式&quot; class=&quot;headerlink&quot; title=&quot;懒汉式&quot;&gt;&lt;/a&gt;懒汉式&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton instance = &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;newInstance&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt; == instance)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            instance = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Singleton();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; instance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	&lt;span class=&quot;comment&quot;&gt;// Do something ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;懒汉式&lt;/code&gt;与&lt;code&gt;饿汉式&lt;/code&gt;的最大区别就是将单例的初始化操作，延迟到需要的时候才进行，这样做在某些场合中有很大用处。比如某个单例用的次数不是很多，但是这个单例提供的功能又非常复杂，而且加载和初始化要消耗大量的资源，这个时候使用&lt;code&gt;懒汉式&lt;/code&gt;就是非常不错的选择。&lt;/p&gt;
+&lt;h3 id=&quot;多线程下的单例模式&quot;&gt;&lt;a href=&quot;#多线程下的单例模式&quot; class=&quot;headerlink&quot; title=&quot;多线程下的单例模式&quot;&gt;&lt;/a&gt;多线程下的单例模式&lt;/h3&gt;&lt;p&gt;上面介绍了一些单例模式的基本应用方法，但是上面所说的那些使用方式都是有一个隐含的前提，那就是他们都是应用在单线程条件下，一旦换成了多线程就有出错的风险。&lt;br&gt;如果在多线程的情况下，&lt;code&gt;饿汉式&lt;/code&gt;不会出现问题，因为JVM只会加载一次单利类，但是&lt;code&gt;懒汉式&lt;/code&gt;可能就会出现重复创建单利对象的问题。为什么会有这样的问题呢？因为&lt;code&gt;懒汉式&lt;/code&gt;在创建单例时是 &lt;strong&gt;线程不安全的&lt;/strong&gt;，多个线程可能会并发调用他的&lt;code&gt;newInstance&lt;/code&gt;方法导致多个线程可能会创建多份相同的单例出来。&lt;/p&gt;
+&lt;p&gt;那有没有办法，使&lt;code&gt;饿汉式&lt;/code&gt;的单利模式也是线程安全的呢？答案肯定是有的，大家通常会使用加同步锁的方式去实现，但是这样实现起来比较麻烦。那么有没有更好的实现方式呢？能问这个问题那必须是有的，否则就得打脸了。 &lt;em&gt;我们可以利用JVM的类加载机制去实现&lt;/em&gt;。在很多情况下JVM已经为我们提供了同步控制，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在&lt;code&gt;static{}&lt;/code&gt;区块中初始化的数据&lt;/li&gt;
+&lt;li&gt;访问&lt;code&gt;final&lt;/code&gt;字段时&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;li&gt;等等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因为在JVM进行类加载的时候他会保证数据是同步的，我们可以这样实现：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;采用内部类，在这个内部类里面去创建对象实例。这样的话，只要应用中不使用内部类 JVM 就不会去加载这个单例类，也就不会创建单例对象，从而实现&lt;code&gt;懒汉式&lt;/code&gt;的延迟加载和线程安全。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;实现代码如下：&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//内部类，在装载该内部类时才会去创建单利对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SingletonHolder&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton instance = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Singleton();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton &lt;span class=&quot;title&quot;&gt;newInstance&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; SingletonHolder.instance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//do something&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这样实现出来的单例类就是线程安全的，麻麻再也不用担心我的单例不是单例了。&lt;/p&gt;
+&lt;h3 id=&quot;使用枚举实现单例模式&quot;&gt;&lt;a href=&quot;#使用枚举实现单例模式&quot; class=&quot;headerlink&quot; title=&quot;使用枚举实现单例模式&quot;&gt;&lt;/a&gt;使用枚举实现单例模式&lt;/h3&gt;&lt;p&gt;除了上述的单例模式的实现方式外，我们还可以通过枚举类来实现单利模式，这也是&lt;code&gt;Effective Java&lt;/code&gt;中推荐的方式。&lt;/p&gt;
+&lt;p&gt;使用枚举类型实现单例模式如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;enum&lt;/span&gt; Singleton&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//定义一个枚举的元素，它就是Singleton的一个实例&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    instance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// do something ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;用枚举实现是不是更简单呢？枚举方式实现的单例模式也是线程安全的，所以大家不用担心多线程问题，可以大胆去用。&lt;/p&gt;
+&lt;p&gt;以上就是单例模式的使用，现在完全可以说，你真的会用单例模式了。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/13/singlton-pattern/&quot;&gt;http://tedyin.me/2016/03/13/singlton-pattern/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天给大家介绍一下&lt;code&gt;单例模式&lt;/code&gt;,就是这个出场率特别高的模式，是个程序员基本都用过他，没用过至少也都知道他。可是我们真的了解他吗？&lt;/p&gt;
+&lt;p&gt;单例模式通常的实现方式分为以下两种：&lt;/p&gt;
+&lt;h3 id=&quot;饿汉式&quot;&gt;&lt;a href=&quot;#饿汉式&quot; class=&quot;headerlink&quot; title=&quot;饿汉式&quot;&gt;&lt;/a&gt;饿汉式&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton instance = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Singleton();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; Singleton &lt;span class=&quot;title&quot;&gt;newInstance&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; instance;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	&lt;span class=&quot;comment&quot;&gt;// Do something ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://tedyin.me/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://tedyin.me/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="java" scheme="http://tedyin.me/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>让你的Rails应用更加健壮的5种姿势『译』</title>
@@ -891,64 +949,6 @@
     
       &lt;p&gt;##Log4J是什么？&lt;/p&gt;
 &lt;p&gt;Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对服务集群的日志进行统一管理。&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Providing Resources</title>
-    <link href="http://tedyin.me/2014/09/28/group-resource/"/>
-    <id>http://tedyin.me/2014/09/28/group-resource/</id>
-    <published>2014-09-28T11:08:00.000Z</published>
-    <updated>2016-02-29T09:31:55.000Z</updated>
-    
-    <content type="html">&lt;p&gt;现在的Android系统运行在各种尺寸的机器上，对于开发者，我们需要让我们的应用适应这些大大小小的屏幕确实比较困难，但是Android给我们提供了一套简单而且方便的机制来帮助我们完成适配，首先我们来看看资源文件的组织方式。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;##组织资源文件&lt;br&gt;众所周知资源文件都存放在&lt;code&gt;res/&lt;/code&gt;目录下的各个文件夹中，这些文件夹都有着各自不同的意义。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;animator/&lt;/code&gt; 存放属性动画(property animation)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;anim/&lt;/code&gt; 存放Tween动画&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;color/&lt;/code&gt; 存放颜色状态的xml文件（即：按钮按下什么颜色，正常什么颜色之类的selector文件）&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;drawable/&lt;/code&gt; 存放图片文件(.png/.9.png/.gif/.jpg/.xml)xml可以为帧动画的animation-list文件，也可以为shape类型文件&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;layout/&lt;/code&gt; 存放布局文件&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;menu/&lt;/code&gt; 存放Options Menu 或者 Context Menu 或者Sub Menu&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;raw/&lt;/code&gt; 存放多媒体文件，该文件夹下的文件在生成APK时不会被压缩成二进制，会保存其原有的格式。这点类似于&lt;code&gt;asset/&lt;/code&gt;文件夹。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;values/&lt;/code&gt; 该文件夹下存放了App中核心的数值文件，包括&lt;code&gt;strings.xml&lt;/code&gt;,&lt;code&gt;style.xml&lt;/code&gt;,&lt;code&gt;array.xml&lt;/code&gt;,&lt;code&gt;integers.xml&lt;/code&gt;,&lt;code&gt;attrs.xml&lt;/code&gt;,&lt;code&gt;colors.xml&lt;/code&gt;,&lt;code&gt;dimens.xml&lt;/code&gt;等APP中需要的颜色样式，距离数值字符串等文件，具体的样式类型可参考具体的Resource部分。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;xml/&lt;/code&gt;该文件夹下存放Runtime中能获取的或需要的xml类型的各种文件，可以通过&lt;code&gt;Resources.getXML(int resId)&lt;/code&gt;来获取该文件的解析器&lt;code&gt;XmlResourceParser&lt;/code&gt;对象。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;asset/&lt;/code&gt;与&lt;code&gt;res/raw&lt;/code&gt;下的文件在生成APK包时，都不会被压缩。他们的区别是&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;asset/&lt;/code&gt;文件夹下的文件不会在R.java文件中生成映射，因此不能通过Id来引用，但是&lt;code&gt;res/raw/&lt;/code&gt;下的文件可以在R.java下生成映射，可以通过Id进行索引。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;asset/&lt;/code&gt;文件夹下可以再继续添加文件夹，但是&lt;code&gt;res/raw/&lt;/code&gt;下不许再出现子文件夹。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;asset/&lt;/code&gt;下的文件或文件夹通过&lt;code&gt;AssetManager&lt;/code&gt;类来访问，&lt;code&gt;res/raw/&lt;/code&gt;文件夹下的文件通过&lt;code&gt;Resources.openRawResource(int resId)&lt;/code&gt;来访问。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;##适配不同的屏幕&lt;/p&gt;
-&lt;p&gt;上述说明了资源文件的基本结构，上述的结构中是Android资源文件组织的最基本结构，如果要适配不同的屏幕，就需要在上述基础上使用更复杂的文件结构来适配不同的布局。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在&lt;code&gt;res/&lt;/code&gt;下创建&lt;code&gt;&amp;lt;resources_name&amp;gt;-&amp;lt;config_qualifier&amp;gt;&lt;/code&gt;这种格式的文件夹，&lt;code&gt;&amp;lt;config_qualifier&amp;gt;&lt;/code&gt;的属性可以添加多个，中间使用&lt;code&gt;-&lt;/code&gt;隔开即可,但是要注意分类的顺序，大类属性在前，小类属性在后即可(大类属性中包含了小类属性)，前面的属性包含后面的属性举例如下:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight arduino&quot;&gt;&lt;figcaption&gt;&lt;span&gt;lang: xml&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;res/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    drawable/   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        icon.png&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;background&lt;/span&gt;.png    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    drawable-hdpi/  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        icon.png&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;background&lt;/span&gt;.png  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    drawable-hdpi-landscape/  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	icon.png&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	&lt;span class=&quot;built_in&quot;&gt;background&lt;/span&gt;.png&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上述&lt;code&gt;drawable&lt;/code&gt;就是规定格式中的&lt;code&gt;&amp;lt;resources_name&amp;gt;&lt;/code&gt;，&lt;code&gt;hdpi&lt;/code&gt;就是规定格式中的&lt;code&gt;&amp;lt;config_qualifier&amp;gt;&lt;/code&gt;。只要按照规定格式&lt;code&gt;&amp;lt;config_qualifier&amp;gt;&lt;/code&gt;部分的内容可以自定义，但是不推荐这样做。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;使用了所有的&lt;code&gt;&amp;lt;config_qualifier&amp;gt;&lt;/code&gt;的资源文件夹命名，排列的顺序是按照优先级排列的，结果为：&lt;br&gt;values-mcc310-en-sw320dp-w720dp-h720dp-large-long-port-car-night-ldpi-notouch-keysexposed-nokeys-navexposed-nonav-v7&lt;br&gt;具体的解释下:&lt;br&gt;values-mcc310(sim卡运营商)-en(语言)-sw320dp(屏幕最小宽度)-w720dp(屏幕最佳宽度)-h720dp(屏幕最佳高度)-large(屏幕尺寸)-long(屏幕长短边模式)-port(当前屏幕横竖屏显示模式)-car(dock模式)-night(白天或夜晚)-ldpi(屏幕最佳dpi)-notouch(触摸屏模类型)-keysexposed(键盘类型)-nokey(硬按键类型)-navexposed(方向键是否可用)-nonav(方向键类型)-v7(android系统版本API level 7)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;多套资源的命名必须和默认的(drawable、layout等)相同。具体的文件命名和组织结构可参考&lt;a href=&quot;http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;不同资源的命名和组织&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;##为多个尺寸屏幕提供最好的适配&lt;br&gt;为了适配大多数的机型，在组织App的资源文件时必须提供一套默认的资源数据，这样做的目的就是在无法找到合适的&lt;code&gt;&amp;lt;config_qualifier&amp;gt;&lt;/code&gt;数据的时候可以使用默认的资源，而不至于找不到资源文件而崩溃，在API level 4以后，drawable资源可以不需要指定默认的资源文件，因为Android会根据屏幕的信息自己找到合适的图片资源并进行必要的缩放，但是此处还是推荐大家指定所有的默认资源！&lt;/p&gt;
-&lt;p&gt;##Android是如何找到最合适的资源文件的&lt;/p&gt;
-&lt;p&gt;如果提供了多套资源文件时，Android在运行时会根据设备的属性找到合适的资源文件来使用。Android查找合适的资源文件的过程是一个循环排除的过程，它会读取一堆设备的属性，然后根据这些属性循环过滤所有的资源文件，最后只剩下唯一的一个即为最优的资源文件。对于图片资源的查找，如果找不到最合适的，它会找接近最优解的资源，如果有两类图片资源都是次优解，一类是低像素的图片，一类是高像素的图片，Android会采用将高像素的图像缩小的策略来适配，而不会采用将低像素的图片放大的操作。因此理论上只要提供一套&lt;code&gt;xxxhdpi&lt;/code&gt;的图片即可。但是一定要注意一点，选取图片像素高的进行放大，并不是说我们只用一套&lt;code&gt;xlarge&lt;/code&gt;的图像就可以适配所以机型了。因为Android在排除资源的时候，如果当前的机型的屏幕类型是Normal Screen，而资源文件都是&lt;code&gt;xlarge&lt;/code&gt;类型的没有Normal类型的，那么系统也不会使用这套资源，这样会导致程序崩溃，提示资源不可用或者无法找到等错误，因此在提供多套资源的时候尽量不要省略，一定要提供给默认的资源。&lt;/p&gt;
-&lt;p&gt;循环排除算法的流程图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7xii1s.com1.z0.glb.clouddn.com/201409182210.png&quot; alt=&quot;循环排除流程图&quot;&gt;&lt;/p&gt;
-&lt;p&gt;##参考&lt;br&gt;&lt;a href=&quot;http://www.cnblogs.com/leizhenzi/archive/2011/10/18/2216428.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;raw和asset的区别&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://developer.android.com/guide/topics/resources/providing-resources.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;资源文件的组织&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://ivan-ru.iteye.com/blog/1711414&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;文件夹属性的使用&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;现在的Android系统运行在各种尺寸的机器上，对于开发者，我们需要让我们的应用适应这些大大小小的屏幕确实比较困难，但是Android给我们提供了一套简单而且方便的机制来帮助我们完成适配，首先我们来看看资源文件的组织方式。&lt;br&gt;
     
     </summary>
     
