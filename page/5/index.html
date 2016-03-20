@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/ruby-on-rails/" style="font-size: 10px;">ruby on rails</a> <a href="/tags/翻译/" style="font-size: 20px;">翻译</a> <a href="/tags/面向对象设计/" style="font-size: 20px;">面向对象设计</a>
+						<a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 15px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/ruby-on-rails/" style="font-size: 10px;">ruby on rails</a> <a href="/tags/翻译/" style="font-size: 15px;">翻译</a> <a href="/tags/面向对象设计/" style="font-size: 20px;">面向对象设计</a>
 					</div>
 				</section>
 				
@@ -178,6 +178,62 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Loading-large-bitmap" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/07/06/Loading-large-bitmap/" class="article-date">
+  	<time datetime="2014-07-06T03:00:00.000Z" itemprop="datePublished">2014-07-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/07/06/Loading-large-bitmap/">Loading Large Bitmap</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在我们加载图片的时候，经常会出现这种情况，我们加载的图片的解析度已经远远超出我们设备的解析度，而且太<br>大的图片会占据比较大的内存带来大的内存开销，如果对这些内存回收管理不及时，很容易造成OutOfMemory运<br>行时异常，导致整个应用崩溃，因此为了避免这种情况的发生，我们在decode图片的时候应当根据自己设备的解<br>析度来解析，只需要解析出适合我们当前设备的图片即可，不需要解析出超高分辨率的图片，因为超高分辨率的图<br>片对我们的视觉体验带来不了任何帮助，反而会占用宝贵的内存，产生性能问题。下面我们将讨论如何将一张大图<br>片解析成一个符合当前设备内存要求的小图片。<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2014/07/06/Loading-large-bitmap/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-google-io-14" class="article article-type-post" itemscope itemprop="blogPost">
   

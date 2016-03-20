@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tedyin.me/2016/03/20/adapter-pattern/</loc>
+    
+    <lastmod>2016-03-20T14:14:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tedyin.me/2016/03/13/singlton-pattern/</loc>
     
     <lastmod>2016-03-14T06:13:47.000Z</lastmod>

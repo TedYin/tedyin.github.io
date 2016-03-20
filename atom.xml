@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tedyin.me/"/>
-  <updated>2016-03-14T06:13:47.000Z</updated>
+  <updated>2016-03-20T14:14:00.000Z</updated>
   <id>http://tedyin.me/</id>
   
   <author>
@@ -14,6 +14,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>adapter-pattern</title>
+    <link href="http://tedyin.me/2016/03/20/adapter-pattern/"/>
+    <id>http://tedyin.me/2016/03/20/adapter-pattern/</id>
+    <published>2016-03-20T14:13:09.000Z</published>
+    <updated>2016-03-20T14:14:00.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/20/adapter-pattern/&quot;&gt;http://tedyin.me/2016/03/20/adapter-pattern/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这次跟大家分享一下我对适配器模式的理解。&lt;/p&gt;
+&lt;p&gt;适配器模式的定义:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;将一个类的接口转换成用户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的类，可以一起工作了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;举个我们日常生活中的例子:&lt;/p&gt;
+&lt;p&gt;有一部移动电源，有一部iphone一部android手机，需要充电使用普通的Usb线就可以给android手机充电，而在给iphone充电的时候必须使用适配iphone的万能转接头才能充电。&lt;/p&gt;
+&lt;p&gt;iphone和android就相当于两个不兼容的接口，转接头就相当于一个适配器，他使得iphone和android手机都能充电了。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;在我们的项目中可以这样是用适配器模式:&lt;/p&gt;
+&lt;p&gt;假如我们开发一个发发动态的功能，第一版要求可以发送文字，实现如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ISendTextPost&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;sendTextPost&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SendTextPost&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ISendTextPost&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; sendTextPost&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//发送文字动态&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;实现方式如上所述，很简单。如果第二版要求既可以发图片也可以发文字动态，实现如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ISendPicturePost&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;sendTextPost&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;pubiic &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;sendPicturePost&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//假如发文字和图片是这样的~~&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SendPicturePost&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ISendPicturePost&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; sendTextPost&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//发送文字动态&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; sendPicturePost&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//发送图片动态&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上述这样实现可以吗？答案是必须不行的，因为发送文字的方法之前已经实现了，完全没必要再去实现一次。如果重复的方法有很多呢，估计都想砸键盘了。&lt;/p&gt;
+&lt;p&gt;对于这种接口不兼容的问题，使用适配器模式可以很好的解决：&lt;/p&gt;
+&lt;p&gt;适配器模式的模型如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 用户所需功能接口 target1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ITarget1&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;doTarget1&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//target1实现类&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Target1Impl&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ITarget1&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;doTarget1&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//做A事情&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 用户所需功能接口 target2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ITarget2&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;doTarget2&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//target2实现类&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Target2Imp&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ITarget2&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;doTarget2&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//做B事情&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 适配器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Adapter&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ITarget1&lt;/span&gt;, &lt;span class=&quot;title&quot;&gt;ITarget2&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; ITarget1 target1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; ITarget2 target2;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Adapter&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(ITarget1 target1,ITarget2 target2)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.target1 = target1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.target2 = target2;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;target1&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//做A事情&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        target1.doTarget1();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;doTarget2&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//做B事情&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        target2.doTarget2();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Client&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Client&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(Sting[] args)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ITarget1 target1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Target1Impl();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ITarget2 target2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Target1Imp2();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Adapter adapter = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Adapter(target1,target2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        adapter.doTarget1();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        adapter.doTarget2();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面就是使用适配器的实现方式。在上述的实现方式中，&lt;code&gt;target1&lt;/code&gt;和&lt;code&gt;target2&lt;/code&gt;都是业务层面的接口，他们有不同的业务功能，对于客户端来说，调用&lt;code&gt;target1&lt;/code&gt;接口时很正常，但是要兼容&lt;code&gt;target2&lt;/code&gt;的功能的时候，就需要有一个实现了&lt;code&gt;target1&lt;/code&gt;功能，并且兼容了&lt;code&gt;target2&lt;/code&gt;功能的类，&lt;code&gt;Adapter&lt;/code&gt;就是这样的一个类，他就是一个转换器，兼容不同的接口来实现功能。&lt;/p&gt;
+&lt;p&gt;在上面的实现中，实质上是使用了&lt;code&gt;对象组合&lt;/code&gt;来实现业务功能的兼容。使用&lt;code&gt;Adapter&lt;/code&gt;可使得已有功能复用，加快开发效率，减少维护成本，在&lt;code&gt;Adapter&lt;/code&gt;中也可以加入一些自己实现的公用方法，这样可以使得Adapter的功能更强大。&lt;/p&gt;
+&lt;p&gt;但是要注意的一点是，在一个系统中不应该过多的使用&lt;code&gt;Adapter模式&lt;/code&gt;，使用过多，会使得系统变得比较凌乱，不好把握，本来明明调的是A接口但是返回的是B结果，因此在使用适配器模式时要记住这一点。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;适配器模式的最重要的一点就是，对象组合，转换匹配，复用功能。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/20/adapter-pattern/&quot;&gt;http://tedyin.me/2016/03/20/adapter-pattern/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这次跟大家分享一下我对适配器模式的理解。&lt;/p&gt;
+&lt;p&gt;适配器模式的定义:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;将一个类的接口转换成用户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的类，可以一起工作了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;举个我们日常生活中的例子:&lt;/p&gt;
+&lt;p&gt;有一部移动电源，有一部iphone一部android手机，需要充电使用普通的Usb线就可以给android手机充电，而在给iphone充电的时候必须使用适配iphone的万能转接头才能充电。&lt;/p&gt;
+&lt;p&gt;iphone和android就相当于两个不兼容的接口，转接头就相当于一个适配器，他使得iphone和android手机都能充电了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://tedyin.me/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="面向对象设计" scheme="http://tedyin.me/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="java" scheme="http://tedyin.me/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>你真的会用单例模式吗</title>
@@ -866,89 +927,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;什么是SSH&quot;&gt;&lt;a href=&quot;#什么是SSH&quot; class=&quot;headerlink&quot; title=&quot;什么是SSH&quot;&gt;&lt;/a&gt;什么是SSH&lt;/h2&gt;&lt;p&gt;SSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Log4J介绍</title>
-    <link href="http://tedyin.me/2014/10/12/log4j/"/>
-    <id>http://tedyin.me/2014/10/12/log4j/</id>
-    <published>2014-10-12T13:37:00.000Z</published>
-    <updated>2016-02-29T09:31:52.000Z</updated>
-    
-    <content type="html">&lt;p&gt;##Log4J是什么？&lt;/p&gt;
-&lt;p&gt;Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对服务集群的日志进行统一管理。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;##Log4J学习&lt;/p&gt;
-&lt;p&gt;Log4J三大组件：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Logger（记录器）：只管记录日志（根据日志级别记录），不管日志存储在什么地方。&lt;/li&gt;
-&lt;li&gt;Appender（存放器）：将Logger记录的日志，存放到配置文件中所指向的地方，只处理日志的存放过程。&lt;/li&gt;
-&lt;li&gt;Layout（布局）：将日志进行格式化后再输出，也就是说他是用来让日志看这更顺眼的。当然如何算顺眼，由你在配置文件中设定。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一个Logger可以有多个Appender，可以同时输出到多个设备上，每一个Appender都有一个Layout来格式化输出内容。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;###Logger 组件&lt;br&gt;有一个超类，log4j.rootLogger这个超类永远存在，可以使用Logger类中的getRootLogger()方法来获得这个对象的引用。&lt;/p&gt;
-&lt;p&gt;Logger组件的继承关系：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;如果子类Logger没有定义日志级别，那么它将继承父类的日志级别。&lt;/li&gt;
-&lt;li&gt;如果把子类Logger的组件的additivity设置为false(默认为true)，那子类将不会继承父类的Appender，否则将继承父类所有的Appender。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;###Appender 组件&lt;br&gt;Appender用来决定日志要输出到什么地方，支持一下目的地：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;控制台Console&lt;/li&gt;
-&lt;li&gt;文件File&lt;/li&gt;
-&lt;li&gt;GUI组件&lt;/li&gt;
-&lt;li&gt;套接口服务器（Remote Socket Server）&lt;/li&gt;
-&lt;li&gt;NT的事件记录器&lt;/li&gt;
-&lt;li&gt;UNIX守护进程（输出到某个进程中去）(待验证)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;###Layout 组件&lt;br&gt;Layout组件决定日志的输出格式,有如下几类：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;org.apache.log4j.HTMLLayout     以Html格式输出日志&lt;/li&gt;
-&lt;li&gt;org.apache.log4j.PatternLayout  以自定义Pattern的模式输出日志&lt;/li&gt;
-&lt;li&gt;org.apache.log4j.SimpleLayout   包含日志信息的级别和，日志字符串&lt;/li&gt;
-&lt;li&gt;org.apache.log4j.TTCCLayout     包含日志产生的线程，时间，类别等详细信息&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;##日志级别&lt;br&gt;日志级别分为5种：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;fatal      严重错误，会导致系统崩溃&lt;/li&gt;
-&lt;li&gt;error     虽然出错，但是系统依然可以运行  &lt;/li&gt;
-&lt;li&gt;warn     警告，系统此处会有发生潜在错误的可能性&lt;/li&gt;
-&lt;li&gt;info       一般的运行时信息&lt;/li&gt;
-&lt;li&gt;debug  调试信息，粒度很细&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;除了上述5中级别外，还有两种特殊级别的日志分类：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;off        关闭日志，级别最高&lt;/li&gt;
-&lt;li&gt;all         打开日志，级别最低&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以上日志的级别高低排序如下：&lt;br&gt;off &amp;gt; fatal &amp;gt; error &amp;gt; warn &amp;gt; info &amp;gt; debug &amp;gt; all&lt;br&gt;当日配置的志级别为info时所有的Debug日志将不会输出。&lt;/p&gt;
-&lt;p&gt;Log4J建议使用上述中的4种分别是：error、warn、info、debug&lt;/p&gt;
-&lt;p&gt;##Log4J 应用&lt;br&gt;对于应用，无非就是配置和使用，先来看看如何在程序中配置Log4J&lt;/p&gt;
-&lt;p&gt;###Log4J的配置&lt;br&gt;Log4J支持XML配置和properties文件两种方式进行配置，此处介绍后一种。&lt;/p&gt;
-&lt;p&gt;####set Logger&lt;br&gt;log4j.rootLogger=INFO,infoLog,file&lt;/p&gt;
-&lt;p&gt;####infoLog logger&lt;br&gt;log4j.appender.infoLog=org.apache.log4j.ConsoleAppender // 配置Appender&lt;br&gt;log4j.appender.infoLog.layout=org.apache.log4j.PatternLayout // 配置Layout&lt;br&gt;log4j.appender.infoLog.layout.ConversionPattern=%d-[TS] %p %t %c - %m%n&lt;/p&gt;
-&lt;p&gt;####file logger&lt;br&gt;log4j.appender.file=org.apache.log4j.FileAppender // 定义Appender&lt;br&gt;log4j.appender.file.File=log.txt&lt;br&gt;log4j.appender.file.layout=org.apache.log4j.PatternLayout // 定义Layout&lt;br&gt;log4j.appender.file.layout.ConversionPattern=%d-[TS] %p %t %c - %m%n// 自定义Layout格式&lt;/p&gt;
-&lt;p&gt;####Error log&lt;br&gt;log4j.errorLog=ERROR, errorLog&lt;/p&gt;
-&lt;p&gt;####errorLog logger&lt;br&gt;log4j.appender.errorLog=org.apache.log4j.FileAppender&lt;br&gt;log4j.appender.errorLog.File=errorLog.txt&lt;br&gt;log4j.appender.errorLog.layout=org.apache.log4j.PatternLayout&lt;br&gt;log4j.appender.errorLog.layout.ConversionPattern=%d-[TS] %p %t %c - %m%n&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;详细的使用请参考Log4J的&lt;a href=&quot;http://logging.apache.org/log4j/1.2/apidocs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;API&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;##Log4J在程序中的应用&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;先将log4j-xxx.jar导入工程中。&lt;/li&gt;
-&lt;li&gt;新建log4j.properties配置文件，并加入配置。&lt;/li&gt;
-&lt;li&gt;在程序中使用Log4J的API。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;##参考：&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/lyc557/article/details/3964459&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;日志级别&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.iteye.com/topic/158409&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Log4J的使用&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;##Log4J是什么？&lt;/p&gt;
-&lt;p&gt;Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对服务集群的日志进行统一管理。&lt;br&gt;
     
     </summary>
     

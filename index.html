@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 20px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/ruby-on-rails/" style="font-size: 10px;">ruby on rails</a> <a href="/tags/翻译/" style="font-size: 20px;">翻译</a> <a href="/tags/面向对象设计/" style="font-size: 20px;">面向对象设计</a>
+						<a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 15px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/ruby-on-rails/" style="font-size: 10px;">ruby on rails</a> <a href="/tags/翻译/" style="font-size: 15px;">翻译</a> <a href="/tags/面向对象设计/" style="font-size: 20px;">面向对象设计</a>
 					</div>
 				</section>
 				
@@ -178,6 +178,80 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-adapter-pattern" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/20/adapter-pattern/" class="article-date">
+  	<time datetime="2016-03-20T14:13:09.000Z" itemprop="datePublished">2016-03-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/20/adapter-pattern/">adapter-pattern</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>转载请注明出处：<a href="http://tedyin.me/2016/03/20/adapter-pattern/">http://tedyin.me/2016/03/20/adapter-pattern/</a></p>
+</blockquote>
+<p>这次跟大家分享一下我对适配器模式的理解。</p>
+<p>适配器模式的定义:</p>
+<blockquote>
+<p>将一个类的接口转换成用户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的类，可以一起工作了。</p>
+</blockquote>
+<p>举个我们日常生活中的例子:</p>
+<p>有一部移动电源，有一部iphone一部android手机，需要充电使用普通的Usb线就可以给android手机充电，而在给iphone充电的时候必须使用适配iphone的万能转接头才能充电。</p>
+<p>iphone和android就相当于两个不兼容的接口，转接头就相当于一个适配器，他使得iphone和android手机都能充电了。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象设计/">面向对象设计</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/设计模式/">设计模式</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/20/adapter-pattern/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-singlton-pattern" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -603,65 +677,6 @@
       
         <p class="article-more-link">
           <a  href="/2015/05/03/android-issue/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-how-to-use-jenv" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/04/26/how-to-use-jenv/" class="article-date">
-  	<time datetime="2015-04-26T12:22:00.000Z" itemprop="datePublished">2015-04-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/26/how-to-use-jenv/">How To Use Jenv To Master Your Java Environnement</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具<code>Jenv</code>，用它来终结我们的Java版本管理之痛。</p>
-</blockquote>
-<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/04/26/how-to-use-jenv/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
