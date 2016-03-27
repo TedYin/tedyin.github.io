@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tedyin.me/"/>
-  <updated>2016-03-27T12:14:07.000Z</updated>
+  <updated>2016-03-27T12:16:18.000Z</updated>
   <id>http://tedyin.me/</id>
   
   <author>
@@ -20,9 +20,12 @@
     <link href="http://tedyin.me/2016/03/27/design-pattern-skills/"/>
     <id>http://tedyin.me/2016/03/27/design-pattern-skills/</id>
     <published>2016-03-27T12:14:07.000Z</published>
-    <updated>2016-03-27T12:14:07.000Z</updated>
+    <updated>2016-03-27T12:16:18.000Z</updated>
     
-    <content type="html">&lt;h3 id=&quot;设计模式是什么&quot;&gt;&lt;a href=&quot;#设计模式是什么&quot; class=&quot;headerlink&quot; title=&quot;设计模式是什么&quot;&gt;&lt;/a&gt;设计模式是什么&lt;/h3&gt;&lt;p&gt;设计模式是对特定问题经过无数次的经验总结之后，提出的能够解决它的优雅的方案。&lt;/p&gt;
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/27/design-pattern-skills/&quot;&gt;http://tedyin.me/2016/03/27/design-pattern-skills/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;设计模式是什么&quot;&gt;&lt;a href=&quot;#设计模式是什么&quot; class=&quot;headerlink&quot; title=&quot;设计模式是什么&quot;&gt;&lt;/a&gt;设计模式是什么&lt;/h3&gt;&lt;p&gt;设计模式是对特定问题经过无数次的经验总结之后，提出的能够解决它的优雅的方案。&lt;/p&gt;
 &lt;h3 id=&quot;重构是什么&quot;&gt;&lt;a href=&quot;#重构是什么&quot; class=&quot;headerlink&quot; title=&quot;重构是什么&quot;&gt;&lt;/a&gt;重构是什么&lt;/h3&gt;&lt;p&gt;重构就是在不改变软件系统外部行为的前提下，改善它的内部结构。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h3 id=&quot;什么是结构化方法&quot;&gt;&lt;a href=&quot;#什么是结构化方法&quot; class=&quot;headerlink&quot; title=&quot;什么是结构化方法&quot;&gt;&lt;/a&gt;什么是结构化方法&lt;/h3&gt;&lt;p&gt;结构化的方法是以具体的功能为核心来组织程序的结构，它的封装度仅为1级(仅仅封装了完成职责的方法)，即仅有对于特定的功能的封装（函数），扩展性很差，很难适应需求的变化。面向对象的方法正是在这一点上优于结构化的方法。在面向对象领域，是以对象来组成程序结构的，一个对象有自己的职责，通过对象间的交互来完成系统的功能，这使得它的封装度至少为2级（封装了方法+数据），即封装了为完成自己职责的方法和数据。另外面向对象的方法还支持更高层次的封装，比如：通过对不同的具体对象的共同的概念行为进行总结概括，我们可以达到3级的封装度 － 抽象的类（在Java中就是接口）。封装的层次越高，抽象的层次就越高，使得设计、代码有越高的弹性，越容易适应变化。&lt;/p&gt;
@@ -50,7 +53,10 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;设计模式是什么&quot;&gt;&lt;a href=&quot;#设计模式是什么&quot; class=&quot;headerlink&quot; title=&quot;设计模式是什么&quot;&gt;&lt;/a&gt;设计模式是什么&lt;/h3&gt;&lt;p&gt;设计模式是对特定问题经过无数次的经验总结之后，提出的能够解决它的优雅的方案。&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/27/design-pattern-skills/&quot;&gt;http://tedyin.me/2016/03/27/design-pattern-skills/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;设计模式是什么&quot;&gt;&lt;a href=&quot;#设计模式是什么&quot; class=&quot;headerlink&quot; title=&quot;设计模式是什么&quot;&gt;&lt;/a&gt;设计模式是什么&lt;/h3&gt;&lt;p&gt;设计模式是对特定问题经过无数次的经验总结之后，提出的能够解决它的优雅的方案。&lt;/p&gt;
 &lt;h3 id=&quot;重构是什么&quot;&gt;&lt;a href=&quot;#重构是什么&quot; class=&quot;headerlink&quot; title=&quot;重构是什么&quot;&gt;&lt;/a&gt;重构是什么&lt;/h3&gt;&lt;p&gt;重构就是在不改变软件系统外部行为的前提下，改善它的内部结构。&lt;/p&gt;
     
     </summary>
