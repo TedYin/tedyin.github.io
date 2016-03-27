@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 15px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/ruby-on-rails/" style="font-size: 10px;">ruby on rails</a> <a href="/tags/翻译/" style="font-size: 15px;">翻译</a> <a href="/tags/面向对象设计/" style="font-size: 20px;">面向对象设计</a>
+						<a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 15px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/ruby-on-rails/" style="font-size: 10px;">ruby on rails</a> <a href="/tags/翻译/" style="font-size: 15px;">翻译</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象设计/" style="font-size: 20px;">面向对象设计</a>
 					</div>
 				</section>
 				
@@ -178,6 +178,62 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-pager-transformer" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/12/21/pager-transformer/" class="article-date">
+  	<time datetime="2014-12-21T13:07:00.000Z" itemprop="datePublished">2014-12-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/21/pager-transformer/">ViewPager PageTransformer 应用</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近项目中要有个需求就是做出一个可以滑动的列表，类似于Paper效果的动画，期初设想的比较复杂，自定义监控ViewPager的OnScroll事件，然后再在onPageScrolled中根据<code>position</code>, <code>positionOffset</code>, <code>positionOffsetPixels</code>等数据就算出滑动的百分比，通过滑动的百分比来控制动画播放的百分比。这样虽然也可以实现想要的效果，但是会很复杂，有许多中间状态需要我们自己计算和保存，维护起来非常麻烦。<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2014/12/21/pager-transformer/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-singlton" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -555,66 +611,6 @@
       
         <p class="article-more-link">
           <a  href="/2014/09/21/handling-congfig-change/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-learn-gson" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/09/14/learn-gson/" class="article-date">
-  	<time datetime="2014-09-14T14:15:00.000Z" itemprop="datePublished">2014-09-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/14/learn-gson/">Gson的使用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Gson概述"><a href="#Gson概述" class="headerlink" title="Gson概述"></a>Gson概述</h2><p>Gson是Google内部为了使用的一个将Java对象序列化为JSON的Java类库，从2008年5月Google开源此项目后被广泛使用。类似的项目还有<a href="https://github.com/alibaba/fastjson/wiki">FastJson</a>、<a href="http://jackson.codehaus.org">JackSon</a>等。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gson/">gson</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2014/09/14/learn-gson/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

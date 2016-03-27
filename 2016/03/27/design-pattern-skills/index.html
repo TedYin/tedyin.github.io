@@ -4,20 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Android View Lifecycle | TedYin&#39;s Blog</title>
+  <title>设计模式学习技巧笔记 | TedYin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。">
+  <meta name="description" content="设计模式是什么设计模式是对特定问题经过无数次的经验总结之后，提出的能够解决它的优雅的方案。
+重构是什么重构就是在不改变软件系统外部行为的前提下，改善它的内部结构。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android View Lifecycle">
-<meta property="og:url" content="http://tedyin.me/2015/03/11/android-view-lifecycle/index.html">
+<meta property="og:title" content="设计模式学习技巧笔记">
+<meta property="og:url" content="http://tedyin.me/2016/03/27/design-pattern-skills/index.html">
 <meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。">
-<meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/view_lifecycle.png">
-<meta property="og:updated_time" content="2016-02-29T09:29:29.000Z">
+<meta property="og:description" content="设计模式是什么设计模式是对特定问题经过无数次的经验总结之后，提出的能够解决它的优雅的方案。
+重构是什么重构就是在不改变软件系统外部行为的前提下，改善它的内部结构。">
+<meta property="og:updated_time" content="2016-03-27T12:14:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android View Lifecycle">
-<meta name="twitter:description" content="在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。">
-<meta name="twitter:image" content="http://7xii1s.com1.z0.glb.clouddn.com/view_lifecycle.png">
+<meta name="twitter:title" content="设计模式学习技巧笔记">
+<meta name="twitter:description" content="设计模式是什么设计模式是对特定问题经过无数次的经验总结之后，提出的能够解决它的优雅的方案。
+重构是什么重构就是在不改变软件系统外部行为的前提下，改善它的内部结构。">
   
   
     <link rel="icon" href="/favicon.png">
@@ -180,11 +181,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-android-view-lifecycle" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-design-pattern-skills" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/03/11/android-view-lifecycle/" class="article-date">
-  	<time datetime="2015-03-11T13:00:00.000Z" itemprop="datePublished">2015-03-11</time>
+      <a href="/2016/03/27/design-pattern-skills/" class="article-date">
+  	<time datetime="2016-03-27T12:14:07.000Z" itemprop="datePublished">2016-03-27</time>
 </a>
     </div>
   
@@ -197,7 +198,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Android View Lifecycle
+      设计模式学习技巧笔记
     </h1>
   
 
@@ -205,6 +206,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -213,20 +218,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在Android开发中了解各个组件的生命周期非常重要，网上已经有许多关于Activity、Fragment等的生命周期的介绍了，今天来介绍一下View的生命周期。<br><a id="more"></a></p>
-<p>##什么是View<br>先来看看官方文档的解释：</p>
-<blockquote>
-<p>This class represents the basic building block for user interface components. A View occupies a rectangular area on the screen and is responsible for drawing and event handling. View is the base class for widgets, which are used to create interactive UI components (buttons, text fields, etc.). The ViewGroup subclass is the base class for layouts, which are invisible containers that hold other Views (or other ViewGroups) and define their layout properties.</p>
-</blockquote>
-<p>也就是说View是最基础的UI组件，所有的其他的UI组件都是从View类中衍生出来的，可见View的地位是多么的高，所以需要掌握View的各个细节。</p>
-<p>##View生命周期中用到的方法</p>
-<p>###1. View的创建期：<br>使用View的构造函数进行创建，在这个过程中，如果有自定义的属性的话，也需要在这个期间进行处理。当View和他的子View全部从XML中inflate结束后，会调用<code>View#onFinishInflate()</code>方法。</p>
-<p>###2. View的布局过程<br>整个布局过程做的就是处理View的大小和位置相关的信息。<br><code>View#onMesure()</code>方法的作用就是计算每个控件在屏幕上的尺寸大小。<code>View#onLayout</code>方法的作用就是设置所有控件的大小和位置。<br><code>View#onSizeChanged</code>方法的作用是当View的大小改变会调用此方法。</p>
-<p>###3. View的渲染<br>View的渲染过程会调用onDraw方法。</p>
-<p>###4. View对事件的处理<br>处理View事件方法有<code>View#onKeyDown()</code>当设备的物理按键按下后会触发该方法；<code>View#onKeyUp()</code>当设备的物理按键弹起的时候就会触发该方法；<code>View#onTrackballEvent()</code>当轨迹球被触动的时候会触发该方法；<br><code>View#onTouchEvent()</code>当设备的屏幕有来自用户的触摸操作时会回调该法，比如某些滑动操作我们就可以在该方法中拦截处理，可以根据用户的不同滑动距离和滑动速度等用户操作，给出许多不同的反馈，提供更好的用户体验。</p>
-<p>###5. View对焦点的处理<br>处理焦点相关事件的回调方法为<code>View#onFocusChanged()</code>当控件的焦点发生改变，会触发该方法。</p>
-<p>###6. View在根节点上的挂载和删除<br>当View通过构造函数创建出来后，如果不挂载到Window上时，是无法显示出来的。当View要挂载到Window上时会调用<code>Veiw#onAttachedToWindow()</code>方法；当View被销毁后要从Window上去除时会调用<code>View#onDetachedFromWindow()</code>方法；当Window隐藏或者可见时会调用<code>View#onWindowVisibilityChanged()</code>方法。通过这几个方法我们可以处理一些初始化的操作，和一些在View被销毁后进行的内存回收或者善后的工作。</p>
-<p>##View的生命周期示意图<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/view_lifecycle.png" alt="view_lifecycle"></p>
+        <h3 id="设计模式是什么"><a href="#设计模式是什么" class="headerlink" title="设计模式是什么"></a>设计模式是什么</h3><p>设计模式是对特定问题经过无数次的经验总结之后，提出的能够解决它的优雅的方案。</p>
+<h3 id="重构是什么"><a href="#重构是什么" class="headerlink" title="重构是什么"></a>重构是什么</h3><p>重构就是在不改变软件系统外部行为的前提下，改善它的内部结构。</p>
+<a id="more"></a>
+<h3 id="什么是结构化方法"><a href="#什么是结构化方法" class="headerlink" title="什么是结构化方法"></a>什么是结构化方法</h3><p>结构化的方法是以具体的功能为核心来组织程序的结构，它的封装度仅为1级(仅仅封装了完成职责的方法)，即仅有对于特定的功能的封装（函数），扩展性很差，很难适应需求的变化。面向对象的方法正是在这一点上优于结构化的方法。在面向对象领域，是以对象来组成程序结构的，一个对象有自己的职责，通过对象间的交互来完成系统的功能，这使得它的封装度至少为2级（封装了方法+数据），即封装了为完成自己职责的方法和数据。另外面向对象的方法还支持更高层次的封装，比如：通过对不同的具体对象的共同的概念行为进行总结概括，我们可以达到3级的封装度 － 抽象的类（在Java中就是接口）。封装的层次越高，抽象的层次就越高，使得设计、代码有越高的弹性，越容易适应变化。</p>
+<p>通过对不同的具体对象的共性进行总结概括，我们可以达到3级的封装度 － 抽象的类。</p>
+<p>封装的层次越高，抽象的层次就越高，设计和代码的弹性就越高，就越容易适应需求的变化。</p>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ol>
+<li>面向对象范式</li>
+<li>面向对象原则（SOLID）</li>
+<li>重新认识面向对象，了解这种思想</li>
+</ol>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ul>
+<li>面向对象的特点：封装，继承，多态。在写类时必须遵守这三点，如何去评价一个类的好坏，就从这三点出发，在写类之前就用这三点过一遍，保证这三点都背遵守。</li>
+<li><p>封装：一切不需要被外界知道的东西，都要封装在内部。</p>
+</li>
+<li><p>继承：</p>
+</li>
+</ul>
+<ol>
+<li>切记设计模式不只是一种方法和技术，更是一种思想和方法论。他是一种思想！！</li>
+<li>学习设计模式最主要的目的就是要建立面向对象的思想，尽可能的面向接口编程，低耦合、高内聚，使你设计的程序尽可能的复用。</li>
+<li>在学习设计模式的过程中，应该更加注意设计模式背后的东西，即具体设计模式所共有的的一些优秀的指导原则：<br>  a. 发现变化，封装变化。<br>  b. 优先使用组合，而不是继承。</li>
+<li>设计模式并不仅仅是一个有关特定问题的解决方案这个结果，它的意图以及它的动机往往更重要，因为一旦我们理解了一个设计模式的意图、动机，那么在设计过程中，就很容易的发现适用于我们自己的设计模式，从而大大简化设计工作，并且可以得到一个比较理想的设计方案。</li>
+</ol>
 
       
     </div>
@@ -236,18 +251,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/03/28/tools-usage/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Android Tools Attribute
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/01/18/android-ui-tips/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android UI Tips</div>
+    <a href="/2016/03/20/adapter-pattern/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">适配器模式</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -263,7 +269,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="android-view-lifecycle" data-title="Android View Lifecycle" data-url="http://tedyin.me/2015/03/11/android-view-lifecycle/"></div>
+	<div class="ds-thread" data-thread-key="design-pattern-skills" data-title="设计模式学习技巧笔记" data-url="http://tedyin.me/2016/03/27/design-pattern-skills/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

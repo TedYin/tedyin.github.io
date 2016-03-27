@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tedyin.me/"/>
-  <updated>2016-03-20T14:25:34.000Z</updated>
+  <updated>2016-03-27T12:14:07.000Z</updated>
   <id>http://tedyin.me/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式学习技巧笔记</title>
+    <link href="http://tedyin.me/2016/03/27/design-pattern-skills/"/>
+    <id>http://tedyin.me/2016/03/27/design-pattern-skills/</id>
+    <published>2016-03-27T12:14:07.000Z</published>
+    <updated>2016-03-27T12:14:07.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;设计模式是什么&quot;&gt;&lt;a href=&quot;#设计模式是什么&quot; class=&quot;headerlink&quot; title=&quot;设计模式是什么&quot;&gt;&lt;/a&gt;设计模式是什么&lt;/h3&gt;&lt;p&gt;设计模式是对特定问题经过无数次的经验总结之后，提出的能够解决它的优雅的方案。&lt;/p&gt;
+&lt;h3 id=&quot;重构是什么&quot;&gt;&lt;a href=&quot;#重构是什么&quot; class=&quot;headerlink&quot; title=&quot;重构是什么&quot;&gt;&lt;/a&gt;重构是什么&lt;/h3&gt;&lt;p&gt;重构就是在不改变软件系统外部行为的前提下，改善它的内部结构。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;什么是结构化方法&quot;&gt;&lt;a href=&quot;#什么是结构化方法&quot; class=&quot;headerlink&quot; title=&quot;什么是结构化方法&quot;&gt;&lt;/a&gt;什么是结构化方法&lt;/h3&gt;&lt;p&gt;结构化的方法是以具体的功能为核心来组织程序的结构，它的封装度仅为1级(仅仅封装了完成职责的方法)，即仅有对于特定的功能的封装（函数），扩展性很差，很难适应需求的变化。面向对象的方法正是在这一点上优于结构化的方法。在面向对象领域，是以对象来组成程序结构的，一个对象有自己的职责，通过对象间的交互来完成系统的功能，这使得它的封装度至少为2级（封装了方法+数据），即封装了为完成自己职责的方法和数据。另外面向对象的方法还支持更高层次的封装，比如：通过对不同的具体对象的共同的概念行为进行总结概括，我们可以达到3级的封装度 － 抽象的类（在Java中就是接口）。封装的层次越高，抽象的层次就越高，使得设计、代码有越高的弹性，越容易适应变化。&lt;/p&gt;
+&lt;p&gt;通过对不同的具体对象的共性进行总结概括，我们可以达到3级的封装度 － 抽象的类。&lt;/p&gt;
+&lt;p&gt;封装的层次越高，抽象的层次就越高，设计和代码的弹性就越高，就越容易适应需求的变化。&lt;/p&gt;
+&lt;h2 id=&quot;基础知识&quot;&gt;&lt;a href=&quot;#基础知识&quot; class=&quot;headerlink&quot; title=&quot;基础知识&quot;&gt;&lt;/a&gt;基础知识&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;面向对象范式&lt;/li&gt;
+&lt;li&gt;面向对象原则（SOLID）&lt;/li&gt;
+&lt;li&gt;重新认识面向对象，了解这种思想&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;应用&quot;&gt;&lt;a href=&quot;#应用&quot; class=&quot;headerlink&quot; title=&quot;应用&quot;&gt;&lt;/a&gt;应用&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;面向对象的特点：封装，继承，多态。在写类时必须遵守这三点，如何去评价一个类的好坏，就从这三点出发，在写类之前就用这三点过一遍，保证这三点都背遵守。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;封装：一切不需要被外界知道的东西，都要封装在内部。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;继承：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;切记设计模式不只是一种方法和技术，更是一种思想和方法论。他是一种思想！！&lt;/li&gt;
+&lt;li&gt;学习设计模式最主要的目的就是要建立面向对象的思想，尽可能的面向接口编程，低耦合、高内聚，使你设计的程序尽可能的复用。&lt;/li&gt;
+&lt;li&gt;在学习设计模式的过程中，应该更加注意设计模式背后的东西，即具体设计模式所共有的的一些优秀的指导原则：&lt;br&gt;  a. 发现变化，封装变化。&lt;br&gt;  b. 优先使用组合，而不是继承。&lt;/li&gt;
+&lt;li&gt;设计模式并不仅仅是一个有关特定问题的解决方案这个结果，它的意图以及它的动机往往更重要，因为一旦我们理解了一个设计模式的意图、动机，那么在设计过程中，就很容易的发现适用于我们自己的设计模式，从而大大简化设计工作，并且可以得到一个比较理想的设计方案。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;设计模式是什么&quot;&gt;&lt;a href=&quot;#设计模式是什么&quot; class=&quot;headerlink&quot; title=&quot;设计模式是什么&quot;&gt;&lt;/a&gt;设计模式是什么&lt;/h3&gt;&lt;p&gt;设计模式是对特定问题经过无数次的经验总结之后，提出的能够解决它的优雅的方案。&lt;/p&gt;
+&lt;h3 id=&quot;重构是什么&quot;&gt;&lt;a href=&quot;#重构是什么&quot; class=&quot;headerlink&quot; title=&quot;重构是什么&quot;&gt;&lt;/a&gt;重构是什么&lt;/h3&gt;&lt;p&gt;重构就是在不改变软件系统外部行为的前提下，改善它的内部结构。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="设计模式" scheme="http://tedyin.me/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>适配器模式</title>
@@ -277,9 +322,9 @@
     </summary>
     
     
-      <category term="面向对象设计" scheme="http://tedyin.me/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1/"/>
-    
       <category term="翻译" scheme="http://tedyin.me/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+      <category term="面向对象设计" scheme="http://tedyin.me/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
@@ -886,47 +931,6 @@
     <summary type="html">
     
       &lt;p&gt;Android应用程序访问互联网时，如果处于WIFI或者CMNET、UNINET或者3GNET，CTNET等接入方式时，无需设置代理即可顺利的访问网络，但是如果处于WAP环境下，那么就需要首先设置代理，之后才能访问互联网。跟设置超时一样，设置代理同样有HttpClient和HttpURLConnection两种方式：&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SSH的原理与使用</title>
-    <link href="http://tedyin.me/2014/10/19/ssh-use/"/>
-    <id>http://tedyin.me/2014/10/19/ssh-use/</id>
-    <published>2014-10-19T08:02:00.000Z</published>
-    <updated>2016-02-29T09:31:47.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;什么是SSH&quot;&gt;&lt;a href=&quot;#什么是SSH&quot; class=&quot;headerlink&quot; title=&quot;什么是SSH&quot;&gt;&lt;/a&gt;什么是SSH&lt;/h2&gt;&lt;p&gt;SSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;SSH登录远程主机的过程&quot;&gt;&lt;a href=&quot;#SSH登录远程主机的过程&quot; class=&quot;headerlink&quot; title=&quot;SSH登录远程主机的过程&quot;&gt;&lt;/a&gt;SSH登录远程主机的过程&lt;/h2&gt;&lt;p&gt;假设有客户端要远程登录服务器，使用SSH登录的过程如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;客户端向服务端发起连接请求，服务端收到请求后，返回给客户端一个公钥。&lt;/li&gt;
-&lt;li&gt;客户端使用该公钥加密用户明和登录密码，然后将加密后的数据传递给服务端。&lt;/li&gt;
-&lt;li&gt;服务端收到用户传递过来的加密数据后，使用自己的私钥解密，检查用户是否为合法用户。&lt;/li&gt;
-&lt;li&gt;如果用户合法，则简历连接，否则拒绝连接。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;在上述登录过程中，如果用户是第一次登录远程主机，那么在用户收到远程主机的公钥后，本地终端就会提示用户注意远程主机是否为真实的目标主机，提示信息一般如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight vbnet&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;The authenticity &lt;span class=&quot;keyword&quot;&gt;of&lt;/span&gt; host &lt;span class=&quot;comment&quot;&gt;&#39;host (12.18.429.21)&#39; can&#39;t be established.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　RSA &lt;span class=&quot;keyword&quot;&gt;key&lt;/span&gt; fingerprint &lt;span class=&quot;keyword&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;98&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;e:d7:e0:de:&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;f:ac:&lt;span class=&quot;number&quot;&gt;67&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;28&lt;/span&gt;:c2:&lt;span class=&quot;number&quot;&gt;42&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;d:&lt;span class=&quot;number&quot;&gt;37&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;58&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;d.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　Are you sure you want &lt;span class=&quot;keyword&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;continue&lt;/span&gt; connecting (yes/no)?&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;在用户根据IP地址和服务端指纹信息确定之后，SSH程序会将该主机信息保存在本地，当下次再登录该主机时，将会直接体使用户输入密码来登录，将不再会提示用户所登录的主机信息。&lt;/p&gt;
-&lt;p&gt;###中间人攻击&lt;/p&gt;
-&lt;p&gt;在用户首次登录的时之所以提示用户登录信息，是因为在逻辑上SSH有个漏洞，假如用户在一个开放网络中，在服务端和客户端之间存在一个第三方的主机(中间人主机)，而且用户登录时被中间人主机拦截，并向客户端返回了自己伪造的公钥，但是用户并未检查所登录的主机是否为目标主机，此时使用伪造的公钥将用户数据加密后传给中间人主机，这样中间人主机就可以拿到用户的登录信息，这就会导致严重的安全事故。因此在为了避免中间人攻击，我们需要在首次登录时，检查目标主机的信息是否为我们所要登录的目标主机，确认之后在进行登录操作。&lt;/p&gt;
-&lt;p&gt;###使用公钥登录&lt;br&gt;为了更好的避免中间人攻击，并且方便我们使用SSH登录，我们可以使用SSH提供的公钥登录，我们可以在本地使用&lt;code&gt;ssh-keygen&lt;/code&gt;命令生成一组公钥和私钥默认为(id_rsa.pub和id_rsa)，然后我们将公钥存储在我们要登录的服务端。当使用公钥登录时，客户端发起连接，服务端会随机发送一串字符串，客户端使用私钥加密后再回传给服务端，服务端收到用户回传的加密数据和，使用先前用户存储在服务端的公钥进行解密，然后检查数据是否正确，如果正确则建立连接，否则拒绝连接，并返回拒绝原因。&lt;/p&gt;
-&lt;p&gt;使用公钥登录后，用户就不必再去每次都输入用户名和密码，而是直接建立连接，也很好的避免了中间人攻击的问题，是一个比较好的解决办法，只是相比直接用口令登录要麻烦一点，不过一劳永逸，刚开始麻烦后面就简单多了。&lt;/p&gt;
-&lt;p&gt;##SSH登录使用&lt;/p&gt;
-&lt;p&gt;使用SSH登录非常简单，命令如下:&lt;/p&gt;
-&lt;figure class=&quot;highlight accesslog&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//ssh &lt;span class=&quot;string&quot;&gt;[username]&lt;/span&gt;@&lt;span class=&quot;string&quot;&gt;[server ip/domain]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ssh user@server.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;指定端口登录：&lt;/p&gt;
-&lt;figure class=&quot;highlight accesslog&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//ssh -P port &lt;span class=&quot;string&quot;&gt;[username]&lt;/span&gt;@&lt;span class=&quot;string&quot;&gt;[server ip/domain]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ssh -P &lt;span class=&quot;number&quot;&gt;2222&lt;/span&gt; user@server.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;SSH的默认端口号是22，可以通过&lt;code&gt;-P&lt;/code&gt;参数来指定端口号。&lt;/p&gt;
-&lt;p&gt;SSH登录时的默认端口是22，如果服务端根据自身需要，要求客户端使用别的端口(例如2222)进行登录时，我们可以在客户端使用-P参数来指定登录端口&lt;/p&gt;
-&lt;p&gt;##参考&lt;br&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ssh原理以及使用&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;什么是SSH&quot;&gt;&lt;a href=&quot;#什么是SSH&quot; class=&quot;headerlink&quot; title=&quot;什么是SSH&quot;&gt;&lt;/a&gt;什么是SSH&lt;/h2&gt;&lt;p&gt;SSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。&lt;br&gt;
     
     </summary>
     
