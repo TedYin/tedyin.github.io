@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 15px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/ruby-on-rails/" style="font-size: 10px;">ruby on rails</a> <a href="/tags/翻译/" style="font-size: 15px;">翻译</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象设计/" style="font-size: 20px;">面向对象设计</a>
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/elasticsearch/" style="font-size: 15px;">elasticsearch</a> <a href="/tags/gson/" style="font-size: 10px;">gson</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/ruby-on-rails/" style="font-size: 10px;">ruby on rails</a> <a href="/tags/翻译/" style="font-size: 20px;">翻译</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象设计/" style="font-size: 20px;">面向对象设计</a>
 					</div>
 				</section>
 				
@@ -178,6 +178,73 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-auto-value" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/11/auto-value/" class="article-date">
+  	<time datetime="2016-04-11T15:25:19.000Z" itemprop="datePublished">2016-04-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/11/auto-value/">使用 Google AutoValue 自动生成代码</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>转载请注明出处：<a href="http://tedyin.me/2016/04/11/auto-value/">http://tedyin.me/2016/04/11/auto-value/</a></p>
+</blockquote>
+<p>在<code>Java</code>中通常定义一个模型类时，需要定义一堆不同类型的成员变量，而且为了满足<code>OCP原则</code>，又要定义一堆相应的<code>Getter</code>和<code>Setter</code>等方法，这个过程是非常枯燥的要写一堆样板代码。虽然现在 IDE 可以很好的帮我们生成这些样板代码，但是如果看到一个模型类里面有这么一堆的方法，总觉的非常的不清晰。</p>
+<blockquote>
+<p>我只想知道这个模型有哪些属性，以及特殊的方法，并不想知道大家都有的东西，你却非要让我看。。。</p>
+</blockquote>
+<p>好了，现在有办法可以解决这个问题了，使用Google开源的<a href="https://github.com/google/auto/">AutoValue</a>就可以解决上述烦恼，而且最近<code>AutoValue</code>项目支持了大家期待已久的<code>Extension API</code>，使得<code>AutoValue</code>更加灵活，至于这个<code>Extension API</code>是干啥的后面会讲到，现在暂时不用去关心他。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译/">翻译</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/11/auto-value/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-design-pattern-skills" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -641,65 +708,9 @@
 
 
   
-    <article id="post-elasticsearch-basic-concepts" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/24/elasticsearch-basic-concepts/" class="article-date">
-  	<time datetime="2016-01-24T12:22:00.000Z" itemprop="datePublished">2016-01-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/24/elasticsearch-basic-concepts/">Elasticsearch Basic Concepts</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><h4 id="Cluster-集群"><a href="#Cluster-集群" class="headerlink" title="Cluster 集群"></a>Cluster 集群</h4><p>Cluster 包含了多个运行ES的节点,每个集群都有一个唯一的名字,用来区分不同的集群,含有相同<code>cluster name</code>的<code>Node</code>属于同一个集群<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/24/elasticsearch-basic-concepts/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
