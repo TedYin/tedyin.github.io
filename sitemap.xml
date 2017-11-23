@@ -2,44 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tedyin.me/2016/04/11/auto-value/</loc>
-    
-    <lastmod>2016-04-12T01:31:45.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tedyin.me/2016/03/27/design-pattern-skills/</loc>
-    
-    <lastmod>2016-03-27T12:16:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tedyin.me/2016/03/20/adapter-pattern/</loc>
-    
-    <lastmod>2016-03-20T14:25:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tedyin.me/2016/03/13/singlton-pattern/</loc>
-    
-    <lastmod>2016-03-14T06:13:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tedyin.me/2016/02/27/solid-principles-in-ruby/</loc>
     
-    <lastmod>2016-03-10T06:28:04.000Z</lastmod>
+    <lastmod>2017-11-23T02:28:23.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/</loc>
     
-    <lastmod>2016-03-10T06:28:04.000Z</lastmod>
+    <lastmod>2017-11-23T02:28:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tedyin.me/2016/03/13/singlton-pattern/</loc>
+    
+    <lastmod>2017-11-23T02:28:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tedyin.me/2016/03/20/adapter-pattern/</loc>
+    
+    <lastmod>2017-11-23T02:28:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tedyin.me/2016/03/27/design-pattern-skills/</loc>
+    
+    <lastmod>2017-11-23T02:28:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tedyin.me/2016/04/11/auto-value/</loc>
+    
+    <lastmod>2017-11-23T02:28:12.000Z</lastmod>
     
   </url>
   

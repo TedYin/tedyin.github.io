@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tedyin.me/"/>
-  <updated>2016-04-12T01:31:45.000Z</updated>
+  <updated>2017-11-23T02:28:12.000Z</updated>
   <id>http://tedyin.me/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://tedyin.me/2016/04/11/auto-value/"/>
     <id>http://tedyin.me/2016/04/11/auto-value/</id>
     <published>2016-04-11T15:25:19.000Z</published>
-    <updated>2016-04-12T01:31:45.000Z</updated>
+    <updated>2017-11-23T02:28:12.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/04/11/auto-value/&quot;&gt;http://tedyin.me/2016/04/11/auto-value/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.github.io/2016/04/11/auto-value/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://tedyin.github.io/2016/04/11/auto-value/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在&lt;code&gt;Java&lt;/code&gt;中通常定义一个模型类时，需要定义一堆不同类型的成员变量，而且为了满足面向对象的基本特征，又要定义一堆相应的&lt;code&gt;Getter&lt;/code&gt;和&lt;code&gt;Setter&lt;/code&gt;等方法，这个过程是非常枯燥的要写一堆样板代码。虽然现在 IDE 可以很好的帮我们生成这些样板代码，但是如果看到一个模型类里面有这么一堆的方法，总觉是会觉得不够清晰。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -57,7 +57,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/04/11/auto-value/&quot;&gt;http://tedyin.me/2016/04/11/auto-value/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.github.io/2016/04/11/auto-value/&quot;&gt;http://tedyin.github.io/2016/04/11/auto-value/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在&lt;code&gt;Java&lt;/code&gt;中通常定义一个模型类时，需要定义一堆不同类型的成员变量，而且为了满足面向对象的基本特征，又要定义一堆相应的&lt;code&gt;Getter&lt;/code&gt;和&lt;code&gt;Setter&lt;/code&gt;等方法，这个过程是非常枯燥的要写一堆样板代码。虽然现在 IDE 可以很好的帮我们生成这些样板代码，但是如果看到一个模型类里面有这么一堆的方法，总觉是会觉得不够清晰。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -68,11 +68,11 @@
     </summary>
     
     
-      <category term="android" scheme="http://tedyin.me/tags/android/"/>
-    
       <category term="翻译" scheme="http://tedyin.me/tags/%E7%BF%BB%E8%AF%91/"/>
     
       <category term="java" scheme="http://tedyin.me/tags/java/"/>
+    
+      <category term="android" scheme="http://tedyin.me/tags/android/"/>
     
   </entry>
   
@@ -81,10 +81,10 @@
     <link href="http://tedyin.me/2016/03/27/design-pattern-skills/"/>
     <id>http://tedyin.me/2016/03/27/design-pattern-skills/</id>
     <published>2016-03-27T12:14:07.000Z</published>
-    <updated>2016-03-27T12:16:18.000Z</updated>
+    <updated>2017-11-23T02:28:19.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/27/design-pattern-skills/&quot;&gt;http://tedyin.me/2016/03/27/design-pattern-skills/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.github.io/2016/03/27/design-pattern-skills/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://tedyin.github.io/2016/03/27/design-pattern-skills/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;设计模式是什么&quot;&gt;&lt;a href=&quot;#设计模式是什么&quot; class=&quot;headerlink&quot; title=&quot;设计模式是什么&quot;&gt;&lt;/a&gt;设计模式是什么&lt;/h3&gt;&lt;p&gt;设计模式是对特定问题经过无数次的经验总结之后，提出的能够解决它的优雅的方案。&lt;/p&gt;
 &lt;h3 id=&quot;重构是什么&quot;&gt;&lt;a href=&quot;#重构是什么&quot; class=&quot;headerlink&quot; title=&quot;重构是什么&quot;&gt;&lt;/a&gt;重构是什么&lt;/h3&gt;&lt;p&gt;重构就是在不改变软件系统外部行为的前提下，改善它的内部结构。&lt;/p&gt;
@@ -115,7 +115,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/27/design-pattern-skills/&quot;&gt;http://tedyin.me/2016/03/27/design-pattern-skills/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.github.io/2016/03/27/design-pattern-skills/&quot;&gt;http://tedyin.github.io/2016/03/27/design-pattern-skills/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;设计模式是什么&quot;&gt;&lt;a href=&quot;#设计模式是什么&quot; class=&quot;headerlink&quot; title=&quot;设计模式是什么&quot;&gt;&lt;/a&gt;设计模式是什么&lt;/h3&gt;&lt;p&gt;设计模式是对特定问题经过无数次的经验总结之后，提出的能够解决它的优雅的方案。&lt;/p&gt;
 &lt;h3 id=&quot;重构是什么&quot;&gt;&lt;a href=&quot;#重构是什么&quot; class=&quot;headerlink&quot; title=&quot;重构是什么&quot;&gt;&lt;/a&gt;重构是什么&lt;/h3&gt;&lt;p&gt;重构就是在不改变软件系统外部行为的前提下，改善它的内部结构。&lt;/p&gt;
@@ -132,10 +132,10 @@
     <link href="http://tedyin.me/2016/03/20/adapter-pattern/"/>
     <id>http://tedyin.me/2016/03/20/adapter-pattern/</id>
     <published>2016-03-20T14:13:09.000Z</published>
-    <updated>2016-03-20T14:25:34.000Z</updated>
+    <updated>2017-11-23T02:28:20.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/20/adapter-pattern/&quot;&gt;http://tedyin.me/2016/03/20/adapter-pattern/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.github.io/2016/03/20/adapter-pattern/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://tedyin.github.io/2016/03/20/adapter-pattern/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;这次跟大家分享一下我对适配器模式的理解。&lt;/p&gt;
 &lt;p&gt;适配器模式的定义:&lt;/p&gt;
@@ -166,7 +166,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/20/adapter-pattern/&quot;&gt;http://tedyin.me/2016/03/20/adapter-pattern/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.github.io/2016/03/20/adapter-pattern/&quot;&gt;http://tedyin.github.io/2016/03/20/adapter-pattern/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;这次跟大家分享一下我对适配器模式的理解。&lt;/p&gt;
 &lt;p&gt;适配器模式的定义:&lt;/p&gt;
@@ -193,10 +193,10 @@
     <link href="http://tedyin.me/2016/03/13/singlton-pattern/"/>
     <id>http://tedyin.me/2016/03/13/singlton-pattern/</id>
     <published>2016-03-13T06:47:18.000Z</published>
-    <updated>2016-03-14T06:13:47.000Z</updated>
+    <updated>2017-11-23T02:28:21.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/13/singlton-pattern/&quot;&gt;http://tedyin.me/2016/03/13/singlton-pattern/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.github.io/2016/03/13/singlton-pattern/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://tedyin.github.io/2016/03/13/singlton-pattern/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;今天给大家介绍一下&lt;code&gt;单例模式&lt;/code&gt;,就是这个出场率特别高的模式，是个程序员基本都用过他，没用过至少也都知道他。可是我们真的了解他吗？&lt;/p&gt;
 &lt;p&gt;单例模式通常的实现方式分为以下两种：&lt;/p&gt;
@@ -229,7 +229,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/13/singlton-pattern/&quot;&gt;http://tedyin.me/2016/03/13/singlton-pattern/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.github.io/2016/03/13/singlton-pattern/&quot;&gt;http://tedyin.github.io/2016/03/13/singlton-pattern/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;今天给大家介绍一下&lt;code&gt;单例模式&lt;/code&gt;,就是这个出场率特别高的模式，是个程序员基本都用过他，没用过至少也都知道他。可是我们真的了解他吗？&lt;/p&gt;
 &lt;p&gt;单例模式通常的实现方式分为以下两种：&lt;/p&gt;
@@ -251,10 +251,10 @@
     <link href="http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/"/>
     <id>http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/</id>
     <published>2016-03-06T09:58:43.000Z</published>
-    <updated>2016-03-10T06:28:04.000Z</updated>
+    <updated>2017-11-23T02:28:22.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://brewhouse.io/2016/02/26/five-practices-for-robust-ruby-on-rails-applications.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文链接: Five Practices for Robust Ruby on Rails Applications&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&quot;&gt;http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://brewhouse.io/2016/02/26/five-practices-for-robust-ruby-on-rails-applications.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文链接: Five Practices for Robust Ruby on Rails Applications&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;无论什么时候，当我发现项目里面存在 bug 或者数据不一致，但却又很难找到是哪里出了问题时，我总是会感叹：“他们(the developer)只需要再多敲几下键盘，这些事情就不会发生了。”&lt;/p&gt;
 &lt;p&gt;在&lt;a href=&quot;http://brewhouse.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Brewhouse&lt;/a&gt;的工作中，我们会应用下面5种最佳实践，让我们的 Rails 应用更加健壮。因为这些方法可以让代码在遇到问题时，可以尽早地、明确地、快速地的抛出问题，告诉我们哪里出错了。我们可以通过捕捉这些错误信息来确保我们所有的数据和操作都是正确有效的。&lt;/p&gt;
@@ -280,7 +280,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://brewhouse.io/2016/02/26/five-practices-for-robust-ruby-on-rails-applications.html&quot;&gt;原文链接: Five Practices for Robust Ruby on Rails Applications&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&quot;&gt;http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://brewhouse.io/2016/02/26/five-practices-for-robust-ruby-on-rails-applications.html&quot;&gt;原文链接: Five Practices for Robust Ruby on Rails Applications&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&quot;&gt;http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;无论什么时候，当我发现项目里面存在 bug 或者数据不一致，但却又很难找到是哪里出了问题时，我总是会感叹：“他们(the developer)只需要再多敲几下键盘，这些事情就不会发生了。”&lt;/p&gt;
 &lt;p&gt;在&lt;a href=&quot;http://brewhouse.io/&quot;&gt;Brewhouse&lt;/a&gt;的工作中，我们会应用下面5种最佳实践，让我们的 Rails 应用更加健壮。因为这些方法可以让代码在遇到问题时，可以尽早地、明确地、快速地的抛出问题，告诉我们哪里出错了。我们可以通过捕捉这些错误信息来确保我们所有的数据和操作都是正确有效的。&lt;/p&gt;
@@ -299,10 +299,10 @@
     <link href="http://tedyin.me/2016/02/27/solid-principles-in-ruby/"/>
     <id>http://tedyin.me/2016/02/27/solid-principles-in-ruby/</id>
     <published>2016-02-27T15:27:00.000Z</published>
-    <updated>2016-03-10T06:28:04.000Z</updated>
+    <updated>2017-11-23T02:28:23.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://eftimov.net/solid-principles&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文链接: SOLID Principles in Ruby&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/02/27/solid-principles-in-ruby/&quot;&gt;http://tedyin.me/2016/02/27/solid-principles-in-ruby/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://eftimov.net/solid-principles&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文链接: SOLID Principles in Ruby&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.github.io/2016/02/27/solid-principles-in-ruby/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://tedyin.github.io/2016/02/27/solid-principles-in-ruby/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;作为一名程序员无论你的水平高低，你都会想写出一手优秀的代码，但是想写优秀的代码并不容易，因此怎样才能提高我们的代码质量呢？下面来看下我们今天的主角 &lt;code&gt;SOLID 原则&lt;/code&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;SOLID-原则是什么&quot;&gt;&lt;a href=&quot;#SOLID-原则是什么&quot; class=&quot;headerlink&quot; title=&quot;SOLID 原则是什么&quot;&gt;&lt;/a&gt;SOLID 原则是什么&lt;/h2&gt;&lt;p&gt;SOLID 不是一个原则，他是一组面向对象设计原则的简称，他代表下面5种设计原则:&lt;/p&gt;
@@ -382,7 +382,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://eftimov.net/solid-principles&quot;&gt;原文链接: SOLID Principles in Ruby&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.me/2016/02/27/solid-principles-in-ruby/&quot;&gt;http://tedyin.me/2016/02/27/solid-principles-in-ruby/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://eftimov.net/solid-principles&quot;&gt;原文链接: SOLID Principles in Ruby&lt;/a&gt;&lt;br&gt;转载请注明出处：&lt;a href=&quot;http://tedyin.github.io/2016/02/27/solid-principles-in-ruby/&quot;&gt;http://tedyin.github.io/2016/02/27/solid-principles-in-ruby/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;作为一名程序员无论你的水平高低，你都会想写出一手优秀的代码，但是想写优秀的代码并不容易，因此怎样才能提高我们的代码质量呢？下面来看下我们今天的主角 &lt;code&gt;SOLID 原则&lt;/code&gt;&lt;br&gt;
     
