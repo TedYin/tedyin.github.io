@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tedyin.me/about/index.html</loc>
+    
+    <lastmod>2017-11-23T03:43:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tedyin.me/categories/index.html</loc>
+    
+    <lastmod>2017-11-23T03:21:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tedyin.me/tags/index.html</loc>
+    
+    <lastmod>2017-11-23T03:17:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tedyin.me/2016/02/27/solid-principles-in-ruby/</loc>
     
     <lastmod>2017-11-23T02:28:23.000Z</lastmod>
