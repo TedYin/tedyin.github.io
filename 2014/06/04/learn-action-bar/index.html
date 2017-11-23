@@ -81,35 +81,18 @@
 
 
 
-<meta name="description" content="#ActionBar OverviewActionBar有如下几个特点:
-
-ActionBar 是android系统提供专门用来应用导行功能的一个控件
-提供一种非常便捷和高效的导航方式
-支持不同页面间的导航功能切换
-
-是android在3.0时添加的一个重要组件。它可以通过support library的形式被集成到2.1及其以上的版本中使用。">
+<meta name="description" content="#ActionBar OverviewActionBar有如下几个特点:  ActionBar 是android系统提供专门用来应用导行功能的一个控件 提供一种非常便捷和高效的导航方式 支持不同页面间的导航功能切换  是android在3.0时添加的一个重要组件。它可以通过support library的形式被集成到2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn ActionBar">
-<meta property="og:url" content="http://tedyin.me/2014/06/04/learn-action-bar/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="#ActionBar OverviewActionBar有如下几个特点:
-
-ActionBar 是android系统提供专门用来应用导行功能的一个控件
-提供一种非常便捷和高效的导航方式
-支持不同页面间的导航功能切换
-
-是android在3.0时添加的一个重要组件。它可以通过support library的形式被集成到2.1及其以上的版本中使用。">
+<meta property="og:url" content="http://tedyin.github.io/2014/06/04/learn-action-bar/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
+<meta property="og:description" content="#ActionBar OverviewActionBar有如下几个特点:  ActionBar 是android系统提供专门用来应用导行功能的一个控件 提供一种非常便捷和高效的导航方式 支持不同页面间的导航功能切换  是android在3.0时添加的一个重要组件。它可以通过support library的形式被集成到2.1及其以上的版本中使用。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/201406090916.png">
 <meta property="og:updated_time" content="2016-02-29T09:35:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn ActionBar">
-<meta name="twitter:description" content="#ActionBar OverviewActionBar有如下几个特点:
-
-ActionBar 是android系统提供专门用来应用导行功能的一个控件
-提供一种非常便捷和高效的导航方式
-支持不同页面间的导航功能切换
-
-是android在3.0时添加的一个重要组件。它可以通过support library的形式被集成到2.1及其以上的版本中使用。">
+<meta name="twitter:description" content="#ActionBar OverviewActionBar有如下几个特点:  ActionBar 是android系统提供专门用来应用导行功能的一个控件 提供一种非常便捷和高效的导航方式 支持不同页面间的导航功能切换  是android在3.0时添加的一个重要组件。它可以通过support library的形式被集成到2.1及其以上的版本中使用。">
 <meta name="twitter:image" content="http://7xii1s.com1.z0.glb.clouddn.com/201406090916.png">
 
 
@@ -140,7 +123,7 @@ ActionBar 是android系统提供专门用来应用导行功能的一个控件
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2014/06/04/learn-action-bar/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2014/06/04/learn-action-bar/"/>
 
 
 
@@ -273,7 +256,7 @@ ActionBar 是android系统提供专门用来应用导行功能的一个控件
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2014/06/04/learn-action-bar/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2014/06/04/learn-action-bar/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -324,6 +307,37 @@ ActionBar 是android系统提供专门用来应用导行功能的一个控件
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -350,7 +364,7 @@ ActionBar 是android系统提供专门用来应用导行功能的一个控件
 <p>#ActionBar Use<br>下面主要介绍一下使用support v7 library中的ActionBar。</p>
 <p>###Add ActionBar</p>
 <ol>
-<li>先<a href="http://developer.android.com/tools/support-library/setup.html" target="_blank" rel="external">导入v7包</a>.</li>
+<li>先<a href="http://developer.android.com/tools/support-library/setup.html" target="_blank" rel="noopener">导入v7包</a>.</li>
 <li>你的Activity必须继承自ActionBarActivity</li>
 <li>在你的应用中使用Theme.AppComapt主题或者使用继承自Theme.AppCompat主题的自定义。</li>
 </ol>
@@ -402,7 +416,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
 <ul>
 <li>给<code>&lt;application&gt;</code>标签添加属性 <code>uiOptions=&quot;splitActionBarWhenNarrow&quot;</code>,使得所有的Activity都应用Split Action Bar或者给某些指定的<code>&lt;activity&gt;</code>标签添加该属性，指定某几个Activity应用Split Action Bar。这个属性只能用于API level 14及其以上，如果想对其以下的版本进行兼容，需要在<code>&lt;activity&gt;</code>标签下使用<code>&lt;meta-data&gt;</code>标签来指定</li>
 </ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">...</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta-data</span></span><br><span class="line">        <span class="attr">android:name</span>=<span class="string">"android.support.UI_OPTIONS"</span></span><br><span class="line">        <span class="attr">android:value</span>=<span class="string">"splitActionBarWhenNarrow"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">...</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta-data</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:name</span>=<span class="string">"android.support.UI_OPTIONS"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:value</span>=<span class="string">"splitActionBarWhenNarrow"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>如果Activity使用了该属性，并且对于ActionBar上的icon和title分别使用<code>setDisplayShowHomeEnable(false)</code>和<code>setDisplayShowTitleEnable(false)</code>进行隐藏，那那么在有tab的情况下，main ActionBar也会被自动隐藏，效果如上图中第2~3图。</p>
 <p>###Navigating Up with the App Icon<br>Navigating Up返回到上一级Activity，有两种方法：</p>
 <ol>

@@ -81,28 +81,18 @@
 
 
 
-<meta name="description" content="有了对ES的基本概念后,下面要做的就是了解如何与ES进行交流,ES非常贴心的提供了一套REST API让大家与他进行交流.这些API能做的事情包括以下几点
-
-检查你的集群,节点以及索引的状态信息
-管理你的集群,节点以及索引等的数据
-执行高级的搜索操作等总之有了这套REST API你几乎可以让ES干它所能干的所有事.">
+<meta name="description" content="有了对ES的基本概念后,下面要做的就是了解如何与ES进行交流,ES非常贴心的提供了一套REST API让大家与他进行交流.这些API能做的事情包括以下几点  检查你的集群,节点以及索引的状态信息 管理你的集群,节点以及索引等的数据 执行高级的搜索操作等总之有了这套REST API你几乎可以让ES干它所能干的所有事.">
+<meta name="keywords" content="elasticsearch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Elasticsearch CRUD">
-<meta property="og:url" content="http://tedyin.me/2016/01/25/elasticsearch-crud/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="有了对ES的基本概念后,下面要做的就是了解如何与ES进行交流,ES非常贴心的提供了一套REST API让大家与他进行交流.这些API能做的事情包括以下几点
-
-检查你的集群,节点以及索引的状态信息
-管理你的集群,节点以及索引等的数据
-执行高级的搜索操作等总之有了这套REST API你几乎可以让ES干它所能干的所有事.">
+<meta property="og:url" content="http://tedyin.github.io/2016/01/25/elasticsearch-crud/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
+<meta property="og:description" content="有了对ES的基本概念后,下面要做的就是了解如何与ES进行交流,ES非常贴心的提供了一套REST API让大家与他进行交流.这些API能做的事情包括以下几点  检查你的集群,节点以及索引的状态信息 管理你的集群,节点以及索引等的数据 执行高级的搜索操作等总之有了这套REST API你几乎可以让ES干它所能干的所有事.">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-02-29T09:43:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Elasticsearch CRUD">
-<meta name="twitter:description" content="有了对ES的基本概念后,下面要做的就是了解如何与ES进行交流,ES非常贴心的提供了一套REST API让大家与他进行交流.这些API能做的事情包括以下几点
-
-检查你的集群,节点以及索引的状态信息
-管理你的集群,节点以及索引等的数据
-执行高级的搜索操作等总之有了这套REST API你几乎可以让ES干它所能干的所有事.">
+<meta name="twitter:description" content="有了对ES的基本概念后,下面要做的就是了解如何与ES进行交流,ES非常贴心的提供了一套REST API让大家与他进行交流.这些API能做的事情包括以下几点  检查你的集群,节点以及索引的状态信息 管理你的集群,节点以及索引等的数据 执行高级的搜索操作等总之有了这套REST API你几乎可以让ES干它所能干的所有事.">
 
 
 
@@ -132,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2016/01/25/elasticsearch-crud/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2016/01/25/elasticsearch-crud/"/>
 
 
 
@@ -265,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2016/01/25/elasticsearch-crud/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2016/01/25/elasticsearch-crud/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -316,6 +306,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -337,7 +358,7 @@
 <li>检查你的集群,节点以及索引的状态信息</li>
 <li>管理你的集群,节点以及索引等的数据</li>
 <li>执行高级的搜索操作等<br>总之有了这套REST API你几乎可以让ES干它所能干的所有事.<a id="more"></a>
-<h2 id="状态查询API"><a href="#状态查询API" class="headerlink" title="状态查询API"></a>状态查询API</h2>可以使用<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat.html" target="_blank" rel="external">_cat API</a>去查询集群节点索引等的状态.</li>
+<h2 id="状态查询API"><a href="#状态查询API" class="headerlink" title="状态查询API"></a>状态查询API</h2>可以使用<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat.html" target="_blank" rel="noopener">_cat API</a>去查询集群节点索引等的状态.</li>
 </ul>
 <h3 id="查询集群健康状态"><a href="#查询集群健康状态" class="headerlink" title="查询集群健康状态"></a>查询集群健康状态</h3><ol>
 <li><code>clur localhost:9200/_cat/health?v</code>查看集群状态,返回结果里有一个<code>status</code>的状态,它有三个值<code>green</code>,<code>yellow</code>,<code>red</code></li>
@@ -402,7 +423,7 @@
 <p>与创建空索引成功的返回值一样,只返回这个?,是不是意味着ES并没有真正的删除索引内部的数据呢?而是对那些数据进行了标记,然后再以后创建新的索引的时候直接覆盖掉这些数据呢?这个需要进一步研究一下.</p>
 </blockquote>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>以上ES的REST API 都是按照下面的协议来定义的:<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X&lt;REST Verb&gt; &lt;Node&gt;<span class="symbol">:&lt;Port&gt;/&lt;Index&gt;/&lt;Type&gt;/&lt;ID&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html" target="_blank" rel="external">Elasticsearch Getting Started</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html" target="_blank" rel="noopener">Elasticsearch Getting Started</a></p>
 
       
     </div>

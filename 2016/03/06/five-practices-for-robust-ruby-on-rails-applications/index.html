@@ -81,22 +81,18 @@
 
 
 
-<meta name="description" content="原文链接: Five Practices for Robust Ruby on Rails Applications转载请注明出处：http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/
-
-无论什么时候，当我发现项目里面存在 bug 或者数据不一致，但却又很难找到是哪里出了问">
+<meta name="description" content="原文链接: Five Practices for Robust Ruby on Rails Applications转载请注明出处：http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/  无论什么">
+<meta name="keywords" content="翻译,ruby on rails">
 <meta property="og:type" content="article">
 <meta property="og:title" content="让你的Rails应用更加健壮的5种姿势『译』">
-<meta property="og:url" content="http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="原文链接: Five Practices for Robust Ruby on Rails Applications转载请注明出处：http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/
-
-无论什么时候，当我发现项目里面存在 bug 或者数据不一致，但却又很难找到是哪里出了问">
+<meta property="og:url" content="http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
+<meta property="og:description" content="原文链接: Five Practices for Robust Ruby on Rails Applications转载请注明出处：http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/  无论什么时候，当我发现项目里面存在 bug 或者数据不一致，但却又很难找到是哪里出了问">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-11-23T02:28:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="让你的Rails应用更加健壮的5种姿势『译』">
-<meta name="twitter:description" content="原文链接: Five Practices for Robust Ruby on Rails Applications转载请注明出处：http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/
-
-无论什么时候，当我发现项目里面存在 bug 或者数据不一致，但却又很难找到是哪里出了问">
+<meta name="twitter:description" content="原文链接: Five Practices for Robust Ruby on Rails Applications转载请注明出处：http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/  无论什么时候，当我发现项目里面存在 bug 或者数据不一致，但却又很难找到是哪里出了问">
 
 
 
@@ -126,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/"/>
 
 
 
@@ -259,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -310,6 +306,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -327,10 +354,10 @@
 
       
         <blockquote>
-<p><a href="http://brewhouse.io/2016/02/26/five-practices-for-robust-ruby-on-rails-applications.html" target="_blank" rel="external">原文链接: Five Practices for Robust Ruby on Rails Applications</a><br>转载请注明出处：<a href="http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/" target="_blank" rel="external">http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/</a></p>
+<p><a href="http://brewhouse.io/2016/02/26/five-practices-for-robust-ruby-on-rails-applications.html" target="_blank" rel="noopener">原文链接: Five Practices for Robust Ruby on Rails Applications</a><br>转载请注明出处：<a href="http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/">http://tedyin.github.io/2016/03/06/five-practices-for-robust-ruby-on-rails-applications/</a></p>
 </blockquote>
 <p>无论什么时候，当我发现项目里面存在 bug 或者数据不一致，但却又很难找到是哪里出了问题时，我总是会感叹：“他们(the developer)只需要再多敲几下键盘，这些事情就不会发生了。”</p>
-<p>在<a href="http://brewhouse.io/" target="_blank" rel="external">Brewhouse</a>的工作中，我们会应用下面5种最佳实践，让我们的 Rails 应用更加健壮。因为这些方法可以让代码在遇到问题时，可以尽早地、明确地、快速地的抛出问题，告诉我们哪里出错了。我们可以通过捕捉这些错误信息来确保我们所有的数据和操作都是正确有效的。</p>
+<p>在<a href="http://brewhouse.io/" target="_blank" rel="noopener">Brewhouse</a>的工作中，我们会应用下面5种最佳实践，让我们的 Rails 应用更加健壮。因为这些方法可以让代码在遇到问题时，可以尽早地、明确地、快速地的抛出问题，告诉我们哪里出错了。我们可以通过捕捉这些错误信息来确保我们所有的数据和操作都是正确有效的。</p>
 <a id="more"></a>
 <h2 id="使用-Hash-fetch-方法去处理‘有问题’的-hash-对象"><a href="#使用-Hash-fetch-方法去处理‘有问题’的-hash-对象" class="headerlink" title="使用 Hash#fetch 方法去处理‘有问题’的 hash 对象"></a>使用 Hash#fetch 方法去处理‘有问题’的 hash 对象</h2><p><code>unexpected method &#39;upcase&#39; for nil…</code> 这样的错误，我们经常会遇到。无论什么时候当你去遍历一个<code>hash</code>对象，如果你希望这个<code>hash</code>对象中所有的<code>key</code>都存在，你最好是使用<code>fetch</code>方法去代替<code>[]</code>方法。<code>fetch()</code>方法在遇到<code>key</code>不存在的情况时会抛出异常，因此你就无法再传入一个有问题的<code>hash</code>对象了，也就不可能出现一些奇怪的 bug 了。</p>
 <h2 id="使用-case-…-else-raise-去捕获异常数据"><a href="#使用-case-…-else-raise-去捕获异常数据" class="headerlink" title="使用 case … else raise 去捕获异常数据"></a>使用 case … else raise 去捕获异常数据</h2><p>最好是在所有的<code>case</code>条件选择语句中加入<code>else raise</code>语句，来处理一些你预想之外的情况。当你的方法接收到一些你预想之外的数据时，<strong>我想你肯定是想知道这些是什么数据，而不是说忽略这些数据，而让代码继续执行</strong>。因此建议使用<code>case ... else raise</code>!</p>
@@ -340,13 +367,13 @@
 <blockquote>
 <p>译者注：确实如此，曾经有一次我在处理数据的时候，就是没有注意这些导致造成了数据破坏，幸亏当时的数据有备份，才没有导致大的问题。</p>
 </blockquote>
-<h2 id="使用-ActiveRecord-的-validate-相关方法来动态校验你的数据"><a href="#使用-ActiveRecord-的-validate-相关方法来动态校验你的数据" class="headerlink" title="使用 ActiveRecord 的 validate 相关方法来动态校验你的数据"></a>使用 ActiveRecord 的 validate 相关方法来动态校验你的数据</h2><p>使用 ActiveRecord 的 validate 相关的方法，并且使用带有<code>!</code>的方法来做校验方法，将会是一个很好的方式去确保你在持久化数据时不会出错。举个例子：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Post</span> &lt; ActiveRecord::Model</span></span><br><span class="line">  validates <span class="symbol">:author</span>, <span class="symbol">:blog</span>, <span class="symbol">presence:</span> <span class="keyword">true</span></span><br><span class="line">  validates <span class="symbol">:published_by</span>, <span class="symbol">presence:</span> <span class="keyword">true</span>, <span class="symbol">if:</span> <span class="symbol">:published?</span></span><br><span class="line">  validates <span class="symbol">:comment_count</span>, <span class="symbol">numericality:</span> &#123; <span class="symbol">greater_or_equal_to:</span> <span class="number">0</span> &#125;</span><br><span class="line">  <span class="comment"># ...</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="使用-ActiveRecord-的-validate-相关方法来动态校验你的数据"><a href="#使用-ActiveRecord-的-validate-相关方法来动态校验你的数据" class="headerlink" title="使用 ActiveRecord 的 validate 相关方法来动态校验你的数据"></a>使用 ActiveRecord 的 validate 相关方法来动态校验你的数据</h2><p>使用 ActiveRecord 的 validate 相关的方法，并且使用带有<code>!</code>的方法来做校验方法，将会是一个很好的方式去确保你在持久化数据时不会出错。举个例子：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Post</span> &lt; ActiveRecord::Model</span></span><br><span class="line">  validates <span class="symbol">:author</span>, <span class="symbol">:blog</span>, <span class="symbol">presence:</span> <span class="literal">true</span></span><br><span class="line">  validates <span class="symbol">:published_by</span>, <span class="symbol">presence:</span> <span class="literal">true</span>, <span class="symbol">if:</span> <span class="symbol">:published?</span></span><br><span class="line">  validates <span class="symbol">:comment_count</span>, <span class="symbol">numericality:</span> &#123; <span class="symbol">greater_or_equal_to:</span> <span class="number">0</span> &#125;</span><br><span class="line">  <span class="comment"># ...</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="使用数据库约束来确保你的数据的一致性"><a href="#使用数据库约束来确保你的数据的一致性" class="headerlink" title="使用数据库约束来确保你的数据的一致性"></a>使用数据库约束来确保你的数据的一致性</h2><p>你的数据库是你最好的朋友，他能够帮你保存你的数据，并且确保你的数据不出现重复和“孤儿记录”的问题。</p>
 <p>一般情况下，你应该为你的数据库中的大多数字段设置他们默认不为空，也就是<code>null: false</code>。<br>你是否知道 Rails 中的 <code>has_one</code> 约束，在数据的创建时不会起到唯一性约束作用呢？</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Account</span></span></span><br><span class="line">  has_one <span class="symbol">:account_settings</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">account = Account.create!</span><br><span class="line">account.create_account_settings!</span><br><span class="line">account.create_account_settings!</span><br><span class="line">account.create_account_settings!</span><br><span class="line"></span><br><span class="line">account.account_settings</span><br><span class="line"> <span class="comment"># =&gt; one of the three account settings you've created... -_-</span></span><br></pre></td></tr></table></figure>
-<p>如果想让你的数据不出现重复，最好的方式是给你的数据添加唯一索引。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_index <span class="symbol">:account_settings</span>, <span class="symbol">:account_id</span>, <span class="symbol">unique:</span> <span class="keyword">true</span></span><br></pre></td></tr></table></figure></p>
+<p>如果想让你的数据不出现重复，最好的方式是给你的数据添加唯一索引。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_index <span class="symbol">:account_settings</span>, <span class="symbol">:account_id</span>, <span class="symbol">unique:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
 <p>这样做之后，如果你尝试去创建重复的记录时，数据库就会抛出异常，去阻止你创建重复数据。</p>
-<p>我们每一个人都不会想存储一些“孤儿记录”在数据库中。但是如何去解决这些“孤儿记录”呢？使用外键是可以很好的帮你解决这个问题，在这里我推荐大家使用<a href="https://github.com/SchemaPlus/schema_auto_foreign_keys" target="_blank" rel="external">schema_auto_foreign_keys</a>这个 gem 去为你的相关的表自动添加外键约束。</p>
+<p>我们每一个人都不会想存储一些“孤儿记录”在数据库中。但是如何去解决这些“孤儿记录”呢？使用外键是可以很好的帮你解决这个问题，在这里我推荐大家使用<a href="https://github.com/SchemaPlus/schema_auto_foreign_keys" target="_blank" rel="noopener">schema_auto_foreign_keys</a>这个 gem 去为你的相关的表自动添加外键约束。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>多写几个字母就可以帮我们避免处理数据不一致的麻烦问题，也会大大减少我们代码的 bug 率，提高我们的工作效率。记住，使用<code>!</code>，<code>raise</code>，<code>validate</code>和<code>数据库约束</code>去强化你的代码，使你的代码更加强壮。你的同事会感谢你，说不定以后当你在次翻看你的代码的时，你会觉得当时做的真好，让你在后来避免了很多不必要的麻烦。</p>
 
       

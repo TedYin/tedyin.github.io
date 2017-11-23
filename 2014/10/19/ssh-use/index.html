@@ -81,12 +81,13 @@
 
 
 
-<meta name="description" content="什么是SSHSSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。">
+<meta name="description" content="什么是SSHSSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSH的原理与使用">
-<meta property="og:url" content="http://tedyin.me/2014/10/19/ssh-use/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:url" content="http://tedyin.github.io/2014/10/19/ssh-use/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
 <meta property="og:description" content="什么是SSHSSH是Secure Shell的简称，是由IEFT网络工作组制定，用来为远程登录等网路服务提供一种安全的信息传输协议。最初是用于Unix平台，现在各个平台上都可以使用SSH协议程序进行信息传输。SSH只是一种协议，针对这种协议的实现有很多个版本，有商业化闭源的实现也有开源的实现，OpenSSH就是著名的开源SSH实现。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-02-29T09:31:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSH的原理与使用">
@@ -120,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2014/10/19/ssh-use/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2014/10/19/ssh-use/"/>
 
 
 
@@ -253,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2014/10/19/ssh-use/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2014/10/19/ssh-use/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -304,6 +305,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -342,7 +374,7 @@
 <figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//ssh -P port <span class="string">[username]</span>@<span class="string">[server ip/domain]</span></span><br><span class="line"></span><br><span class="line">ssh -P <span class="number">2222</span> user@server.com</span><br></pre></td></tr></table></figure>
 <p>SSH的默认端口号是22，可以通过<code>-P</code>参数来指定端口号。</p>
 <p>SSH登录时的默认端口是22，如果服务端根据自身需要，要求客户端使用别的端口(例如2222)进行登录时，我们可以在客户端使用-P参数来指定登录端口</p>
-<p>##参考<br><a href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html" target="_blank" rel="external">ssh原理以及使用</a></p>
+<p>##参考<br><a href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html" target="_blank" rel="noopener">ssh原理以及使用</a></p>
 
       
     </div>

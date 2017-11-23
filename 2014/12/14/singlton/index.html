@@ -84,9 +84,10 @@
 <meta name="description" content="单例模式大家应该已经很熟悉了，但是在使用单例模式的时候，我们经常会忽略一个问题，那就是多线程情况下的单例模式的使用。一般单例模式的实现会有下面两种，分别是懒汉式和饿汉式。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单例模式的使用">
-<meta property="og:url" content="http://tedyin.me/2014/12/14/singlton/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:url" content="http://tedyin.github.io/2014/12/14/singlton/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
 <meta property="og:description" content="单例模式大家应该已经很熟悉了，但是在使用单例模式的时候，我们经常会忽略一个问题，那就是多线程情况下的单例模式的使用。一般单例模式的实现会有下面两种，分别是懒汉式和饿汉式。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-02-29T09:30:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单例模式的使用">
@@ -120,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2014/12/14/singlton/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2014/12/14/singlton/"/>
 
 
 
@@ -253,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2014/12/14/singlton/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2014/12/14/singlton/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -304,6 +305,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -321,11 +353,11 @@
 
       
         <p>单例模式大家应该已经很熟悉了，但是在使用单例模式的时候，我们经常会忽略一个问题，那就是多线程情况下的单例模式的使用。一般单例模式的实现会有下面两种，分别是懒汉式和饿汉式。<br><a id="more"></a></p>
-<p>##懒汉式实现<br><figure class="highlight smali"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//懒汉式实现<span class="keyword"></span><br><span class="line">public</span> class Singleton&#123;</span><br><span class="line">   <span class="keyword"> private</span><span class="keyword"> static</span> Singleton<span class="built_in"> instance </span>= null;    </span><br><span class="line">   <span class="keyword"> private</span> Singleton()&#123;&#125;</span><br><span class="line">   <span class="keyword"> public</span><span class="keyword"> static</span> newInstance()&#123;</span><br><span class="line">        if(null == instance)&#123;</span><br><span class="line">           <span class="built_in"> instance </span>=<span class="built_in"> new </span>Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">       <span class="built_in"> return </span>instance;</span><br><span class="line">    &#125;</span><br><span class="line">   <span class="keyword"> public</span> void doSomething()&#123;</span><br><span class="line">        // Do something ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>##饿汉式<br><figure class="highlight smali"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//饿汉式<span class="keyword"></span><br><span class="line">public</span> class Singleton&#123;</span><br><span class="line">   <span class="keyword"> private</span><span class="keyword"> static</span> Singleton<span class="built_in"> instance </span>=<span class="built_in"> new </span>Singleton();</span><br><span class="line">   <span class="keyword"> private</span> Singleton()&#123;&#125;</span><br><span class="line">   <span class="keyword"> public</span><span class="keyword"> static</span> Singleton newInstance()&#123;</span><br><span class="line">       <span class="built_in"> return </span>instance;</span><br><span class="line">    &#125;</span><br><span class="line">   <span class="keyword"> public</span> void doSomething()&#123;</span><br><span class="line">        // Do something ...</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>##懒汉式实现<br><figure class="highlight smali"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//懒汉式实现</span><br><span class="line">public class Singleton&#123;</span><br><span class="line">   <span class="keyword"> private</span><span class="keyword"> static</span> Singleton<span class="built_in"> instance </span>= null;    </span><br><span class="line">   <span class="keyword"> private</span> Singleton()&#123;&#125;</span><br><span class="line">   <span class="keyword"> public</span><span class="keyword"> static</span> newInstance()&#123;</span><br><span class="line">        if(null == instance)&#123;</span><br><span class="line">           <span class="built_in"> instance </span>=<span class="built_in"> new </span>Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">       <span class="built_in"> return </span>instance;</span><br><span class="line">    &#125;</span><br><span class="line">   <span class="keyword"> public</span> void doSomething()&#123;</span><br><span class="line">        // Do something ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>##饿汉式<br><figure class="highlight smali"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//饿汉式</span><br><span class="line">public class Singleton&#123;</span><br><span class="line">   <span class="keyword"> private</span><span class="keyword"> static</span> Singleton<span class="built_in"> instance </span>=<span class="built_in"> new </span>Singleton();</span><br><span class="line">   <span class="keyword"> private</span> Singleton()&#123;&#125;</span><br><span class="line">   <span class="keyword"> public</span><span class="keyword"> static</span> Singleton newInstance()&#123;</span><br><span class="line">       <span class="built_in"> return </span>instance;</span><br><span class="line">    &#125;</span><br><span class="line">   <span class="keyword"> public</span> void doSomething()&#123;</span><br><span class="line">        // Do something ...</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>懒汉式和饿汉式的最大区别就是加载单例的时机的不同，也就是说空间和时间的问题。懒汉式是用空间换时间的典型，相反的饿汉式就是使用时间换空间的典型，上面的例子只是举了一个很简单的情况，假如这个单例对象很大非常占用内存，那么选择上述两种方式就会有很大的不同，要根据情况而确定到底使用哪一种。</p>
 <p>但是不论选择上面的哪一种都会有一个问题那就是在多线程的情况下，如果是首次加载单例，就会出现生成多个单例的情况，这样如果是生成一个很大的单例对象的时候，加入这个单例对象的构造过程很复杂很耗时，那么在多线程情况下就会很容易出错，而且很耗内存，那么如何使用线程安全的单例模式呢？我们可以使用JVM自身来加载我们的单例模式，这样JVM自身在Load类的时候是线程安全的，因此我们可以利用这点写出线程安全的类。</p>
-<p>##线程安全的类<br><figure class="highlight cs"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Singleton</span>&#123;</span><br><span class="line">    <span class="comment">//内部类，在装载该内部类时才会去创建单利对象</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">SingletonHolder</span>&#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">newInstance</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> SingletonHolder.instance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//do something</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>利用JVM自身的特性之后，我们就再也不用担心多线程下单例模式的加载问题了。</p>
+<p>##线程安全的类<br><figure class="highlight cpp"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span>&#123;</span></span><br><span class="line">    <span class="comment">//内部类，在装载该内部类时才会去创建单利对象</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonHolder</span>&#123;</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">newInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> SingletonHolder.instance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//do something</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>利用JVM自身的特性之后，我们就再也不用担心多线程下单例模式的加载问题了。</p>
 
       
     </div>

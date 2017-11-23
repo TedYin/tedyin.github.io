@@ -84,9 +84,10 @@
 <meta name="description" content="在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android HttpURLConnection VS HttpClient">
-<meta property="og:url" content="http://tedyin.me/2014/12/22/httpclient-urlconnection/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:url" content="http://tedyin.github.io/2014/12/22/httpclient-urlconnection/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
 <meta property="og:description" content="在Android中提供了两种Http操作的封装，一种使用HttpURLConnection去进行网络操作，另外一种是使用HttpClient进行网络操作的处理，这两者在Android中共存，但是官方建议使用HttpURLConnection来进行网络处理。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-02-29T09:30:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android HttpURLConnection VS HttpClient">
@@ -120,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2014/12/22/httpclient-urlconnection/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2014/12/22/httpclient-urlconnection/"/>
 
 
 
@@ -253,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2014/12/22/httpclient-urlconnection/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2014/12/22/httpclient-urlconnection/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -304,6 +305,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -327,7 +359,7 @@
 <figure class="highlight gradle"><figcaption><span>lang: java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> enableHttpResponseCache()&#123;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">		<span class="keyword">long</span> httpCacheSize = <span class="number">10</span> * <span class="number">1024</span> * <span class="number">1024</span>; <span class="comment">// 10 MiB</span></span><br><span class="line">	    <span class="keyword">File</span> httpCacheDir = <span class="keyword">new</span> <span class="keyword">File</span>(getCacheDir(), <span class="string">"http"</span>);</span><br><span class="line">	    <span class="keyword">Class</span>.forName(<span class="string">"android.net.http.HttpResponseCache"</span>)</span><br><span class="line">	        .getMethod(<span class="string">"install"</span>, <span class="keyword">File</span>.<span class="keyword">class</span>, <span class="keyword">long</span>.<span class="keyword">class</span>)</span><br><span class="line">	        .invoke(<span class="keyword">null</span>, httpCacheDir, httpCacheSize);</span><br><span class="line">	&#125;cache(Exception httpResponseCacheNotAvailable)&#123;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在客户端配置好缓存处理后，同样需要在服务端进行配置支持HttpCache，否则Cache是不会生效的。<br>在2.3以及以后的版本中，HttpURLConnection默认是支持<code>Accept-Type:gzip</code>的，只需要在服务端配置一下即可，在消息传输和获取的过程中使用压缩数据进行传输，这样会更加快速的传递数据，而且省电省流量。但是如果服务端支持gzip格式数据传输，那么在使用<code>getContentLength()</code>方法获取的就是压缩后的数据大小，这一定要注意。</p>
 <p>##到底使用哪一个？<br>上面已经说的很明确了，在2.3版本之前使用HttpClient进行网络请求，在FROYO版本之后使用HttpURLConnection进行网络请求，因为2.3以前的版本市场份额已经很小很小了，所以在以后的开发中可以略去选择直接使用HttpURLConnection进行网络操作，而且Android官方也会持续改进HttpURLConnection在Android中的性能。</p>
-<p>##参考<br>(参考)[<a href="http://android-developers.blogspot.tw/2011/09/androids-http-clients.html" target="_blank" rel="external">http://android-developers.blogspot.tw/2011/09/androids-http-clients.html</a>]</p>
+<p>##参考<br>(参考)[<a href="http://android-developers.blogspot.tw/2011/09/androids-http-clients.html" target="_blank" rel="noopener">http://android-developers.blogspot.tw/2011/09/androids-http-clients.html</a>]</p>
 
       
     </div>

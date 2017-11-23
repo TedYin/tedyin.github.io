@@ -81,19 +81,17 @@
 
 
 
-<meta name="description" content="##Log4J是什么？
-Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对">
+<meta name="description" content="##Log4J是什么？ Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Log4J介绍">
-<meta property="og:url" content="http://tedyin.me/2014/10/12/log4j/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="##Log4J是什么？
-Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对">
+<meta property="og:url" content="http://tedyin.github.io/2014/10/12/log4j/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
+<meta property="og:description" content="##Log4J是什么？ Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-02-29T09:31:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Log4J介绍">
-<meta name="twitter:description" content="##Log4J是什么？
-Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对">
+<meta name="twitter:description" content="##Log4J是什么？ Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定义日志的收集过程，和收集粒度，以及收集后日志的输出位置，可以输出到控制台，文件，数据库，甚至是远程服务器，这些操作仅仅只需要通过Log4J的配置文件进行定义后便可实现，是一个非常而且强大的日志收集库。除此之外，Log4J提供多语言兼容，可以在Java，Python，.Net等语言环境下的服务器中使用，可以对">
 
 
 
@@ -123,7 +121,7 @@ Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2014/10/12/log4j/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2014/10/12/log4j/"/>
 
 
 
@@ -256,7 +254,7 @@ Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2014/10/12/log4j/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2014/10/12/log4j/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -306,6 +304,37 @@ Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
           
 
           
@@ -379,14 +408,14 @@ Log4J是Apache基金会下一个开源的日志管理项目，可以高度自定
 <p>####file logger<br>log4j.appender.file=org.apache.log4j.FileAppender // 定义Appender<br>log4j.appender.file.File=log.txt<br>log4j.appender.file.layout=org.apache.log4j.PatternLayout // 定义Layout<br>log4j.appender.file.layout.ConversionPattern=%d-[TS] %p %t %c - %m%n// 自定义Layout格式</p>
 <p>####Error log<br>log4j.errorLog=ERROR, errorLog</p>
 <p>####errorLog logger<br>log4j.appender.errorLog=org.apache.log4j.FileAppender<br>log4j.appender.errorLog.File=errorLog.txt<br>log4j.appender.errorLog.layout=org.apache.log4j.PatternLayout<br>log4j.appender.errorLog.layout.ConversionPattern=%d-[TS] %p %t %c - %m%n</p>
-<p><em>详细的使用请参考Log4J的<a href="http://logging.apache.org/log4j/1.2/apidocs/" target="_blank" rel="external">API</a></em></p>
+<p><em>详细的使用请参考Log4J的<a href="http://logging.apache.org/log4j/1.2/apidocs/" target="_blank" rel="noopener">API</a></em></p>
 <p>##Log4J在程序中的应用</p>
 <ol>
 <li>先将log4j-xxx.jar导入工程中。</li>
 <li>新建log4j.properties配置文件，并加入配置。</li>
 <li>在程序中使用Log4J的API。</li>
 </ol>
-<p>##参考：<br><a href="http://blog.csdn.net/lyc557/article/details/3964459" target="_blank" rel="external">日志级别</a><br><a href="http://www.iteye.com/topic/158409" target="_blank" rel="external">Log4J的使用</a></p>
+<p>##参考：<br><a href="http://blog.csdn.net/lyc557/article/details/3964459" target="_blank" rel="noopener">日志级别</a><br><a href="http://www.iteye.com/topic/158409" target="_blank" rel="noopener">Log4J的使用</a></p>
 
       
     </div>

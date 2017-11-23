@@ -81,31 +81,18 @@
 
 
 
-<meta name="description" content="##Theme和Style的区别
-
-Theme是应用到一个Activity或者整个Application上的Style，而不是应用于某个View上，应用于某个View上的叫做Style。
-Theme是针对窗体级别，改变窗体样式的，Style是针对窗体中的UI控件的，用来控件或者Layout的样式。
-Theme和Style在定义的时候是一样的，都是定义在/res/values/目录下。
-每个&amp;lt;">
+<meta name="description" content="##Theme和Style的区别  Theme是应用到一个Activity或者整个Application上的Style，而不是应用于某个View上，应用于某个View上的叫做Style。 Theme是针对窗体级别，改变窗体样式的，Style是针对窗体中的UI控件的，用来控件或者Layout的样式。 Theme和Styl">
+<meta name="keywords" content="android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Theme And Style">
-<meta property="og:url" content="http://tedyin.me/2014/09/08/style-and-theme/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="##Theme和Style的区别
-
-Theme是应用到一个Activity或者整个Application上的Style，而不是应用于某个View上，应用于某个View上的叫做Style。
-Theme是针对窗体级别，改变窗体样式的，Style是针对窗体中的UI控件的，用来控件或者Layout的样式。
-Theme和Style在定义的时候是一样的，都是定义在/res/values/目录下。
-每个&amp;lt;">
+<meta property="og:url" content="http://tedyin.github.io/2014/09/08/style-and-theme/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
+<meta property="og:description" content="##Theme和Style的区别  Theme是应用到一个Activity或者整个Application上的Style，而不是应用于某个View上，应用于某个View上的叫做Style。 Theme是针对窗体级别，改变窗体样式的，Style是针对窗体中的UI控件的，用来控件或者Layout的样式。 Theme和Style在定义的时候是一样的，都是定义在/res/values/目录下。 每个&amp;lt;">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-02-29T09:41:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Theme And Style">
-<meta name="twitter:description" content="##Theme和Style的区别
-
-Theme是应用到一个Activity或者整个Application上的Style，而不是应用于某个View上，应用于某个View上的叫做Style。
-Theme是针对窗体级别，改变窗体样式的，Style是针对窗体中的UI控件的，用来控件或者Layout的样式。
-Theme和Style在定义的时候是一样的，都是定义在/res/values/目录下。
-每个&amp;lt;">
+<meta name="twitter:description" content="##Theme和Style的区别  Theme是应用到一个Activity或者整个Application上的Style，而不是应用于某个View上，应用于某个View上的叫做Style。 Theme是针对窗体级别，改变窗体样式的，Style是针对窗体中的UI控件的，用来控件或者Layout的样式。 Theme和Style在定义的时候是一样的，都是定义在/res/values/目录下。 每个&amp;lt;">
 
 
 
@@ -135,7 +122,7 @@ Theme和Style在定义的时候是一样的，都是定义在/res/values/目录�
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2014/09/08/style-and-theme/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2014/09/08/style-and-theme/"/>
 
 
 
@@ -268,7 +255,7 @@ Theme和Style在定义的时候是一样的，都是定义在/res/values/目录�
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2014/09/08/style-and-theme/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2014/09/08/style-and-theme/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -319,6 +306,37 @@ Theme和Style在定义的时候是一样的，都是定义在/res/values/目录�
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -348,9 +366,9 @@ Theme和Style在定义的时候是一样的，都是定义在/res/values/目录�
 </ul>
 <p>如果想自定义一个Style要从何下手呢？完全从头做起？那你就错了，在定义Style的时候，不需要从头做起，<br>只需要继承Android提供的Style，并且对你需要自定义的属性进行修改即可。</p>
 <p>例如：继承TextView的默认Style，并对其进行修改</p>
-<figure class="highlight xml"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">"GreenText"</span> <span class="attr">parent</span>=<span class="string">"@android:style/TextAppearance"</span>&gt;</span><span class="xml"></span><br><span class="line">        <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:textColor"</span>&gt;</span>#00FF00<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">"GreenText"</span> <span class="attr">parent</span>=<span class="string">"@android:style/TextAppearance"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:textColor"</span>&gt;</span>#00FF00<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>如果你想继承自己定义的Style，而不是系统默认的Style的话，你可以直接在自定义Style名后面加上“.”再<br>加新的属性名即可，不需要再去写<code>parent</code>。例如：创建一个新的Style并继承上面自定义的GreenText</p>
-<figure class="highlight xml"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">“GreenText.Big"</span>&gt;</span><span class="undefined"></span><br><span class="line">        &lt;item name="android:textSize”&gt;30sp&lt;/item&gt;</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">“GreenText.Big</span>"&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        &lt;item name="android:textSize”&gt;30sp&lt;/item&gt;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>##Style的属性（Properties）<br>从上面的介绍知道了如何自定义一个Style，你只需继承Android默认的Style并且重写其中你需要自定义的字<br>段，那么都有哪些自定义的字段是可以重写的呢？你可以从<code>R.attr</code>获得所有可以重写的属性信息。但是不是所<br>有的<code>R.attr</code>中的属性都适用于某个指定的View，你需要参考指定的View的属性信息来确定哪些信息是可以被<br>重写的。如果你给一个View指定了一些它不支持的属性，他会自动忽略这些属性。有些属性不适合于任何View，<br>他只对Window有效这些属性只能用作Theme的属性去使用，如何区分哪些是对View有效哪些对其无效呢？<br>在<code>R.attr</code>中所有以<code>Window</code>开头的属性都是对View无效的，只能用做Theme属性去使用，其余的可以<br>用View的属性。</p>
 <p>##Style的应用<br>应用Style的方式有两种:</p>
 <ol>
@@ -360,16 +378,16 @@ Theme和Style在定义的时候是一样的，都是定义在/res/values/目录�
 <p>当Style应用给一个View的时候，这个Style只会对这个View有效，如果这个View是一个ViewGroup的话，<br>那么也仅仅是对这个ViewGroup这个控件有效，对于ViewGroup内部的View是没有任何效果的。如果想对这<br>个ViewGroup中的所有View都有效的话，那么应该将这个Style当做Theme来使用，而非Style来使用。<br>(当Theme使用的意思就是将这个Style应用到这个ViewGroup所在的Activity或者整个Application)</p>
 <p>##Theme的选择<br>在选择使用什么样的Theme的时候，需要根据系统所支持的版本来确定，高版本的系统中会提供一些Theme是低<br>版本中不含有的。因此为了对各个版本兼容，Android在res目录下生成了多个values目录来提供对不同版本的<br>兼容。</p>
 <p>举例如下：<br>假如当前版本为3.0以下，我们可以在res/values目录下定义style.xml:</p>
-<figure class="highlight xml"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></span><br><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">     ···</span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">"LightThemeSelector"</span> <span class="attr">parent</span>=<span class="string">"android:Theme.Light”&gt;</span><br><span class="line">          ···</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">     ···</span><br><span class="line">&lt;/resources&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></span><br><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">     ···</span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">"LightThemeSelector"</span> <span class="attr">parent</span>=<span class="string">"android:Theme.Light”&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">          ···</span></span></span><br><span class="line"><span class="tag"><span class="string">    &lt;/style&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">     ···</span></span></span><br><span class="line"><span class="tag"><span class="string">&lt;/resources&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>假如当前版本为3.0~4.0之间我们可以在res/values-v11目录下定义style.xml:</p>
-<figure class="highlight xml"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></span><br><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">     ···</span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">"LightThemeSelector"</span> <span class="attr">parent</span>=<span class="string">“android:Theme.Holo.Light”</span>&gt;</span><span class="undefined"></span><br><span class="line">          ···</span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">     ···</span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></span><br><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">     ···</span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">"LightThemeSelector"</span> <span class="attr">parent</span>=<span class="string">“android:Theme.Holo.Light”</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">          ···</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">     ···</span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Holo主题是在API 11后提供的。如果在API 14以上，我们可以在res/values-v14目录下定义。<br>这样就可以很好的兼容多个版本，保持视觉上的统一。</p>
 <p>##如何去引用资源</p>
 <p>引用可以通过：@、？来引用。那么这两者的区别在哪里呢？“?”主要用来引用私有资源，“@”主要用来引用公有<br>资源。因为Android的资源Style等之间存在着继承关系，因此”?”就相当于类中的”this”,而”@“则相当于一<br>个公共的对象（R），来对资源进行引用。通常”?”引用的资源都是当前包(目录)中的，而”@“引用的资源既可以<br>是当前目录中的也可以不同目录中的。在对Android属性继承修改的时候，我们可能需要别的属性，如果该属性<br>在父类中不存在的话，那么我们可以在<code>res/values/attrs.xml</code>中通过<code>declare-styleable</code>标签来定<br>义我们所需要的属性资源以及这些属性资源的<code>format</code>格式，然后就可以在Style文件中直接使用。</p>
-<p>##资源<br><a href="https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/res/res/values/styles.xml" target="_blank" rel="external">Android的Style资源</a></p>
-<p><a href="https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/res/res/values/themes.xml" target="_blank" rel="external">Android的Theme资源</a></p>
-<p><a href="http://developer.android.com/reference/android/R.attr.html" target="_blank" rel="external">Android的属性资源</a></p>
-<p><a href="http://developer.android.com/reference/android/R.styleable.html#Theme" target="_blank" rel="external">可以在Theme中使用的属性</a></p>
+<p>##资源<br><a href="https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/res/res/values/styles.xml" target="_blank" rel="noopener">Android的Style资源</a></p>
+<p><a href="https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/res/res/values/themes.xml" target="_blank" rel="noopener">Android的Theme资源</a></p>
+<p><a href="http://developer.android.com/reference/android/R.attr.html" target="_blank" rel="noopener">Android的属性资源</a></p>
+<p><a href="http://developer.android.com/reference/android/R.styleable.html#Theme" target="_blank" rel="noopener">可以在Theme中使用的属性</a></p>
 
       
     </div>

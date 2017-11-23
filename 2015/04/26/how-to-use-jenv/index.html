@@ -81,22 +81,17 @@
 
 
 
-<meta name="description" content="对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具Jenv，用它来终结我们的Java版本管理之痛。
-
-介绍Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。">
+<meta name="description" content="对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具Jenv，用它来终结我们的Java版本管理之痛。  介绍Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How To Use Jenv To Master Your Java Environnement">
-<meta property="og:url" content="http://tedyin.me/2015/04/26/how-to-use-jenv/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具Jenv，用它来终结我们的Java版本管理之痛。
-
-介绍Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。">
+<meta property="og:url" content="http://tedyin.github.io/2015/04/26/how-to-use-jenv/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
+<meta property="og:description" content="对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具Jenv，用它来终结我们的Java版本管理之痛。  介绍Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-02-29T09:37:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How To Use Jenv To Master Your Java Environnement">
-<meta name="twitter:description" content="对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具Jenv，用它来终结我们的Java版本管理之痛。
-
-介绍Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。">
+<meta name="twitter:description" content="对于一个Java开发者来说，系统上安装多个Java版本是很常见的事，但是在各个版本之间进行切换是一件非常痛苦的事情，今天向大家介绍一个工具Jenv，用它来终结我们的Java版本管理之痛。  介绍Jenv的作用类似于rbenv，只是rbenv是用来管理系统上的不同Ruby版本的。Jenv运行在Linux或者Mac上，不能在Windows上使用（建议Win的用户转向Linux或者Mac）。">
 
 
 
@@ -126,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2015/04/26/how-to-use-jenv/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2015/04/26/how-to-use-jenv/"/>
 
 
 
@@ -259,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2015/04/26/how-to-use-jenv/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2015/04/26/how-to-use-jenv/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -310,6 +305,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -340,7 +366,7 @@
 <li><p>将<code>~/.jenv/bin</code>加入到<code>$PATH</code>环境变量中</p>
 </li>
 <li><p>添加初始化Jenv的脚本到环境变量中</p>
-<figure class="highlight ruby"><figcaption><span>lang: bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo <span class="string">'eval "$(jenv init -)"'</span> <span class="meta">&gt;&gt; </span>~<span class="regexp">/.bash_profile</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><figcaption><span>lang: bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="string">'eval "$(jenv init -)"'</span> &gt;&gt; ~/.bash_profile</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重启命令行，使PATH的设置生效，现在可已使用jenv来管理JDK版本了。</p>
 </li>
@@ -362,7 +388,7 @@
 </li>
 </ol>
 </blockquote>
-<h1 id="该项目Github地址"><a href="#该项目Github地址" class="headerlink" title="该项目Github地址"></a>该项目Github地址</h1><p><a href="https://github.com/gcuisinier/jenv" target="_blank" rel="external">Jenv</a></p>
+<h1 id="该项目Github地址"><a href="#该项目Github地址" class="headerlink" title="该项目Github地址"></a>该项目Github地址</h1><p><a href="https://github.com/gcuisinier/jenv" target="_blank" rel="noopener">Jenv</a></p>
 
       
     </div>

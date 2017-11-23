@@ -81,12 +81,13 @@
 
 
 
-<meta name="description" content="今天说一下对象序列化时的两个接口Serializable和Parcelable，前者是Java中的老面孔了，大家也都非常熟悉了，后者是Android提供的新面孔，既然Java本身就有序列化的接口为什么Android还要重新造轮子呢？当然Google也不是傻子，肯定是前面那个轮子不能满足他们的要求，所以他们才重新造出了Parcelable这个接口。">
+<meta name="description" content="今天说一下对象序列化时的两个接口Serializable和Parcelable，前者是Java中的老面孔了，大家也都非常熟悉了，后者是Android提供的新面孔，既然Java本身就有序列化的接口为什么Android还要重新造轮子呢？当然Google也不是傻子，肯定是前面那个轮子不能满足他们的要求，所以他们才重新造出了P">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Parcelable Vs Serializable">
-<meta property="og:url" content="http://tedyin.me/2015/04/03/parcelable-vs-serializable/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:url" content="http://tedyin.github.io/2015/04/03/parcelable-vs-serializable/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
 <meta property="og:description" content="今天说一下对象序列化时的两个接口Serializable和Parcelable，前者是Java中的老面孔了，大家也都非常熟悉了，后者是Android提供的新面孔，既然Java本身就有序列化的接口为什么Android还要重新造轮子呢？当然Google也不是傻子，肯定是前面那个轮子不能满足他们的要求，所以他们才重新造出了Parcelable这个接口。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/parcelable_vs_serializable.png">
 <meta property="og:updated_time" content="2016-02-29T09:29:20.000Z">
 <meta name="twitter:card" content="summary">
@@ -122,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2015/04/03/parcelable-vs-serializable/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2015/04/03/parcelable-vs-serializable/"/>
 
 
 
@@ -255,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2015/04/03/parcelable-vs-serializable/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2015/04/03/parcelable-vs-serializable/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -306,6 +307,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -336,7 +368,7 @@
 </blockquote>
 <p>这样就OK了,下面来看看废了一番周折写出来的序列化方法到底比原生的好了多少，有图有真相！！<br><img src="http://7xii1s.com1.z0.glb.clouddn.com/parcelable_vs_serializable.png" alt="parcelable"></p>
 <p>OMG !这差距，使用<code>Parcelable</code>虽然复杂点，但是这性能提升，真是值了！</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.developerphil.com/parcelable-vs-serializable/" target="_blank" rel="external">Parcelable vs Serializable</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.developerphil.com/parcelable-vs-serializable/" target="_blank" rel="noopener">Parcelable vs Serializable</a></p>
 
       
     </div>

@@ -81,12 +81,13 @@
 
 
 
-<meta name="description" content="在我们加载图片的时候，经常会出现这种情况，我们加载的图片的解析度已经远远超出我们设备的解析度，而且太大的图片会占据比较大的内存带来大的内存开销，如果对这些内存回收管理不及时，很容易造成OutOfMemory运行时异常，导致整个应用崩溃，因此为了避免这种情况的发生，我们在decode图片的时候应当根据自己设备的解析度来解析，只需要解析出适合我们当前设备的图片即可，不需要解析出超高分辨率的图片，因为超">
+<meta name="description" content="在我们加载图片的时候，经常会出现这种情况，我们加载的图片的解析度已经远远超出我们设备的解析度，而且太大的图片会占据比较大的内存带来大的内存开销，如果对这些内存回收管理不及时，很容易造成OutOfMemory运行时异常，导致整个应用崩溃，因此为了避免这种情况的发生，我们在decode图片的时候应当根据自己设备的解析度来解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Loading Large Bitmap">
-<meta property="og:url" content="http://tedyin.me/2014/07/06/Loading-large-bitmap/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:url" content="http://tedyin.github.io/2014/07/06/Loading-large-bitmap/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
 <meta property="og:description" content="在我们加载图片的时候，经常会出现这种情况，我们加载的图片的解析度已经远远超出我们设备的解析度，而且太大的图片会占据比较大的内存带来大的内存开销，如果对这些内存回收管理不及时，很容易造成OutOfMemory运行时异常，导致整个应用崩溃，因此为了避免这种情况的发生，我们在decode图片的时候应当根据自己设备的解析度来解析，只需要解析出适合我们当前设备的图片即可，不需要解析出超高分辨率的图片，因为超">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-02-29T09:35:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Loading Large Bitmap">
@@ -120,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2014/07/06/Loading-large-bitmap/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2014/07/06/Loading-large-bitmap/"/>
 
 
 
@@ -253,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2014/07/06/Loading-large-bitmap/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2014/07/06/Loading-large-bitmap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -304,6 +305,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -322,7 +354,7 @@
       
         <p>在我们加载图片的时候，经常会出现这种情况，我们加载的图片的解析度已经远远超出我们设备的解析度，而且太<br>大的图片会占据比较大的内存带来大的内存开销，如果对这些内存回收管理不及时，很容易造成OutOfMemory运<br>行时异常，导致整个应用崩溃，因此为了避免这种情况的发生，我们在decode图片的时候应当根据自己设备的解<br>析度来解析，只需要解析出适合我们当前设备的图片即可，不需要解析出超高分辨率的图片，因为超高分辨率的图<br>片对我们的视觉体验带来不了任何帮助，反而会占用宝贵的内存，产生性能问题。下面我们将讨论如何将一张大图<br>片解析成一个符合当前设备内存要求的小图片。<br><a id="more"></a></p>
 <p>##Read Bitmap Dimensions and Type<br><code>BitmapFactory</code>类提供了许多解析图片的方法(<code>decodeByteArray()</code> <code>decodeFile()</code><br><code>decodeResource()</code> <code>decodeStream()</code>等)来解析各种形式的图片。这些方法在执行的时候都会为图片<br>分配一块内存去解析图片，这样做很容易导致OOM的发生。但是系统为每个图片解析的方法都提供了一个<br><code>BitmapFactory.Option</code>对象做为参数，来设置我们的解析过程是否分配内存给被解析的图片。<br>设置<code>Options.inJustDecodeBounds = true</code>，则在解析的时候不会为Bitmap分配内存，因此解析完成<br>后返回的Bitmap对象将会是null。<br>因此如果我们想知道这个图片的尺寸和类型，我们可以先设置<code>Options.inJustDecodeBounds = true</code>，<br>然后调用decode方法并且传入Options对象，然后在decode结束后，我们可以通过<code>Options.outWidth</code>、<br><code>Optinons.outHeight</code>和<code>Options.outMimeType</code>,获得图片的尺寸以及图片的类型。<br>代码如下：</p>
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">BitmapFactory.Options <span class="built_in">opt</span> = new BitmapFactory.Options()<span class="comment">;</span></span><br><span class="line"><span class="built_in">opt</span>.inJustDecodeBounds = <span class="literal">true</span><span class="comment">; //解析时不分配内存，仅仅是获取图片信息</span></span><br><span class="line">BitmapFactory.decodeResource(getResource(),R.id.image,<span class="built_in">opt</span>)<span class="comment">;</span></span><br><span class="line"><span class="built_in">int</span> imageWidth = <span class="built_in">opt</span>.outWidth<span class="comment">;</span></span><br><span class="line"><span class="built_in">int</span> imageHeight = <span class="built_in">opt</span>.outHeight<span class="comment">;</span></span><br><span class="line"><span class="built_in">String</span> imageType = <span class="built_in">opt</span>.outMimeType<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">BitmapFactory.Options </span><span class="meta">opt</span> = new <span class="keyword">BitmapFactory.Options();</span></span><br><span class="line"><span class="keyword">opt.inJustDecodeBounds </span>= true<span class="comment">; //解析时不分配内存，仅仅是获取图片信息</span></span><br><span class="line"><span class="keyword">BitmapFactory.decodeResource(getResource(),R.id.image,opt);</span></span><br><span class="line"><span class="keyword">int </span>imageWidth = <span class="meta">opt</span>.outWidth<span class="comment">;</span></span><br><span class="line"><span class="symbol">int</span> imageHeight = <span class="meta">opt</span>.outHeight<span class="comment">;</span></span><br><span class="line"><span class="keyword">String </span>imageType = <span class="meta">opt</span>.outMimeType<span class="comment">;</span></span><br></pre></td></tr></table></figure>
 <p>这样我们就得到了图片的尺寸和类型。<br>为例避免OOM发生我们在解析前，我们需要在解析前检查图片的尺寸和大小，是否符合我们的需求。</p>
 <p>##Load a Scaled Down Version into Memory<br>既然我们已经知道了图片的尺寸，下来我么就需要考虑是加载这个图片呢还是加载一个低解析度的版本。我们可以<br>通过如下几个因素来考虑</p>
 <ul>
@@ -345,7 +377,7 @@
 <li>根据所需要的图片大小，获取最佳的<code>inSampleSize</code>值</li>
 <li>使用2中获得的<code>inSampleSize</code>来解析图片</li>
 </ol>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="function">Bitmap <span class="title">decodeSampledBmpFromResource</span><span class="params">(</span><br><span class="line">	Resource res,<span class="keyword">int</span> resId,<span class="keyword">int</span> reqHeight,<span class="keyword">int</span> reqWidth)</span></span>&#123;</span><br><span class="line">	<span class="comment">// 1.获取图片的尺寸信息</span></span><br><span class="line">	BitmapFactory.Options opt = <span class="keyword">new</span> BitmapFactory.Options();</span><br><span class="line">	opt.inJustDecodeBounds = <span class="keyword">true</span>;</span><br><span class="line">	BitmapFactory.decodeFromResource(res,resId,opt);</span><br><span class="line">	<span class="comment">// 2.计算最佳inSampleSize值</span></span><br><span class="line">	opt.inSampleSize=</span><br><span class="line">	calculateInSampleSize(opt,reqWidth,reqHeight);</span><br><span class="line">	<span class="comment">// 3.将原图解析成需要的Bitmap</span></span><br><span class="line">	opt.inJustDecodeBounds = <span class="keyword">false</span>;<span class="comment">//否则解析出的bmp为null</span></span><br><span class="line">	<span class="function"><span class="keyword">return</span> BitmapFactory.<span class="title">decodeFromResource</span><span class="params">(res,resId,opt)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Bitmap decodeSampledBmpFromResource(</span><br><span class="line">	Resource res,<span class="keyword">int</span> resId,<span class="keyword">int</span> reqHeight,<span class="keyword">int</span> reqWidth)&#123;</span><br><span class="line">	<span class="comment">// 1.获取图片的尺寸信息</span></span><br><span class="line">	BitmapFactory.Options opt = <span class="keyword">new</span> BitmapFactory.Options();</span><br><span class="line">	opt.inJustDecodeBounds = <span class="keyword">true</span>;</span><br><span class="line">	BitmapFactory.decodeFromResource(res,resId,opt);</span><br><span class="line">	<span class="comment">// 2.计算最佳inSampleSize值</span></span><br><span class="line">	opt.inSampleSize=</span><br><span class="line">	calculateInSampleSize(opt,reqWidth,reqHeight);</span><br><span class="line">	<span class="comment">// 3.将原图解析成需要的Bitmap</span></span><br><span class="line">	opt.inJustDecodeBounds = <span class="keyword">false</span>;<span class="comment">//否则解析出的bmp为null</span></span><br><span class="line">	<span class="function"><span class="keyword">return</span> BitmapFactory.<span class="title">decodeFromResource</span><span class="params">(res,resId,opt)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>

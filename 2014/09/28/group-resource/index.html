@@ -84,9 +84,10 @@
 <meta name="description" content="现在的Android系统运行在各种尺寸的机器上，对于开发者，我们需要让我们的应用适应这些大大小小的屏幕确实比较困难，但是Android给我们提供了一套简单而且方便的机制来帮助我们完成适配，首先我们来看看资源文件的组织方式。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Providing Resources">
-<meta property="og:url" content="http://tedyin.me/2014/09/28/group-resource/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:url" content="http://tedyin.github.io/2014/09/28/group-resource/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
 <meta property="og:description" content="现在的Android系统运行在各种尺寸的机器上，对于开发者，我们需要让我们的应用适应这些大大小小的屏幕确实比较困难，但是Android给我们提供了一套简单而且方便的机制来帮助我们完成适配，首先我们来看看资源文件的组织方式。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7xii1s.com1.z0.glb.clouddn.com/201409182210.png">
 <meta property="og:updated_time" content="2016-02-29T09:31:55.000Z">
 <meta name="twitter:card" content="summary">
@@ -122,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2014/09/28/group-resource/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2014/09/28/group-resource/"/>
 
 
 
@@ -255,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2014/09/28/group-resource/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2014/09/28/group-resource/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -306,6 +307,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -354,14 +386,14 @@
 <p>使用了所有的<code>&lt;config_qualifier&gt;</code>的资源文件夹命名，排列的顺序是按照优先级排列的，结果为：<br>values-mcc310-en-sw320dp-w720dp-h720dp-large-long-port-car-night-ldpi-notouch-keysexposed-nokeys-navexposed-nonav-v7<br>具体的解释下:<br>values-mcc310(sim卡运营商)-en(语言)-sw320dp(屏幕最小宽度)-w720dp(屏幕最佳宽度)-h720dp(屏幕最佳高度)-large(屏幕尺寸)-long(屏幕长短边模式)-port(当前屏幕横竖屏显示模式)-car(dock模式)-night(白天或夜晚)-ldpi(屏幕最佳dpi)-notouch(触摸屏模类型)-keysexposed(键盘类型)-nokey(硬按键类型)-navexposed(方向键是否可用)-nonav(方向键类型)-v7(android系统版本API level 7)</p>
 </blockquote>
 <ol>
-<li>多套资源的命名必须和默认的(drawable、layout等)相同。具体的文件命名和组织结构可参考<a href="http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources" target="_blank" rel="external">不同资源的命名和组织</a></li>
+<li>多套资源的命名必须和默认的(drawable、layout等)相同。具体的文件命名和组织结构可参考<a href="http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources" target="_blank" rel="noopener">不同资源的命名和组织</a></li>
 </ol>
 <p>##为多个尺寸屏幕提供最好的适配<br>为了适配大多数的机型，在组织App的资源文件时必须提供一套默认的资源数据，这样做的目的就是在无法找到合适的<code>&lt;config_qualifier&gt;</code>数据的时候可以使用默认的资源，而不至于找不到资源文件而崩溃，在API level 4以后，drawable资源可以不需要指定默认的资源文件，因为Android会根据屏幕的信息自己找到合适的图片资源并进行必要的缩放，但是此处还是推荐大家指定所有的默认资源！</p>
 <p>##Android是如何找到最合适的资源文件的</p>
 <p>如果提供了多套资源文件时，Android在运行时会根据设备的属性找到合适的资源文件来使用。Android查找合适的资源文件的过程是一个循环排除的过程，它会读取一堆设备的属性，然后根据这些属性循环过滤所有的资源文件，最后只剩下唯一的一个即为最优的资源文件。对于图片资源的查找，如果找不到最合适的，它会找接近最优解的资源，如果有两类图片资源都是次优解，一类是低像素的图片，一类是高像素的图片，Android会采用将高像素的图像缩小的策略来适配，而不会采用将低像素的图片放大的操作。因此理论上只要提供一套<code>xxxhdpi</code>的图片即可。但是一定要注意一点，选取图片像素高的进行放大，并不是说我们只用一套<code>xlarge</code>的图像就可以适配所以机型了。因为Android在排除资源的时候，如果当前的机型的屏幕类型是Normal Screen，而资源文件都是<code>xlarge</code>类型的没有Normal类型的，那么系统也不会使用这套资源，这样会导致程序崩溃，提示资源不可用或者无法找到等错误，因此在提供多套资源的时候尽量不要省略，一定要提供给默认的资源。</p>
 <p>循环排除算法的流程图：</p>
 <p><img src="http://7xii1s.com1.z0.glb.clouddn.com/201409182210.png" alt="循环排除流程图"></p>
-<p>##参考<br><a href="http://www.cnblogs.com/leizhenzi/archive/2011/10/18/2216428.html" target="_blank" rel="external">raw和asset的区别</a><br><a href="http://developer.android.com/guide/topics/resources/providing-resources.html" target="_blank" rel="external">资源文件的组织</a><br><a href="http://ivan-ru.iteye.com/blog/1711414" target="_blank" rel="external">文件夹属性的使用</a></p>
+<p>##参考<br><a href="http://www.cnblogs.com/leizhenzi/archive/2011/10/18/2216428.html" target="_blank" rel="noopener">raw和asset的区别</a><br><a href="http://developer.android.com/guide/topics/resources/providing-resources.html" target="_blank" rel="noopener">资源文件的组织</a><br><a href="http://ivan-ru.iteye.com/blog/1711414" target="_blank" rel="noopener">文件夹属性的使用</a></p>
 
       
     </div>

@@ -84,9 +84,10 @@
 <meta name="description" content="##Runtime Changes 是什么在Android运行期间，当设备的一些属性改变时，为了更好的使得App适应设备的改变，Android会主动destory当前的Activity，并且重新创建并启动它，以适应设备属性的改变。这样做的目的是为了更好的方便我们处理这些Change。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Handling Runtime Changes">
-<meta property="og:url" content="http://tedyin.me/2014/09/21/handling-congfig-change/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
+<meta property="og:url" content="http://tedyin.github.io/2014/09/21/handling-congfig-change/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
 <meta property="og:description" content="##Runtime Changes 是什么在Android运行期间，当设备的一些属性改变时，为了更好的使得App适应设备的改变，Android会主动destory当前的Activity，并且重新创建并启动它，以适应设备属性的改变。这样做的目的是为了更好的方便我们处理这些Change。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-02-29T09:31:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Handling Runtime Changes">
@@ -120,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2014/09/21/handling-congfig-change/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2014/09/21/handling-congfig-change/"/>
 
 
 
@@ -253,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2014/09/21/handling-congfig-change/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2014/09/21/handling-congfig-change/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -304,6 +305,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -327,7 +359,7 @@
 <li>当键盘隐藏或者显示时</li>
 <li>当系统语言改变时</li>
 </ul>
-<p>以上是常见的几个会引起，Activity被Destory掉，并且立即被重新创建的操作，其他的操作可以参考<a href="http://developer.android.com/reference/android/content/res/Configuration.html" target="_blank" rel="external">开发文档</a></p>
+<p>以上是常见的几个会引起，Activity被Destory掉，并且立即被重新创建的操作，其他的操作可以参考<a href="http://developer.android.com/reference/android/content/res/Configuration.html" target="_blank" rel="noopener">开发文档</a></p>
 <p>##处理这些改变<br>处理这些改变有两类操作</p>
 <ul>
 <li>在Configuration改变时保存当前的上下文状态对象</li>
@@ -359,13 +391,13 @@
 <p>这里是将Fragment当容器来使用，利用了它的特性，存储Activity的状态对象。而且在获取时，由FragmentManager来管理Fragment的状态，这样既方便又安全。</p>
 </blockquote>
 <p>###自定义处理Configuration的变化<br>如果在Configuration变化时没有资源文件的更新(横竖屏不同布局)，或者因为性能的要求，不需要重启当前Activity的话，我们可以通过自定义处理Configuration的变化来代替系统的默认处理(重启Activity)。使用<code>&lt;activity&gt;</code>标签下的<code>&lt;android:configChanges&gt;</code>属性来指定需要自定义处理的属性变换。代码如下:</p>
-<figure class="highlight xml"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".MyActivity"</span></span><br><span class="line">    <span class="attr">android:configChanges</span>=<span class="string">"orientation|keyboardHidden|screenSize"</span></span><br><span class="line">    <span class="attr">android:label</span>=<span class="string">"@string/app_name"</span><span class="string">]]</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><figcaption><span>lang: xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;activity android:name=<span class="string">".MyActivity"</span></span><br><span class="line">    android:configChanges=<span class="string">"orientation|keyboardHidden|screenSize"</span></span><br><span class="line">    android:<span class="keyword">label</span><span class="bash">=<span class="string">"@string/app_name"</span>]]&gt;</span></span><br><span class="line"><span class="bash"></span></span><br></pre></td></tr></table></figure>
 <p>当在<code>&lt;activity&gt;</code>中配置好之后，我们可以通过重写<code>onConfigurationChanged(Configuration)</code>方法来自定义处理Configuration的属性变化。</p>
-<figure class="highlight aspectj"><figcaption><span>lang: Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Overried</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onConfigurationChanged</span><span class="params">(Configuration newConfig)</span></span>&#123;</span><br><span class="line">     <span class="keyword">super</span>.onConfigurationChanged(newConfig);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Checks the orientation of the screen</span></span><br><span class="line">    <span class="keyword">if</span> (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) &#123;</span><br><span class="line">        Toast.makeText(<span class="keyword">this</span>, <span class="string">"landscape"</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125; <span class="function"><span class="keyword">else</span> <span class="title">if</span> <span class="params">(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT)</span></span>&#123;</span><br><span class="line">        Toast.makeText(<span class="keyword">this</span>, <span class="string">"portrait"</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight haxe"><figcaption><span>lang: Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">@Overried</span><br><span class="line"><span class="keyword">public</span> void onConfigurationChanged(Configuration <span class="keyword">new</span><span class="type">Config</span>)&#123;</span><br><span class="line">     <span class="keyword">super</span>.onConfigurationChanged(<span class="keyword">new</span><span class="type">Config</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Checks the orientation of the screen</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">new</span><span class="type">Config</span>.orientation == Configuration.ORIENTATION_LANDSCAPE) &#123;</span><br><span class="line">        Toast.makeText(<span class="built_in">this</span>, <span class="string">"landscape"</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">new</span><span class="type">Config</span>.orientation == Configuration.ORIENTATION_PORTRAIT)&#123;</span><br><span class="line">        Toast.makeText(<span class="built_in">this</span>, <span class="string">"portrait"</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注意：在3.2版本 API level 13之后，<code>screen size</code>属性的改变也会引起Activity的销毁并重启。而且congfigChanges的属性都是Integer的，如果是自定义处理属性改变，那么在属性改变后所需要重新加载的数据都要重新设置一遍。比如，某个图片横屏和竖屏是不同的，那么就需要在onConfigurationChanged()方法中重新设置该图片的资源。</p>
 </blockquote>
-<p>##参考<br><a href="http://developer.android.com/guide/topics/resources/runtime-changes.html" target="_blank" rel="external">Handling Runtime Changes</a></p>
+<p>##参考<br><a href="http://developer.android.com/guide/topics/resources/runtime-changes.html" target="_blank" rel="noopener">Handling Runtime Changes</a></p>
 
       
     </div>

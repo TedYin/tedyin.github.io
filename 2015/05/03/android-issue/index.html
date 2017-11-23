@@ -81,22 +81,18 @@
 
 
 
-<meta name="description" content="在实际的项目开发过程中，经常会遇到一些莫名其妙的问题，或者很容易忽略的但是会造成很多麻烦的小问题，这篇帖子用来记录下这些问题，并给出注意事项或者解决方法，后续会不断更新所遇到的问题和解决方法。
-
-Fragment中使用onActivityResult方法无效不能有效的回调">
+<meta name="description" content="在实际的项目开发过程中，经常会遇到一些莫名其妙的问题，或者很容易忽略的但是会造成很多麻烦的小问题，这篇帖子用来记录下这些问题，并给出注意事项或者解决方法，后续会不断更新所遇到的问题和解决方法。  Fragment中使用onActivityResult方法无效不能有效的回调">
+<meta name="keywords" content="android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android开发中遇到的小问题汇总">
-<meta property="og:url" content="http://tedyin.me/2015/05/03/android-issue/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="在实际的项目开发过程中，经常会遇到一些莫名其妙的问题，或者很容易忽略的但是会造成很多麻烦的小问题，这篇帖子用来记录下这些问题，并给出注意事项或者解决方法，后续会不断更新所遇到的问题和解决方法。
-
-Fragment中使用onActivityResult方法无效不能有效的回调">
+<meta property="og:url" content="http://tedyin.github.io/2015/05/03/android-issue/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
+<meta property="og:description" content="在实际的项目开发过程中，经常会遇到一些莫名其妙的问题，或者很容易忽略的但是会造成很多麻烦的小问题，这篇帖子用来记录下这些问题，并给出注意事项或者解决方法，后续会不断更新所遇到的问题和解决方法。  Fragment中使用onActivityResult方法无效不能有效的回调">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-02-29T09:29:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android开发中遇到的小问题汇总">
-<meta name="twitter:description" content="在实际的项目开发过程中，经常会遇到一些莫名其妙的问题，或者很容易忽略的但是会造成很多麻烦的小问题，这篇帖子用来记录下这些问题，并给出注意事项或者解决方法，后续会不断更新所遇到的问题和解决方法。
-
-Fragment中使用onActivityResult方法无效不能有效的回调">
+<meta name="twitter:description" content="在实际的项目开发过程中，经常会遇到一些莫名其妙的问题，或者很容易忽略的但是会造成很多麻烦的小问题，这篇帖子用来记录下这些问题，并给出注意事项或者解决方法，后续会不断更新所遇到的问题和解决方法。  Fragment中使用onActivityResult方法无效不能有效的回调">
 
 
 
@@ -126,7 +122,7 @@ Fragment中使用onActivityResult方法无效不能有效的回调">
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2015/05/03/android-issue/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2015/05/03/android-issue/"/>
 
 
 
@@ -259,7 +255,7 @@ Fragment中使用onActivityResult方法无效不能有效的回调">
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2015/05/03/android-issue/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2015/05/03/android-issue/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -310,6 +306,37 @@ Fragment中使用onActivityResult方法无效不能有效的回调">
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -331,12 +358,12 @@ Fragment中使用onActivityResult方法无效不能有效的回调">
 <li>Fragment中使用onActivityResult方法无效不能有效的回调<a id="more"></a>
 <h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3>在Fragment中不要使用getActivity().startActivityForResult()方法去启动Activity，而应该直接使用startActivity方法去启动Activity，否则会被挂载Fragment的Activity中的onActivityResult的方法截获，导致Fragment的onActivityResult方法无法被回调。</li>
 </ol>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://stackoverflow.com/questions/6147884/onactivityresult-not-being-called-in-fragment" target="_blank" rel="external">参考Stackoverflow</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://stackoverflow.com/questions/6147884/onactivityresult-not-being-called-in-fragment" target="_blank" rel="noopener">参考Stackoverflow</a></p>
 <ol>
 <li>ViewPager.setCurrentItem(0)后onPageSelect方法没有被触发</li>
 </ol>
 <h3 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h3><p>调用完setCurrentItem(0)后再手动调用加载函数。原因是ViewPager内部的mCurrentItem默认值为0，设置了setCurrentItem（0）之后dispatchSelect为false认为已经调用过了onPageSelect方法，因此在第一次调用完setCurrentItem(0)时无效。</p>
-<h3 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h3><p><a href="http://stackoverflow.com/questions/11794269/onpageselected-isnt-triggered-when-calling-setcurrentitem0" target="_blank" rel="external">参考Stackoverflow</a></p>
+<h3 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h3><p><a href="http://stackoverflow.com/questions/11794269/onpageselected-isnt-triggered-when-calling-setcurrentitem0" target="_blank" rel="noopener">参考Stackoverflow</a></p>
 
       
     </div>

@@ -81,22 +81,18 @@
 
 
 
-<meta name="description" content="前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档1curl -XPOST &apos;localhost:9200/bank/account/_bulk?pretty&apos; --data-binary &quot;@accounts.json&quot;
-
-@accounts.json是存在当前目录下的一个json文件,里面存储了一个j">
+<meta name="description" content="前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档1curl -XPOST &apos;localhost:9200/bank/account/_bulk?pretty&apos; --data-binary &quot;@a">
+<meta name="keywords" content="elasticsearch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Elasticsearch 的批处理">
-<meta property="og:url" content="http://tedyin.me/2016/01/26/elasticsearch-batch-processing/index.html">
-<meta property="og:site_name" content="TedYin's Blog">
-<meta property="og:description" content="前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档1curl -XPOST &apos;localhost:9200/bank/account/_bulk?pretty&apos; --data-binary &quot;@accounts.json&quot;
-
-@accounts.json是存在当前目录下的一个json文件,里面存储了一个j">
+<meta property="og:url" content="http://tedyin.github.io/2016/01/26/elasticsearch-batch-processing/index.html">
+<meta property="og:site_name" content="TedYin&#39;s Blog">
+<meta property="og:description" content="前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档1curl -XPOST &apos;localhost:9200/bank/account/_bulk?pretty&apos; --data-binary &quot;@accounts.json&quot;  @accounts.json是存在当前目录下的一个json文件,里面存储了一个j">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-02-29T09:44:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Elasticsearch 的批处理">
-<meta name="twitter:description" content="前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档1curl -XPOST &apos;localhost:9200/bank/account/_bulk?pretty&apos; --data-binary &quot;@accounts.json&quot;
-
-@accounts.json是存在当前目录下的一个json文件,里面存储了一个j">
+<meta name="twitter:description" content="前面已经介绍了如何使用ES提供的REST API去做CRUD操作,但是这些操作都是单一的.今天来介绍一下ES中的批处理,可以批量CUD索引和文档1curl -XPOST &apos;localhost:9200/bank/account/_bulk?pretty&apos; --data-binary &quot;@accounts.json&quot;  @accounts.json是存在当前目录下的一个json文件,里面存储了一个j">
 
 
 
@@ -126,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://tedyin.me/2016/01/26/elasticsearch-batch-processing/"/>
+  <link rel="canonical" href="http://tedyin.github.io/2016/01/26/elasticsearch-batch-processing/"/>
 
 
 
@@ -259,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tedyin.me/2016/01/26/elasticsearch-batch-processing/">
+    <link itemprop="mainEntityOfPage" href="http://tedyin.github.io/2016/01/26/elasticsearch-batch-processing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TedYin">
@@ -310,6 +306,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -330,18 +357,18 @@
 <blockquote>
 <p><code>@accounts.json</code>是存在当前目录下的一个json文件,里面存储了一个josn数组,你可以让她存储任何结构相同的数组.</p>
 </blockquote>
-<p>所有的批量操作都是使用<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html" target="_blank" rel="external">_bluk API</a>来完成,上面的操作就是为<code>accounts.json</code>里面的数据建立索引.<br><a id="more"></a></p>
+<p>所有的批量操作都是使用<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html" target="_blank" rel="noopener">_bluk API</a>来完成,上面的操作就是为<code>accounts.json</code>里面的数据建立索引.<br><a id="more"></a></p>
 <ul>
-<li>除了批量操作数据之外,ES还可以对一条或多条数据进行多步骤操作.<figure class="highlight scilab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST <span class="string">'localhost:9200/blog/article/_bulk?pretty'</span> -d <span class="string">'</span><br><span class="line">&#123;"</span>index<span class="string">":&#123;"</span>_id<span class="string">":"</span><span class="number">1</span><span class="string">"&#125;&#125;</span><br><span class="line">&#123;"</span>title<span class="string">": "</span>batch bulk api title <span class="number">1</span><span class="string">" &#125;</span><br><span class="line">&#123;"</span>update<span class="string">":&#123;"</span>_id<span class="string">":"</span><span class="number">2</span><span class="string">"&#125;&#125;</span><br><span class="line">&#123;"</span>doc<span class="string">": &#123;"</span>title<span class="string">": "</span>batch bulk api title <span class="number">2</span><span class="string">" &#125;&#125;</span><br><span class="line">&#123;"</span>delete<span class="string">":&#123;"</span>_id<span class="string">":"</span><span class="number">3</span><span class="string">"&#125;&#125;</span><br><span class="line">'</span></span><br></pre></td></tr></table></figure>
+<li>除了批量操作数据之外,ES还可以对一条或多条数据进行多步骤操作.<figure class="highlight scilab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST <span class="string">'localhost:9200/blog/article/_bulk?pretty'</span> -d <span class="string">'</span></span><br><span class="line"><span class="string">&#123;"</span>index<span class="string">":&#123;"</span>_id<span class="string">":"</span><span class="number">1</span><span class="string">"&#125;&#125;</span></span><br><span class="line"><span class="string">&#123;"</span>title<span class="string">": "</span>batch bulk api title <span class="number">1</span><span class="string">" &#125;</span></span><br><span class="line"><span class="string">&#123;"</span>update<span class="string">":&#123;"</span>_id<span class="string">":"</span><span class="number">2</span><span class="string">"&#125;&#125;</span></span><br><span class="line"><span class="string">&#123;"</span>doc<span class="string">": &#123;"</span>title<span class="string">": "</span>batch bulk api title <span class="number">2</span><span class="string">" &#125;&#125;</span></span><br><span class="line"><span class="string">&#123;"</span>delete<span class="string">":&#123;"</span>_id<span class="string">":"</span><span class="number">3</span><span class="string">"&#125;&#125;</span></span><br><span class="line"><span class="string">'</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>上面的批量操作一共干了三件事情:</p>
 <ol>
 <li>将id是1的Document重新以新的数据重新索引,因此该Document的version会自增1</li>
 <li>更新了id是2的Document中的<code>title</code>数据,只是更新数据,并不涉及到重新索引所以version不会变化</li>
-<li>删除了id为3的文档<br>更多的批处理操作可以参考<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html" target="_blank" rel="external">Bulk API</a></li>
+<li>删除了id为3的文档<br>更多的批处理操作可以参考<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html" target="_blank" rel="noopener">Bulk API</a></li>
 </ol>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/_batch_processing.html" target="_blank" rel="external">Elasticsearch Batch Processing</a><br><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html" target="_blank" rel="external">Elasticsearch Bulk API</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/_batch_processing.html" target="_blank" rel="noopener">Elasticsearch Batch Processing</a><br><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html" target="_blank" rel="noopener">Elasticsearch Bulk API</a></p>
 
       
     </div>
